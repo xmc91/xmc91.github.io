@@ -1,6 +1,6 @@
 # Site settings 配置站点
 title: 'WindMan Blog'
-description: '风一样得男子'
+description: '风一样de男子'
 keyword: 'WindMan, WindMan的独立博客, WindMan的博客,蓝牙, 小程序, Android,nodejs'
 url: '' # your host
 
@@ -21,12 +21,12 @@ nav:
 
 # Footer
 footer:
-  since: 2017
+  since: 2019
 
 # Author 配置博主信息
 author: 'WindMan'
-nickname: '风一样得男子'
-bio: 'Android开发者，node兴趣者，热爱技术&设计'
+nickname: '风一样de男子'
+bio: 'Android开发者，Nodejs兴趣者，wx小程序轻涉者,爱人文历史，爱技术，爱生活'
 avatar: '/assets/img/profile.png'
 
 # Search
@@ -37,8 +37,8 @@ nightMode: true
 
 # Comments 评论功能
 comments:
-  disqus: false
-  disqus_url: 'https://liaokeyu.disqus.com/embed.js'
+  disqus: true
+  disqus_url: 'https://xwindman.disqus.com/embed.js'
 
 # MathJax 公式支持 by Ray-Eldath
 mathjax: true
@@ -56,10 +56,10 @@ postPatterns: 'circuitBoard'
 # SNS settings 配置社交网站
 # url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
 sns:
-  weibo: '//weibo.com/lovecolcol'
-  juejin: '//juejin.im/user/57a6f434165abd006159b4cc'
-  instagram: '//www.instagram.com/steveliaocn'
-  github: '//github.com/kaeyleo'
+  csdn: '//blog.csdn.net/weixin_42142832'
+  juejin: '//juejin.im/user/58b513f0570c35006b0be9c1'
+  github: '//github.com/XWindMan'
+ 
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
