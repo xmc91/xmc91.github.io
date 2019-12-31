@@ -1,4 +1,3 @@
-2019-12-31-nice-video.md
 ---
 layout: post
 title: 'Nice Video'
