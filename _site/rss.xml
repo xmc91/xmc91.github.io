@@ -3,10 +3,10 @@
   <channel>
     <title>WindMan Blog</title>
     <description>风一样de男子</description>
-    <link>http://localhost:4000//</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 31 Dec 2019 23:00:44 +0800</pubDate>
-    <lastBuildDate>Tue, 31 Dec 2019 23:00:44 +0800</lastBuildDate>
+    <link>//</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 08 Feb 2020 12:27:46 +0800</pubDate>
+    <lastBuildDate>Sat, 08 Feb 2020 12:27:46 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -79,8 +79,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 31 Dec 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/12/31/nice-video.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/12/31/nice-video.html</guid>
+        <link>/2019/12/31/nice-video.html</link>
+        <guid isPermaLink="true">/2019/12/31/nice-video.html</guid>
         
         <category>video</category>
         
@@ -121,8 +121,8 @@
 &lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Sun, 22 Dec 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/12/22/wx-open.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/12/22/wx-open.html</guid>
+        <link>/2019/12/22/wx-open.html</link>
+        <guid isPermaLink="true">/2019/12/22/wx-open.html</guid>
         
         <category>小程序</category>
         
@@ -150,8 +150,8 @@
 &lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Sun, 22 Dec 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/12/22/read.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/12/22/read.html</guid>
+        <link>/2019/12/22/read.html</link>
+        <guid isPermaLink="true">/2019/12/22/read.html</guid>
         
         <category>read</category>
         
@@ -280,8 +280,8 @@ source .bash_profile&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 22 Dec 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/12/22/nodejs-env.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/12/22/nodejs-env.html</guid>
+        <link>/2019/12/22/nodejs-env.html</link>
+        <guid isPermaLink="true">/2019/12/22/nodejs-env.html</guid>
         
         <category>nodejs</category>
         
@@ -313,8 +313,8 @@ source .bash_profile&lt;/p&gt;
 &lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Sun, 22 Dec 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/12/22/hello-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/12/22/hello-jekyll.html</guid>
+        <link>/2019/12/22/hello-jekyll.html</link>
+        <guid isPermaLink="true">/2019/12/22/hello-jekyll.html</guid>
         
         <category>jekyll</category>
         

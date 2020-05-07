@@ -77,7 +77,7 @@ tags: nodejs
   >Checksums matched!
   >Now using node v13.3.0 (npm v6.13.1)
 
-  + 配置环境变量
++ 配置环境变量
 
   >// 编辑配置文件
   >vim .bash_profile
@@ -97,4 +97,4 @@ tags: nodejs
 
   + 直接敲npm/cnpm 可以查看usage
 
-  <iframe type="text/html" width="100%" height="385" src="http://www.youtube.com/embed/gfmjMWjn-Xg" frameborder="0"></iframe>
+<iframe type="text/html" width="100%" height="385" src="http://www.youtube.com/embed/gfmjMWjn-Xg" frameborder="0"></iframe>
