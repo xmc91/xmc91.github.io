@@ -19,7 +19,7 @@
     } ,
   
     {
-      "title"    : "念奴娇 赤壁怀古",
+      "title"    : "好诗呀",
       "tags"     : "read",
       "url"      : "/2019/12/22/read.html"
     } ,
@@ -32,7 +32,7 @@
   
     {
       "title"    : "Hello Jekyll",
-      "tags"     : "jekyll",
+      "tags"     : "Tools",
       "url"      : "/2019/12/22/hello-jekyll.html"
     } 
   

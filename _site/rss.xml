@@ -5,8 +5,8 @@
     <description>风一样de男子</description>
     <link>//</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 07 May 2020 13:26:33 +0800</pubDate>
-    <lastBuildDate>Thu, 07 May 2020 13:26:33 +0800</lastBuildDate>
+    <pubDate>Thu, 07 May 2020 13:44:30 +0800</pubDate>
+    <lastBuildDate>Thu, 07 May 2020 13:44:30 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -155,10 +155,8 @@
       </item>
     
       <item>
-        <title>念奴娇 赤壁怀古</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;最豪放得诗&lt;/p&gt;
-&lt;/blockquote&gt;
+        <title>好诗呀</title>
+        <description>&lt;h1 id=&quot;豪放&quot;&gt;豪放&lt;/h1&gt;
 
 &lt;h2 id=&quot;-念奴娇-赤壁怀古-&quot;&gt;&lt;center&gt; 念奴娇 赤壁怀古 &lt;/center&gt;&lt;/h2&gt;
 &lt;center&gt;大江东去，浪淘尽，千古风流人物。&lt;/center&gt;
@@ -169,6 +167,22 @@
 &lt;center&gt;羽扇纶巾，谈笑间，樯橹灰飞烟灭。&lt;/center&gt;
 &lt;center&gt;故国神游，多情应笑我，早生华发。&lt;/center&gt;
 &lt;center&gt;人生如梦，一尊还酹江月&lt;/center&gt;
+
+&lt;h1 id=&quot;婉约&quot;&gt;婉约&lt;/h1&gt;
+
+&lt;h1 id=&quot;声声慢寻寻觅觅&quot;&gt;声声慢·寻寻觅觅&lt;/h1&gt;
+
+&lt;p&gt;[宋] &lt;a href=&quot;http://www.shicimingju.com/chaxun/zuozhe/77.html&quot;&gt;李清照&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;寻寻觅觅，冷冷清清，凄凄惨惨戚戚。
+乍暖还寒时候，最难将息。
+三杯两盏淡酒，怎敌他、晚来风急？
+雁过也，正伤心，却是旧时相识。&lt;/p&gt;
+
+&lt;p&gt;满地黄花堆积。憔悴损，如今有谁堪摘？
+守着窗儿，独自怎生得黑？
+梧桐更兼细雨，到黄昏、点点滴滴。
+这次第，怎一个愁字了得！&lt;/p&gt;
 
 &lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 </description>
@@ -310,22 +324,30 @@ source .bash_profile
       <item>
         <title>Hello Jekyll</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;Transform your plain text into static websites and blogs.&lt;/p&gt;
+  &lt;p&gt;本站使用方法&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;welcome&quot;&gt;Welcome&lt;/h3&gt;
-
-&lt;p&gt;This site aims to be a comprehensive guide to Jekyll. We’ll cover topics such as getting your site up and running, creating and managing your content, customizing the way your site works and looks, deploying to various environments, and give you some advice on participating in the future development of Jekyll itself.&lt;/p&gt;
-
-&lt;h3 id=&quot;so-what-is-jekyll-exactlypermalink&quot;&gt;So what is Jekyll, exactly?Permalink&lt;/h3&gt;
-
-&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like &lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;) and our &lt;a href=&quot;https://github.com/Shopify/liquid/wiki&quot;&gt;Liquid&lt;/a&gt; renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.&lt;/p&gt;
-
-&lt;h3 id=&quot;helpful-hintspermalink&quot;&gt;Helpful HintsPermalink&lt;/h3&gt;
-
-&lt;p&gt;Throughout this guide there are a number of small-but-handy pieces of information that can make using Jekyll easier, more interesting, and less hazardous. Here’s what to look out for.&lt;/p&gt;
-
-&lt;h3 id=&quot;video-test&quot;&gt;Video Test&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;内容
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;在_post路径下，编写内容
+编写头
+---
+layout: post
+title: 'Hello Jekyll'
+date: 2019-12-22
+author: WindMan
+cover:'http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg'
+tags: Tools
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;编译
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;提交即可&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll主题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 </description>
@@ -333,7 +355,7 @@ source .bash_profile
         <link>/2019/12/22/hello-jekyll.html</link>
         <guid isPermaLink="true">/2019/12/22/hello-jekyll.html</guid>
         
-        <category>jekyll</category>
+        <category>Tools</category>
         
         
       </item>
