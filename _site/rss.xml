@@ -5,9 +5,32 @@
     <description>风一样de男子</description>
     <link>//</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 07 May 2020 12:16:39 +0800</pubDate>
-    <lastBuildDate>Thu, 07 May 2020 12:16:39 +0800</lastBuildDate>
+    <pubDate>Thu, 07 May 2020 13:26:33 +0800</pubDate>
+    <lastBuildDate>Thu, 07 May 2020 13:26:33 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Android相关 网址记录</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/distribute/best-practices/develop/64-bit&quot;&gt;Android 64&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_40611659/article/details/95174124&quot;&gt;Android 10适配&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/10023495fba9&quot;&gt;ssh 使用&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/u010586698/article/details/56673379&quot;&gt;android 国际化&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/yanzi1225627/article/details/48215549&quot;&gt;mac 反编译&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
+        <link>/2020/05/06/Android%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95.html</link>
+        <guid isPermaLink="true">/2020/05/06/Android%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
     
       <item>
         <title>Nice Video</title>
