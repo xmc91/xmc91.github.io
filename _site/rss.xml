@@ -5,13 +5,173 @@
     <description>风一样de男子</description>
     <link>//</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 07 May 2020 13:44:30 +0800</pubDate>
-    <lastBuildDate>Thu, 07 May 2020 13:44:30 +0800</lastBuildDate>
+    <pubDate>Thu, 28 May 2020 11:31:43 +0800</pubDate>
+    <lastBuildDate>Thu, 28 May 2020 11:31:43 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
-        <title>Android相关 网址记录</title>
+        <title>Android CameraX</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Android的碎片化导致处理相机并没有那么容易，But，新的 Jetpack 库可帮助您以简单且一致的方式针对 90% 的 Android 设备开发相机应用。
+听起来是不是很nice&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
+        <link>/2020/05/06/CameraX.html</link>
+        <guid isPermaLink="true">/2020/05/06/CameraX.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>Handle的盆友们</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Handle通过线程的MessageQueue发送和处理Message和Runnable对象，每一个Handle实例和一个单例的Thread及它的MessageQueue相关联。
+创建一个Handle的时候，他就绑定到线程及对应的MessageQueue，此后，Handle将会处理Message，把Message发送到MessageQueue，并且处理
+从MessageQueue里出来的Message。Handle主要有两个作用：定时处理Message；把不同线程Action排队。通过不能的方法，可以马上执行也可以
+延后执行。当app创建的时候（一个进程），主线程创建一个MessageQueue专门处理顶级对象（Activity、broadcast等）及其他Window相关对象。
+开发者可以在新建的线程通过Handle与主线程交流。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;相关关键人物&quot;&gt;相关关键人物&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hanle
+发送及调整Message时机，取得与当前线程一致的Looper并循环，把Message压入MessageQueue。最终处理Message&lt;/li&gt;
+  &lt;li&gt;Message
+中间流通的消息，携带处理方及自身属性&lt;/li&gt;
+  &lt;li&gt;Looper
+循环，当MessageQueue里的消息到时的时候，取出Message，并通过Message的target把处理逻辑回到Handle&lt;/li&gt;
+  &lt;li&gt;MessageQueue
+Message的队列，排序里边的Message，适当的时候取出来&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;消息处理流程&quot;&gt;消息处理流程&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;首先创建Handle，并实现handleMessage，默认创建的Handle的变量callback是空&lt;/li&gt;
+  &lt;li&gt;handle发送消息，最终调用sendMessageAtTime&lt;/li&gt;
+  &lt;li&gt;当前handle对象赋给当前Message的target变量&lt;/li&gt;
+  &lt;li&gt;排队。。。&lt;/li&gt;
+  &lt;li&gt;Looper.loop,looper里有个MessageQueue，取出下一个最近的Message，调用Message的target的dispatchMessage方法，&lt;/li&gt;
+  &lt;li&gt;如果handle是调用的post，则post时的入参runnable赋给Message的callback（Runnable），否则Message的callback就是null&lt;/li&gt;
+  &lt;li&gt;最终回调给Handle的是
+    &lt;ul&gt;
+      &lt;li&gt;如果Message的callback不为空，则有post时候的runnable的run方法接收&lt;/li&gt;
+      &lt;li&gt;如果Handle的callback不为空，则有创建Handle时候的callback的handleMessage接收&lt;/li&gt;
+      &lt;li&gt;以上都为空，则调用自己实现的handleMessage接收&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
+        <link>/2020/05/06/Handle.html</link>
+        <guid isPermaLink="true">/2020/05/06/Handle.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>Android App性能优化</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;本文从最初的编码，编码 中及后的检查，编译，编译后的apk瘦身，对APP的整个产生过程优化。&lt;/p&gt;
+  &lt;h2 id=&quot;编码优化&quot;&gt;编码优化&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;handler 作为内部类导致内测泄露，由于非静态内部匿名类会持有外部类的引用，可能会导致外部类无法即使释放。
+```
+public class HandlerActivity extends Activity{&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;private static class InnerHandler extends Handler{
+	// 持有弱引用
+	private final WeakReference&amp;lt;HandlerActivity&amp;gt; mActivity;
+	
+	public InnerHandler(HandlerActivity activity){
+		mActivity = new WeakReference&amp;lt;HandlerActivity&amp;gt;(activity);
+	}
+	
+	@Override
+	public void handleMessage(Message msg){
+		HandlerActivity activity = mActivity.get();
+		if(activity != null){
+		}
+	}
+}
+
+private final InnerHandler mHandler = new InnerHandler(this);
+
+/*
+* 静态匿名内部类不会持有外部类的引用
+*/
+private static final Runnable runnable = new Runnable(){
+
+	@Override
+	public void run(){
+	}
+};
+
+@Override
+protected void onCreate(Bundle savedInstanceState){
+	super.onCreate(savedInstanceState);
+	
+	//延迟5分子发送消息
+	mHandler.postDelayed(runnable, 1000*60*5);
+} }	
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;————————————————
+版权声明：本文为CSDN博主「augfun」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/augfun/article/details/82356871
+```&lt;/p&gt;
+&lt;h2 id=&quot;检查工具lint&quot;&gt;检查工具lint&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://tools.android.com/tips/lint&quot;&gt;主要参考&lt;/a&gt;
+https://blog.csdn.net/luzhenyuxfcy/article/details/79398761
+https://blog.csdn.net/qq_34895720/article/details/102859115?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3&lt;/p&gt;
+
+&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
+        <link>/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</link>
+        <guid isPermaLink="true">/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>Android学习资源</title>
         <description>&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.android.google.cn/&quot;&gt;Android 大本营&lt;/a&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;Android最根本的学习地儿&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://androidxref.com/&quot;&gt;androidxref&lt;/a&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;Android 源码学习学习&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.wanandroid.com/&quot;&gt;WanAndroid&lt;/a&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;适合日常逛街&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://developer.android.com/distribute/best-practices/develop/64-bit&quot;&gt;Android 64&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_40611659/article/details/95174124&quot;&gt;Android 10适配&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/10023495fba9&quot;&gt;ssh 使用&lt;/a&gt;&lt;/li&gt;

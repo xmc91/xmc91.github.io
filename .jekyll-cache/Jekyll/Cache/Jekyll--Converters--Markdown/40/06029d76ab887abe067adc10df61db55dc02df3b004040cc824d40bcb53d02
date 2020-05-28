@@ -1,0 +1,58 @@
+I"�<blockquote>
+  <p>本文从最初的编码，编码 中及后的检查，编译，编译后的apk瘦身，对APP的整个产生过程优化。</p>
+  <h2 id="编码优化">编码优化</h2>
+  <ul>
+    <li>handler 作为内部类导致内测泄露，由于非静态内部匿名类会持有外部类的引用，可能会导致外部类无法即使释放。
+```
+public class HandlerActivity extends Activity{</li>
+  </ul>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private static class InnerHandler extends Handler{
+	// 持有弱引用
+	private final WeakReference&lt;HandlerActivity&gt; mActivity;
+	
+	public InnerHandler(HandlerActivity activity){
+		mActivity = new WeakReference&lt;HandlerActivity&gt;(activity);
+	}
+	
+	@Override
+	public void handleMessage(Message msg){
+		HandlerActivity activity = mActivity.get();
+		if(activity != null){
+		}
+	}
+}
+
+private final InnerHandler mHandler = new InnerHandler(this);
+
+/*
+* 静态匿名内部类不会持有外部类的引用
+*/
+private static final Runnable runnable = new Runnable(){
+
+	@Override
+	public void run(){
+	}
+};
+
+@Override
+protected void onCreate(Bundle savedInstanceState){
+	super.onCreate(savedInstanceState);
+	
+	//延迟5分子发送消息
+	mHandler.postDelayed(runnable, 1000*60*5);
+} }	
+</code></pre></div></div>
+
+<p>————————————————
+版权声明：本文为CSDN博主「augfun」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/augfun/article/details/82356871
+```</p>
+<h2 id="检查工具lint">检查工具lint</h2>
+<p><a href="http://tools.android.com/tips/lint">主要参考</a>
+https://blog.csdn.net/luzhenyuxfcy/article/details/79398761
+https://blog.csdn.net/qq_34895720/article/details/102859115?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3</p>
+
+<iframe type="text/html" width="100%" height="385" src="http://www.youtube.com/embed/gfmjMWjn-Xg" frameborder="0"></iframe>
+:ET

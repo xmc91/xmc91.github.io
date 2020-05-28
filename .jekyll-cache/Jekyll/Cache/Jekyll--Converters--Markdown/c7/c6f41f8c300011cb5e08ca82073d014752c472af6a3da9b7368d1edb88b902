@@ -1,4 +1,19 @@
-I"o<ul>
+I"#<ul>
+  <li><a href="https://developer.android.google.cn/">Android 大本营</a>
+    <blockquote>
+      <p>Android最根本的学习地儿</p>
+    </blockquote>
+  </li>
+  <li><a href="http://androidxref.com/">androidxref</a>
+    <blockquote>
+      <p>Android 源码学习学习</p>
+    </blockquote>
+  </li>
+  <li><a href="https://www.wanandroid.com/">WanAndroid</a>
+    <blockquote>
+      <p>适合日常逛街</p>
+    </blockquote>
+  </li>
   <li><a href="https://developer.android.com/distribute/best-practices/develop/64-bit">Android 64</a></li>
   <li><a href="https://blog.csdn.net/weixin_40611659/article/details/95174124">Android 10适配</a></li>
   <li><a href="https://www.jianshu.com/p/10023495fba9">ssh 使用</a></li>
