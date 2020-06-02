@@ -1,4 +1,4 @@
-I"<blockquote>
+I"�<blockquote>
   <p>本站使用方法</p>
 </blockquote>
 
@@ -18,6 +18,12 @@ tags: Tools
   </li>
   <li>编译
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
+</code></pre></div>    </div>
+  </li>
+  <li>浏览器预览
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll server
+// url
+Server address: http://127.0.0.1:4000/
 </code></pre></div>    </div>
   </li>
   <li>提交即可</li>

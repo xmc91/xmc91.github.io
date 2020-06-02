@@ -5,9 +5,165 @@
     <description>风一样de男子</description>
     <link>//</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 28 May 2020 11:31:43 +0800</pubDate>
-    <lastBuildDate>Thu, 28 May 2020 11:31:43 +0800</lastBuildDate>
+    <pubDate>Tue, 02 Jun 2020 17:47:58 +0800</pubDate>
+    <lastBuildDate>Tue, 02 Jun 2020 17:47:58 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Asplugin</title>
+        <description>&lt;p&gt;layout: post
+title: ‘Plugin 一蓑烟雨任平生’
+author: WindMan
+date: 2020-06-02
+categories: Plugin 
+tags: Plugin 
+—&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;【定风波·莫听穿林打叶声】 [宋代：苏轼]
+三月七日，沙湖道中遇雨，雨具先去，同行皆狼狈，余独不觉。已而遂晴，故作此。
+莫听穿林打叶声，何妨吟啸且徐行。竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。
+料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;as-插件集合&quot;&gt;AS 插件集合&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ECTranslation
+    &lt;blockquote&gt;
+      &lt;p&gt;翻译，大大滴有用，拯救 Chinese English&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;GenerateAllSetter
+    &lt;blockquote&gt;
+      &lt;p&gt;生成一个对象的所有的setter方法，当时AS默认自带&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;SequenceDiagram
+    &lt;blockquote&gt;
+      &lt;p&gt;生成简单序列图。
+单击图形形状来导航代码。
+从图中删除类。
+将图表导出为图像。
+通过“设置”&amp;gt;“其他设置”&amp;gt;“序列”从图表中排除类&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Leetcode Editor
+    &lt;blockquote&gt;
+      &lt;p&gt;光天化日之下摸鱼&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;GsonFormat
+    &lt;blockquote&gt;
+      &lt;p&gt;json里的方天画戟&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Tue, 02 Jun 2020 00:00:00 +0800</pubDate>
+        <link>/2020/06/02/ASPlugin.html</link>
+        <guid isPermaLink="true">/2020/06/02/ASPlugin.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Gradle 水龙吟</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;【水龙吟·次韵章质夫杨花词】[宋代：苏轼]
+似花还似非花，也无人惜从教坠。抛家傍路，思量却是，无情有思。萦损柔肠，困酣娇眼，欲开还闭。梦随风万里，寻郎去处，又还被、莺呼起。
+不恨此花飞尽，恨西园、落红难缀。晓来雨过，遗踪何在？一池萍碎。春色三分，二分尘土，一分流水。细看来，不是杨花，点点是离人泪。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://services.gradle.org/&quot;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;task&quot;&gt;Task&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Copy&lt;/li&gt;
+  &lt;li&gt;Delete&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Mon, 01 Jun 2020 00:00:00 +0800</pubDate>
+        <link>/2020/06/01/gradle.html</link>
+        <guid isPermaLink="true">/2020/06/01/gradle.html</guid>
+        
+        <category>Gradle</category>
+        
+        
+        <category>Kotlin</category>
+        
+      </item>
+    
+      <item>
+        <title>Kotlin 蓦然回首</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;【青玉案·元夕】[辛弃疾]&lt;br /&gt;
+东风夜放花千树，更吹落，星如雨。宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。
+蛾儿雪柳黄金缕，笑语盈盈暗香去。众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;正本清源
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;https://kotlinlang.org/&quot;&gt;官方&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.kotlincn.net/docs/reference/basic-syntax.html&quot;&gt;开发文档&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;工欲善其事，必先利其器
+    &lt;ol&gt;
+      &lt;li&gt;IntelliJ IDEA&lt;/li&gt;
+      &lt;li&gt;Eclipse&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;支持和JAVA混合开发&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;变量声明
+```&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;变量声明比JAVA多了个var（变量）、val(常量)，其他类型会自动推断
+```&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;函数
+```&lt;/li&gt;
+  &lt;li&gt;函数声明用fun&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;override 覆盖超类方法,修饰fun
+```&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;类
+```&lt;/li&gt;
+  &lt;li&gt;class声明类，没有new&lt;/li&gt;
+  &lt;li&gt;类的继承，用：，超类在后&lt;/li&gt;
+  &lt;li&gt;所有对象的超类是 Any&lt;/li&gt;
+  &lt;li&gt;abstract修饰class&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;主构造函数和类声明在一起，次级构造函数可以通过this委托&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;内部类用inner修饰&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;只保存数据的类用data修饰&lt;/li&gt;
+  &lt;li&gt;泛型同java&lt;/li&gt;
+  &lt;li&gt;接口用enum修饰
+```&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Sun, 31 May 2020 00:00:00 +0800</pubDate>
+        <link>/2020/05/31/kotlin.html</link>
+        <guid isPermaLink="true">/2020/05/31/kotlin.html</guid>
+        
+        <category>Kotlin</category>
+        
+        
+        <category>Kotlin</category>
+        
+      </item>
     
       <item>
         <title>Android CameraX</title>
@@ -30,8 +186,15 @@
       </item>
     
       <item>
-        <title>Handle的盆友们</title>
+        <title>Handle 水调歌头</title>
         <description>&lt;blockquote&gt;
+  &lt;p&gt;【水调歌头·明月几时有】  [宋代： 苏轼]
+丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。
+明月几时有？把酒问青天。不知天上宫阙，今夕是何年。我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间。
+转朱阁，低绮户，照无眠。不应有恨，何事长向别时圆？人有悲欢离合，月有阴晴圆缺，此事古难全。但愿人长久，千里共婵娟。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
   &lt;p&gt;Handle通过线程的MessageQueue发送和处理Message和Runnable对象，每一个Handle实例和一个单例的Thread及它的MessageQueue相关联。
 创建一个Handle的时候，他就绑定到线程及对应的MessageQueue，此后，Handle将会处理Message，把Message发送到MessageQueue，并且处理
 从MessageQueue里出来的Message。Handle主要有两个作用：定时处理Message；把不同线程Action排队。通过不能的方法，可以马上执行也可以
@@ -354,169 +517,6 @@ https://blog.csdn.net/qq_34895720/article/details/102859115?utm_medium=distribut
         
         
         <category>read</category>
-        
-      </item>
-    
-      <item>
-        <title>Nodejs 环境搭建</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;NodeJs 磨刀霍霍向猪羊&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;nvm：管理各个node版本，便于不同项目使用不同node版本；&lt;/li&gt;
-  &lt;li&gt;Node：无法可说，主角&lt;/li&gt;
-  &lt;li&gt;npm：node的媳妇兼秘书，安装卸载node中间件&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;安装nvm&quot;&gt;安装nvm&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 随便用那个都行
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;nvm example&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Example:
-nvm install 8.0.0           Install a specific version number
-nvm use 8.0              Use the latest available 8.0.x release
-nvm run 6.10.3 app.js         Run app.js using node 6.10.3
-nvm exec 4.8.3 node app.js      
-nvm alias default 8.1.0       
-nvm alias default node
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;卸载&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;to remove, delete, or uninstall nvm - just remove the `$NVM_DIR` folder (usually `~/.nvm`)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;实操&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 安装node 8.0.0
-nvm install 8.0.0
-Downloading and installing node v8.0.0...
-Downloading https://nodejs.org/dist/v8.0.0/node-v8.0.0-darwin-x64.tar.gz...
-\############################################################################################# 100.0%
-Computing checksum with shasum -a 256
-Checksums matched!
-Now using node v8.0.0 (npm v5.0.0)
-Creating default alias: default -&amp;gt; 8.0.0 (-&amp;gt; v8.0.0)
-// 安装node 10.0.0
-nvm install 10.0.0
-Downloading and installing node v10.0.0...
-Downloading https://nodejs.org/dist/v10.0.0/node-v10.0.0-darwin-x64.tar.gz...
-\############################################################################################# 100.0%
-Computing checksum with shasum -a 256
-Checksums matched!
-Now using node v10.0.0 (npm v5.6.0)
-// 重命名node版本
-nvm alias n10 10.0.0
-nvm alias n8 8.0.0
-// 切换版本
-nvm use n10
-nvm use n8
-// 查看可用版本
-nvm ls
--&amp;gt;    v8.0.0
-​    v10.0.0
-​     system
-default -&amp;gt; 8.0.0 (-&amp;gt; v8.0.0)
-n8 -&amp;gt; 8.0.0 (-&amp;gt; v8.0.0)
-n10 -&amp;gt; 10.0.0 (-&amp;gt; v10.0.0)
-node -&amp;gt; stable (-&amp;gt; v10.0.0) (default)
-stable -&amp;gt; 10.0 (-&amp;gt; v10.0.0) (default)
-// 安装稳定版本
-nvm install stable
-Downloading and installing node v13.3.0...
-Downloading https://nodejs.org/dist/v13.3.0/node-v13.3.0-darwin-x64.tar.gz...
-\############################################################################################# 100.0%
-Computing checksum with shasum -a 256
-Checksums matched!
-Now using node v13.3.0 (npm v6.13.1)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;配置环境变量&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 编辑配置文件
-vim .bash_profile
-// 编辑
-export NVM_DIR=&quot;$HOME/.nvm&quot;
-[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;amp;&amp;amp; \. &quot;$NVM_DIR/nvm.sh&quot;  # This loads nvm
-// 重载配置文件
-source .bash_profile
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;h3 id=&quot;npm&quot;&gt;npm&lt;/h3&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;切换为淘宝&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;npm install -g cnpm –registry=&lt;a href=&quot;https://links.jianshu.com/go?to=https%3A%2F%2Fregistry.npm.taobao.org&quot;&gt;https://registry.npm.taobao.org&lt;/a&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;直接敲npm/cnpm 可以查看usage&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-</description>
-        <pubDate>Sun, 22 Dec 2019 00:00:00 +0800</pubDate>
-        <link>/2019/12/22/nodejs-env.html</link>
-        <guid isPermaLink="true">/2019/12/22/nodejs-env.html</guid>
-        
-        <category>nodejs</category>
-        
-        
-        <category>node</category>
-        
-      </item>
-    
-      <item>
-        <title>Hello Jekyll</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;本站使用方法&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;内容
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;在_post路径下，编写内容
-编写头
----
-layout: post
-title: 'Hello Jekyll'
-date: 2019-12-22
-author: WindMan
-cover:'http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg'
-tags: Tools
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;编译
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;提交即可&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll主题&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-</description>
-        <pubDate>Sun, 22 Dec 2019 00:00:00 +0800</pubDate>
-        <link>/2019/12/22/hello-jekyll.html</link>
-        <guid isPermaLink="true">/2019/12/22/hello-jekyll.html</guid>
-        
-        <category>Tools</category>
-        
         
       </item>
     

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Android App性能优化 - WindMan Blog</title>
+    <title>Kotlin 蓦然回首 - WindMan Blog</title>
     <meta name="author"  content="WindMan">
-    <meta name="description" content="Android App性能优化">
-    <meta name="keywords"  content="Android">
+    <meta name="description" content="Kotlin 蓦然回首">
+    <meta name="keywords"  content="Kotlin">
     <!-- Open Graph -->
-    <meta property="og:title" content="Android App性能优化 - WindMan Blog">
+    <meta property="og:title" content="Kotlin 蓦然回首 - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html">
+    <meta property="og:url" content="/2020/05/31/kotlin.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -109,23 +109,26 @@ Author: Ray-Eldath
 
 
   <header
-    class="g-banner post-header post-pattern-circuitBoard bgcolor-pink post-no-cover"
+    class="g-banner post-header post-pattern-circuitBoard bgcolor-pink "
     data-theme="pink"
   >
     <div class="post-wrapper">
       <div class="post-tags">
         
           
-            <a href="/tags.html#Android" class="post-tag">Android</a>
+            <a href="/tags.html#Kotlin" class="post-tag">Kotlin</a>
           
         
       </div>
-      <h1>Android App性能优化</h1>
+      <h1>Kotlin 蓦然回首</h1>
       <div class="post-meta">
         <span class="post-meta-item"><i class="iconfont icon-author"></i>WindMan</span>
-        <time class="post-meta-item" datetime="20-05-06"><i class="iconfont icon-date"></i>06 May 2020</time>
+        <time class="post-meta-item" datetime="20-05-31"><i class="iconfont icon-date"></i>31 May 2020</time>
       </div>
     </div>
+    
+    <div class="filter"></div>
+      <div class="post-cover" style="background: url('/imgs/kotlin.png') center no-repeat; background-size: cover;"></div>
     
   </header>
 
@@ -134,60 +137,57 @@ Author: Ray-Eldath
 
     <article class="markdown-body">
       <blockquote>
-  <p>本文从最初的编码，编码 中及后的检查，编译，编译后的apk瘦身，对APP的整个产生过程优化。</p>
-  <h2 id="编码优化">编码优化</h2>
-  <ul>
-    <li>handler 作为内部类导致内测泄露，由于非静态内部匿名类会持有外部类的引用，可能会导致外部类无法即使释放。
-```
-public class HandlerActivity extends Activity{</li>
-  </ul>
+  <p>【青玉案·元夕】[辛弃疾]<br />
+东风夜放花千树，更吹落，星如雨。宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。
+蛾儿雪柳黄金缕，笑语盈盈暗香去。众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private static class InnerHandler extends Handler{
-	// 持有弱引用
-	private final WeakReference&lt;HandlerActivity&gt; mActivity;
-	
-	public InnerHandler(HandlerActivity activity){
-		mActivity = new WeakReference&lt;HandlerActivity&gt;(activity);
-	}
-	
-	@Override
-	public void handleMessage(Message msg){
-		HandlerActivity activity = mActivity.get();
-		if(activity != null){
-		}
-	}
-}
-
-private final InnerHandler mHandler = new InnerHandler(this);
-
-/*
-* 静态匿名内部类不会持有外部类的引用
-*/
-private static final Runnable runnable = new Runnable(){
-
-	@Override
-	public void run(){
-	}
-};
-
-@Override
-protected void onCreate(Bundle savedInstanceState){
-	super.onCreate(savedInstanceState);
-	
-	//延迟5分子发送消息
-	mHandler.postDelayed(runnable, 1000*60*5);
-} }	
-</code></pre></div></div>
-
-<p>————————————————
-版权声明：本文为CSDN博主「augfun」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/augfun/article/details/82356871
+<ul>
+  <li>正本清源
+    <ol>
+      <li><a href="https://kotlinlang.org/">官方</a></li>
+      <li><a href="https://www.kotlincn.net/docs/reference/basic-syntax.html">开发文档</a></li>
+    </ol>
+  </li>
+  <li>工欲善其事，必先利其器
+    <ol>
+      <li>IntelliJ IDEA</li>
+      <li>Eclipse</li>
+    </ol>
+  </li>
+  <li>
+    <p>支持和JAVA混合开发</p>
+  </li>
+  <li>变量声明
+```</li>
+  <li>
+    <p>变量声明比JAVA多了个var（变量）、val(常量)，其他类型会自动推断
 ```</p>
-<h2 id="检查工具lint">检查工具lint</h2>
-<p><a href="http://tools.android.com/tips/lint">主要参考</a>
-https://blog.csdn.net/luzhenyuxfcy/article/details/79398761
-https://blog.csdn.net/qq_34895720/article/details/102859115?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3</p>
+  </li>
+  <li>函数
+```</li>
+  <li>函数声明用fun</li>
+  <li>
+    <p>override 覆盖超类方法,修饰fun
+```</p>
+  </li>
+  <li>类
+```</li>
+  <li>class声明类，没有new</li>
+  <li>类的继承，用：，超类在后</li>
+  <li>所有对象的超类是 Any</li>
+  <li>abstract修饰class</li>
+  <li>
+    <p>主构造函数和类声明在一起，次级构造函数可以通过this委托</p>
+  </li>
+  <li>
+    <p>内部类用inner修饰</p>
+  </li>
+  <li>只保存数据的类用data修饰</li>
+  <li>泛型同java</li>
+  <li>接口用enum修饰
+```</li>
+</ul>
 
 <iframe type="text/html" width="100%" height="385" src="http://www.youtube.com/embed/gfmjMWjn-Xg" frameborder="0"></iframe>
 
@@ -230,21 +230,24 @@ https://blog.csdn.net/qq_34895720/article/details/102859115?utm_medium=distribut
     <section class="post-footer-item read-next">
       
       <div class="read-next-item">
-        <a href="/2020/05/06/Handle.html" class="read-next-link"></a>
+        <a href="/2020/06/01/gradle.html" class="read-next-link"></a>
         <section>
-          <span>Handle 水调歌头</span>
-          <p>  【水调歌头·明月几时有】  [宋代： 苏轼]丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。明月几时有？把酒问青天...</p>
+          <span>Gradle 水龙吟</span>
+          <p>  【水龙吟·次韵章质夫杨花词】[宋代：苏轼]似花还似非花，也无人惜从教坠。抛家傍路，思量却是，无情有思。萦损柔肠...</p>
         </section>
+        
+        <div class="filter"></div>
+        <img src="/imgs/kotlin.png" alt="">
         
      </div>
       
 
       
       <div class="read-next-item">
-        <a href="/2020/05/06/Android%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95.html" class="read-next-link"></a>
+        <a href="/2020/05/06/CameraX.html" class="read-next-link"></a>
           <section>
-            <span>Android学习资源</span>
-            <p>  Android 大本营          Android最根本的学习地儿      </p>
+            <span>Android CameraX</span>
+            <p>  Android的碎片化导致处理相机并没有那么容易，But，新的 Jetpack 库可帮助您以简单且一致的方式针...</p>
           </section>
           
       </div>

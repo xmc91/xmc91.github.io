@@ -23,10 +23,15 @@ tags: Tools
   ---
   ```
 + 编译
-  ```
-  jekyll build
-  ```
-
+``` 
+jekyll build
+```
++ 浏览器预览
+``` 
+jekyll server
+// url
+Server address: http://127.0.0.1:4000/
+```
 + 提交即可
 + [Jekyll主题](http://jekyllthemes.org/)
 
