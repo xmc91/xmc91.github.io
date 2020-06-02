@@ -5,21 +5,13 @@
     <description>风一样de男子</description>
     <link>//</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 02 Jun 2020 17:47:58 +0800</pubDate>
-    <lastBuildDate>Tue, 02 Jun 2020 17:47:58 +0800</lastBuildDate>
+    <pubDate>Tue, 02 Jun 2020 17:52:41 +0800</pubDate>
+    <lastBuildDate>Tue, 02 Jun 2020 17:52:41 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
-        <title>Asplugin</title>
-        <description>&lt;p&gt;layout: post
-title: ‘Plugin 一蓑烟雨任平生’
-author: WindMan
-date: 2020-06-02
-categories: Plugin 
-tags: Plugin 
-—&lt;/p&gt;
-
-&lt;blockquote&gt;
+        <title>Plugin 一蓑烟雨任平生</title>
+        <description>&lt;blockquote&gt;
   &lt;p&gt;【定风波·莫听穿林打叶声】 [宋代：苏轼]
 三月七日，沙湖道中遇雨，雨具先去，同行皆狼狈，余独不觉。已而遂晴，故作此。
 莫听穿林打叶声，何妨吟啸且徐行。竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。
@@ -66,6 +58,10 @@ tags: Plugin
         <link>/2020/06/02/ASPlugin.html</link>
         <guid isPermaLink="true">/2020/06/02/ASPlugin.html</guid>
         
+        <category>Plugin</category>
+        
+        
+        <category>Plugin</category>
         
       </item>
     
