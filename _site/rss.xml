@@ -3,11 +3,218 @@
   <channel>
     <title>WindMan Blog</title>
     <description>风一样de男子</description>
-    <link>//</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 02 Jun 2020 17:52:41 +0800</pubDate>
-    <lastBuildDate>Tue, 02 Jun 2020 17:52:41 +0800</lastBuildDate>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 06 Jun 2020 13:24:07 +0800</pubDate>
+    <lastBuildDate>Sat, 06 Jun 2020 13:24:07 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>红楼梦经典诗词</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;文字在这里堆砌成万里长城&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;红楼梦17首经典诗词&quot;&gt;红楼梦17首经典诗词&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;作者题绝
+    &lt;blockquote&gt;
+      &lt;p&gt;满纸荒唐言，一把辛酸泪！
+都云作者痴，谁解其中味？&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;太虚幻境楹联
+    &lt;blockquote&gt;
+      &lt;p&gt;假作真时真亦假，无为有处有还无。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;好了歌
+    &lt;blockquote&gt;
+      &lt;p&gt;世人都晓神仙好，惟有功名忘不了。
+古今将相在何方，荒冢一堆草没了。
+世人都晓神仙好，只有金银忘不了。
+终朝只恨聚无多，及到多时眼闭了。
+世人都晓神仙好，只有娇妻忘不了。
+君生日日说恩情，君死又随人去了。
+世人都晓神仙好，只有儿孙忘不了。
+痴心父母古来多，孝顺儿孙谁见了。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;王叔晖 林黛玉  终身误
+    &lt;blockquote&gt;
+      &lt;p&gt;都道是金玉良姻，俺只念木石前盟。
+空对着，山中高士晶莹雪；
+终不忘，世外仙姝寂寞林。
+叹人间，美中不足今方信。
+纵然是齐眉举案，到底意难平。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;枉凝眉
+    &lt;blockquote&gt;
+      &lt;p&gt;一个是阆苑仙葩，一个是美玉无暇。
+若说没奇缘，今生偏又遇着他；
+若说有奇缘，如何心事终虚化？
+一个枉自嗟呀，一个空劳牵挂。
+一个是水中月，一个是镜中花。
+想眼中能有多少泪珠儿，
+怎经得秋流到冬尽，春流到夏！&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;恨无常
+    &lt;blockquote&gt;
+      &lt;p&gt;喜荣华正好，恨无常又到。
+眼睁睁，把万事全抛。
+荡悠悠，把芳魂消耗。
+望家乡，路远山高。
+故向爹娘梦里相寻告：
+儿命已入黄泉，
+天伦呵，须要退步抽身早！&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;王叔晖 王熙凤-平儿  世难容
+    &lt;blockquote&gt;
+      &lt;p&gt;气质美如兰，才华阜比仙。
+天生成孤僻人皆罕。
+你道是啖肉食腥膻，视绮罗俗厌；
+却不知太高人愈妒，过洁世同嫌。
+可叹这，青灯古殿人将老；
+辜负了，红粉朱楼春色阑。
+到头来，依旧是风尘肮脏违心愿。
+好一似，无暇白玉遭泥陷；
+又何须，王孙公子叹无缘。
+说到辛酸处，荒唐愈可悲。
+由来同一梦，休笑世人痴！&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;聪明累
+    &lt;blockquote&gt;
+      &lt;p&gt;机关算尽太聪明，反算了卿卿性命。
+生前心已碎，死后性空灵。
+家富人宁，终有个家亡人散各奔腾。
+枉费了，意悬悬半世心；
+好一似，荡悠悠三更梦。
+忽喇喇似大厦倾，昏惨惨似灯将尽。
+呀！一场欢喜忽悲辛。叹人世，终难定。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;晚韶华
+    &lt;blockquote&gt;
+      &lt;p&gt;镜里恩情，更那堪梦里功名！
+那美韶华去之何迅！再休提绣帐鸳衾。
+只这带珠冠，
+披凤袄，也抵不了无常性命。
+虽说是，
+人生莫受老来贫，也须要阴骘积儿孙。
+气昂昂头戴簪缨，气昂昂头戴簪缨；
+光灿灿胸悬金印；
+威赫赫爵禄高登，威赫赫爵禄高登；
+昏惨惨黄泉路近。
+问古今将相可还存？
+也只是虚名儿与后人钦敬。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;王叔晖 晴雯补裘  好事终
+    &lt;blockquote&gt;
+      &lt;p&gt;画梁春尽落香尘。
+擅风情，秉月貌，便是败家的根本。
+箕裘颓堕皆从敬，家事消亡首罪宁。
+宿孽总因情。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;西江月
+    &lt;blockquote&gt;
+      &lt;p&gt;无故寻愁觅恨，有时似傻如狂；
+纵然生得好皮囊，腹内原来草莽。
+潦倒不通世务，愚顽怕读文章；
+行为偏僻性乖张，那管世人诽谤！
+富贵不知乐业，贫穷难耐凄凉；
+可怜辜负好韶光，于国于家无望。
+天下无能第一，古今不肖无双；
+寄言纨袴与膏粱，莫效此儿形状！&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;黛玉容貌
+    &lt;blockquote&gt;
+      &lt;p&gt;两弯似蹙非蹙笼烟眉，
+一双似喜非喜含情目。
+态生两靥之愁，娇袭一身之病。
+泪光点点，娇喘微微。
+闲静时如姣花照水，行动处似弱柳扶风。
+心较比干多一窍，病如西子胜三分。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;王叔晖 憨湘云醉眠芍药裀  护官符
+    &lt;blockquote&gt;
+      &lt;p&gt;贾不假，白玉为堂金作马。
+阿房宫，三百里，
+住不下金陵一个史。
+东海缺少白玉床，龙王来请金陵王。
+丰年好大雪，珍珠如土金如铁。
+宁国府上房楹联
+世事洞明皆学问，人情练达即文章。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;秦可卿房内楹联
+    &lt;blockquote&gt;
+      &lt;p&gt;嫩寒锁梦因春冷，芳气袭人是酒香。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;薄命司楹联
+    &lt;blockquote&gt;
+      &lt;p&gt;春恨秋悲皆自惹，花容月貌为谁妍。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;警幻仙姑作歌曰
+    &lt;blockquote&gt;
+      &lt;p&gt;春梦随云散，飞花逐水流。
+寄言众儿女，何必觅闲愁。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;王叔晖 红楼梦人物  葬花吟黛玉
+    &lt;blockquote&gt;
+      &lt;p&gt;花谢花飞花满天，红消香断有谁怜？
+游丝软系飘春榭，落絮轻沾扑绣帘。
+闺中女儿惜春暮，愁绪满怀无处诉，
+手把花除出绣闺，忍踏落花来复去。
+柳丝榆荚自芳菲，不管桃飘与李飞。
+桃李明年能再发，明年闺中知有谁？
+三月香巢已垒成，梁间燕子太无情！
+明年花发虽可啄，却不道人去梁空巢也倾。
+一年三百六十日，风刀霜剑严相逼，
+明媚鲜妍能几时，一朝飘泊难寻觅。
+花开易见落难寻，阶前愁杀葬花人，
+独倚花锄泪暗洒，洒上空枝见血痕。
+杜鹃无语正黄昏，荷锄归去掩重门。
+青灯照壁人初睡，冷雨敲窗被未温。
+怪奴底事倍伤神，半为怜春半恼春：
+怜春忽至恼忽去，至又无言去不闻。
+昨宵庭外悲歌发，知是花魂与鸟魂？
+花魂鸟魂总难留，鸟自无咽花自羞。
+愿奴肋下生双翼，随花飞到天尽头。
+天尽头，何处有香丘？
+未若锦囊收艳骨，一抔净土掩风流。
+质本洁来还洁去，强于污掉陷渠沟。
+尔今死去侬收葬，未卜侬身何日丧？
+侬今葬花人笑痴，他年葬侬知是谁？
+试看春残花渐落，便是红颜老死时。
+一朝春尽红颜老，花落人亡两不知！&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Sat, 06 Jun 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</guid>
+        
+        <category>read</category>
+        
+        
+        <category>read</category>
+        
+      </item>
     
       <item>
         <title>Plugin 一蓑烟雨任平生</title>
@@ -55,8 +262,8 @@
 &lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Tue, 02 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/02/ASPlugin.html</link>
-        <guid isPermaLink="true">/2020/06/02/ASPlugin.html</guid>
+        <link>http://localhost:4000/2020/06/02/ASPlugin.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/02/ASPlugin.html</guid>
         
         <category>Plugin</category>
         
@@ -83,13 +290,13 @@
 &lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Mon, 01 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/01/gradle.html</link>
-        <guid isPermaLink="true">/2020/06/01/gradle.html</guid>
+        <link>http://localhost:4000/2020/06/01/gradle.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/01/gradle.html</guid>
         
         <category>Gradle</category>
         
         
-        <category>Kotlin</category>
+        <category>Gradle</category>
         
       </item>
     
@@ -151,8 +358,8 @@
 &lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Sun, 31 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/31/kotlin.html</link>
-        <guid isPermaLink="true">/2020/05/31/kotlin.html</guid>
+        <link>http://localhost:4000/2020/05/31/kotlin.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/31/kotlin.html</guid>
         
         <category>Kotlin</category>
         
@@ -171,8 +378,8 @@
 &lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/06/CameraX.html</link>
-        <guid isPermaLink="true">/2020/05/06/CameraX.html</guid>
+        <link>http://localhost:4000/2020/05/06/CameraX.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/06/CameraX.html</guid>
         
         <category>Android</category>
         
@@ -227,13 +434,11 @@ Message的队列，排序里边的Message，适当的时候取出来&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt; &lt;/p&gt;
-
 &lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/06/Handle.html</link>
-        <guid isPermaLink="true">/2020/05/06/Handle.html</guid>
+        <link>http://localhost:4000/2020/05/06/Handle.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/06/Handle.html</guid>
         
         <category>Android</category>
         
@@ -303,8 +508,8 @@ https://blog.csdn.net/qq_34895720/article/details/102859115?utm_medium=distribut
 &lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</link>
-        <guid isPermaLink="true">/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</guid>
+        <link>http://localhost:4000/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</guid>
         
         <category>Android</category>
         
@@ -341,8 +546,8 @@ https://blog.csdn.net/qq_34895720/article/details/102859115?utm_medium=distribut
 &lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/06/Android%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95.html</link>
-        <guid isPermaLink="true">/2020/05/06/Android%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95.html</guid>
+        <link>http://localhost:4000/2020/05/06/Android%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/06/Android%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95.html</guid>
         
         <category>Android</category>
         
@@ -421,8 +626,8 @@ https://blog.csdn.net/qq_34895720/article/details/102859115?utm_medium=distribut
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 31 Dec 2019 00:00:00 +0800</pubDate>
-        <link>/2019/12/31/nice-video.html</link>
-        <guid isPermaLink="true">/2019/12/31/nice-video.html</guid>
+        <link>http://localhost:4000/2019/12/31/nice-video.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/12/31/nice-video.html</guid>
         
         <category>video</category>
         
@@ -463,56 +668,13 @@ https://blog.csdn.net/qq_34895720/article/details/102859115?utm_medium=distribut
 &lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Sun, 22 Dec 2019 00:00:00 +0800</pubDate>
-        <link>/2019/12/22/wx-open.html</link>
-        <guid isPermaLink="true">/2019/12/22/wx-open.html</guid>
+        <link>http://localhost:4000/2019/12/22/wx-open.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/12/22/wx-open.html</guid>
         
         <category>小程序</category>
         
         
         <category>wx</category>
-        
-      </item>
-    
-      <item>
-        <title>好诗呀</title>
-        <description>&lt;h1 id=&quot;豪放&quot;&gt;豪放&lt;/h1&gt;
-
-&lt;h2 id=&quot;-念奴娇-赤壁怀古-&quot;&gt;&lt;center&gt; 念奴娇 赤壁怀古 &lt;/center&gt;&lt;/h2&gt;
-&lt;center&gt;大江东去，浪淘尽，千古风流人物。&lt;/center&gt;
-&lt;center&gt;故垒西边，人道是，三国周郎赤壁。&lt;/center&gt;
-&lt;center&gt;乱石穿空，惊涛拍岸，卷起千堆雪。&lt;/center&gt;
-&lt;center&gt;江山如画，一时多少豪杰。&lt;/center&gt;
-&lt;center&gt;遥想公瑾当年，小乔初嫁了，雄姿英发。&lt;/center&gt;
-&lt;center&gt;羽扇纶巾，谈笑间，樯橹灰飞烟灭。&lt;/center&gt;
-&lt;center&gt;故国神游，多情应笑我，早生华发。&lt;/center&gt;
-&lt;center&gt;人生如梦，一尊还酹江月&lt;/center&gt;
-
-&lt;h1 id=&quot;婉约&quot;&gt;婉约&lt;/h1&gt;
-
-&lt;h1 id=&quot;声声慢寻寻觅觅&quot;&gt;声声慢·寻寻觅觅&lt;/h1&gt;
-
-&lt;p&gt;[宋] &lt;a href=&quot;http://www.shicimingju.com/chaxun/zuozhe/77.html&quot;&gt;李清照&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;寻寻觅觅，冷冷清清，凄凄惨惨戚戚。
-乍暖还寒时候，最难将息。
-三杯两盏淡酒，怎敌他、晚来风急？
-雁过也，正伤心，却是旧时相识。&lt;/p&gt;
-
-&lt;p&gt;满地黄花堆积。憔悴损，如今有谁堪摘？
-守着窗儿，独自怎生得黑？
-梧桐更兼细雨，到黄昏、点点滴滴。
-这次第，怎一个愁字了得！&lt;/p&gt;
-
-&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-</description>
-        <pubDate>Sun, 22 Dec 2019 00:00:00 +0800</pubDate>
-        <link>/2019/12/22/read.html</link>
-        <guid isPermaLink="true">/2019/12/22/read.html</guid>
-        
-        <category>read</category>
-        
-        
-        <category>read</category>
         
       </item>
     
