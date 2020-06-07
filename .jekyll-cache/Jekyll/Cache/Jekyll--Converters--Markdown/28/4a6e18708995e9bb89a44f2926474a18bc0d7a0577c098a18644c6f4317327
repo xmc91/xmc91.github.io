@@ -1,0 +1,59 @@
+I"�<blockquote>
+  <p>【青玉案·元夕】[辛弃疾]<br />
+东风夜放花千树，更吹落，星如雨。宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。
+蛾儿雪柳黄金缕，笑语盈盈暗香去。众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。</p>
+</blockquote>
+
+<ul>
+  <li>正本清源
+    <ol>
+      <li><a href="https://kotlinlang.org/">官方</a></li>
+      <li><a href="https://www.kotlincn.net/docs/reference/basic-syntax.html">开发文档</a></li>
+    </ol>
+  </li>
+  <li>工欲善其事，必先利其器
+    <ol>
+      <li>IntelliJ IDEA</li>
+      <li>Eclipse</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="../../../../assets/img/kotlin.png" alt="test" /></p>
+
+<ul>
+  <li>
+    <p>支持和JAVA混合开发</p>
+  </li>
+  <li>变量声明
+```</li>
+  <li>
+    <p>变量声明比JAVA多了个var（变量）、val(常量)，其他类型会自动推断
+```</p>
+  </li>
+  <li>函数
+```</li>
+  <li>函数声明用fun</li>
+  <li>
+    <p>override 覆盖超类方法,修饰fun
+```</p>
+  </li>
+  <li>类
+```</li>
+  <li>class声明类，没有new</li>
+  <li>类的继承，用：，超类在后</li>
+  <li>所有对象的超类是 Any</li>
+  <li>abstract修饰class</li>
+  <li>
+    <p>主构造函数和类声明在一起，次级构造函数可以通过this委托</p>
+  </li>
+  <li>
+    <p>内部类用inner修饰</p>
+  </li>
+  <li>只保存数据的类用data修饰</li>
+  <li>泛型同java</li>
+  <li>接口用enum修饰
+```</li>
+</ul>
+
+:ET

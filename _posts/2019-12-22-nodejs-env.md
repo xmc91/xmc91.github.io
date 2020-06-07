@@ -41,10 +41,9 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 
   
 
-+ 实操
++ 安装node 8.0.0
 
   ```
-  // 安装node 8.0.0
   nvm install 8.0.0
   Downloading and installing node v8.0.0...
   Downloading https://nodejs.org/dist/v8.0.0/node-v8.0.0-darwin-x64.tar.gz...
@@ -53,7 +52,9 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
   Checksums matched!
   Now using node v8.0.0 (npm v5.0.0)
   Creating default alias: default -> 8.0.0 (-> v8.0.0)
-  // 安装node 10.0.0
+  ```
++ 安装node 10.0.0
+  ```
   nvm install 10.0.0
   Downloading and installing node v10.0.0...
   Downloading https://nodejs.org/dist/v10.0.0/node-v10.0.0-darwin-x64.tar.gz...
@@ -61,13 +62,19 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
   Computing checksum with shasum -a 256
   Checksums matched!
   Now using node v10.0.0 (npm v5.6.0)
-  // 重命名node版本
+  ```
++ 重命名node版本
+  ```
   nvm alias n10 10.0.0
   nvm alias n8 8.0.0
-  // 切换版本
+  ```
++ 切换版本
+  ```
   nvm use n10
   nvm use n8
-  // 查看可用版本
+  ```
++ 查看可用版本
+  ```
   nvm ls
   ->    v8.0.0
   ​    v10.0.0
@@ -77,7 +84,9 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
   n10 -> 10.0.0 (-> v10.0.0)
   node -> stable (-> v10.0.0) (default)
   stable -> 10.0 (-> v10.0.0) (default)
-  // 安装稳定版本
+  ```
++ 安装稳定版本
+  ```
   nvm install stable
   Downloading and installing node v13.3.0...
   Downloading https://nodejs.org/dist/v13.3.0/node-v13.3.0-darwin-x64.tar.gz...
@@ -88,7 +97,6 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
   ```
 
   
-
 + 配置环境变量
 
   ```
@@ -107,6 +115,4 @@ source .bash_profile
 
   > npm install -g cnpm --registry=[https://registry.npm.taobao.org](https://links.jianshu.com/go?to=https%3A%2F%2Fregistry.npm.taobao.org)
 
-  + 直接敲npm/cnpm 可以查看usage
-
-<iframe type="text/html" width="100%" height="385" src="http://www.youtube.com/embed/gfmjMWjn-Xg" frameborder="0"></iframe>
++ 直接敲npm/cnpm 可以查看usage

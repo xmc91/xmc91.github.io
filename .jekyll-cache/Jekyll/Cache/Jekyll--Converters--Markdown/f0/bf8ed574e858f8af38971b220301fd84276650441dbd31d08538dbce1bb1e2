@@ -1,0 +1,41 @@
+I"�<blockquote>
+  <p>本站使用方法</p>
+</blockquote>
+
+<ul>
+  <li>内容
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>在_post路径下，编写内容
+编写头
+---
+layout: post
+title: 'Hello Jekyll'
+date: 2019-12-22
+author: WindMan
+cover:'http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg'
+tags: Tools
+---
+</code></pre></div>    </div>
+  </li>
+  <li>编译
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
+</code></pre></div>    </div>
+  </li>
+  <li>浏览器预览
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll server
+// url
+Server address: http://127.0.0.1:4000/
+</code></pre></div>    </div>
+  </li>
+  <li>图片相对路径引用
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/assets/*
+</code></pre></div>    </div>
+  </li>
+  <li>字体切换
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/assets/font
+</code></pre></div>    </div>
+  </li>
+  <li>提交即可</li>
+  <li><a href="http://jekyllthemes.org/">Jekyll主题</a></li>
+</ul>
+
+:ET

@@ -32,8 +32,17 @@ jekyll server
 // url
 Server address: http://127.0.0.1:4000/
 ```
+
++ 图片相对路径引用
+```
+/assets/*
+```
+
++ 字体切换
+```
+/assets/font
+```
+
 + 提交即可
 + [Jekyll主题](http://jekyllthemes.org/)
 
-
-<iframe type="text/html" width="100%" height="385" src="http://www.youtube.com/embed/gfmjMWjn-Xg" frameborder="0"></iframe>
