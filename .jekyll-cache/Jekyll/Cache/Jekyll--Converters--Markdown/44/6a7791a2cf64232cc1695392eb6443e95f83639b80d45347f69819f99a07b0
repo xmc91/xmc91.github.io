@@ -1,4 +1,4 @@
-I"d<blockquote>
+I"w<blockquote>
   <p>本文从最初的编码，编码 中及后的检查，编译，编译后的apk瘦身，对APP的整个产生过程优化。</p>
   <h2 id="编码优化">编码优化</h2>
   <ul>
@@ -8,7 +8,7 @@ public class HandlerActivity extends Activity{</li>
   </ul>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private static class InnerHandler extends Handler{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private static class InnerHandler extends Handler{
 	// 持有弱引用
 	private final WeakReference&lt;HandlerActivity&gt; mActivity;
 	

@@ -3,11 +3,11 @@
   <channel>
     <title>WindMan Blog</title>
     <description>风一样de男子</description>
-    <link>//</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 07 Jun 2020 16:19:45 +0800</pubDate>
-    <lastBuildDate>Sun, 07 Jun 2020 16:19:45 +0800</lastBuildDate>
-    <generator>Jekyll v4.0.0</generator>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 17 Jun 2020 23:31:32 +0800</pubDate>
+    <lastBuildDate>Wed, 17 Jun 2020 23:31:32 +0800</lastBuildDate>
+    <generator>Jekyll v4.1.0</generator>
     
       <item>
         <title>经典对子</title>
@@ -357,8 +357,8 @@
 
 </description>
         <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</link>
-        <guid isPermaLink="true">/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</guid>
+        <link>http://localhost:4000/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</guid>
         
         <category>read</category>
         
@@ -433,8 +433,8 @@
 
 </description>
         <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/07/music.html</link>
-        <guid isPermaLink="true">/2020/06/07/music.html</guid>
+        <link>http://localhost:4000/2020/06/07/music.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/07/music.html</guid>
         
         <category>read</category>
         
@@ -639,8 +639,8 @@
 
 </description>
         <pubDate>Sat, 06 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</link>
-        <guid isPermaLink="true">/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</guid>
+        <link>http://localhost:4000/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</guid>
         
         <category>read</category>
         
@@ -707,8 +707,8 @@
 
 </description>
         <pubDate>Tue, 02 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/02/ASPlugin.html</link>
-        <guid isPermaLink="true">/2020/06/02/ASPlugin.html</guid>
+        <link>http://localhost:4000/2020/06/02/ASPlugin.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/02/ASPlugin.html</guid>
         
         <category>Plugin</category>
         
@@ -734,8 +734,8 @@
 
 </description>
         <pubDate>Mon, 01 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/01/gradle.html</link>
-        <guid isPermaLink="true">/2020/06/01/gradle.html</guid>
+        <link>http://localhost:4000/2020/06/01/gradle.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/01/gradle.html</guid>
         
         <category>Gradle</category>
         
@@ -802,8 +802,8 @@
 
 </description>
         <pubDate>Sun, 31 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/31/kotlin.html</link>
-        <guid isPermaLink="true">/2020/05/31/kotlin.html</guid>
+        <link>http://localhost:4000/2020/05/31/kotlin.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/31/kotlin.html</guid>
         
         <category>Kotlin</category>
         
@@ -821,8 +821,8 @@
 
 </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/06/CameraX.html</link>
-        <guid isPermaLink="true">/2020/05/06/CameraX.html</guid>
+        <link>http://localhost:4000/2020/05/06/CameraX.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/06/CameraX.html</guid>
         
         <category>Android</category>
         
@@ -878,8 +878,8 @@ Message的队列，排序里边的Message，适当的时候取出来&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/06/Handle.html</link>
-        <guid isPermaLink="true">/2020/05/06/Handle.html</guid>
+        <link>http://localhost:4000/2020/05/06/Handle.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/06/Handle.html</guid>
         
         <category>Android</category>
         
@@ -900,7 +900,7 @@ public class HandlerActivity extends Activity{&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;private static class InnerHandler extends Handler{
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;private static class InnerHandler extends Handler{
 	// 持有弱引用
 	private final WeakReference&amp;lt;HandlerActivity&amp;gt; mActivity;
 	
@@ -945,8 +945,8 @@ https://blog.csdn.net/qq_34895720/article/details/102859115?utm_medium=distribut
 
 </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</link>
-        <guid isPermaLink="true">/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</guid>
+        <link>http://localhost:4000/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</guid>
         
         <category>Android</category>
         
@@ -982,8 +982,8 @@ https://blog.csdn.net/qq_34895720/article/details/102859115?utm_medium=distribut
 
 </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/06/Android%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95.html</link>
-        <guid isPermaLink="true">/2020/05/06/Android%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95.html</guid>
+        <link>http://localhost:4000/2020/05/06/Android%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/06/Android%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95.html</guid>
         
         <category>Android</category>
         
