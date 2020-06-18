@@ -1,4 +1,4 @@
-I"�<blockquote>
+I"�<blockquote>
   <p>本站使用方法</p>
 </blockquote>
 
@@ -38,4 +38,20 @@ Server address: http://127.0.0.1:4000/
   <li><a href="http://jekyllthemes.org/">Jekyll主题</a></li>
 </ul>
 
+<h2 id="window配置jekyll环境">window配置jekyll环境</h2>
+<ul>
+  <li>下载 <a href="https://rubyinstaller.org/downloads/"> Ruby+Devkit 2.5.8-1 (x64)</a>,这个是ruby及其安装包环境，自带gem。超级慢，不翻墙总是会失败</li>
+  <li>gem是ruby的包管理工具，可以下载ruby环境的各自依赖</li>
+  <li>gem install bundler</li>
+  <li>gem install jekyll,超级慢</li>
+  <li>此时jekyll build运行，可能会报错如下：</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dependency Error: Yikes! It looks like you don't have jek       yll-paginate or one of its dependencies installed.
+</code></pre></div></div>
+
+<ul>
+  <li>根据提示，gem install jekyll-paginate</li>
+  <li>ok</li>
+</ul>
 :ET
