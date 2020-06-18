@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nodejs 环境搭建 - WindMan Blog</title>
+    <title>皇帝 - WindMan Blog</title>
     <meta name="author"  content="WindMan">
-    <meta name="description" content="Nodejs 环境搭建">
-    <meta name="keywords"  content="nodejs">
+    <meta name="description" content="皇帝">
+    <meta name="keywords"  content="Android">
     <!-- Open Graph -->
-    <meta property="og:title" content="Nodejs 环境搭建 - WindMan Blog">
+    <meta property="og:title" content="皇帝 - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/2019/12/22/nodejs-env.html">
+    <meta property="og:url" content="/2020/06/18/%E7%9A%87%E5%B8%9D.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -116,14 +116,14 @@ Author: Ray-Eldath
       <div class="post-tags">
         
           
-            <a href="/tags.html#nodejs" class="post-tag">nodejs</a>
+            <a href="/tags.html#Android" class="post-tag">Android</a>
           
         
       </div>
-      <h1>Nodejs 环境搭建</h1>
+      <h1>皇帝</h1>
       <div class="post-meta">
         <span class="post-meta-item"><i class="iconfont icon-author"></i>WindMan</span>
-        <time class="post-meta-item" datetime="19-12-22"><i class="iconfont icon-date"></i>22 Dec 2019</time>
+        <time class="post-meta-item" datetime="20-06-18"><i class="iconfont icon-date"></i>18 Jun 2020</time>
       </div>
     </div>
     
@@ -133,120 +133,60 @@ Author: Ray-Eldath
     
 
     <article class="markdown-body">
-      <blockquote>
-  <p>NodeJs 磨刀霍霍向猪羊</p>
-</blockquote>
-
+      <h2 id="西楚前206-前202-共4年">西楚【前206-前202, 共4年】</h2>
 <ul>
-  <li>nvm：管理各个node版本，便于不同项目使用不同node版本；</li>
-  <li>Node：无法可说，主角</li>
-  <li>npm：node的媳妇兼秘书，安装卸载node中间件</li>
-</ul>
-
-<h3 id="安装nvm">安装nvm</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 随便用那个都行
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <p>nvm example</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Example:
-nvm install 8.0.0           Install a specific version number
-nvm use 8.0              Use the latest available 8.0.x release
-nvm run 6.10.3 app.js         Run app.js using node 6.10.3
-nvm exec 4.8.3 node app.js      
-nvm alias default 8.1.0       
-nvm alias default node
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>卸载</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>to remove, delete, or uninstall nvm - just remove the `$NVM_DIR` folder (usually `~/.nvm`)
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>安装node 8.0.0</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 8.0.0
-Downloading and installing node v8.0.0...
-Downloading https://nodejs.org/dist/v8.0.0/node-v8.0.0-darwin-x64.tar.gz...
-\############################################################################################# 100.0%
-Computing checksum with shasum -a 256
-Checksums matched!
-Now using node v8.0.0 (npm v5.0.0)
-Creating default alias: default -&gt; 8.0.0 (-&gt; v8.0.0)
-</code></pre></div>    </div>
-  </li>
-  <li>安装node 10.0.0
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 10.0.0
-Downloading and installing node v10.0.0...
-Downloading https://nodejs.org/dist/v10.0.0/node-v10.0.0-darwin-x64.tar.gz...
-\############################################################################################# 100.0%
-Computing checksum with shasum -a 256
-Checksums matched!
-Now using node v10.0.0 (npm v5.6.0)
-</code></pre></div>    </div>
-  </li>
-  <li>重命名node版本
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm alias n10 10.0.0
-nvm alias n8 8.0.0
-</code></pre></div>    </div>
-  </li>
-  <li>切换版本
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm use n10
-nvm use n8
-</code></pre></div>    </div>
-  </li>
-  <li>查看可用版本
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm ls
--&gt;    v8.0.0
-​    v10.0.0
-​     system
-default -&gt; 8.0.0 (-&gt; v8.0.0)
-n8 -&gt; 8.0.0 (-&gt; v8.0.0)
-n10 -&gt; 10.0.0 (-&gt; v10.0.0)
-node -&gt; stable (-&gt; v10.0.0) (default)
-stable -&gt; 10.0 (-&gt; v10.0.0) (default)
-</code></pre></div>    </div>
-  </li>
-  <li>安装稳定版本
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install stable
-Downloading and installing node v13.3.0...
-Downloading https://nodejs.org/dist/v13.3.0/node-v13.3.0-darwin-x64.tar.gz...
-\############################################################################################# 100.0%
-Computing checksum with shasum -a 256
-Checksums matched!
-Now using node v13.3.0 (npm v6.13.1)
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>配置环境变量</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 编辑配置文件
-vim .bash_profile
-// 编辑
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; \. "$NVM_DIR/nvm.sh"  # This loads nvm
-// 重载配置文件
-source .bash_profile
-</code></pre></div>    </div>
-
-    <h3 id="npm">npm</h3>
-  </li>
-  <li>
-    <p>切换为淘宝</p>
-
+  <li>项羽【西楚霸王】
     <blockquote>
-      <p>npm install -g cnpm –registry=<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fregistry.npm.taobao.org">https://registry.npm.taobao.org</a></p>
+      <ul>
+        <li>楚国贵族,公元前207年,巨鹿之战后拜为诸侯上将军，拥兵雄厚，达四十余万。次年，项羽在咸阳分封十八路诸侯就国，自立为西楚霸王。</li>
+        <li>公元前206年汉王刘邦率军出蜀伐楚，爆发楚汉相争。公元前202年刘邦合韩信、彭越，英布五十万兵马将项羽合围于垓下，项羽战败，自刎于乌江，</li>
+      </ul>
     </blockquote>
   </li>
-  <li>直接敲npm/cnpm 可以查看usage</li>
 </ul>
+
+<h2 id="汉朝公元前202年公元8年公元25220年-共历29帝享国四百零七年">汉朝【公元前202年~公元8年，公元25~220年。 共历29帝，享国四百零七年。】</h2>
+<h3 id="西汉公元前202年公元8年定都长安">西汉【公元前202年~公元8年，定都长安】</h3>
+<ul>
+  <li>刘邦【流氓翻身】
+    <blockquote>
+      <ul>
+        <li>前202年在定陶正式称皇帝，仍用“汉”号，定都洛阳，两年又迁都长安，但刘邦依旧长住洛阳</li>
+        <li>前期与民休息，分封功臣，后期一个个干掉，非刘不王。</li>
+        <li>白登之围以后，和亲求和平</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>刘盈/吕后
+    <blockquote>
+      <ul>
+        <li>皇帝无能，吕后当家</li>
+        <li>萧规曹随，倒也安生</li>
+        <li>任用外戚，酿成“诸吕之乱”</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>刘恭【前少帝】
+    <blockquote>
+      <ul>
+        <li>吕后立又废，封于永巷，对外称病，此后密死</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>刘弘【后少帝】（前184年6月15日－前180年11月14日在位）
+    <blockquote>
+      <ul>
+        <li>吕后霸权，未及称元年</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>汉文帝
+    <h3 id="新朝">新朝</h3>
+  </li>
+</ul>
+
+<h3 id="东汉公元25220年">东汉【公元25~220年】</h3>
+
 
     </article>
 
@@ -286,26 +226,14 @@ source .bash_profile
     </section>
     <section class="post-footer-item read-next">
       
-      <div class="read-next-item">
-        <a href="/2019/12/22/wx-open.html" class="read-next-link"></a>
-        <section>
-          <span>公众号接入小程序流程</span>
-          <p>  公众号小程序</p>
-        </section>
-        
-     </div>
-      
 
       
       <div class="read-next-item">
-        <a href="/2019/12/22/hello-jekyll.html" class="read-next-link"></a>
+        <a href="/2020/06/08/jetpack.html" class="read-next-link"></a>
           <section>
-            <span>Hello Jekyll</span>
-            <p>  本站使用方法</p>
+            <span>Jetpack 纪传志表</span>
+            <p>  纪：一般只写皇帝；  传：后妃、皇子事件、民间有意义的事件；志：人文、地理、时宪、交通、乐礼、服饰、饮食、河道...</p>
           </section>
-          
-          <div class="filter"></div>
-          <img src="http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg" alt="">
           
       </div>
       

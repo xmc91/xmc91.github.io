@@ -3,11 +3,79 @@
   <channel>
     <title>WindMan Blog</title>
     <description>风一样de男子</description>
-    <link>http://localhost:4000//</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 18 Jun 2020 13:44:05 +0800</pubDate>
-    <lastBuildDate>Thu, 18 Jun 2020 13:44:05 +0800</lastBuildDate>
-    <generator>Jekyll v4.0.0</generator>
+    <link>//</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 19 Jun 2020 00:33:52 +0800</pubDate>
+    <lastBuildDate>Fri, 19 Jun 2020 00:33:52 +0800</lastBuildDate>
+    <generator>Jekyll v4.1.0</generator>
+    
+      <item>
+        <title>皇帝</title>
+        <description>&lt;h2 id=&quot;西楚前206-前202-共4年&quot;&gt;西楚【前206-前202, 共4年】&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;项羽【西楚霸王】
+    &lt;blockquote&gt;
+      &lt;ul&gt;
+        &lt;li&gt;楚国贵族,公元前207年,巨鹿之战后拜为诸侯上将军，拥兵雄厚，达四十余万。次年，项羽在咸阳分封十八路诸侯就国，自立为西楚霸王。&lt;/li&gt;
+        &lt;li&gt;公元前206年汉王刘邦率军出蜀伐楚，爆发楚汉相争。公元前202年刘邦合韩信、彭越，英布五十万兵马将项羽合围于垓下，项羽战败，自刎于乌江，&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;汉朝公元前202年公元8年公元25220年-共历29帝享国四百零七年&quot;&gt;汉朝【公元前202年~公元8年，公元25~220年。 共历29帝，享国四百零七年。】&lt;/h2&gt;
+&lt;h3 id=&quot;西汉公元前202年公元8年定都长安&quot;&gt;西汉【公元前202年~公元8年，定都长安】&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;刘邦【流氓翻身】
+    &lt;blockquote&gt;
+      &lt;ul&gt;
+        &lt;li&gt;前202年在定陶正式称皇帝，仍用“汉”号，定都洛阳，两年又迁都长安，但刘邦依旧长住洛阳&lt;/li&gt;
+        &lt;li&gt;前期与民休息，分封功臣，后期一个个干掉，非刘不王。&lt;/li&gt;
+        &lt;li&gt;白登之围以后，和亲求和平&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;刘盈/吕后
+    &lt;blockquote&gt;
+      &lt;ul&gt;
+        &lt;li&gt;皇帝无能，吕后当家&lt;/li&gt;
+        &lt;li&gt;萧规曹随，倒也安生&lt;/li&gt;
+        &lt;li&gt;任用外戚，酿成“诸吕之乱”&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;刘恭【前少帝】
+    &lt;blockquote&gt;
+      &lt;ul&gt;
+        &lt;li&gt;吕后立又废，封于永巷，对外称病，此后密死&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;刘弘【后少帝】（前184年6月15日－前180年11月14日在位）
+    &lt;blockquote&gt;
+      &lt;ul&gt;
+        &lt;li&gt;吕后霸权，未及称元年&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;汉文帝
+    &lt;h3 id=&quot;新朝&quot;&gt;新朝&lt;/h3&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;东汉公元25220年&quot;&gt;东汉【公元25~220年】&lt;/h3&gt;
+
+</description>
+        <pubDate>Thu, 18 Jun 2020 00:00:00 +0800</pubDate>
+        <link>/2020/06/18/%E7%9A%87%E5%B8%9D.html</link>
+        <guid isPermaLink="true">/2020/06/18/%E7%9A%87%E5%B8%9D.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
     
       <item>
         <title>Jetpack 纪传志表</title>
@@ -25,22 +93,21 @@
   &lt;li&gt;编写databing的layout，只有这个类型的layout才能生成对应的 ViewDataBinding 类&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;layout&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/apk/res/android&quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;xmlns:app=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/apk/res-auto&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;
+&amp;lt;layout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;&amp;gt;
     // 数据
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;data&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/data&amp;gt;&lt;/span&gt;
+    &amp;lt;data&amp;gt;
+    &amp;lt;/data&amp;gt;
     // 布局
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;androidx.constraintlayout.widget.ConstraintLayout&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/container&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;android:paddingTop=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;?attr/actionBarSize&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &amp;lt;androidx.constraintlayout.widget.ConstraintLayout
+        android:id=&quot;@+id/container&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;
+        android:paddingTop=&quot;?attr/actionBarSize&quot;&amp;gt;
 
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/androidx.constraintlayout.widget.ConstraintLayout&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/layout&amp;gt;&lt;/span&gt;
-
+    &amp;lt;/androidx.constraintlayout.widget.ConstraintLayout&amp;gt;
+&amp;lt;/layout&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;ul&gt;
   &lt;li&gt;
@@ -51,15 +118,15 @@
   &lt;li&gt;在 Fragment、ListView 或 RecyclerView 适配器中使用数据绑定项，您可能更愿意使用绑定类或 DataBindingUtil 类的 inflate() 方法，如以下代码示例所示：&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ListItemBinding binding = ListItemBinding.inflate(layoutInflater, viewGroup, false);
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ListItemBinding binding = ListItemBinding.inflate(layoutInflater, viewGroup, false);
     // or
     ListItemBinding binding = DataBindingUtil.inflate(layoutInflater, R.layout.list_item, viewGroup, false);
     
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Mon, 08 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/08/jetpack.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/08/jetpack.html</guid>
+        <link>/2020/06/08/jetpack.html</link>
+        <guid isPermaLink="true">/2020/06/08/jetpack.html</guid>
         
         <category>Android</category>
         
@@ -97,8 +164,8 @@ android {
 &lt;p&gt;```&lt;/p&gt;
 </description>
         <pubDate>Mon, 08 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/08/Android-issue.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/08/Android-issue.html</guid>
+        <link>/2020/06/08/Android-issue.html</link>
+        <guid isPermaLink="true">/2020/06/08/Android-issue.html</guid>
         
         <category>Android</category>
         
@@ -455,8 +522,8 @@ android {
 
 </description>
         <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</guid>
+        <link>/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</link>
+        <guid isPermaLink="true">/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</guid>
         
         <category>read</category>
         
@@ -498,7 +565,7 @@ android {
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;流程&quot;&gt;流程&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 如果Activity的这个方法没有通过super调用，后续啥都没了
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 如果Activity的这个方法没有通过super调用，后续啥都没了
 public boolean dispatchTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
             onUserInteraction();
@@ -513,7 +580,7 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;ul&gt;
   &lt;li&gt;系统捕获到点击，先把这事告诉Activity的dispatchTouchEvent(MotionEvent ev)，Activity这玩意真是爸爸，你直接返回true或者false都不行。正常理解就是分发或者不分发的事儿吗？在这块，你说的就不算了，你必须听Activity得super.dispatchTouchEvent(ev)。不听Activity的话，这事就撂这了，无论是ViewGroup还是View你们都歇菜吧。[侬吉岛为啥了吧？]相信你没看粗来为毛，因为这里Activity并没有把分发转个ViewGroup，哈哈哈，Activity这吊玩意自己不处理，把这玩意交给了Window的抽象方法superDispatchTouchEvent，PhoneWindow这厮继承Window同时还持有DecorView，最终在PhoneWindow里成功转移：
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Override
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Override
   public boolean superDispatchTouchEvent(MotionEvent event) {
       return mDecor.superDispatchTouchEvent(event);
   }
@@ -524,7 +591,7 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
     &lt;p&gt;事件来到ViewGroup的dispatchTouchEvent，这ViewGroup也是个爹（其实是因为内部有实现，不调用super里边的实现就失效了，更别谈往下走），return true则后续事件在Activity和ViewGroup中荡漾，return false这事也就葱ViewGroup的地板弹到Activity再也回不来了，但是Activity得onTouch可以执行。只有调用super.dispatchTouchEvent(ev)，ViewGroup才能发挥自己的余热，经过深思熟虑（各种判断）告诉onInterceptTouchEvent(ev)&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;不知不觉，事件来到了ViewGroup的onInterceptTouchEvent(ev),而这个函数呢，有点低调，不喜欢管事，简单思考一哈哈（就个简单的判断，其他判断可以不深究，不是down他肯定不管），他就不管了（return false 不拦截）
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public boolean onInterceptTouchEvent(MotionEvent ev) {
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public boolean onInterceptTouchEvent(MotionEvent ev) {
       if (ev.isFromSource(InputDevice.SOURCE_MOUSE)
               &amp;amp;&amp;amp; ev.getAction() == MotionEvent.ACTION_DOWN
               &amp;amp;&amp;amp; ev.isButtonPressed(MotionEvent.BUTTON_PRIMARY)
@@ -545,8 +612,8 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html</guid>
+        <link>/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html</link>
+        <guid isPermaLink="true">/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html</guid>
         
         <category>read</category>
         
@@ -621,8 +688,8 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 
 </description>
         <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/07/music.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/07/music.html</guid>
+        <link>/2020/06/07/music.html</link>
+        <guid isPermaLink="true">/2020/06/07/music.html</guid>
         
         <category>read</category>
         
@@ -654,8 +721,8 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/07/flutter.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/07/flutter.html</guid>
+        <link>/2020/06/07/flutter.html</link>
+        <guid isPermaLink="true">/2020/06/07/flutter.html</guid>
         
         <category>flutter</category>
         
@@ -860,8 +927,8 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 
 </description>
         <pubDate>Sat, 06 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</guid>
+        <link>/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</link>
+        <guid isPermaLink="true">/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</guid>
         
         <category>read</category>
         
@@ -943,8 +1010,8 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 
 </description>
         <pubDate>Tue, 02 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/02/ASPlugin.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/02/ASPlugin.html</guid>
+        <link>/2020/06/02/ASPlugin.html</link>
+        <guid isPermaLink="true">/2020/06/02/ASPlugin.html</guid>
         
         <category>Plugin</category>
         
@@ -970,81 +1037,13 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 
 </description>
         <pubDate>Mon, 01 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/01/gradle.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/01/gradle.html</guid>
+        <link>/2020/06/01/gradle.html</link>
+        <guid isPermaLink="true">/2020/06/01/gradle.html</guid>
         
         <category>Gradle</category>
         
         
         <category>Gradle</category>
-        
-      </item>
-    
-      <item>
-        <title>Kotlin 蓦然回首</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;【青玉案·元夕】[辛弃疾]&lt;br /&gt;
-东风夜放花千树，更吹落，星如雨。宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。
-蛾儿雪柳黄金缕，笑语盈盈暗香去。众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;正本清源
-    &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;https://kotlinlang.org/&quot;&gt;官方&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.kotlincn.net/docs/reference/basic-syntax.html&quot;&gt;开发文档&lt;/a&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;工欲善其事，必先利其器
-    &lt;ol&gt;
-      &lt;li&gt;IntelliJ IDEA&lt;/li&gt;
-      &lt;li&gt;Eclipse 
-&lt;img src=&quot;/assets/img/kotlin/kotlin_tools.png&quot; alt=&quot;test&quot; /&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;支持和JAVA混合开发&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;变量声明
-```&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;变量声明比JAVA多了个var（变量）、val(常量)，其他类型会自动推断
-```&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;函数
-```&lt;/li&gt;
-  &lt;li&gt;函数声明用fun&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;override 覆盖超类方法,修饰fun
-```&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;类
-```&lt;/li&gt;
-  &lt;li&gt;class声明类，没有new&lt;/li&gt;
-  &lt;li&gt;类的继承，用：，超类在后&lt;/li&gt;
-  &lt;li&gt;所有对象的超类是 Any&lt;/li&gt;
-  &lt;li&gt;abstract修饰class&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;主构造函数和类声明在一起，次级构造函数可以通过this委托&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;内部类用inner修饰&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;只保存数据的类用data修饰&lt;/li&gt;
-  &lt;li&gt;泛型同java&lt;/li&gt;
-  &lt;li&gt;接口用enum修饰
-```&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sun, 31 May 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/05/31/kotlin.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/05/31/kotlin.html</guid>
-        
-        <category>Kotlin</category>
-        
-        
-        <category>Kotlin</category>
         
       </item>
     

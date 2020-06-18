@@ -33,7 +33,6 @@ tags: Android
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
-
 ```
 + 生成的ViewDataBinding类路径如下：
 ![T extends ViewDataBinding](/assets/img/jetpack/viewdatabinding.png)
