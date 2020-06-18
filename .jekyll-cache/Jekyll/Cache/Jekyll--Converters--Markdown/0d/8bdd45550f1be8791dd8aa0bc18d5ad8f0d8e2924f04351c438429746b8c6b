@@ -1,4 +1,4 @@
-I"�<blockquote>
+I"4<blockquote>
   <p>【定风波·莫听穿林打叶声】 [宋代：苏轼]
 三月七日，沙湖道中遇雨，雨具先去，同行皆狼狈，余独不觉。已而遂晴，故作此。
 莫听穿林打叶声，何妨吟啸且徐行。竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。
@@ -48,6 +48,21 @@
   <li><a href="https://plugins.jetbrains.com/plugin/7793-markdown">markdown</a>
     <blockquote>
       <p>readme.md 的福音</p>
+    </blockquote>
+  </li>
+  <li>rainbow brackets
+    <blockquote>
+      <p>爱上🌈，吃掉🌈。代码里从此多了颜色</p>
+    </blockquote>
+  </li>
+  <li>ideaJad
+    <blockquote>
+      <p>反编译工具</p>
+    </blockquote>
+  </li>
+  <li>Material Theme UI
+    <blockquote>
+      <p>给idea 换身衣服吧</p>
     </blockquote>
   </li>
 </ul>

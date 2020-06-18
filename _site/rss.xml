@@ -3,11 +3,109 @@
   <channel>
     <title>WindMan Blog</title>
     <description>风一样de男子</description>
-    <link>//</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 07 Jun 2020 16:19:45 +0800</pubDate>
-    <lastBuildDate>Sun, 07 Jun 2020 16:19:45 +0800</lastBuildDate>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 08 Jun 2020 14:03:35 +0800</pubDate>
+    <lastBuildDate>Mon, 08 Jun 2020 14:03:35 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Jetpack 纪传志表</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;纪：一般只写皇帝；  &lt;br /&gt;
+传：后妃、皇子事件、民间有意义的事件；&lt;br /&gt;
+志：人文、地理、时宪、交通、乐礼、服饰、饮食、河道、兵、刑法、邦交；  &lt;br /&gt;
+表：皇子、公主、外戚、大臣、封爵、疆臣、驻使&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;jetpack-配置&quot;&gt;JetPack 配置&lt;/h2&gt;
+
+&lt;h2 id=&quot;databinding&quot;&gt;DataBinding&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;编写databing的layout，只有这个类型的layout才能生成对应的 ViewDataBinding 类&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;layout&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/apk/res/android&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;xmlns:app=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/apk/res-auto&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    // 数据
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;data&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/data&amp;gt;&lt;/span&gt;
+    // 布局
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;androidx.constraintlayout.widget.ConstraintLayout&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/container&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:paddingTop=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;?attr/actionBarSize&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/androidx.constraintlayout.widget.ConstraintLayout&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/layout&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;生成的ViewDataBinding类路径如下：
+&lt;img src=&quot;/assets/img/jetpack/viewdatabinding.png&quot; alt=&quot;T extends ViewDataBinding&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;后续对view和data操作都在这个 ViewDataBinding 上处理，看名字就知道，这玩意就是二者的结合物。&lt;/li&gt;
+  &lt;li&gt;在 Fragment、ListView 或 RecyclerView 适配器中使用数据绑定项，您可能更愿意使用绑定类或 DataBindingUtil 类的 inflate() 方法，如以下代码示例所示：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    ListItemBinding binding = ListItemBinding.inflate(layoutInflater, viewGroup, false);
+    // or
+    ListItemBinding binding = DataBindingUtil.inflate(layoutInflater, R.layout.list_item, viewGroup, false);
+    
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 08 Jun 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/06/08/jetpack.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/08/jetpack.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>Android issue</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;android 疑难杂症解决秘籍&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;build.gradle DSL element ‘android.dataBinding.enabled’ is obsolete and has been replaced with ‘android.buildFeatures.dataBinding’
+    &lt;blockquote&gt;
+      &lt;p&gt;按照提示：xxxx已过期，请用yyyy替代，而且指明了哪个文件，到对于文件替换即可
+```
+android {
+  …
+  // 原来
+  dataBinding {
+      enabled = true
+  }
+  // 替换成
+  buildFeatures {
+      dataBinding = true
+  }
+}&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+</description>
+        <pubDate>Mon, 08 Jun 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/06/08/Android-issue.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/08/Android-issue.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
     
       <item>
         <title>经典对子</title>
@@ -357,8 +455,98 @@
 
 </description>
         <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</link>
-        <guid isPermaLink="true">/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</guid>
+        <link>http://localhost:4000/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</guid>
+        
+        <category>read</category>
+        
+        
+        <category>read</category>
+        
+      </item>
+    
+      <item>
+        <title>事件分发 寻寻觅觅</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;声声慢·寻寻觅觅【作者】李清照
+寻寻觅觅，冷冷清清，凄凄惨惨戚戚。乍暖还寒时候，最难将息。三杯两盏淡酒，怎敌他、晚来风急！雁过也，正伤心，却是旧时相识。
+满地黄花堆积，憔悴损，如今有谁堪摘？守着窗儿，独自怎生得黑！梧桐更兼细雨，到黄昏、点点滴滴。这次第，怎一个愁字了得！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;事件分发本质上屏幕作为电容屏幕下边有四个引脚通着电手指点击屏幕触发电容电流流动然后引脚计算出手指点击的位置上报给系统此时才到达应用层反馈到view上处理业务逻辑操作屏幕其实就像是和一个人做游戏一样屏幕主板等一系列硬件作为工具系统中间商把事件给到服务商appapp把你的意图展示到屏幕上这难道不是一个哲学问题吗女施主从哪里来我从来出来女施主到哪里去我要到去出去不过这里的去处和来处形成了闭环&quot;&gt;事件分发本质上：屏幕作为电容，屏幕下边有四个引脚通着电，手指点击屏幕触发电容电流流动；然后引脚计算出手指点击的位置，上报给系统；此时才到达应用层，反馈到view上处理业务逻辑。【操作屏幕，其实就像是和一个人做游戏一样，屏幕、主板等一系列硬件作为工具，系统中间商把事件给到服务商APP，APP把你的意图展示到屏幕上，这难道不是一个哲学问题吗？女施主从哪里来？我从来出来，女施主到哪里去？我要到去出去。不过这里的去处和来处形成了闭环】&lt;/h3&gt;
+
+&lt;h3 id=&quot;事件分发在app上的对象自然是view啦&quot;&gt;事件分发在APP上的对象自然是view啦&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;View 是最小的吗？No，能看到的都是View，你看那，viewgroup本质上不也是个view嘛。正所谓无大无小&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Activity：view的家族们&lt;/li&gt;
+  &lt;li&gt;ViewGroup：view的集合&lt;/li&gt;
+  &lt;li&gt;View：通常是一个小单位&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;事件的分类&quot;&gt;事件的分类&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;无非就是，点了、动了、离开了&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Down：点下的那一刻&lt;/li&gt;
+  &lt;li&gt;Move：你说你点了没动？那是你的眼睛骗了你&lt;/li&gt;
+  &lt;li&gt;Up：拜拜了，屏幕&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;流程&quot;&gt;流程&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 如果Activity的这个方法没有通过super调用，后续啥都没了
+public boolean dispatchTouchEvent(MotionEvent ev) {
+        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
+            onUserInteraction();
+        }
+        // 这里最终是ViewGroup的diapatch
+        // 所以ViewGroup的dispatch返回true，Activity的onTouch也就没了
+        if (getWindow().superDispatchTouchEvent(ev)) {
+            return true;
+        }
+        return onTouchEvent(ev);
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;系统捕获到点击，先把这事告诉Activity的dispatchTouchEvent(MotionEvent ev)，Activity这玩意真是爸爸，你直接返回true或者false都不行。正常理解就是分发或者不分发的事儿吗？在这块，你说的就不算了，你必须听Activity得super.dispatchTouchEvent(ev)。不听Activity的话，这事就撂这了，无论是ViewGroup还是View你们都歇菜吧。[侬吉岛为啥了吧？]相信你没看粗来为毛，因为这里Activity并没有把分发转个ViewGroup，哈哈哈，Activity这吊玩意自己不处理，把这玩意交给了Window的抽象方法superDispatchTouchEvent，PhoneWindow这厮继承Window同时还持有DecorView，最终在PhoneWindow里成功转移：
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Override
+  public boolean superDispatchTouchEvent(MotionEvent event) {
+      return mDecor.superDispatchTouchEvent(event);
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;DecorView经过一系列甩锅，这就成功的把分发事件从Activity转给了ViewGroup。馹馹馹，感觉谷歌的工程师在洗钱。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;事件来到ViewGroup的dispatchTouchEvent，这ViewGroup也是个爹（其实是因为内部有实现，不调用super里边的实现就失效了，更别谈往下走），return true则后续事件在Activity和ViewGroup中荡漾，return false这事也就葱ViewGroup的地板弹到Activity再也回不来了，但是Activity得onTouch可以执行。只有调用super.dispatchTouchEvent(ev)，ViewGroup才能发挥自己的余热，经过深思熟虑（各种判断）告诉onInterceptTouchEvent(ev)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;不知不觉，事件来到了ViewGroup的onInterceptTouchEvent(ev),而这个函数呢，有点低调，不喜欢管事，简单思考一哈哈（就个简单的判断，其他判断可以不深究，不是down他肯定不管），他就不管了（return false 不拦截）
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public boolean onInterceptTouchEvent(MotionEvent ev) {
+      if (ev.isFromSource(InputDevice.SOURCE_MOUSE)
+              &amp;amp;&amp;amp; ev.getAction() == MotionEvent.ACTION_DOWN
+              &amp;amp;&amp;amp; ev.isButtonPressed(MotionEvent.BUTTON_PRIMARY)
+              &amp;amp;&amp;amp; isOnScrollbarThumb(ev.getX(), ev.getY())) {
+          return true;
+      }
+      return false;
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;最后上一张图吧，这玩意怕死不好记，还是上个图，看图识意&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/click/click.png&quot; alt=&quot;流程图&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在Android10源码分析的，这个分析的真不错&lt;a href=&quot;https://www.jianshu.com/p/38015afcdb58&quot;&gt;android 5.0事件分发分析&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html</guid>
         
         <category>read</category>
         
@@ -433,13 +621,46 @@
 
 </description>
         <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/07/music.html</link>
-        <guid isPermaLink="true">/2020/06/07/music.html</guid>
+        <link>http://localhost:4000/2020/06/07/music.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/07/music.html</guid>
         
         <category>read</category>
         
         
         <category>read</category>
+        
+      </item>
+    
+      <item>
+        <title>Flutter 大江东去浪淘尽</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;念奴娇·赤壁怀古【作者】苏轼 
+大江东去，浪淘尽，千古风流人物。
+故垒西边，人道是，三国周郎赤壁。
+乱石穿空，惊涛拍岸，卷起千堆雪。
+江山如画，一时多少豪杰。
+遥想公瑾当年，小乔初嫁了，雄姿英发。
+羽扇纶巾，谈笑间，樯橹灰飞烟灭。
+故国神游，多情应笑我，早生华发。
+人生如梦，一尊还酹江月。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;环境搭建&quot;&gt;环境搭建&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;下载flutter sdk，&lt;a href=&quot;https://flutterchina.club/get-started/install/&quot;&gt;慢的夜啤&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;安装插件：在AS上安装Dart和Flutter&lt;/li&gt;
+  &lt;li&gt;初始化一个项目  &lt;br /&gt;
+&lt;img src=&quot;/assets/img/flutter/flutter_project.png&quot; height=&quot;300&quot; width=&quot;500&quot; align=&quot;left&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/06/07/flutter.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/07/flutter.html</guid>
+        
+        <category>flutter</category>
+        
+        
+        <category>flutter</category>
         
       </item>
     
@@ -639,8 +860,8 @@
 
 </description>
         <pubDate>Sat, 06 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</link>
-        <guid isPermaLink="true">/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</guid>
+        <link>http://localhost:4000/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</guid>
         
         <category>read</category>
         
@@ -703,12 +924,27 @@
       &lt;p&gt;readme.md 的福音&lt;/p&gt;
     &lt;/blockquote&gt;
   &lt;/li&gt;
+  &lt;li&gt;rainbow brackets
+    &lt;blockquote&gt;
+      &lt;p&gt;爱上🌈，吃掉🌈。代码里从此多了颜色&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ideaJad
+    &lt;blockquote&gt;
+      &lt;p&gt;反编译工具&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Material Theme UI
+    &lt;blockquote&gt;
+      &lt;p&gt;给idea 换身衣服吧&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
         <pubDate>Tue, 02 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/02/ASPlugin.html</link>
-        <guid isPermaLink="true">/2020/06/02/ASPlugin.html</guid>
+        <link>http://localhost:4000/2020/06/02/ASPlugin.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/02/ASPlugin.html</guid>
         
         <category>Plugin</category>
         
@@ -734,8 +970,8 @@
 
 </description>
         <pubDate>Mon, 01 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/01/gradle.html</link>
-        <guid isPermaLink="true">/2020/06/01/gradle.html</guid>
+        <link>http://localhost:4000/2020/06/01/gradle.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/01/gradle.html</guid>
         
         <category>Gradle</category>
         
@@ -763,7 +999,7 @@
     &lt;ol&gt;
       &lt;li&gt;IntelliJ IDEA&lt;/li&gt;
       &lt;li&gt;Eclipse 
-&lt;img src=&quot;/assets/img/kotlin_tools.png&quot; alt=&quot;test&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/assets/img/kotlin/kotlin_tools.png&quot; alt=&quot;test&quot; /&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -802,193 +1038,13 @@
 
 </description>
         <pubDate>Sun, 31 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/31/kotlin.html</link>
-        <guid isPermaLink="true">/2020/05/31/kotlin.html</guid>
+        <link>http://localhost:4000/2020/05/31/kotlin.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/31/kotlin.html</guid>
         
         <category>Kotlin</category>
         
         
         <category>Kotlin</category>
-        
-      </item>
-    
-      <item>
-        <title>Android CameraX</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Android的碎片化导致处理相机并没有那么容易，But，新的 Jetpack 库可帮助您以简单且一致的方式针对 90% 的 Android 设备开发相机应用。
-听起来是不是很nice&lt;/p&gt;
-&lt;/blockquote&gt;
-
-</description>
-        <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/06/CameraX.html</link>
-        <guid isPermaLink="true">/2020/05/06/CameraX.html</guid>
-        
-        <category>Android</category>
-        
-        
-        <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>Handle 水调歌头</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;【水调歌头·明月几时有】  [宋代： 苏轼]
-丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。
-明月几时有？把酒问青天。不知天上宫阙，今夕是何年。我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间。
-转朱阁，低绮户，照无眠。不应有恨，何事长向别时圆？人有悲欢离合，月有阴晴圆缺，此事古难全。但愿人长久，千里共婵娟。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Handle通过线程的MessageQueue发送和处理Message和Runnable对象，每一个Handle实例和一个单例的Thread及它的MessageQueue相关联。
-创建一个Handle的时候，他就绑定到线程及对应的MessageQueue，此后，Handle将会处理Message，把Message发送到MessageQueue，并且处理
-从MessageQueue里出来的Message。Handle主要有两个作用：定时处理Message；把不同线程Action排队。通过不能的方法，可以马上执行也可以
-延后执行。当app创建的时候（一个进程），主线程创建一个MessageQueue专门处理顶级对象（Activity、broadcast等）及其他Window相关对象。
-开发者可以在新建的线程通过Handle与主线程交流。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;相关关键人物&quot;&gt;相关关键人物&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Hanle
-发送及调整Message时机，取得与当前线程一致的Looper并循环，把Message压入MessageQueue。最终处理Message&lt;/li&gt;
-  &lt;li&gt;Message
-中间流通的消息，携带处理方及自身属性&lt;/li&gt;
-  &lt;li&gt;Looper
-循环，当MessageQueue里的消息到时的时候，取出Message，并通过Message的target把处理逻辑回到Handle&lt;/li&gt;
-  &lt;li&gt;MessageQueue
-Message的队列，排序里边的Message，适当的时候取出来&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;消息处理流程&quot;&gt;消息处理流程&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;首先创建Handle，并实现handleMessage，默认创建的Handle的变量callback是空&lt;/li&gt;
-  &lt;li&gt;handle发送消息，最终调用sendMessageAtTime&lt;/li&gt;
-  &lt;li&gt;当前handle对象赋给当前Message的target变量&lt;/li&gt;
-  &lt;li&gt;排队。。。&lt;/li&gt;
-  &lt;li&gt;Looper.loop,looper里有个MessageQueue，取出下一个最近的Message，调用Message的target的dispatchMessage方法，&lt;/li&gt;
-  &lt;li&gt;如果handle是调用的post，则post时的入参runnable赋给Message的callback（Runnable），否则Message的callback就是null&lt;/li&gt;
-  &lt;li&gt;最终回调给Handle的是
-    &lt;ul&gt;
-      &lt;li&gt;如果Message的callback不为空，则有post时候的runnable的run方法接收&lt;/li&gt;
-      &lt;li&gt;如果Handle的callback不为空，则有创建Handle时候的callback的handleMessage接收&lt;/li&gt;
-      &lt;li&gt;以上都为空，则调用自己实现的handleMessage接收&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/06/Handle.html</link>
-        <guid isPermaLink="true">/2020/05/06/Handle.html</guid>
-        
-        <category>Android</category>
-        
-        
-        <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>Android App性能优化</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;本文从最初的编码，编码 中及后的检查，编译，编译后的apk瘦身，对APP的整个产生过程优化。&lt;/p&gt;
-  &lt;h2 id=&quot;编码优化&quot;&gt;编码优化&lt;/h2&gt;
-  &lt;ul&gt;
-    &lt;li&gt;handler 作为内部类导致内测泄露，由于非静态内部匿名类会持有外部类的引用，可能会导致外部类无法即使释放。
-```
-public class HandlerActivity extends Activity{&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;private static class InnerHandler extends Handler{
-	// 持有弱引用
-	private final WeakReference&amp;lt;HandlerActivity&amp;gt; mActivity;
-	
-	public InnerHandler(HandlerActivity activity){
-		mActivity = new WeakReference&amp;lt;HandlerActivity&amp;gt;(activity);
-	}
-	
-	@Override
-	public void handleMessage(Message msg){
-		HandlerActivity activity = mActivity.get();
-		if(activity != null){
-		}
-	}
-}
-
-private final InnerHandler mHandler = new InnerHandler(this);
-
-/*
-* 静态匿名内部类不会持有外部类的引用
-*/
-private static final Runnable runnable = new Runnable(){
-
-	@Override
-	public void run(){
-	}
-};
-
-@Override
-protected void onCreate(Bundle savedInstanceState){
-	super.onCreate(savedInstanceState);
-	
-	//延迟5分子发送消息
-	mHandler.postDelayed(runnable, 1000*60*5);
-} }	
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-&lt;h2 id=&quot;检查工具lint&quot;&gt;检查工具lint&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://tools.android.com/tips/lint&quot;&gt;主要参考&lt;/a&gt;
-https://blog.csdn.net/luzhenyuxfcy/article/details/79398761
-https://blog.csdn.net/qq_34895720/article/details/102859115?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</link>
-        <guid isPermaLink="true">/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</guid>
-        
-        <category>Android</category>
-        
-        
-        <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>Android学习资源</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.android.google.cn/&quot;&gt;Android 大本营&lt;/a&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;Android最根本的学习地儿&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://androidxref.com/&quot;&gt;androidxref&lt;/a&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;Android 源码学习学习&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.wanandroid.com/&quot;&gt;WanAndroid&lt;/a&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;适合日常逛街&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/distribute/best-practices/develop/64-bit&quot;&gt;Android 64&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_40611659/article/details/95174124&quot;&gt;Android 10适配&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/10023495fba9&quot;&gt;ssh 使用&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/u010586698/article/details/56673379&quot;&gt;android 国际化&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/yanzi1225627/article/details/48215549&quot;&gt;mac 反编译&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 06 May 2020 00:00:00 +0800</pubDate>
-        <link>/2020/05/06/Android%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95.html</link>
-        <guid isPermaLink="true">/2020/05/06/Android%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80%E8%AE%B0%E5%BD%95.html</guid>
-        
-        <category>Android</category>
-        
-        
-        <category>Android</category>
         
       </item>
     

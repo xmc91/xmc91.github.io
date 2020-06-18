@@ -1,5 +1,4 @@
-I"�
-<blockquote>
+I"&<blockquote>
   <p>【水调歌头·明月几时有】  [宋代： 苏轼]
 丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。
 明月几时有？把酒问青天。不知天上宫阙，今夕是何年。我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间。
@@ -29,12 +28,73 @@ Message的队列，排序里边的Message，适当的时候取出来</li>
 <h2 id="消息处理流程">消息处理流程</h2>
 <ul>
   <li>首先创建Handle，并实现handleMessage，默认创建的Handle的变量callback是空</li>
-  <li>handle发送消息，最终调用sendMessageAtTime</li>
-  <li>当前handle对象赋给当前Message的target变量</li>
+  <li>handle发送消息，最终调用sendMessageAtTime
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public boolean sendMessageAtTime(Message msg, long uptimeMillis) {
+      MessageQueue queue = mQueue;
+      if (queue == null) {
+          RuntimeException e = new RuntimeException(
+                  this + " sendMessageAtTime() called with no mQueue");
+          Log.w("Looper", e.getMessage(), e);
+          return false;
+      }
+      return enqueueMessage(queue, msg, uptimeMillis);
+  }
+</code></pre></div>    </div>
+  </li>
+  <li>当前handle对象赋给当前Message的target变量
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private boolean enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis) {
+      msg.target = this;
+      if (mAsynchronous) {
+          msg.setAsynchronous(true);
+      }
+      return queue.enqueueMessage(msg, uptimeMillis);
+  }
+</code></pre></div>    </div>
+  </li>
   <li>排队。。。</li>
-  <li>Looper.loop,looper里有个MessageQueue，取出下一个最近的Message，调用Message的target的dispatchMessage方法，</li>
+  <li>Looper.loop,looper里有个MessageQueue，取出下一个最近的Message，调用Message的target的dispatchMessage方法，
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static void loop() {
+      final Looper me = myLooper();
+      if (me == null) {
+          throw new RuntimeException("No Looper; Looper.prepare() wasn't called on this thread.");
+      }
+      final MessageQueue queue = me.mQueue;
+      ...
+      // 获取最近的message
+      for (;;) {
+          Message msg = queue.next(); // might block
+          if (msg == null) {
+              return;
+          }
+          // 回到handler处理
+          try {
+              msg.target.dispatchMessage(msg);
+              dispatchEnd = needEndTime ? SystemClock.uptimeMillis() : 0;
+          } finally {
+              if (traceTag != 0) {
+                  Trace.traceEnd(traceTag);
+              }
+          }
+          msg.recycleUnchecked();
+      }
+  }
+</code></pre></div>    </div>
+  </li>
   <li>如果handle是调用的post，则post时的入参runnable赋给Message的callback（Runnable），否则Message的callback就是null</li>
   <li>最终回调给Handle的是
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public void dispatchMessage(Message msg) {
+      if (msg.callback != null) {
+          handleCallback(msg);
+      } else {
+          if (mCallback != null) {
+              if (mCallback.handleMessage(msg)) {
+                  return;
+              }
+          }
+          handleMessage(msg);
+      }
+  }
+</code></pre></div>    </div>
     <ul>
       <li>如果Message的callback不为空，则有post时候的runnable的run方法接收</li>
       <li>如果Handle的callback不为空，则有创建Handle时候的callback的handleMessage接收</li>

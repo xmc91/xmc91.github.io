@@ -37,3 +37,12 @@ tags: Plugin
 + [markdown](https://plugins.jetbrains.com/plugin/7793-markdown)
 > readme.md 的福音
 
++ rainbow brackets
+> 爱上🌈，吃掉🌈。代码里从此多了颜色
+
++ ideaJad
+> 反编译工具
+
++ Material Theme UI
+> 给idea 换身衣服吧
+
