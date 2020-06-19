@@ -1,10 +1,10 @@
-I"<blockquote>
+I"�<blockquote>
   <p>本站使用方法</p>
 </blockquote>
 
 <ul>
   <li>内容
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>在_post路径下，编写内容
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>在_post路径下，编写内容
 编写头
 ---
 layout: post
@@ -17,21 +17,21 @@ tags: Tools
 </code></pre></div>    </div>
   </li>
   <li>编译
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
 </code></pre></div>    </div>
   </li>
   <li>浏览器预览
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll server
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll server
 // url
 Server address: http://127.0.0.1:4000/
 </code></pre></div>    </div>
   </li>
   <li>图片相对路径引用
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/assets/*
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/assets/*
 </code></pre></div>    </div>
   </li>
   <li>字体切换
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/assets/font
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/assets/font
 </code></pre></div>    </div>
   </li>
   <li>提交即可</li>
@@ -47,7 +47,7 @@ Server address: http://127.0.0.1:4000/
   <li>此时jekyll build运行，可能会报错如下：</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dependency Error: Yikes! It looks like you don't have jek       yll-paginate or one of its dependencies installed.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dependency Error: Yikes! It looks like you don't have jek       yll-paginate or one of its dependencies installed.
 </code></pre></div></div>
 
 <ul>

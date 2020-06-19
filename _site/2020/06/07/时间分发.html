@@ -10,7 +10,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="事件分发 寻寻觅觅 - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html">
+    <meta property="og:url" content="http://localhost:4000/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -164,7 +164,7 @@ Author: Ray-Eldath
 </ul>
 
 <h3 id="流程">流程</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 如果Activity的这个方法没有通过super调用，后续啥都没了
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 如果Activity的这个方法没有通过super调用，后续啥都没了
 public boolean dispatchTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
             onUserInteraction();
@@ -179,7 +179,7 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 </code></pre></div></div>
 <ul>
   <li>系统捕获到点击，先把这事告诉Activity的dispatchTouchEvent(MotionEvent ev)，Activity这玩意真是爸爸，你直接返回true或者false都不行。正常理解就是分发或者不分发的事儿吗？在这块，你说的就不算了，你必须听Activity得super.dispatchTouchEvent(ev)。不听Activity的话，这事就撂这了，无论是ViewGroup还是View你们都歇菜吧。[侬吉岛为啥了吧？]相信你没看粗来为毛，因为这里Activity并没有把分发转个ViewGroup，哈哈哈，Activity这吊玩意自己不处理，把这玩意交给了Window的抽象方法superDispatchTouchEvent，PhoneWindow这厮继承Window同时还持有DecorView，最终在PhoneWindow里成功转移：
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
   public boolean superDispatchTouchEvent(MotionEvent event) {
       return mDecor.superDispatchTouchEvent(event);
   }
@@ -190,7 +190,7 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
     <p>事件来到ViewGroup的dispatchTouchEvent，这ViewGroup也是个爹（其实是因为内部有实现，不调用super里边的实现就失效了，更别谈往下走），return true则后续事件在Activity和ViewGroup中荡漾，return false这事也就葱ViewGroup的地板弹到Activity再也回不来了，但是Activity得onTouch可以执行。只有调用super.dispatchTouchEvent(ev)，ViewGroup才能发挥自己的余热，经过深思熟虑（各种判断）告诉onInterceptTouchEvent(ev)</p>
   </li>
   <li>不知不觉，事件来到了ViewGroup的onInterceptTouchEvent(ev),而这个函数呢，有点低调，不喜欢管事，简单思考一哈哈（就个简单的判断，其他判断可以不深究，不是down他肯定不管），他就不管了（return false 不拦截）
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public boolean onInterceptTouchEvent(MotionEvent ev) {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public boolean onInterceptTouchEvent(MotionEvent ev) {
       if (ev.isFromSource(InputDevice.SOURCE_MOUSE)
               &amp;&amp; ev.getAction() == MotionEvent.ACTION_DOWN
               &amp;&amp; ev.isButtonPressed(MotionEvent.BUTTON_PRIMARY)

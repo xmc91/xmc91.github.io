@@ -10,7 +10,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Jetpack 纪传志表 - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/2020/06/08/jetpack.html">
+    <meta property="og:url" content="http://localhost:4000/2020/06/08/jetpack.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -147,21 +147,21 @@ Author: Ray-Eldath
   <li>编写databing的layout，只有这个类型的layout才能生成对应的 ViewDataBinding 类</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;layout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span><span class="nt">&gt;</span>
     // 数据
-    &lt;data&gt;
-    &lt;/data&gt;
+    <span class="nt">&lt;data&gt;</span>
+    <span class="nt">&lt;/data&gt;</span>
     // 布局
-    &lt;androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="?attr/actionBarSize"&gt;
+    <span class="nt">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+        <span class="na">android:id=</span><span class="s">"@+id/container"</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+        <span class="na">android:paddingTop=</span><span class="s">"?attr/actionBarSize"</span><span class="nt">&gt;</span>
 
-    &lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;
-&lt;/layout&gt;
+    <span class="nt">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+<span class="nt">&lt;/layout&gt;</span>
 </code></pre></div></div>
 <ul>
   <li>
@@ -172,7 +172,7 @@ Author: Ray-Eldath
   <li>在 Fragment、ListView 或 RecyclerView 适配器中使用数据绑定项，您可能更愿意使用绑定类或 DataBindingUtil 类的 inflate() 方法，如以下代码示例所示：</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ListItemBinding binding = ListItemBinding.inflate(layoutInflater, viewGroup, false);
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ListItemBinding binding = ListItemBinding.inflate(layoutInflater, viewGroup, false);
     // or
     ListItemBinding binding = DataBindingUtil.inflate(layoutInflater, R.layout.list_item, viewGroup, false);
     
@@ -217,10 +217,10 @@ Author: Ray-Eldath
     <section class="post-footer-item read-next">
       
       <div class="read-next-item">
-        <a href="/2020/06/18/%E7%9A%87%E5%B8%9D.html" class="read-next-link"></a>
+        <a href="/2020/06/18/%E4%B8%AD%E5%9B%BD%E7%9A%87%E5%B8%9D%E8%A1%A8.html" class="read-next-link"></a>
         <section>
-          <span>皇帝</span>
-          <p>西楚【前206-前202, 共4年】  项羽【西楚霸王】                  楚国贵族,公元前207...</p>
+          <span>中国皇帝</span>
+          <p>  2132年，422抔黄土</p>
         </section>
         
      </div>

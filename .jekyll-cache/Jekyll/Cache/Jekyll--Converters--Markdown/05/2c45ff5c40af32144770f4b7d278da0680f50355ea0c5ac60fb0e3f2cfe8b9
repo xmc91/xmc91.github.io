@@ -1,4 +1,4 @@
-I"F<blockquote>
+I"�<blockquote>
   <p>NodeJs 磨刀霍霍向猪羊</p>
 </blockquote>
 
@@ -10,7 +10,7 @@
 
 <h3 id="安装nvm">安装nvm</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 随便用那个都行
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 随便用那个都行
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 </code></pre></div></div>
@@ -19,7 +19,7 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
   <li>
     <p>nvm example</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Example:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Example:
 nvm install 8.0.0           Install a specific version number
 nvm use 8.0              Use the latest available 8.0.x release
 nvm run 6.10.3 app.js         Run app.js using node 6.10.3
@@ -31,13 +31,13 @@ nvm alias default node
   <li>
     <p>卸载</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>to remove, delete, or uninstall nvm - just remove the `$NVM_DIR` folder (usually `~/.nvm`)
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>to remove, delete, or uninstall nvm - just remove the `$NVM_DIR` folder (usually `~/.nvm`)
 </code></pre></div>    </div>
   </li>
   <li>
     <p>安装node 8.0.0</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 8.0.0
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 8.0.0
 Downloading and installing node v8.0.0...
 Downloading https://nodejs.org/dist/v8.0.0/node-v8.0.0-darwin-x64.tar.gz...
 \############################################################################################# 100.0%
@@ -48,7 +48,7 @@ Creating default alias: default -&gt; 8.0.0 (-&gt; v8.0.0)
 </code></pre></div>    </div>
   </li>
   <li>安装node 10.0.0
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 10.0.0
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 10.0.0
 Downloading and installing node v10.0.0...
 Downloading https://nodejs.org/dist/v10.0.0/node-v10.0.0-darwin-x64.tar.gz...
 \############################################################################################# 100.0%
@@ -58,17 +58,17 @@ Now using node v10.0.0 (npm v5.6.0)
 </code></pre></div>    </div>
   </li>
   <li>重命名node版本
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm alias n10 10.0.0
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm alias n10 10.0.0
 nvm alias n8 8.0.0
 </code></pre></div>    </div>
   </li>
   <li>切换版本
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm use n10
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm use n10
 nvm use n8
 </code></pre></div>    </div>
   </li>
   <li>查看可用版本
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm ls
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm ls
 -&gt;    v8.0.0
 ​    v10.0.0
 ​     system
@@ -80,7 +80,7 @@ stable -&gt; 10.0 (-&gt; v10.0.0) (default)
 </code></pre></div>    </div>
   </li>
   <li>安装稳定版本
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install stable
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install stable
 Downloading and installing node v13.3.0...
 Downloading https://nodejs.org/dist/v13.3.0/node-v13.3.0-darwin-x64.tar.gz...
 \############################################################################################# 100.0%
@@ -92,7 +92,7 @@ Now using node v13.3.0 (npm v6.13.1)
   <li>
     <p>配置环境变量</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 编辑配置文件
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 编辑配置文件
 vim .bash_profile
 // 编辑
 export NVM_DIR="$HOME/.nvm"

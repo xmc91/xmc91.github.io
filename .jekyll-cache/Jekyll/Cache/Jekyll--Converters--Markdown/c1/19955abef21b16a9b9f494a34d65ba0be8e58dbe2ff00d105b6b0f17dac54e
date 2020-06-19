@@ -1,4 +1,4 @@
-I"r<blockquote>
+I"&<blockquote>
   <p>【水调歌头·明月几时有】  [宋代： 苏轼]
 丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。
 明月几时有？把酒问青天。不知天上宫阙，今夕是何年。我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间。
@@ -29,7 +29,7 @@ Message的队列，排序里边的Message，适当的时候取出来</li>
 <ul>
   <li>首先创建Handle，并实现handleMessage，默认创建的Handle的变量callback是空</li>
   <li>handle发送消息，最终调用sendMessageAtTime
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public boolean sendMessageAtTime(Message msg, long uptimeMillis) {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public boolean sendMessageAtTime(Message msg, long uptimeMillis) {
       MessageQueue queue = mQueue;
       if (queue == null) {
           RuntimeException e = new RuntimeException(
@@ -42,7 +42,7 @@ Message的队列，排序里边的Message，适当的时候取出来</li>
 </code></pre></div>    </div>
   </li>
   <li>当前handle对象赋给当前Message的target变量
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private boolean enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis) {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private boolean enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis) {
       msg.target = this;
       if (mAsynchronous) {
           msg.setAsynchronous(true);
@@ -53,7 +53,7 @@ Message的队列，排序里边的Message，适当的时候取出来</li>
   </li>
   <li>排队。。。</li>
   <li>Looper.loop,looper里有个MessageQueue，取出下一个最近的Message，调用Message的target的dispatchMessage方法，
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static void loop() {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static void loop() {
       final Looper me = myLooper();
       if (me == null) {
           throw new RuntimeException("No Looper; Looper.prepare() wasn't called on this thread.");
@@ -82,7 +82,7 @@ Message的队列，排序里边的Message，适当的时候取出来</li>
   </li>
   <li>如果handle是调用的post，则post时的入参runnable赋给Message的callback（Runnable），否则Message的callback就是null</li>
   <li>最终回调给Handle的是
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public void dispatchMessage(Message msg) {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public void dispatchMessage(Message msg) {
       if (msg.callback != null) {
           handleCallback(msg);
       } else {
