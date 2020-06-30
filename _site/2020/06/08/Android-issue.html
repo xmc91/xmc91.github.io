@@ -10,7 +10,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Android issue - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:4000/2020/06/08/Android-issue.html">
+    <meta property="og:url" content="/2020/06/08/Android-issue.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -140,10 +140,9 @@ Author: Ray-Eldath
 <ul>
   <li>build.gradle DSL element ‘android.dataBinding.enabled’ is obsolete and has been replaced with ‘android.buildFeatures.dataBinding’
     <blockquote>
-      <p>按照提示：xxxx已过期，请用yyyy替代，而且指明了哪个文件，到对于文件替换即可
-```
-android {
-  …
+      <p>按照提示：xxxx已过期，请用yyyy替代，而且指明了哪个文件，到对应文件替换即可</p>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android {
+  ...
   // 原来
   dataBinding {
       enabled = true
@@ -152,12 +151,17 @@ android {
   buildFeatures {
       dataBinding = true
   }
-}</p>
+}
+</code></pre></div>      </div>
+    </blockquote>
+  </li>
+  <li>Unable to find method ‘org.gradle.api.internal.project.ProjectInternal.g
+    <blockquote>
+      <p>从github上clone的项目，下来就这个错误。
+修改本地可用的gradle版本/gradle-wrapper 版本即可。</p>
     </blockquote>
   </li>
 </ul>
-
-<p>```</p>
 
     </article>
 

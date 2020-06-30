@@ -3,72 +3,123 @@
   <channel>
     <title>WindMan Blog</title>
     <description>风一样de男子</description>
-    <link>http://localhost:4000//</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 19 Jun 2020 10:50:27 +0800</pubDate>
-    <lastBuildDate>Fri, 19 Jun 2020 10:50:27 +0800</lastBuildDate>
+    <link>//</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 30 Jun 2020 10:33:29 +0800</pubDate>
+    <lastBuildDate>Tue, 30 Jun 2020 10:33:29 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
-        <title>皇帝</title>
-        <description>&lt;h2 id=&quot;西楚前206-前202-共4年&quot;&gt;西楚【前206-前202, 共4年】&lt;/h2&gt;
+        <title>npm</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;npm is the world’s largest software registry. Open source developers from every continent use npm to share and borrow packages, and many organizations use npm to manage private development as well.
+&lt;a href=&quot;https://docs.npmjs.com/&quot;&gt;npm&lt;/a&gt;&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://docs.npmjs.com/misc/semver#advanced-range-syntax&quot;&gt;更新时，版本号range逻辑&lt;/a&gt;
+x:重构等;y:功能升级;z:bug修复。[x.y.z]
+~:指定了xy，只能升级z；只指定了x，则可以升级yz到最大；如果带beta，则只能升级beta-x
+^:最左边第一个不为0的不升级，0以后的升级&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Mon, 29 Jun 2020 00:00:00 +0800</pubDate>
+        <link>/2020/06/29/npm.html</link>
+        <guid isPermaLink="true">/2020/06/29/npm.html</guid>
+        
+        <category>nodejs</category>
+        
+        
+        <category>nodejs</category>
+        
+      </item>
+    
+      <item>
+        <title>android sd卡</title>
+        <description>
+</description>
+        <pubDate>Mon, 29 Jun 2020 00:00:00 +0800</pubDate>
+        <link>/2020/06/29/Android-SD%E5%8D%A1.html</link>
+        <guid isPermaLink="true">/2020/06/29/Android-SD%E5%8D%A1.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>MarkDown </title>
+        <description>&lt;h2 id=&quot;编辑工具&quot;&gt;编辑工具&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;项羽【西楚霸王】
-    &lt;blockquote&gt;
-      &lt;ul&gt;
-        &lt;li&gt;楚国贵族,公元前207年,巨鹿之战后拜为诸侯上将军，拥兵雄厚，达四十余万。次年，项羽在咸阳分封十八路诸侯就国，自立为西楚霸王。&lt;/li&gt;
-        &lt;li&gt;公元前206年汉王刘邦率军出蜀伐楚，爆发楚汉相争。公元前202年刘邦合韩信、彭越，英布五十万兵马将项羽合围于垓下，项羽战败，自刎于乌江，&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
+  &lt;li&gt;离线：Typora&lt;/li&gt;
+  &lt;li&gt;在线：简书、有道等&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;汉朝公元前202年公元8年公元25220年-共历29帝享国四百零七年&quot;&gt;汉朝【公元前202年~公元8年，公元25~220年。 共历29帝，享国四百零七年。】&lt;/h2&gt;
-&lt;h3 id=&quot;西汉公元前202年公元8年定都长安&quot;&gt;西汉【公元前202年~公元8年，定都长安】&lt;/h3&gt;
+&lt;h2 id=&quot;标题及段落&quot;&gt;标题及段落&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;刘邦【流氓翻身】
-    &lt;blockquote&gt;
-      &lt;ul&gt;
-        &lt;li&gt;前202年在定陶正式称皇帝，仍用“汉”号，定都洛阳，两年又迁都长安，但刘邦依旧长住洛阳&lt;/li&gt;
-        &lt;li&gt;前期与民休息，分封功臣，后期一个个干掉，非刘不王。&lt;/li&gt;
-        &lt;li&gt;白登之围以后，和亲求和平&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/blockquote&gt;
+  &lt;li&gt;
+    &lt;h1 id=&quot;一级标题&quot;&gt;一级标题===&lt;/h1&gt;
   &lt;/li&gt;
-  &lt;li&gt;刘盈/吕后
-    &lt;blockquote&gt;
-      &lt;ul&gt;
-        &lt;li&gt;皇帝无能，吕后当家&lt;/li&gt;
-        &lt;li&gt;萧规曹随，倒也安生&lt;/li&gt;
-        &lt;li&gt;任用外戚，酿成“诸吕之乱”&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/blockquote&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;二级标题&quot;&gt;二级标题—&lt;/h2&gt;
   &lt;/li&gt;
-  &lt;li&gt;刘恭【前少帝】
-    &lt;blockquote&gt;
-      &lt;ul&gt;
-        &lt;li&gt;吕后立又废，封于永巷，对外称病，此后密死&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/blockquote&gt;
+  &lt;li&gt;用#号表示1-6
+    &lt;h1 id=&quot;1--2--3-4-5-6&quot;&gt;1 ;## 2 ;### 3;#### 4;##### 5；###### 6&lt;/h1&gt;
   &lt;/li&gt;
-  &lt;li&gt;刘弘【后少帝】（前184年6月15日－前180年11月14日在位）
-    &lt;blockquote&gt;
-      &lt;ul&gt;
-        &lt;li&gt;吕后霸权，未及称元年&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;汉文帝
-    &lt;h3 id=&quot;新朝&quot;&gt;新朝&lt;/h3&gt;
-  &lt;/li&gt;
+  &lt;li&gt;两个空格换行
+行1&lt;br /&gt;
+行2&lt;/li&gt;
+  &lt;li&gt;空行换行
+行1&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;东汉公元25220年&quot;&gt;东汉【公元25~220年】&lt;/h3&gt;
+&lt;p&gt;行2&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;分割线：三个以上的星号、减号、底线
+*** ；— ；___&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;内容体&quot;&gt;内容体&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;斜体：* ；粗体：** ；又粗又斜：&lt;strong&gt;* 
+&lt;em&gt;斜&lt;/em&gt; ；&lt;/strong&gt;粗** ；&lt;strong&gt;&lt;em&gt;又粗又斜&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;删除线：&lt;del&gt;xxx&lt;/del&gt;&lt;/li&gt;
+  &lt;li&gt;下划线：nnd，居然用html标签 &lt;u&gt;&lt;/u&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
+        <pubDate>Mon, 22 Jun 2020 00:00:00 +0800</pubDate>
+        <link>/2020/06/22/markdown.html</link>
+        <guid isPermaLink="true">/2020/06/22/markdown.html</guid>
+        
+        <category>Tools</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>基金</title>
+        <description>
+</description>
+        <pubDate>Sat, 20 Jun 2020 00:00:00 +0800</pubDate>
+        <link>/2020/06/20/%E5%9F%BA%E9%87%91.html</link>
+        <guid isPermaLink="true">/2020/06/20/%E5%9F%BA%E9%87%91.html</guid>
+        
+        <category>read</category>
+        
+        
+        <category>read</category>
+        
+      </item>
+    
+      <item>
+        <title>皇帝</title>
+        <description>
+</description>
         <pubDate>Thu, 18 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/18/%E7%9A%87%E5%B8%9D.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/18/%E7%9A%87%E5%B8%9D.html</guid>
+        <link>/2020/06/18/%E7%9A%87%E5%B8%9D.html</link>
+        <guid isPermaLink="true">/2020/06/18/%E7%9A%87%E5%B8%9D.html</guid>
         
         <category>Android</category>
         
@@ -167,8 +218,8 @@
 &lt;h3 id=&quot;东汉公元25220年&quot;&gt;东汉【公元25~220年】&lt;/h3&gt;
 </description>
         <pubDate>Thu, 18 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/18/%E4%B8%AD%E5%9B%BD%E7%9A%87%E5%B8%9D%E8%A1%A8.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/18/%E4%B8%AD%E5%9B%BD%E7%9A%87%E5%B8%9D%E8%A1%A8.html</guid>
+        <link>/2020/06/18/%E4%B8%AD%E5%9B%BD%E7%9A%87%E5%B8%9D%E8%A1%A8.html</link>
+        <guid isPermaLink="true">/2020/06/18/%E4%B8%AD%E5%9B%BD%E7%9A%87%E5%B8%9D%E8%A1%A8.html</guid>
         
         <category>read</category>
         
@@ -225,8 +276,8 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Mon, 08 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/08/jetpack.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/08/jetpack.html</guid>
+        <link>/2020/06/08/jetpack.html</link>
+        <guid isPermaLink="true">/2020/06/08/jetpack.html</guid>
         
         <category>Android</category>
         
@@ -244,10 +295,9 @@
 &lt;ul&gt;
   &lt;li&gt;build.gradle DSL element ‘android.dataBinding.enabled’ is obsolete and has been replaced with ‘android.buildFeatures.dataBinding’
     &lt;blockquote&gt;
-      &lt;p&gt;按照提示：xxxx已过期，请用yyyy替代，而且指明了哪个文件，到对于文件替换即可
-```
-android {
-  …
+      &lt;p&gt;按照提示：xxxx已过期，请用yyyy替代，而且指明了哪个文件，到对应文件替换即可&lt;/p&gt;
+      &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;android {
+  ...
   // 原来
   dataBinding {
       enabled = true
@@ -256,16 +306,21 @@ android {
   buildFeatures {
       dataBinding = true
   }
-}&lt;/p&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;      &lt;/div&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Unable to find method ‘org.gradle.api.internal.project.ProjectInternal.g
+    &lt;blockquote&gt;
+      &lt;p&gt;从github上clone的项目，下来就这个错误。
+修改本地可用的gradle版本/gradle-wrapper 版本即可。&lt;/p&gt;
     &lt;/blockquote&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;```&lt;/p&gt;
 </description>
         <pubDate>Mon, 08 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/08/Android-issue.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/08/Android-issue.html</guid>
+        <link>/2020/06/08/Android-issue.html</link>
+        <guid isPermaLink="true">/2020/06/08/Android-issue.html</guid>
         
         <category>Android</category>
         
@@ -622,8 +677,8 @@ android {
 
 </description>
         <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</guid>
+        <link>/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</link>
+        <guid isPermaLink="true">/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</guid>
         
         <category>read</category>
         
@@ -712,411 +767,13 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html</guid>
+        <link>/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html</link>
+        <guid isPermaLink="true">/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html</guid>
         
         <category>read</category>
         
         
         <category>read</category>
-        
-      </item>
-    
-      <item>
-        <title>宁静的野荡</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;我坐在这里，听啊，想啊，念啊&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;love is over
-    &lt;blockquote&gt;
-      &lt;p&gt;欧阳菲菲的中期代表作，1979年出发表，80年代在日本风靡一时的单曲。共分为日语版；韩语版；英文版；粤语版。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;野子
-    &lt;blockquote&gt;
-      &lt;p&gt;写给每一个内心野荡的人&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;光辉岁月
-    &lt;blockquote&gt;
-      &lt;p&gt;音乐响起，忍不住磕头。黄家驹为南非黑人领袖曼德拉创作的一首感人至深的作品。在曼德拉逝世后，这首歌曲更显得弥足珍贵。《光辉岁月》不仅浓缩了曼德拉一生的坎坷，同时也表达出曼德拉所希望达到的自由平等 。这首歌曲也可以看做是对Beyond的一首赞歌：不管经历了多少风雨，Beyond已经拥有只属于自己的光辉岁月&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;真的爱你
-    &lt;blockquote&gt;
-      &lt;p&gt;当年Beyond乐队刚成立时非常困难，大家连一件像样的乐器都买不起，更不用说举办演唱会了，黄家驹的父亲比较保守，一直希望家驹长大后能有一份稳定的工作，不希望他搞音乐，而家驹的母亲不一样，她一直以来都非常尊重儿子的想法，认为“兴趣是人生最好的导师”这句话非常有道理，而且家驹的母亲平时也经常听儿子演唱各种歌曲，认为儿子天赋很高，又有十足的兴趣作激励，将来一定能在音乐这方面大有作为，即使没有大的作为，起码也做了自己想做的事情，不会留下悔恨。因此，家驹的母亲经常偷偷给家驹存钱，家驹对母亲非常感激。后来一次演唱会正赶在母亲节前夕举行，投资商非常想让黄家驹作一首关于赞美母爱的歌，本来家驹不愿意，因为他不想因为商业化作歌，但后来他还是答应了，因为作首歌表达自己对母亲的感激之情这件事他已经考虑很久了，就这样，这首脍炙人口的《真的爱你》就在一夜之间诞生了&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;不再犹豫
-    &lt;blockquote&gt;
-      &lt;p&gt;莫欺少年穷，一往无前&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;童年
-    &lt;blockquote&gt;
-      &lt;p&gt;不一样的童年风景，却是一样的童年心境&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;谁伴我闯荡
-    &lt;blockquote&gt;
-      &lt;p&gt;在理想和现实中、在困难和迷惘中，坚持自我！&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;喜欢你
-    &lt;blockquote&gt;
-      &lt;p&gt;黑服你，一封迟到的情书，一腔忏悔的爱&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;最浪漫的事
-    &lt;blockquote&gt;
-      &lt;p&gt;这是我听过的最浪漫的事&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;阳光总在风雨后
-    &lt;blockquote&gt;
-      &lt;p&gt;愿意和一辈子的鸡汤：风风雨雨都接受&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;漂洋过海来看你
-    &lt;blockquote&gt;
-      &lt;p&gt;丝丝入扣的相思，发人深省的爱情啊&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/07/music.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/07/music.html</guid>
-        
-        <category>read</category>
-        
-        
-        <category>read</category>
-        
-      </item>
-    
-      <item>
-        <title>Flutter 大江东去浪淘尽</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;念奴娇·赤壁怀古【作者】苏轼 
-大江东去，浪淘尽，千古风流人物。
-故垒西边，人道是，三国周郎赤壁。
-乱石穿空，惊涛拍岸，卷起千堆雪。
-江山如画，一时多少豪杰。
-遥想公瑾当年，小乔初嫁了，雄姿英发。
-羽扇纶巾，谈笑间，樯橹灰飞烟灭。
-故国神游，多情应笑我，早生华发。
-人生如梦，一尊还酹江月。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;环境搭建&quot;&gt;环境搭建&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;下载flutter sdk，&lt;a href=&quot;https://flutterchina.club/get-started/install/&quot;&gt;慢的夜啤&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;安装插件：在AS上安装Dart和Flutter&lt;/li&gt;
-  &lt;li&gt;初始化一个项目  &lt;br /&gt;
-&lt;img src=&quot;/assets/img/flutter/flutter_project.png&quot; height=&quot;300&quot; width=&quot;500&quot; align=&quot;left&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/07/flutter.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/07/flutter.html</guid>
-        
-        <category>flutter</category>
-        
-        
-        <category>flutter</category>
-        
-      </item>
-    
-      <item>
-        <title>一栋红楼，一场梦</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;文字在这里堆砌成万里长城&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;红楼梦17首经典诗词&quot;&gt;红楼梦17首经典诗词&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;作者题绝
-    &lt;blockquote&gt;
-      &lt;p&gt;满纸荒唐言，一把辛酸泪！
-都云作者痴，谁解其中味？&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;太虚幻境楹联
-    &lt;blockquote&gt;
-      &lt;p&gt;假作真时真亦假，无为有处有还无。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;好了歌
-    &lt;blockquote&gt;
-      &lt;p&gt;世人都晓神仙好，惟有功名忘不了。
-古今将相在何方，荒冢一堆草没了。
-世人都晓神仙好，只有金银忘不了。
-终朝只恨聚无多，及到多时眼闭了。
-世人都晓神仙好，只有娇妻忘不了。
-君生日日说恩情，君死又随人去了。
-世人都晓神仙好，只有儿孙忘不了。
-痴心父母古来多，孝顺儿孙谁见了。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;王叔晖 林黛玉  终身误
-    &lt;blockquote&gt;
-      &lt;p&gt;都道是金玉良姻，俺只念木石前盟。
-空对着，山中高士晶莹雪；
-终不忘，世外仙姝寂寞林。
-叹人间，美中不足今方信。
-纵然是齐眉举案，到底意难平。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;枉凝眉
-    &lt;blockquote&gt;
-      &lt;p&gt;一个是阆苑仙葩，一个是美玉无暇。
-若说没奇缘，今生偏又遇着他；
-若说有奇缘，如何心事终虚化？
-一个枉自嗟呀，一个空劳牵挂。
-一个是水中月，一个是镜中花。
-想眼中能有多少泪珠儿，
-怎经得秋流到冬尽，春流到夏！&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;恨无常
-    &lt;blockquote&gt;
-      &lt;p&gt;喜荣华正好，恨无常又到。
-眼睁睁，把万事全抛。
-荡悠悠，把芳魂消耗。
-望家乡，路远山高。
-故向爹娘梦里相寻告：
-儿命已入黄泉，
-天伦呵，须要退步抽身早！&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;王叔晖 王熙凤-平儿  世难容
-    &lt;blockquote&gt;
-      &lt;p&gt;气质美如兰，才华阜比仙。
-天生成孤僻人皆罕。
-你道是啖肉食腥膻，视绮罗俗厌；
-却不知太高人愈妒，过洁世同嫌。
-可叹这，青灯古殿人将老；
-辜负了，红粉朱楼春色阑。
-到头来，依旧是风尘肮脏违心愿。
-好一似，无暇白玉遭泥陷；
-又何须，王孙公子叹无缘。
-说到辛酸处，荒唐愈可悲。
-由来同一梦，休笑世人痴！&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;聪明累
-    &lt;blockquote&gt;
-      &lt;p&gt;机关算尽太聪明，反算了卿卿性命。
-生前心已碎，死后性空灵。
-家富人宁，终有个家亡人散各奔腾。
-枉费了，意悬悬半世心；
-好一似，荡悠悠三更梦。
-忽喇喇似大厦倾，昏惨惨似灯将尽。
-呀！一场欢喜忽悲辛。叹人世，终难定。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;晚韶华
-    &lt;blockquote&gt;
-      &lt;p&gt;镜里恩情，更那堪梦里功名！
-那美韶华去之何迅！再休提绣帐鸳衾。
-只这带珠冠，
-披凤袄，也抵不了无常性命。
-虽说是，
-人生莫受老来贫，也须要阴骘积儿孙。
-气昂昂头戴簪缨，气昂昂头戴簪缨；
-光灿灿胸悬金印；
-威赫赫爵禄高登，威赫赫爵禄高登；
-昏惨惨黄泉路近。
-问古今将相可还存？
-也只是虚名儿与后人钦敬。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;王叔晖 晴雯补裘  好事终
-    &lt;blockquote&gt;
-      &lt;p&gt;画梁春尽落香尘。
-擅风情，秉月貌，便是败家的根本。
-箕裘颓堕皆从敬，家事消亡首罪宁。
-宿孽总因情。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;西江月
-    &lt;blockquote&gt;
-      &lt;p&gt;无故寻愁觅恨，有时似傻如狂；
-纵然生得好皮囊，腹内原来草莽。
-潦倒不通世务，愚顽怕读文章；
-行为偏僻性乖张，那管世人诽谤！
-富贵不知乐业，贫穷难耐凄凉；
-可怜辜负好韶光，于国于家无望。
-天下无能第一，古今不肖无双；
-寄言纨袴与膏粱，莫效此儿形状！&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;黛玉容貌
-    &lt;blockquote&gt;
-      &lt;p&gt;两弯似蹙非蹙笼烟眉，
-一双似喜非喜含情目。
-态生两靥之愁，娇袭一身之病。
-泪光点点，娇喘微微。
-闲静时如姣花照水，行动处似弱柳扶风。
-心较比干多一窍，病如西子胜三分。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;王叔晖 憨湘云醉眠芍药裀  护官符
-    &lt;blockquote&gt;
-      &lt;p&gt;贾不假，白玉为堂金作马。
-阿房宫，三百里，
-住不下金陵一个史。
-东海缺少白玉床，龙王来请金陵王。
-丰年好大雪，珍珠如土金如铁。
-宁国府上房楹联
-世事洞明皆学问，人情练达即文章。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;秦可卿房内楹联
-    &lt;blockquote&gt;
-      &lt;p&gt;嫩寒锁梦因春冷，芳气袭人是酒香。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;薄命司楹联
-    &lt;blockquote&gt;
-      &lt;p&gt;春恨秋悲皆自惹，花容月貌为谁妍。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;警幻仙姑作歌曰
-    &lt;blockquote&gt;
-      &lt;p&gt;春梦随云散，飞花逐水流。
-寄言众儿女，何必觅闲愁。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;王叔晖 红楼梦人物  葬花吟黛玉
-    &lt;blockquote&gt;
-      &lt;p&gt;花谢花飞花满天，红消香断有谁怜？
-游丝软系飘春榭，落絮轻沾扑绣帘。
-闺中女儿惜春暮，愁绪满怀无处诉，
-手把花除出绣闺，忍踏落花来复去。
-柳丝榆荚自芳菲，不管桃飘与李飞。
-桃李明年能再发，明年闺中知有谁？
-三月香巢已垒成，梁间燕子太无情！
-明年花发虽可啄，却不道人去梁空巢也倾。
-一年三百六十日，风刀霜剑严相逼，
-明媚鲜妍能几时，一朝飘泊难寻觅。
-花开易见落难寻，阶前愁杀葬花人，
-独倚花锄泪暗洒，洒上空枝见血痕。
-杜鹃无语正黄昏，荷锄归去掩重门。
-青灯照壁人初睡，冷雨敲窗被未温。
-怪奴底事倍伤神，半为怜春半恼春：
-怜春忽至恼忽去，至又无言去不闻。
-昨宵庭外悲歌发，知是花魂与鸟魂？
-花魂鸟魂总难留，鸟自无咽花自羞。
-愿奴肋下生双翼，随花飞到天尽头。
-天尽头，何处有香丘？
-未若锦囊收艳骨，一抔净土掩风流。
-质本洁来还洁去，强于污掉陷渠沟。
-尔今死去侬收葬，未卜侬身何日丧？
-侬今葬花人笑痴，他年葬侬知是谁？
-试看春残花渐落，便是红颜老死时。
-一朝春尽红颜老，花落人亡两不知！&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 06 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/06/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E8%AF%97%E8%AF%8D.html</guid>
-        
-        <category>read</category>
-        
-        
-        <category>read</category>
-        
-      </item>
-    
-      <item>
-        <title>Plugin 一蓑烟雨任平生</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;【定风波·莫听穿林打叶声】 [宋代：苏轼]
-三月七日，沙湖道中遇雨，雨具先去，同行皆狼狈，余独不觉。已而遂晴，故作此。
-莫听穿林打叶声，何妨吟啸且徐行。竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。
-料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://plugins.jetbrains.com&quot;&gt;官网&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;jetbrains-插件集合&quot;&gt;jetbrains 插件集合&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ECTranslation
-    &lt;blockquote&gt;
-      &lt;p&gt;翻译，大大滴有用，拯救 Chinese English&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;GenerateAllSetter
-    &lt;blockquote&gt;
-      &lt;p&gt;生成一个对象的所有的setter方法，当然工具默认自带的插件也可以&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;SequenceDiagram
-    &lt;blockquote&gt;
-      &lt;p&gt;生成简单序列图。
-单击图形形状来导航代码。
-从图中删除类。
-将图表导出为图像。
-通过“设置”&amp;gt;“其他设置”&amp;gt;“序列”从图表中排除类&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Leetcode Editor
-    &lt;blockquote&gt;
-      &lt;p&gt;注册之后，在AS里登录。光天化日之下摸鱼&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;GsonFormat
-    &lt;blockquote&gt;
-      &lt;p&gt;json里的方天画戟&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://plugins.jetbrains.com/plugin/7495--ignore&quot;&gt;ignore&lt;/a&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;支持各种版本管理工具的ignore，比如常见的git、hg，cvs等等
-支持右键把文件加入ignore、隐藏加入的文件&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://plugins.jetbrains.com/plugin/7793-markdown&quot;&gt;markdown&lt;/a&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;readme.md 的福音&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;rainbow brackets
-    &lt;blockquote&gt;
-      &lt;p&gt;爱上🌈，吃掉🌈。代码里从此多了颜色&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;ideaJad
-    &lt;blockquote&gt;
-      &lt;p&gt;反编译工具&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Material Theme UI
-    &lt;blockquote&gt;
-      &lt;p&gt;给idea 换身衣服吧&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Tue, 02 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/02/ASPlugin.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/02/ASPlugin.html</guid>
-        
-        <category>Plugin</category>
-        
-        
-        <category>Plugin</category>
         
       </item>
     

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Android App性能优化 - WindMan Blog</title>
+    <title>App优化 寂寞沙洲冷 - WindMan Blog</title>
     <meta name="author"  content="WindMan">
-    <meta name="description" content="Android App性能优化">
+    <meta name="description" content="App优化 寂寞沙洲冷">
     <meta name="keywords"  content="Android">
     <!-- Open Graph -->
-    <meta property="og:title" content="Android App性能优化 - WindMan Blog">
+    <meta property="og:title" content="App优化 寂寞沙洲冷 - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:4000/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html">
+    <meta property="og:url" content="/2020/05/06/android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -120,7 +120,7 @@ Author: Ray-Eldath
           
         
       </div>
-      <h1>Android App性能优化</h1>
+      <h1>App优化 寂寞沙洲冷</h1>
       <div class="post-meta">
         <span class="post-meta-item"><i class="iconfont icon-author"></i>WindMan</span>
         <time class="post-meta-item" datetime="20-05-06"><i class="iconfont icon-date"></i>06 May 2020</time>
@@ -134,53 +134,25 @@ Author: Ray-Eldath
 
     <article class="markdown-body">
       <blockquote>
-  <p>本文从最初的编码，编码 中及后的检查，编译，编译后的apk瘦身，对APP的整个产生过程优化。</p>
-  <h2 id="编码优化">编码优化</h2>
-  <ul>
-    <li>handler 作为内部类导致内测泄露，由于非静态内部匿名类会持有外部类的引用，可能会导致外部类无法即使释放。
-```
-public class HandlerActivity extends Activity{</li>
-  </ul>
+  <p>【卜算子·黄州定慧院寓居作】  [宋代： 苏轼]
+缺月挂疏桐，漏断人初静。谁见幽人独往来，缥缈孤鸿影。
+惊起却回头，有恨无人省。拣尽寒枝不肯栖，寂寞沙洲冷。</p>
+  <h2 id="view优化">View优化</h2>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private static class InnerHandler extends Handler{
-	// 持有弱引用
-	private final WeakReference&lt;HandlerActivity&gt; mActivity;
-	
-	public InnerHandler(HandlerActivity activity){
-		mActivity = new WeakReference&lt;HandlerActivity&gt;(activity);
-	}
-	
-	@Override
-	public void handleMessage(Message msg){
-		HandlerActivity activity = mActivity.get();
-		if(activity != null){
-		}
-	}
-}
+<h2 id="内存优化">内存优化</h2>
 
-private final InnerHandler mHandler = new InnerHandler(this);
+<h2 id="存储优化">存储优化</h2>
 
-/*
-* 静态匿名内部类不会持有外部类的引用
-*/
-private static final Runnable runnable = new Runnable(){
+<h2 id="稳定性优化">稳定性优化</h2>
 
-	@Override
-	public void run(){
-	}
-};
+<h2 id="电量优化">电量优化</h2>
 
-@Override
-protected void onCreate(Bundle savedInstanceState){
-	super.onCreate(savedInstanceState);
-	
-	//延迟5分子发送消息
-	mHandler.postDelayed(runnable, 1000*60*5);
-} }	
-</code></pre></div></div>
+<h2 id="apk优化">apk优化</h2>
+<ul>
+  <li></li>
+</ul>
 
-<p>```</p>
 <h2 id="检查工具lint">检查工具lint</h2>
 <p><a href="http://tools.android.com/tips/lint">主要参考</a>
 https://blog.csdn.net/luzhenyuxfcy/article/details/79398761

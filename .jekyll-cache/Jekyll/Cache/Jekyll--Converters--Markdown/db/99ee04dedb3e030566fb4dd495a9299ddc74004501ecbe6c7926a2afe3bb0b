@@ -1,0 +1,11 @@
+I"y<blockquote>
+  <p>npm is the world’s largest software registry. Open source developers from every continent use npm to share and borrow packages, and many organizations use npm to manage private development as well.
+<a href="https://docs.npmjs.com/">npm</a></p>
+  <ul>
+    <li><a href="https://docs.npmjs.com/misc/semver#advanced-range-syntax">更新时，版本号range逻辑</a>
+x:重构等;y:功能升级;z:bug修复。[x.y.z]
+~:指定了xy，只能升级z；只指定了x，则可以升级yz到最大；如果带beta，则只能升级beta-x
+^:最左边第一个不为0的不升级，0以后的升级</li>
+  </ul>
+</blockquote>
+:ET
