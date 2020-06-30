@@ -5,9 +5,30 @@
     <description>风一样de男子</description>
     <link>//</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 30 Jun 2020 10:33:29 +0800</pubDate>
-    <lastBuildDate>Tue, 30 Jun 2020 10:33:29 +0800</lastBuildDate>
+    <pubDate>Tue, 30 Jun 2020 10:42:27 +0800</pubDate>
+    <lastBuildDate>Tue, 30 Jun 2020 10:42:27 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>日常记录</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;记忆是一场没有尽头的纪录片&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Foxmail
+今天突然想更换一下GitHub的邮箱，因为现在这些老外不太靠谱了，又加上翻墙困难，哪天Gmail无法登陆了就凉凉了，竟然发现Foxmail没有入口，一顿搜索，发现foxmail 在2005年被腾讯收购，需要在qq邮箱注册Foxmail。然后设置独立密码，于是我的GitHub就可以用双号登陆啦。&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Tue, 30 Jun 2020 00:00:00 +0800</pubDate>
+        <link>/2020/06/30/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95.html</link>
+        <guid isPermaLink="true">/2020/06/30/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95.html</guid>
+        
+        <category>read</category>
+        
+        
+        <category>read</category>
+        
+      </item>
     
       <item>
         <title>npm</title>
@@ -679,96 +700,6 @@ x:重构等;y:功能升级;z:bug修复。[x.y.z]
         <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
         <link>/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</link>
         <guid isPermaLink="true">/2020/06/07/%E7%BB%8F%E5%85%B8%E5%AF%B9%E5%AD%90.html</guid>
-        
-        <category>read</category>
-        
-        
-        <category>read</category>
-        
-      </item>
-    
-      <item>
-        <title>事件分发 寻寻觅觅</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;声声慢·寻寻觅觅【作者】李清照
-寻寻觅觅，冷冷清清，凄凄惨惨戚戚。乍暖还寒时候，最难将息。三杯两盏淡酒，怎敌他、晚来风急！雁过也，正伤心，却是旧时相识。
-满地黄花堆积，憔悴损，如今有谁堪摘？守着窗儿，独自怎生得黑！梧桐更兼细雨，到黄昏、点点滴滴。这次第，怎一个愁字了得！&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;事件分发本质上屏幕作为电容屏幕下边有四个引脚通着电手指点击屏幕触发电容电流流动然后引脚计算出手指点击的位置上报给系统此时才到达应用层反馈到view上处理业务逻辑操作屏幕其实就像是和一个人做游戏一样屏幕主板等一系列硬件作为工具系统中间商把事件给到服务商appapp把你的意图展示到屏幕上这难道不是一个哲学问题吗女施主从哪里来我从来出来女施主到哪里去我要到去出去不过这里的去处和来处形成了闭环&quot;&gt;事件分发本质上：屏幕作为电容，屏幕下边有四个引脚通着电，手指点击屏幕触发电容电流流动；然后引脚计算出手指点击的位置，上报给系统；此时才到达应用层，反馈到view上处理业务逻辑。【操作屏幕，其实就像是和一个人做游戏一样，屏幕、主板等一系列硬件作为工具，系统中间商把事件给到服务商APP，APP把你的意图展示到屏幕上，这难道不是一个哲学问题吗？女施主从哪里来？我从来出来，女施主到哪里去？我要到去出去。不过这里的去处和来处形成了闭环】&lt;/h3&gt;
-
-&lt;h3 id=&quot;事件分发在app上的对象自然是view啦&quot;&gt;事件分发在APP上的对象自然是view啦&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;View 是最小的吗？No，能看到的都是View，你看那，viewgroup本质上不也是个view嘛。正所谓无大无小&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Activity：view的家族们&lt;/li&gt;
-  &lt;li&gt;ViewGroup：view的集合&lt;/li&gt;
-  &lt;li&gt;View：通常是一个小单位&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;事件的分类&quot;&gt;事件的分类&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;无非就是，点了、动了、离开了&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Down：点下的那一刻&lt;/li&gt;
-  &lt;li&gt;Move：你说你点了没动？那是你的眼睛骗了你&lt;/li&gt;
-  &lt;li&gt;Up：拜拜了，屏幕&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;流程&quot;&gt;流程&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 如果Activity的这个方法没有通过super调用，后续啥都没了
-public boolean dispatchTouchEvent(MotionEvent ev) {
-        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-            onUserInteraction();
-        }
-        // 这里最终是ViewGroup的diapatch
-        // 所以ViewGroup的dispatch返回true，Activity的onTouch也就没了
-        if (getWindow().superDispatchTouchEvent(ev)) {
-            return true;
-        }
-        return onTouchEvent(ev);
-    }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li&gt;系统捕获到点击，先把这事告诉Activity的dispatchTouchEvent(MotionEvent ev)，Activity这玩意真是爸爸，你直接返回true或者false都不行。正常理解就是分发或者不分发的事儿吗？在这块，你说的就不算了，你必须听Activity得super.dispatchTouchEvent(ev)。不听Activity的话，这事就撂这了，无论是ViewGroup还是View你们都歇菜吧。[侬吉岛为啥了吧？]相信你没看粗来为毛，因为这里Activity并没有把分发转个ViewGroup，哈哈哈，Activity这吊玩意自己不处理，把这玩意交给了Window的抽象方法superDispatchTouchEvent，PhoneWindow这厮继承Window同时还持有DecorView，最终在PhoneWindow里成功转移：
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Override
-  public boolean superDispatchTouchEvent(MotionEvent event) {
-      return mDecor.superDispatchTouchEvent(event);
-  }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;DecorView经过一系列甩锅，这就成功的把分发事件从Activity转给了ViewGroup。馹馹馹，感觉谷歌的工程师在洗钱。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;事件来到ViewGroup的dispatchTouchEvent，这ViewGroup也是个爹（其实是因为内部有实现，不调用super里边的实现就失效了，更别谈往下走），return true则后续事件在Activity和ViewGroup中荡漾，return false这事也就葱ViewGroup的地板弹到Activity再也回不来了，但是Activity得onTouch可以执行。只有调用super.dispatchTouchEvent(ev)，ViewGroup才能发挥自己的余热，经过深思熟虑（各种判断）告诉onInterceptTouchEvent(ev)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;不知不觉，事件来到了ViewGroup的onInterceptTouchEvent(ev),而这个函数呢，有点低调，不喜欢管事，简单思考一哈哈（就个简单的判断，其他判断可以不深究，不是down他肯定不管），他就不管了（return false 不拦截）
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public boolean onInterceptTouchEvent(MotionEvent ev) {
-      if (ev.isFromSource(InputDevice.SOURCE_MOUSE)
-              &amp;amp;&amp;amp; ev.getAction() == MotionEvent.ACTION_DOWN
-              &amp;amp;&amp;amp; ev.isButtonPressed(MotionEvent.BUTTON_PRIMARY)
-              &amp;amp;&amp;amp; isOnScrollbarThumb(ev.getX(), ev.getY())) {
-          return true;
-      }
-      return false;
-  }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;最后上一张图吧，这玩意怕死不好记，还是上个图，看图识意&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/click/click.png&quot; alt=&quot;流程图&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;在Android10源码分析的，这个分析的真不错&lt;a href=&quot;https://www.jianshu.com/p/38015afcdb58&quot;&gt;android 5.0事件分发分析&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 07 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html</link>
-        <guid isPermaLink="true">/2020/06/07/%E6%97%B6%E9%97%B4%E5%88%86%E5%8F%91.html</guid>
         
         <category>read</category>
         

@@ -1,6 +1,12 @@
 [
   
     {
+      "title"    : "日常记录",
+      "tags"     : "read",
+      "url"      : "/2020/06/30/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95.html"
+    } ,
+  
+    {
       "title"    : "npm",
       "tags"     : "nodejs",
       "url"      : "/2020/06/29/npm.html"
