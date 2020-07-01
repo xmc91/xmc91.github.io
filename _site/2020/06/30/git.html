@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>基金 - WindMan Blog</title>
+    <title>Git 笔记 - WindMan Blog</title>
     <meta name="author"  content="WindMan">
-    <meta name="description" content="基金">
-    <meta name="keywords"  content="read">
+    <meta name="description" content="Git 笔记">
+    <meta name="keywords"  content="Tool">
     <!-- Open Graph -->
-    <meta property="og:title" content="基金 - WindMan Blog">
+    <meta property="og:title" content="Git 笔记 - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/2020/06/20/%E5%9F%BA%E9%87%91.html">
+    <meta property="og:url" content="/2020/06/30/git.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -116,14 +116,14 @@ Author: Ray-Eldath
       <div class="post-tags">
         
           
-            <a href="/tags.html#read" class="post-tag">read</a>
+            <a href="/tags.html#Tool" class="post-tag">Tool</a>
           
         
       </div>
-      <h1>基金</h1>
+      <h1>Git 笔记</h1>
       <div class="post-meta">
         <span class="post-meta-item"><i class="iconfont icon-author"></i>WindMan</span>
-        <time class="post-meta-item" datetime="20-06-20"><i class="iconfont icon-date"></i>20 Jun 2020</time>
+        <time class="post-meta-item" datetime="20-06-30"><i class="iconfont icon-date"></i>30 Jun 2020</time>
       </div>
     </div>
     
@@ -133,7 +133,52 @@ Author: Ray-Eldath
     
 
     <article class="markdown-body">
-      
+      <blockquote>
+  <p>2005年，神一样的linus，两周就用C写完了Git，一个月之内，Linux系统的源码已经由Git管理了，2008年，GitHub上线，为开源项目免费提供Git存储。</p>
+  <ul>
+    <li>Git分布式管理
+CVS和SVN是集中式管理，必须联网，与中央服务器沟通。Git在本地即可管理版本，在中央服务器与别人的版本合并</li>
+    <li>Git安装
+Git最早只能在Linux和Unix系统上，目前各大系统都可以了。
+linux安装：sudo apt-get install git
+mac安装: brew install git (mac安装homebrew：/usr/bin/ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”)
+windows安装：下载gitbash for Windows</li>
+    <li>git创建仓库
+通常情况下，mkdir 一个路径，然后 git  init 
+此时，会生出.git文件，以后版本管理就有这个文件了</li>
+    <li>关联GitHub
+在 GitHub上创建一个空仓库
+在本地仓库目录： git remote add origin（远程哭名字） git@github.com:GitHub账户名/xxx.git
+git push -u origin master</li>
+    <li>clone
+git clone，Git支持多种协议，包括https，但ssh协议速度最快。</li>
+    <li>花式操作分支
+```</li>
+    <li>查看远程分支：git branch -a</li>
+    <li>查看本地分支：git branch</li>
+    <li>创建分支：git branch  xxx</li>
+    <li>切换分支：git checkout/switch   xxx</li>
+    <li>创建并切换：git checkout -b dev// git switch  -b dev</li>
+    <li>合并分支：git merge dev</li>
+    <li>删除分支：git branch -d dev
+```</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>–pretty=oneline
+git add xx 添加修改到暂存区stage// git add . // git log // git status // git diff // git diff xxx         // git commit -m ‘xx’ 把修改从暂存区的所有提交到当前分支 // git push // git rest –hard HEAD^(HEAD^^,HEAD~100)//  git reset –hard 1094a回退版本(id只写前几位即可)// git reflog记录之前的命令</p>
+</blockquote>
+
+<blockquote>
+  <p>git config –global i18n.logOutputEncoding gbk //
+git config –global i18n.commitEncoding gbk
+git checkout –file // 撤销未提交的修改
+git checkout xx 切换分支
+git reset HEAD xx 把xx文件从暂存区恢复到工作区
+git rm删掉，并且git commit</p>
+
+</blockquote>
 
     </article>
 
@@ -174,10 +219,10 @@ Author: Ray-Eldath
     <section class="post-footer-item read-next">
       
       <div class="read-next-item">
-        <a href="/2020/06/20/Wise-yellow-joke.html" class="read-next-link"></a>
+        <a href="/2020/06/30/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95.html" class="read-next-link"></a>
         <section>
-          <span>基金</span>
-          <p>  Wise Yellow Joke</p>
+          <span>日常记录</span>
+          <p>  记忆是一场没有尽头的纪录片      Foxmail今天突然想更换一下GitHub的邮箱，因为现在这些老外不太...</p>
         </section>
         
      </div>
@@ -185,10 +230,10 @@ Author: Ray-Eldath
 
       
       <div class="read-next-item">
-        <a href="/2020/06/18/%E7%9A%87%E5%B8%9D.html" class="read-next-link"></a>
+        <a href="/2020/06/29/npm.html" class="read-next-link"></a>
           <section>
-            <span>皇帝</span>
-            <p></p>
+            <span>npm</span>
+            <p>  npm is the world’s largest software registry. Open sour...</p>
           </section>
           
       </div>

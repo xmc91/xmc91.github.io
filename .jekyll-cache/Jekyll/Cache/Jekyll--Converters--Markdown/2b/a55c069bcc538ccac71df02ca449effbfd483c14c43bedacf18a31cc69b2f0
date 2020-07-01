@@ -1,0 +1,14 @@
+I"�<blockquote>
+  <p>自己创建的自己亲手毁掉，哈哈哈哈，有意思</p>
+  <ul>
+    <li>安装
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install deno
+</code></pre></div>      </div>
+    </li>
+    <li>deno -h
+```
+deno 0.32.0
+A secure JavaScript and TypeScript runtime // 安全的JavaScript和TypeScript运行时</li>
+  </ul>
+</blockquote>
+:ET

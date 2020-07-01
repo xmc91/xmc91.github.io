@@ -1,0 +1,65 @@
+I"k<blockquote>
+  <p>自己创建的自己亲手毁掉，哈哈哈哈，有意思</p>
+  <ul>
+    <li>安装
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install deno
+</code></pre></div>      </div>
+    </li>
+    <li>deno -h
+```
+deno 0.32.0
+A secure JavaScript and TypeScript runtime // 安全的JavaScript和TypeScript运行时</li>
+  </ul>
+</blockquote>
+
+<p>Docs: https://deno.land/std/manual.md
+Modules: https://deno.land/x/
+Bugs: https://github.com/denoland/deno/issues</p>
+
+<p>To run the REPL supply no arguments:</p>
+
+<p>deno</p>
+
+<p>To evaluate code from the command line:</p>
+
+<p>deno eval “console.log(30933 + 404)”</p>
+
+<p>To execute a script:</p>
+
+<p>deno https://deno.land/std/examples/welcome.ts</p>
+
+<p>The default subcommand is ‘run’. The above is equivalent to</p>
+
+<p>deno run https://deno.land/std/examples/welcome.ts</p>
+
+<p>See ‘deno help run’ for run specific flags.</p>
+
+<p>USAGE:
+    deno [SUBCOMMAND]</p>
+
+<p>OPTIONS:
+    -h, –help                     Prints help information
+    -L, –log-level <log-level>    Set log level [possible values: debug, info]
+    -V, --version                  Prints version information</log-level></p>
+
+<p>SUBCOMMANDS:
+    bundle         Bundle module and dependencies into single file
+    completions    Generate shell completions
+    eval           Eval script
+    fetch          Fetch the dependencies
+    fmt            Format files
+    help           Prints this message or the help of the given subcommand(s)
+    info           Show info about cache or info related to source file
+    install        Install script as executable
+    repl           Read Eval Print Loop
+    run            Run a program given a filename or url to the source code
+    test           Run tests
+    types          Print runtime TypeScript declarations</p>
+
+<p>ENVIRONMENT VARIABLES:
+    DENO_DIR       Set deno’s base directory
+    NO_COLOR       Set to disable color
+    HTTP_PROXY     Proxy address for HTTP requests (module downloads, fetch)// 请求的HTTP_PROXY代理地址（模块下载，获取）
+    HTTPS_PROXY    Same but for HTTPS
+```</p>
+:ET

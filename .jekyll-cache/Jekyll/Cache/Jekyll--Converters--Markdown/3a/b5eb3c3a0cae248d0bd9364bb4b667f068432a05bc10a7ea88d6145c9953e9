@@ -1,0 +1,51 @@
+I"^
+<blockquote>
+  <p>纪：一般只写皇帝；  <br />
+传：后妃、皇子事件、民间有意义的事件；<br />
+志：人文、地理、时宪、交通、乐礼、服饰、饮食、河道、兵、刑法、邦交；  <br />
+表：皇子、公主、外戚、大臣、封爵、疆臣、驻使</p>
+</blockquote>
+
+<h2 id="jetpack-配置">JetPack 配置</h2>
+
+<h2 id="databinding">DataBinding</h2>
+<ul>
+  <li>编写databing的layout，只有这个类型的layout才能生成对应的 ViewDataBinding 类</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;layout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span><span class="nt">&gt;</span>
+    // 数据
+    <span class="nt">&lt;data&gt;</span>
+    <span class="nt">&lt;/data&gt;</span>
+    // 布局
+    <span class="nt">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+        <span class="na">android:id=</span><span class="s">"@+id/container"</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+        <span class="na">android:paddingTop=</span><span class="s">"?attr/actionBarSize"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+<span class="nt">&lt;/layout&gt;</span>
+</code></pre></div></div>
+<ul>
+  <li>
+    <p>生成的ViewDataBinding类路径如下：
+<img src="/assets/img/jetpack/viewdatabinding.png" alt="T extends ViewDataBinding" /></p>
+  </li>
+  <li>后续对view和data操作都在这个 ViewDataBinding 上处理，看名字就知道，这玩意就是二者的结合物。</li>
+  <li>在 Fragment、ListView 或 RecyclerView 适配器中使用数据绑定项，您可能更愿意使用绑定类或 DataBindingUtil 类的 inflate() 方法，如以下代码示例所示：</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ListItemBinding binding = ListItemBinding.inflate(layoutInflater, viewGroup, false);
+    // or
+    ListItemBinding binding = DataBindingUtil.inflate(layoutInflater, R.layout.list_item, viewGroup, false);
+    
+</code></pre></div></div>
+
+<h2 id="一些不错的文章">一些不错的文章</h2>
+<ul>
+  <li><a href="https://zhuanlan.zhihu.com/p/145425347">Jetpack一统江湖</a></li>
+</ul>
+:ET

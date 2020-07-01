@@ -46,3 +46,6 @@ tags: Android
     ListItemBinding binding = DataBindingUtil.inflate(layoutInflater, R.layout.list_item, viewGroup, false);
     
 ```
+
+## 一些不错的文章
++ [Jetpack一统江湖](https://zhuanlan.zhihu.com/p/145425347)
