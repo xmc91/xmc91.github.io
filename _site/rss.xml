@@ -5,57 +5,49 @@
     <description>风一样de男子</description>
     <link>//</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Jul 2020 14:03:32 +0800</pubDate>
-    <lastBuildDate>Wed, 01 Jul 2020 14:03:32 +0800</lastBuildDate>
-    <generator>Jekyll v4.0.0</generator>
+    <pubDate>Thu, 02 Jul 2020 22:16:43 +0800</pubDate>
+    <lastBuildDate>Thu, 02 Jul 2020 22:16:43 +0800</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>deno</title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;自己创建的自己亲手毁掉，哈哈哈哈，有意思&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;安装
-      &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install deno
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;      &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;deno -h
-```
-deno 0.32.0
-A secure JavaScript and TypeScript runtime // 安全的JavaScript和TypeScript运行时&lt;/li&gt;
-  &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Docs: https://deno.land/std/manual.md
+&lt;ul&gt;
+  &lt;li&gt;安装
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;brew install deno
+&lt;/code&gt;&lt;/pre&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;deno -h&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;deno 0.32.0
+A secure JavaScript and TypeScript runtime // 安全的JavaScript和TypeScript运行时
+Docs: https://deno.land/std/manual.md
 Modules: https://deno.land/x/
-Bugs: https://github.com/denoland/deno/issues&lt;/p&gt;
+Bugs: https://github.com/denoland/deno/issues
+To run the REPL supply no arguments:
 
-&lt;p&gt;To run the REPL supply no arguments:&lt;/p&gt;
+  deno
+To evaluate code from the command line:
 
-&lt;p&gt;deno&lt;/p&gt;
+  deno eval &quot;console.log(30933 + 404)&quot;
+To execute a script:
 
-&lt;p&gt;To evaluate code from the command line:&lt;/p&gt;
+  deno https://deno.land/std/examples/welcome.ts
+The default subcommand is &#39;run&#39;. The above is equivalent to
 
-&lt;p&gt;deno eval “console.log(30933 + 404)”&lt;/p&gt;
-
-&lt;p&gt;To execute a script:&lt;/p&gt;
-
-&lt;p&gt;deno https://deno.land/std/examples/welcome.ts&lt;/p&gt;
-
-&lt;p&gt;The default subcommand is ‘run’. The above is equivalent to&lt;/p&gt;
-
-&lt;p&gt;deno run https://deno.land/std/examples/welcome.ts&lt;/p&gt;
-
-&lt;p&gt;See ‘deno help run’ for run specific flags.&lt;/p&gt;
-
-&lt;p&gt;USAGE:
-    deno [SUBCOMMAND]&lt;/p&gt;
-
-&lt;p&gt;OPTIONS:
-    -h, –help                     Prints help information
-    -L, –log-level &lt;log-level&gt;    Set log level [possible values: debug, info]
-    -V, --version                  Prints version information&lt;/log-level&gt;&lt;/p&gt;
-
-&lt;p&gt;SUBCOMMANDS:
+  deno run https://deno.land/std/examples/welcome.ts
+See &#39;deno help run&#39; for run specific flags.
+USAGE:
+    deno [SUBCOMMAND]
+OPTIONS:
+    -h, --help                     Prints help information
+    -L, --log-level &amp;lt;log-level&amp;gt;    Set log level [possible values: debug, info]
+    -V, --version                  Prints version information
+SUBCOMMANDS:
     bundle         Bundle module and dependencies into single file
     completions    Generate shell completions
     eval           Eval script
@@ -67,14 +59,13 @@ Bugs: https://github.com/denoland/deno/issues&lt;/p&gt;
     repl           Read Eval Print Loop
     run            Run a program given a filename or url to the source code
     test           Run tests
-    types          Print runtime TypeScript declarations&lt;/p&gt;
-
-&lt;p&gt;ENVIRONMENT VARIABLES:
-    DENO_DIR       Set deno’s base directory
+    types          Print runtime TypeScript declarations
+ENVIRONMENT VARIABLES:
+    DENO_DIR       Set deno&#39;s base directory
     NO_COLOR       Set to disable color
     HTTP_PROXY     Proxy address for HTTP requests (module downloads, fetch)// 请求的HTTP_PROXY代理地址（模块下载，获取）
     HTTPS_PROXY    Same but for HTTPS
-```&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 01 Jul 2020 00:00:00 +0800</pubDate>
         <link>/2020/07/01/deno.html</link>
@@ -94,7 +85,6 @@ Bugs: https://github.com/denoland/deno/issues&lt;/p&gt;
   &lt;ul&gt;
     &lt;li&gt;Foxmail
 今天突然想更换一下GitHub的邮箱，因为现在这些老外不太靠谱了，又加上翻墙困难，哪天Gmail无法登陆了就凉凉了，竟然发现Foxmail没有入口，一顿搜索，发现foxmail 在2005年被腾讯收购，需要在qq邮箱注册Foxmail。然后设置独立密码，于是我的GitHub就可以用双号登陆啦。&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;https://bitbucket.org/blog/sunsetting-mercurial-support-in-bitbucket&quot;&gt;日落的bitbucket&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/blockquote&gt;
 </description>
@@ -210,22 +200,22 @@ x:重构等;y:功能升级;z:bug修复。[x.y.z]
     
       <item>
         <title>MarkDown </title>
-        <description>&lt;h2 id=&quot;编辑工具&quot;&gt;编辑工具&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;section&quot;&gt;编辑工具&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;离线：Typora&lt;/li&gt;
   &lt;li&gt;在线：简书、有道等&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;标题及段落&quot;&gt;标题及段落&lt;/h2&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;标题及段落&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;h1 id=&quot;一级标题&quot;&gt;一级标题===&lt;/h1&gt;
+    &lt;h1 id=&quot;section-2&quot;&gt;一级标题===&lt;/h1&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;h2 id=&quot;二级标题&quot;&gt;二级标题—&lt;/h2&gt;
+    &lt;h2 id=&quot;section-3&quot;&gt;二级标题—&lt;/h2&gt;
   &lt;/li&gt;
   &lt;li&gt;用#号表示1-6
-    &lt;h1 id=&quot;1--2--3-4-5-6&quot;&gt;1 ;## 2 ;### 3;#### 4;##### 5；###### 6&lt;/h1&gt;
+    &lt;h1 id=&quot;section-4&quot;&gt;1 ;## 2 ;### 3;#### 4;##### 5；###### 6&lt;/h1&gt;
   &lt;/li&gt;
   &lt;li&gt;两个空格换行
 行1&lt;br /&gt;
@@ -240,7 +230,7 @@ x:重构等;y:功能升级;z:bug修复。[x.y.z]
 *** ；— ；___&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;内容体&quot;&gt;内容体&lt;/h2&gt;
+&lt;h2 id=&quot;section-5&quot;&gt;内容体&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;斜体：* ；粗体：** ；又粗又斜：&lt;strong&gt;* 
 &lt;em&gt;斜&lt;/em&gt; ；&lt;/strong&gt;粗** ；&lt;strong&gt;&lt;em&gt;又粗又斜&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
@@ -346,7 +336,7 @@ x:重构等;y:功能升级;z:bug修复。[x.y.z]
   &lt;p&gt;2132年，422抔黄土&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;秦朝-前221前207&quot;&gt;秦朝 【前221—前207】&lt;/h2&gt;
+&lt;h2 id=&quot;section&quot;&gt;秦朝 【前221—前207】&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;嬴政【秦始皇】(前221-前210 共11年)&lt;/li&gt;
 &lt;/ul&gt;
@@ -375,7 +365,7 @@ x:重构等;y:功能升级;z:bug修复。[x.y.z]
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;西楚前206-前202-共4年&quot;&gt;西楚【前206-前202, 共4年】&lt;/h2&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;西楚【前206-前202, 共4年】&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;项羽【西楚霸王】
     &lt;blockquote&gt;
@@ -387,8 +377,8 @@ x:重构等;y:功能升级;z:bug修复。[x.y.z]
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;汉朝公元前202年公元8年公元25220年-共历29帝享国四百零七年&quot;&gt;汉朝【公元前202年~公元8年，公元25~220年。 共历29帝，享国四百零七年。】&lt;/h2&gt;
-&lt;h3 id=&quot;西汉公元前202年公元8年定都长安&quot;&gt;西汉【公元前202年~公元8年，定都长安】&lt;/h3&gt;
+&lt;h2 id=&quot;section-2&quot;&gt;汉朝【公元前202年~公元8年，公元25~220年。 共历29帝，享国四百零七年。】&lt;/h2&gt;
+&lt;h3 id=&quot;section-3&quot;&gt;西汉【公元前202年~公元8年，定都长安】&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;刘邦【流氓翻身】
     &lt;blockquote&gt;
@@ -423,11 +413,11 @@ x:重构等;y:功能升级;z:bug修复。[x.y.z]
     &lt;/blockquote&gt;
   &lt;/li&gt;
   &lt;li&gt;汉文帝
-    &lt;h3 id=&quot;新朝&quot;&gt;新朝&lt;/h3&gt;
+    &lt;h3 id=&quot;section-4&quot;&gt;新朝&lt;/h3&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;东汉公元25220年&quot;&gt;东汉【公元25~220年】&lt;/h3&gt;
+&lt;h3 id=&quot;section-5&quot;&gt;东汉【公元25~220年】&lt;/h3&gt;
 </description>
         <pubDate>Thu, 18 Jun 2020 00:00:00 +0800</pubDate>
         <link>/2020/06/18/%E4%B8%AD%E5%9B%BD%E7%9A%87%E5%B8%9D%E8%A1%A8.html</link>

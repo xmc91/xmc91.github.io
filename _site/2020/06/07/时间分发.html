@@ -139,9 +139,9 @@ Author: Ray-Eldath
 满地黄花堆积，憔悴损，如今有谁堪摘？守着窗儿，独自怎生得黑！梧桐更兼细雨，到黄昏、点点滴滴。这次第，怎一个愁字了得！</p>
 </blockquote>
 
-<h3 id="事件分发本质上屏幕作为电容屏幕下边有四个引脚通着电手指点击屏幕触发电容电流流动然后引脚计算出手指点击的位置上报给系统此时才到达应用层反馈到view上处理业务逻辑操作屏幕其实就像是和一个人做游戏一样屏幕主板等一系列硬件作为工具系统中间商把事件给到服务商appapp把你的意图展示到屏幕上这难道不是一个哲学问题吗女施主从哪里来我从来出来女施主到哪里去我要到去出去不过这里的去处和来处形成了闭环">事件分发本质上：屏幕作为电容，屏幕下边有四个引脚通着电，手指点击屏幕触发电容电流流动；然后引脚计算出手指点击的位置，上报给系统；此时才到达应用层，反馈到view上处理业务逻辑。【操作屏幕，其实就像是和一个人做游戏一样，屏幕、主板等一系列硬件作为工具，系统中间商把事件给到服务商APP，APP把你的意图展示到屏幕上，这难道不是一个哲学问题吗？女施主从哪里来？我从来出来，女施主到哪里去？我要到去出去。不过这里的去处和来处形成了闭环】</h3>
+<h3 id="viewappapp">事件分发本质上：屏幕作为电容，屏幕下边有四个引脚通着电，手指点击屏幕触发电容电流流动；然后引脚计算出手指点击的位置，上报给系统；此时才到达应用层，反馈到view上处理业务逻辑。【操作屏幕，其实就像是和一个人做游戏一样，屏幕、主板等一系列硬件作为工具，系统中间商把事件给到服务商APP，APP把你的意图展示到屏幕上，这难道不是一个哲学问题吗？女施主从哪里来？我从来出来，女施主到哪里去？我要到去出去。不过这里的去处和来处形成了闭环】</h3>
 
-<h3 id="事件分发在app上的对象自然是view啦">事件分发在APP上的对象自然是view啦</h3>
+<h3 id="appview">事件分发在APP上的对象自然是view啦</h3>
 <blockquote>
   <p>View 是最小的吗？No，能看到的都是View，你看那，viewgroup本质上不也是个view嘛。正所谓无大无小</p>
 </blockquote>
@@ -152,7 +152,7 @@ Author: Ray-Eldath
   <li>View：通常是一个小单位</li>
 </ul>
 
-<h3 id="事件的分类">事件的分类</h3>
+<h3 id="section">事件的分类</h3>
 <blockquote>
   <p>无非就是，点了、动了、离开了</p>
 </blockquote>
@@ -163,8 +163,8 @@ Author: Ray-Eldath
   <li>Up：拜拜了，屏幕</li>
 </ul>
 
-<h3 id="流程">流程</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 如果Activity的这个方法没有通过super调用，后续啥都没了
+<h3 id="section-1">流程</h3>
+<div class="highlighter-rouge"><pre class="codehilite"><code>// 如果Activity的这个方法没有通过super调用，后续啥都没了
 public boolean dispatchTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
             onUserInteraction();
@@ -176,21 +176,21 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
         }
         return onTouchEvent(ev);
     }
-</code></pre></div></div>
+</code></pre></div>
 <ul>
   <li>系统捕获到点击，先把这事告诉Activity的dispatchTouchEvent(MotionEvent ev)，Activity这玩意真是爸爸，你直接返回true或者false都不行。正常理解就是分发或者不分发的事儿吗？在这块，你说的就不算了，你必须听Activity得super.dispatchTouchEvent(ev)。不听Activity的话，这事就撂这了，无论是ViewGroup还是View你们都歇菜吧。[侬吉岛为啥了吧？]相信你没看粗来为毛，因为这里Activity并没有把分发转个ViewGroup，哈哈哈，Activity这吊玩意自己不处理，把这玩意交给了Window的抽象方法superDispatchTouchEvent，PhoneWindow这厮继承Window同时还持有DecorView，最终在PhoneWindow里成功转移：
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
+    <div class="highlighter-rouge"><pre class="codehilite"><code>@Override
   public boolean superDispatchTouchEvent(MotionEvent event) {
       return mDecor.superDispatchTouchEvent(event);
   }
-</code></pre></div>    </div>
+</code></pre>    </div>
     <p>DecorView经过一系列甩锅，这就成功的把分发事件从Activity转给了ViewGroup。馹馹馹，感觉谷歌的工程师在洗钱。</p>
   </li>
   <li>
     <p>事件来到ViewGroup的dispatchTouchEvent，这ViewGroup也是个爹（其实是因为内部有实现，不调用super里边的实现就失效了，更别谈往下走），return true则后续事件在Activity和ViewGroup中荡漾，return false这事也就葱ViewGroup的地板弹到Activity再也回不来了，但是Activity得onTouch可以执行。只有调用super.dispatchTouchEvent(ev)，ViewGroup才能发挥自己的余热，经过深思熟虑（各种判断）告诉onInterceptTouchEvent(ev)</p>
   </li>
   <li>不知不觉，事件来到了ViewGroup的onInterceptTouchEvent(ev),而这个函数呢，有点低调，不喜欢管事，简单思考一哈哈（就个简单的判断，其他判断可以不深究，不是down他肯定不管），他就不管了（return false 不拦截）
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public boolean onInterceptTouchEvent(MotionEvent ev) {
+    <div class="highlighter-rouge"><pre class="codehilite"><code>public boolean onInterceptTouchEvent(MotionEvent ev) {
       if (ev.isFromSource(InputDevice.SOURCE_MOUSE)
               &amp;&amp; ev.getAction() == MotionEvent.ACTION_DOWN
               &amp;&amp; ev.isButtonPressed(MotionEvent.BUTTON_PRIMARY)
@@ -199,7 +199,7 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
       }
       return false;
   }
-</code></pre></div>    </div>
+</code></pre>    </div>
   </li>
   <li>最后上一张图吧，这玩意怕死不好记，还是上个图，看图识意</li>
 </ul>

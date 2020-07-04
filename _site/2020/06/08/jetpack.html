@@ -140,14 +140,14 @@ Author: Ray-Eldath
 表：皇子、公主、外戚、大臣、封爵、疆臣、驻使</p>
 </blockquote>
 
-<h2 id="jetpack-配置">JetPack 配置</h2>
+<h2 id="jetpack-">JetPack 配置</h2>
 
 <h2 id="databinding">DataBinding</h2>
 <ul>
   <li>编写databing的layout，只有这个类型的layout才能生成对应的 ViewDataBinding 类</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<div class="highlighter-rouge"><pre class="codehilite"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 <span class="nt">&lt;layout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
     <span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span><span class="nt">&gt;</span>
     // 数据
@@ -162,7 +162,7 @@ Author: Ray-Eldath
 
     <span class="nt">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
 <span class="nt">&lt;/layout&gt;</span>
-</code></pre></div></div>
+</code></pre></div>
 <ul>
   <li>
     <p>生成的ViewDataBinding类路径如下：
@@ -172,13 +172,13 @@ Author: Ray-Eldath
   <li>在 Fragment、ListView 或 RecyclerView 适配器中使用数据绑定项，您可能更愿意使用绑定类或 DataBindingUtil 类的 inflate() 方法，如以下代码示例所示：</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ListItemBinding binding = ListItemBinding.inflate(layoutInflater, viewGroup, false);
+<div class="highlighter-rouge"><pre class="codehilite"><code>    ListItemBinding binding = ListItemBinding.inflate(layoutInflater, viewGroup, false);
     // or
     ListItemBinding binding = DataBindingUtil.inflate(layoutInflater, R.layout.list_item, viewGroup, false);
     
-</code></pre></div></div>
+</code></pre></div>
 
-<h2 id="一些不错的文章">一些不错的文章</h2>
+<h2 id="section">一些不错的文章</h2>
 <ul>
   <li><a href="https://zhuanlan.zhihu.com/p/145425347">Jetpack一统江湖</a></li>
 </ul>
