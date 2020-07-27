@@ -5,9 +5,145 @@
     <description>风一样de男子</description>
     <link>//</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Jul 2020 14:03:32 +0800</pubDate>
-    <lastBuildDate>Wed, 01 Jul 2020 14:03:32 +0800</lastBuildDate>
+    <pubDate>Mon, 27 Jul 2020 11:25:39 +0800</pubDate>
+    <lastBuildDate>Mon, 27 Jul 2020 11:25:39 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Android 面试 Java部分</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;java 相关&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;容器（HashMap、HashSet、LinkedList、ArrayList、数组等）
+内存模型
+垃圾回收算法（JVM）
+垃圾回收机制和调用 System.gc()的区别？
+类加载过程（需要多看看，重在理解，对于热修复和插件化比较重要）
+反射
+多线程和线程池
+设计模式（六大基本原则、项目中常用的设计模式、手写单例等）
+Java 四大引用
+Java 的泛型
+final、finally、finalize 的区别
+接口、抽象类的区别&lt;/p&gt;
+</description>
+        <pubDate>Mon, 27 Jul 2020 00:00:00 +0800</pubDate>
+        <link>/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</link>
+        <guid isPermaLink="true">/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</guid>
+        
+        <category>android</category>
+        
+        
+        <category>android</category>
+        
+      </item>
+    
+      <item>
+        <title>http 及其抓包</title>
+        <description>
+</description>
+        <pubDate>Sat, 18 Jul 2020 00:00:00 +0800</pubDate>
+        <link>/2020/07/18/Android-http.html</link>
+        <guid isPermaLink="true">/2020/07/18/Android-http.html</guid>
+        
+        <category>android</category>
+        
+        
+        <category>android</category>
+        
+      </item>
+    
+      <item>
+        <title>svg 在Android中的使用</title>
+        <description>
+</description>
+        <pubDate>Fri, 17 Jul 2020 00:00:00 +0800</pubDate>
+        <link>/2020/07/17/svg.html</link>
+        <guid isPermaLink="true">/2020/07/17/svg.html</guid>
+        
+        <category>android</category>
+        
+        
+        <category>android</category>
+        
+      </item>
+    
+      <item>
+        <title>node jwt 苹果登录验证</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;苹果登录有两种方式验证：jwt形式；code授权码形式.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;jwt&quot;&gt;jwt&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;格式：heard.paylod.signture&lt;/li&gt;
+  &lt;li&gt;signtura生成方式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;HMACSHA256(base64UrlEncode(header) + &quot;.&quot; +base64UrlEncode(payload),secret)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;解析之后
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{ header: {
+   kid: '86D32Kf',
+   alg: 'RS256' 
+ },
+payload: 
+ { iss: 'https://appleid.apple.com',
+   aud: 'com.company.product',
+   exp: 1594712245,
+   iat: 1594711645,
+   sub: '001610.d0b9dfa70cc24cd79f5bba662c625102.0718',
+   c_hash: 'tlydpf-lV51Gi2pKAGZKCA',
+   email: '5u2nbamwvm@privaterelay.appleid.com',
+   email_verified: 'true',
+   is_private_email: 'true',
+   auth_time: 1594711645,
+   nonce_supported: true },
+signature:'es-mMU2FRsILnqmo_G5VbNKMz9gHtL9GjtyuiiiiiiiiP5J9ZhttU1_EJBEDBkBnR1jcrq_xM7kCpq357aN_EAC6G7bgGq4_RrAlG8XwEj4RSo1GoYQX1F0sby0SQrf1D_NZzdirjuUX7yNf-ZoeglyBg-7e-CbTjqfYBOswh_jsTWZ-I3vM-Ctcg12E5tUk345678jzaKpzIuL4KvlALM-VrY-Wp_7mFj4a3KKAxls0ojAjD434EL6oPDT8452j8QOWRFtPRttrqLqfpQbJJeXMCJkW5qIKeI9CU7v6Bpo5RLz3P8yGLrUoY3UJXyKT5_5MEs2bbw' }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;nodejs实现&quot;&gt;nodejs实现&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var jwt = require('jsonwebtoken');
+const jwksClient = require('jwks-rsa');
+// 获取苹果公钥json
+var jwt_client = jwksClient({
+    jwksUri: 'https://appleid.apple.com/auth/keys'
+});
+exports.verifyAppleSignin = function(req, res) {
+    let jwtToken = req.param('jwtToken');
+    // 解析出完整的jwt数据
+    let jwtStr = jwt.decode(jwtToken, { complete: true })
+    jwt_client.getSigningKey(jwtStr.header.kid, function(err, key) {
+        // 通过header里的kid和公钥json里的kid匹配，生成公钥
+        // 当然也可以自己通过n和e生成公钥
+        let signingKey = key.rsaPublicKey;
+        // 验证，是否一致
+        jwt.verify(jwtToken, signingKey, (err, data) =&amp;gt; {
+            if (!err) {
+                console.log('verifyAppleSignin,verify ok')
+            } else {
+                console.log('err', err);
+            }
+        })
+    });
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Wed, 01 Jul 2020 00:00:00 +0800</pubDate>
+        <link>/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html</link>
+        <guid isPermaLink="true">/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html</guid>
+        
+        <category>nodejs</category>
+        
+        
+        <category>nodejs</category>
+        
+      </item>
     
       <item>
         <title>deno</title>
@@ -255,188 +391,6 @@ x:重构等;y:功能升级;z:bug修复。[x.y.z]
         
         <category>Tools</category>
         
-        
-      </item>
-    
-      <item>
-        <title>基金</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Wise Yellow Joke&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;赵四小姐从十六岁开始跟张学良。跟一年，属奸情；跟三年，算偷情；跟六十年，便成为千古爱情！
-启示：很多事情不看做不做，而看你做多久。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;民国初名妓小凤仙，如果跟了民工，就属于扫黄对象；她跟了蔡锷，则千古留芳了；倘若她跟了孙中山，那便可能成为第一夫人了。
-启示：不在于你干什么，而看你跟谁干。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;女浴室起火，里面人乱作一团，赤裸身体往外跑，只见大街上白花花一大群，一老者大喊“快捂住”，众裸女突然醒悟，但身上要紧部位有三处，手忙脚乱捂不过来，不知所措。这时老者又大喊：“捂脸就行，下面都一样！”
-启示：在特殊情况下抓工作不可能面面俱到，要抓住重点。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;女人报案：“我把钱放在胸衣内，在拥挤的地铁内被一帅哥偷走了……”警察纳闷：“这么敏感的地方你就没觉察到？”女人红着脸答：“谁能想到他是摸钱呢？”
-启示：让客户的钱在愉快体验中不知不觉地被摸走，是商业模式的最高境界。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;组织几个人收保护费，那是黑社会。朱元璋组织几百万人抢下王位，就是伟大的皇帝。武则天睡了公公睡儿子，虽属乱伦，但乱的够大，故成为女皇。
-启示：不在你干没干坏事，而在于干多大！&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;一公司在小便池上贴上条：“往前一小步, 文明一大步”，结果地上仍有许多尿渍。后来公司认真吸取教训, 重新设计成：“尿不到池里说明你短；尿到池外说明你软”，结果地上比以前干净许多。
-启示：给客户的投资建议一定要具体、确切、中要害。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;某日，女秘书神色凝重地说：王总，我怀孕了。王继续低头看文件，然后淡淡一笑：我早结扎了。女秘书愣了一会媚笑道：我和您开玩笑呢！王抬起头看了她一眼，喝了口茶说：我也是。
-启示：在江湖上混的人，遇事不要慌，先让子弹飞一会。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;男子去提亲，女方家长：请自我介绍。A说：我有一千万；B说：我有一栋豪宅，价值两千万；家长很满意。就问C，你家有什么？C答：我什么都没有，只有一个孩子，在你女儿肚子里。AB无语，走了。
-启示：核心竞争力不是钱和房子，是在关键的岗位有自己的人。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 20 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/20/Wise-yellow-joke.html</link>
-        <guid isPermaLink="true">/2020/06/20/Wise-yellow-joke.html</guid>
-        
-        <category>read</category>
-        
-        
-        <category>read</category>
-        
-      </item>
-    
-      <item>
-        <title>基金</title>
-        <description>
-</description>
-        <pubDate>Sat, 20 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/20/%E5%9F%BA%E9%87%91.html</link>
-        <guid isPermaLink="true">/2020/06/20/%E5%9F%BA%E9%87%91.html</guid>
-        
-        <category>read</category>
-        
-        
-        <category>read</category>
-        
-      </item>
-    
-      <item>
-        <title>皇帝</title>
-        <description>
-</description>
-        <pubDate>Thu, 18 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/18/%E7%9A%87%E5%B8%9D.html</link>
-        <guid isPermaLink="true">/2020/06/18/%E7%9A%87%E5%B8%9D.html</guid>
-        
-        <category>Android</category>
-        
-        
-        <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>中国皇帝</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;2132年，422抔黄土&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;秦朝-前221前207&quot;&gt;秦朝 【前221—前207】&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;嬴政【秦始皇】(前221-前210 共11年)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;ul&gt;
-    &lt;li&gt;秦王嬴政先后灭韩、赵、魏、楚、燕、齐，完成统一大业。前221年，取三皇五帝，称为秦始皇。&lt;/li&gt;
-    &lt;li&gt;秦朝在中央设三公九卿，管理国家大事；地方上废除分封制，代以郡县制；实行书同文、车同轨、统一度量衡。对外北击匈奴，南征百越，筑长城以拒外敌，凿灵渠以通水系。&lt;/li&gt;
-    &lt;li&gt;修万里长城&lt;/li&gt;
-    &lt;li&gt;焚书坑儒&lt;/li&gt;
-    &lt;li&gt;中央集权制度的建立，奠定中国2000余年政治制度基本格局，奠定中国大一统王朝的统治基础，故称“百代都行秦政法”。&lt;/li&gt;
-    &lt;li&gt;秦朝结束了自春秋战国以来五百年来诸侯分裂割据的局面，成为中国历史上第一个中央集权制国家。前210年，秦始皇巡游途中病死于沙丘（今河北省广宗县西北）&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;胡亥【秦二世】(前209-前207 共2年)
-    &lt;blockquote&gt;
-      &lt;p&gt;前209年，陈胜、吴广斩木为兵，揭竿而起，天下响应，刘邦、项羽起兵江淮共抗秦。秦二世被赵高杀死&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;子婴【秦二世】(前206)
-    &lt;blockquote&gt;
-      &lt;p&gt;同年子婴贬去帝号，称秦王，向刘邦投降。刘邦攻占咸阳，秦亡。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;西楚前206-前202-共4年&quot;&gt;西楚【前206-前202, 共4年】&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;项羽【西楚霸王】
-    &lt;blockquote&gt;
-      &lt;ul&gt;
-        &lt;li&gt;楚国贵族,公元前207年,巨鹿之战后拜为诸侯上将军，拥兵雄厚，达四十余万。次年，项羽在咸阳分封十八路诸侯就国，自立为西楚霸王。&lt;/li&gt;
-        &lt;li&gt;公元前206年汉王刘邦率军出蜀伐楚，爆发楚汉相争。公元前202年刘邦合韩信、彭越，英布五十万兵马将项羽合围于垓下，项羽战败，自刎于乌江，&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;汉朝公元前202年公元8年公元25220年-共历29帝享国四百零七年&quot;&gt;汉朝【公元前202年~公元8年，公元25~220年。 共历29帝，享国四百零七年。】&lt;/h2&gt;
-&lt;h3 id=&quot;西汉公元前202年公元8年定都长安&quot;&gt;西汉【公元前202年~公元8年，定都长安】&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;刘邦【流氓翻身】
-    &lt;blockquote&gt;
-      &lt;ul&gt;
-        &lt;li&gt;前202年在定陶正式称皇帝，仍用“汉”号，定都洛阳，两年又迁都长安，但刘邦依旧长住洛阳&lt;/li&gt;
-        &lt;li&gt;前期与民休息，分封功臣，后期一个个干掉，非刘不王。&lt;/li&gt;
-        &lt;li&gt;白登之围以后，和亲求和平&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;刘盈/吕后
-    &lt;blockquote&gt;
-      &lt;ul&gt;
-        &lt;li&gt;皇帝无能，吕后当家&lt;/li&gt;
-        &lt;li&gt;萧规曹随，倒也安生&lt;/li&gt;
-        &lt;li&gt;任用外戚，酿成“诸吕之乱”&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;刘恭【前少帝】
-    &lt;blockquote&gt;
-      &lt;ul&gt;
-        &lt;li&gt;吕后立又废，封于永巷，对外称病，此后密死&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;刘弘【后少帝】（前184年6月15日－前180年11月14日在位）
-    &lt;blockquote&gt;
-      &lt;ul&gt;
-        &lt;li&gt;吕后霸权，未及称元年&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;汉文帝
-    &lt;h3 id=&quot;新朝&quot;&gt;新朝&lt;/h3&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;东汉公元25220年&quot;&gt;东汉【公元25~220年】&lt;/h3&gt;
-</description>
-        <pubDate>Thu, 18 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/18/%E4%B8%AD%E5%9B%BD%E7%9A%87%E5%B8%9D%E8%A1%A8.html</link>
-        <guid isPermaLink="true">/2020/06/18/%E4%B8%AD%E5%9B%BD%E7%9A%87%E5%B8%9D%E8%A1%A8.html</guid>
-        
-        <category>read</category>
-        
-        
-        <category>read</category>
         
       </item>
     

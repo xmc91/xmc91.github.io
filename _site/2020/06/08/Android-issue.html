@@ -161,6 +161,29 @@ Author: Ray-Eldath
 修改本地可用的gradle版本/gradle-wrapper 版本即可。</p>
     </blockquote>
   </li>
+  <li>Can’t connect to SOCKS proxy:Connection refused: connect</li>
+  <li>Connection refused: connect</li>
+  <li>as 设置里的http proxy ：You have JVM property “https.proxyHost” set to …. This may lea
+    <blockquote>
+      <p>代理问题
+修改~/.gradle/gradle.properties 里的https:proxyHost，或者干掉
+重启AS即可</p>
+    </blockquote>
+  </li>
+  <li>Error:Could not initialize class org.jetbrains.kotlin.gradle.KotlinGradleModelBuilder
+    <blockquote>
+      <p>kotlin问题，修改版本</p>
+    </blockquote>
+  </li>
+  <li>Received close_notify during handshake
+    <blockquote>
+      <p>库没有下载下来,修改jceter源
+<code class="highlighter-rouge">
+// jcenter()
+maven{ url'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+</code>`</p>
+    </blockquote>
+  </li>
 </ul>
 
     </article>

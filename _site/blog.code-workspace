@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../Work/github/mm_io_cloud"
 		}
 	]
 }

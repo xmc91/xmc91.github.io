@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>deno - WindMan Blog</title>
+    <title>node jwt 苹果登录验证 - WindMan Blog</title>
     <meta name="author"  content="WindMan">
-    <meta name="description" content="deno">
-    <meta name="keywords"  content="deno">
+    <meta name="description" content="node jwt 苹果登录验证">
+    <meta name="keywords"  content="nodejs">
     <!-- Open Graph -->
-    <meta property="og:title" content="deno - WindMan Blog">
+    <meta property="og:title" content="node jwt 苹果登录验证 - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/2020/07/01/deno.html">
+    <meta property="og:url" content="/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -116,11 +116,11 @@ Author: Ray-Eldath
       <div class="post-tags">
         
           
-            <a href="/tags.html#deno" class="post-tag">deno</a>
+            <a href="/tags.html#nodejs" class="post-tag">nodejs</a>
           
         
       </div>
-      <h1>deno</h1>
+      <h1>node jwt 苹果登录验证</h1>
       <div class="post-meta">
         <span class="post-meta-item"><i class="iconfont icon-author"></i>WindMan</span>
         <time class="post-meta-item" datetime="20-07-01"><i class="iconfont icon-date"></i>01 Jul 2020</time>
@@ -134,69 +134,67 @@ Author: Ray-Eldath
 
     <article class="markdown-body">
       <blockquote>
-  <p>自己创建的自己亲手毁掉，哈哈哈哈，有意思</p>
-  <ul>
-    <li>安装
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install deno
-</code></pre></div>      </div>
-    </li>
-    <li>deno -h
-```
-deno 0.32.0
-A secure JavaScript and TypeScript runtime // 安全的JavaScript和TypeScript运行时</li>
-  </ul>
+  <p>苹果登录有两种方式验证：jwt形式；code授权码形式.</p>
 </blockquote>
 
-<p>Docs: https://deno.land/std/manual.md
-Modules: https://deno.land/x/
-Bugs: https://github.com/denoland/deno/issues</p>
+<h3 id="jwt">jwt</h3>
+<ul>
+  <li>格式：heard.paylod.signture</li>
+  <li>signtura生成方式</li>
+</ul>
 
-<p>To run the REPL supply no arguments:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HMACSHA256(base64UrlEncode(header) + "." +base64UrlEncode(payload),secret)
+</code></pre></div></div>
 
-<p>deno</p>
+<ul>
+  <li>解析之后
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ header: {
+   kid: '86D32Kf',
+   alg: 'RS256' 
+ },
+payload: 
+ { iss: 'https://appleid.apple.com',
+   aud: 'com.company.product',
+   exp: 1594712245,
+   iat: 1594711645,
+   sub: '001610.d0b9dfa70cc24cd79f5bba662c625102.0718',
+   c_hash: 'tlydpf-lV51Gi2pKAGZKCA',
+   email: '5u2nbamwvm@privaterelay.appleid.com',
+   email_verified: 'true',
+   is_private_email: 'true',
+   auth_time: 1594711645,
+   nonce_supported: true },
+signature:'es-mMU2FRsILnqmo_G5VbNKMz9gHtL9GjtyuiiiiiiiiP5J9ZhttU1_EJBEDBkBnR1jcrq_xM7kCpq357aN_EAC6G7bgGq4_RrAlG8XwEj4RSo1GoYQX1F0sby0SQrf1D_NZzdirjuUX7yNf-ZoeglyBg-7e-CbTjqfYBOswh_jsTWZ-I3vM-Ctcg12E5tUk345678jzaKpzIuL4KvlALM-VrY-Wp_7mFj4a3KKAxls0ojAjD434EL6oPDT8452j8QOWRFtPRttrqLqfpQbJJeXMCJkW5qIKeI9CU7v6Bpo5RLz3P8yGLrUoY3UJXyKT5_5MEs2bbw' }
+</code></pre></div>    </div>
+  </li>
+</ul>
 
-<p>To evaluate code from the command line:</p>
-
-<p>deno eval “console.log(30933 + 404)”</p>
-
-<p>To execute a script:</p>
-
-<p>deno https://deno.land/std/examples/welcome.ts</p>
-
-<p>The default subcommand is ‘run’. The above is equivalent to</p>
-
-<p>deno run https://deno.land/std/examples/welcome.ts</p>
-
-<p>See ‘deno help run’ for run specific flags.</p>
-
-<p>USAGE:
-    deno [SUBCOMMAND]</p>
-
-<p>OPTIONS:
-    -h, –help                     Prints help information
-    -L, –log-level <log-level>    Set log level [possible values: debug, info]
-    -V, --version                  Prints version information</log-level></p>
-
-<p>SUBCOMMANDS:
-    bundle         Bundle module and dependencies into single file
-    completions    Generate shell completions
-    eval           Eval script
-    fetch          Fetch the dependencies
-    fmt            Format files
-    help           Prints this message or the help of the given subcommand(s)
-    info           Show info about cache or info related to source file
-    install        Install script as executable
-    repl           Read Eval Print Loop
-    run            Run a program given a filename or url to the source code
-    test           Run tests
-    types          Print runtime TypeScript declarations</p>
-
-<p>ENVIRONMENT VARIABLES:
-    DENO_DIR       Set deno’s base directory
-    NO_COLOR       Set to disable color
-    HTTP_PROXY     Proxy address for HTTP requests (module downloads, fetch)// 请求的HTTP_PROXY代理地址（模块下载，获取）
-    HTTPS_PROXY    Same but for HTTPS
-```</p>
+<h3 id="nodejs实现">nodejs实现</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var jwt = require('jsonwebtoken');
+const jwksClient = require('jwks-rsa');
+// 获取苹果公钥json
+var jwt_client = jwksClient({
+    jwksUri: 'https://appleid.apple.com/auth/keys'
+});
+exports.verifyAppleSignin = function(req, res) {
+    let jwtToken = req.param('jwtToken');
+    // 解析出完整的jwt数据
+    let jwtStr = jwt.decode(jwtToken, { complete: true })
+    jwt_client.getSigningKey(jwtStr.header.kid, function(err, key) {
+        // 通过header里的kid和公钥json里的kid匹配，生成公钥
+        // 当然也可以自己通过n和e生成公钥
+        let signingKey = key.rsaPublicKey;
+        // 验证，是否一致
+        jwt.verify(jwtToken, signingKey, (err, data) =&gt; {
+            if (!err) {
+                console.log('verifyAppleSignin,verify ok')
+            } else {
+                console.log('err', err);
+            }
+        })
+    });
+}
+</code></pre></div></div>
 
     </article>
 
@@ -237,10 +235,10 @@ Bugs: https://github.com/denoland/deno/issues</p>
     <section class="post-footer-item read-next">
       
       <div class="read-next-item">
-        <a href="/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html" class="read-next-link"></a>
+        <a href="/2020/07/17/svg.html" class="read-next-link"></a>
         <section>
-          <span>node jwt 苹果登录验证</span>
-          <p>  苹果登录有两种方式验证：jwt形式；code授权码形式.</p>
+          <span>svg 在Android中的使用</span>
+          <p></p>
         </section>
         
      </div>
@@ -248,10 +246,10 @@ Bugs: https://github.com/denoland/deno/issues</p>
 
       
       <div class="read-next-item">
-        <a href="/2020/06/30/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95.html" class="read-next-link"></a>
+        <a href="/2020/07/01/deno.html" class="read-next-link"></a>
           <section>
-            <span>日常记录</span>
-            <p>  记忆是一场没有尽头的纪录片      Foxmail今天突然想更换一下GitHub的邮箱，因为现在这些老外不太...</p>
+            <span>deno</span>
+            <p>  自己创建的自己亲手毁掉，哈哈哈哈，有意思      安装      brew install deno    ...</p>
           </section>
           
       </div>

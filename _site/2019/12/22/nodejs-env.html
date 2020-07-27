@@ -182,13 +182,10 @@ Now using node v8.0.0 (npm v5.0.0)
 Creating default alias: default -&gt; 8.0.0 (-&gt; v8.0.0)
 </code></pre></div>    </div>
   </li>
-  <li>安装node 10.0.0
+  <li>
+    <p>安装node 10.0.0</p>
+
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 10.0.0
-Downloading and installing node v10.0.0...
-Downloading https://nodejs.org/dist/v10.0.0/node-v10.0.0-darwin-x64.tar.gz...
-\############################################################################################# 100.0%
-Computing checksum with shasum -a 256
-Checksums matched!
 Now using node v10.0.0 (npm v5.6.0)
 </code></pre></div>    </div>
   </li>
@@ -216,11 +213,6 @@ stable -&gt; 10.0 (-&gt; v10.0.0) (default)
   </li>
   <li>安装稳定版本
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install stable
-Downloading and installing node v13.3.0...
-Downloading https://nodejs.org/dist/v13.3.0/node-v13.3.0-darwin-x64.tar.gz...
-\############################################################################################# 100.0%
-Computing checksum with shasum -a 256
-Checksums matched!
 Now using node v13.3.0 (npm v6.13.1)
 </code></pre></div>    </div>
   </li>
@@ -247,6 +239,57 @@ source .bash_profile
   </li>
   <li>直接敲npm/cnpm 可以查看usage</li>
 </ul>
+
+<h2 id="本地测试">本地测试</h2>
+<h3 id="安装并启动mongodb">安装并启动MongoDB</h3>
+<ul>
+  <li>下载：https://www.mongodb.com/try#community</li>
+  <li>解压</li>
+  <li>配置环境变量
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH=${PATH}:/usr/local/MongoDB/bin
+</code></pre></div>    </div>
+  </li>
+  <li>创建data和log目录</li>
+  <li>启动
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mongod --dbpath data --logpath log/mongod.log --logappend
+</code></pre></div>    </div>
+    <h3 id="安装并启动redis">安装并启动Redis</h3>
+  </li>
+  <li>下载：https://redis.io/</li>
+  <li>解压：tar zxvf redis-4.0.10.tar.gz</li>
+  <li>安装：sudo make install</li>
+  <li>启动服务
+<code class="highlighter-rouge">
+cd /usr/local/Cellar/redis/5.0.6/bin
+redis-server 
+              _._                                                  
+         _.-``__ ''-._                                             
+    _.-``    `.  `_.  ''-._           Redis 5.0.6 (00000000/0) 64 bit
+.-`` .-</code>.  ```\/    <em>.,</em> ‘’-._                                 <br />
+ (    ‘      ,       .-<code class="highlighter-rouge">  | </code>,    )     Running in standalone mode
+ |<code class="highlighter-rouge">-._</code>-…-<code class="highlighter-rouge"> __...-.</code><code class="highlighter-rouge">-._|'</code> <em>.-‘|     Port: 6379
+ |    <code class="highlighter-rouge">-._   </code>.</em>    /     <em>.-‘    |     PID: 24650
+<code class="highlighter-rouge">-._    </code>-.</em>  <code class="highlighter-rouge">-./  _.-'    _.-'                                   
+ |</code>-.<em><code class="highlighter-rouge">-._    </code>-.<strong>.-‘    _.-‘_.-‘|                                <br />
+ |    <code class="highlighter-rouge">-._</code>-._        _.-‘_.-‘    |           http://redis.io      <br />
+<code class="highlighter-rouge">-._    </code>-._<code class="highlighter-rouge">-.__.-'_.-'    _.-'                                   
+ |</code>-._<code class="highlighter-rouge">-._    </code>-.</strong>.-‘    _.-‘</em>.-‘|                                <br />
+ |    <code class="highlighter-rouge">-._</code>-._        <em>.-‘</em>.-‘    |                                <br />
+<code class="highlighter-rouge">-._    </code>-.<em><code class="highlighter-rouge">-.__.-'_.-'    _.-'                                   
+    </code>-.</em>    <code class="highlighter-rouge">-.__.-'    _.-'                                       
+        </code>-._        _.-‘                                         <br />
+            `-.__.-‘</li>
+</ul>
+
+<p>```</p>
+<h2 id="远程服务器部署">远程服务器部署</h2>
+<h3 id="linux部署">Linux部署</h3>
+<ul>
+  <li>git clone 代码</li>
+  <li>npm install 安装依赖</li>
+  <li>配置Nginx</li>
+</ul>
+
 
     </article>
 
