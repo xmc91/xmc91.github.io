@@ -5,9 +5,9 @@
     <description>风一样de男子</description>
     <link>//</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 27 Jul 2020 11:25:39 +0800</pubDate>
-    <lastBuildDate>Mon, 27 Jul 2020 11:25:39 +0800</lastBuildDate>
-    <generator>Jekyll v4.0.0</generator>
+    <pubDate>Mon, 27 Jul 2020 11:42:17 +0800</pubDate>
+    <lastBuildDate>Mon, 27 Jul 2020 11:42:17 +0800</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
     
       <item>
         <title>Android 面试 Java部分</title>
@@ -81,12 +81,12 @@ final、finally、finalize 的区别
   &lt;li&gt;signtura生成方式&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;HMACSHA256(base64UrlEncode(header) + &quot;.&quot; +base64UrlEncode(payload),secret)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;HMACSHA256(base64UrlEncode(header) + &quot;.&quot; +base64UrlEncode(payload),secret)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;解析之后
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{ header: {
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{ header: {
    kid: '86D32Kf',
    alg: 'RS256' 
  },
@@ -108,7 +108,7 @@ signature:'es-mMU2FRsILnqmo_G5VbNKMz9gHtL9GjtyuiiiiiiiiP5J9ZhttU1_EJBEDBkBnR1jcr
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;nodejs实现&quot;&gt;nodejs实现&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var jwt = require('jsonwebtoken');
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var jwt = require('jsonwebtoken');
 const jwksClient = require('jwks-rsa');
 // 获取苹果公钥json
 var jwt_client = jwksClient({
@@ -149,49 +149,41 @@ exports.verifyAppleSignin = function(req, res) {
         <title>deno</title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;自己创建的自己亲手毁掉，哈哈哈哈，有意思&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;安装
-      &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install deno
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;      &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;deno -h
-```
-deno 0.32.0
-A secure JavaScript and TypeScript runtime // 安全的JavaScript和TypeScript运行时&lt;/li&gt;
-  &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Docs: https://deno.land/std/manual.md
+&lt;ul&gt;
+  &lt;li&gt;安装
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install deno
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;deno -h&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deno 0.32.0
+A secure JavaScript and TypeScript runtime // 安全的JavaScript和TypeScript运行时
+Docs: https://deno.land/std/manual.md
 Modules: https://deno.land/x/
-Bugs: https://github.com/denoland/deno/issues&lt;/p&gt;
+Bugs: https://github.com/denoland/deno/issues
+To run the REPL supply no arguments:
 
-&lt;p&gt;To run the REPL supply no arguments:&lt;/p&gt;
+  deno
+To evaluate code from the command line:
 
-&lt;p&gt;deno&lt;/p&gt;
+  deno eval &quot;console.log(30933 + 404)&quot;
+To execute a script:
 
-&lt;p&gt;To evaluate code from the command line:&lt;/p&gt;
+  deno https://deno.land/std/examples/welcome.ts
+The default subcommand is 'run'. The above is equivalent to
 
-&lt;p&gt;deno eval “console.log(30933 + 404)”&lt;/p&gt;
-
-&lt;p&gt;To execute a script:&lt;/p&gt;
-
-&lt;p&gt;deno https://deno.land/std/examples/welcome.ts&lt;/p&gt;
-
-&lt;p&gt;The default subcommand is ‘run’. The above is equivalent to&lt;/p&gt;
-
-&lt;p&gt;deno run https://deno.land/std/examples/welcome.ts&lt;/p&gt;
-
-&lt;p&gt;See ‘deno help run’ for run specific flags.&lt;/p&gt;
-
-&lt;p&gt;USAGE:
-    deno [SUBCOMMAND]&lt;/p&gt;
-
-&lt;p&gt;OPTIONS:
-    -h, –help                     Prints help information
-    -L, –log-level &lt;log-level&gt;    Set log level [possible values: debug, info]
-    -V, --version                  Prints version information&lt;/log-level&gt;&lt;/p&gt;
-
-&lt;p&gt;SUBCOMMANDS:
+  deno run https://deno.land/std/examples/welcome.ts
+See 'deno help run' for run specific flags.
+USAGE:
+    deno [SUBCOMMAND]
+OPTIONS:
+    -h, --help                     Prints help information
+    -L, --log-level &amp;lt;log-level&amp;gt;    Set log level [possible values: debug, info]
+    -V, --version                  Prints version information
+SUBCOMMANDS:
     bundle         Bundle module and dependencies into single file
     completions    Generate shell completions
     eval           Eval script
@@ -203,14 +195,13 @@ Bugs: https://github.com/denoland/deno/issues&lt;/p&gt;
     repl           Read Eval Print Loop
     run            Run a program given a filename or url to the source code
     test           Run tests
-    types          Print runtime TypeScript declarations&lt;/p&gt;
-
-&lt;p&gt;ENVIRONMENT VARIABLES:
-    DENO_DIR       Set deno’s base directory
+    types          Print runtime TypeScript declarations
+ENVIRONMENT VARIABLES:
+    DENO_DIR       Set deno's base directory
     NO_COLOR       Set to disable color
     HTTP_PROXY     Proxy address for HTTP requests (module downloads, fetch)// 请求的HTTP_PROXY代理地址（模块下载，获取）
     HTTPS_PROXY    Same but for HTTPS
-```&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 01 Jul 2020 00:00:00 +0800</pubDate>
         <link>/2020/07/01/deno.html</link>
@@ -227,12 +218,15 @@ Bugs: https://github.com/denoland/deno/issues&lt;/p&gt;
         <title>日常记录</title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;记忆是一场没有尽头的纪录片&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Foxmail
-今天突然想更换一下GitHub的邮箱，因为现在这些老外不太靠谱了，又加上翻墙困难，哪天Gmail无法登陆了就凉凉了，竟然发现Foxmail没有入口，一顿搜索，发现foxmail 在2005年被腾讯收购，需要在qq邮箱注册Foxmail。然后设置独立密码，于是我的GitHub就可以用双号登陆啦。&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;https://bitbucket.org/blog/sunsetting-mercurial-support-in-bitbucket&quot;&gt;日落的bitbucket&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
 &lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Foxmail
+    &lt;blockquote&gt;
+      &lt;p&gt;今天突然想更换一下GitHub的邮箱，因为现在这些老外不太靠谱了，又加上翻墙困难，哪天Gmail无法登陆了就凉凉了，竟然发现Foxmail没有入口，一顿搜索，发现foxmail 在2005年被腾讯收购，需要在qq邮箱注册Foxmail。然后设置独立密码，于是我的GitHub就可以用双号登陆啦。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Tue, 30 Jun 2020 00:00:00 +0800</pubDate>
         <link>/2020/06/30/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95.html</link>
@@ -249,35 +243,51 @@ Bugs: https://github.com/denoland/deno/issues&lt;/p&gt;
         <title>Git 笔记</title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;2005年，神一样的linus，两周就用C写完了Git，一个月之内，Linux系统的源码已经由Git管理了，2008年，GitHub上线，为开源项目免费提供Git存储。&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Git分布式管理
-CVS和SVN是集中式管理，必须联网，与中央服务器沟通。Git在本地即可管理版本，在中央服务器与别人的版本合并&lt;/li&gt;
-    &lt;li&gt;Git安装
-Git最早只能在Linux和Unix系统上，目前各大系统都可以了。
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Git分布式管理
+    &lt;blockquote&gt;
+      &lt;p&gt;CVS和SVN是集中式管理，必须联网，与中央服务器沟通。Git在本地即可管理版本，在中央服务器与别人的版本合并&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Git安装
+    &lt;blockquote&gt;
+      &lt;p&gt;Git最早只能在Linux和Unix系统上，目前各大系统都可以了。
 linux安装：sudo apt-get install git
 mac安装: brew install git (mac安装homebrew：/usr/bin/ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”)
-windows安装：下载gitbash for Windows&lt;/li&gt;
-    &lt;li&gt;git创建仓库
-通常情况下，mkdir 一个路径，然后 git  init 
-此时，会生出.git文件，以后版本管理就有这个文件了&lt;/li&gt;
-    &lt;li&gt;关联GitHub
-在 GitHub上创建一个空仓库
+windows安装：下载gitbash for Windows&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;git创建仓库
+    &lt;blockquote&gt;
+      &lt;p&gt;通常情况下，mkdir 一个路径，然后 git  init 
+此时，会生出.git文件，以后版本管理就有这个文件了&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;关联GitHub
+    &lt;blockquote&gt;
+      &lt;p&gt;在 GitHub上创建一个空仓库
 在本地仓库目录： git remote add origin（远程哭名字） git@github.com:GitHub账户名/xxx.git
-git push -u origin master&lt;/li&gt;
-    &lt;li&gt;clone
-git clone，Git支持多种协议，包括https，但ssh协议速度最快。&lt;/li&gt;
-    &lt;li&gt;花式操作分支
+git push -u origin master&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;clone
+    &lt;blockquote&gt;
+      &lt;p&gt;git clone，Git支持多种协议，包括https，但ssh协议速度最快。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;花式操作分支
 ```&lt;/li&gt;
-    &lt;li&gt;查看远程分支：git branch -a&lt;/li&gt;
-    &lt;li&gt;查看本地分支：git branch&lt;/li&gt;
-    &lt;li&gt;创建分支：git branch  xxx&lt;/li&gt;
-    &lt;li&gt;切换分支：git checkout/switch   xxx&lt;/li&gt;
-    &lt;li&gt;创建并切换：git checkout -b dev// git switch  -b dev&lt;/li&gt;
-    &lt;li&gt;合并分支：git merge dev&lt;/li&gt;
-    &lt;li&gt;删除分支：git branch -d dev
+  &lt;li&gt;查看远程分支：git branch -a&lt;/li&gt;
+  &lt;li&gt;查看本地分支：git branch&lt;/li&gt;
+  &lt;li&gt;创建分支：git branch  xxx&lt;/li&gt;
+  &lt;li&gt;切换分支：git checkout/switch   xxx&lt;/li&gt;
+  &lt;li&gt;创建并切换：git checkout -b dev// git switch  -b dev&lt;/li&gt;
+  &lt;li&gt;合并分支：git merge dev&lt;/li&gt;
+  &lt;li&gt;删除分支：git branch -d dev
 ```&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;–pretty=oneline
@@ -308,15 +318,19 @@ git rm删掉，并且git commit&lt;/p&gt;
       <item>
         <title>npm</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;npm is the world’s largest software registry. Open source developers from every continent use npm to share and borrow packages, and many organizations use npm to manage private development as well.
-&lt;a href=&quot;https://docs.npmjs.com/&quot;&gt;npm&lt;/a&gt;&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;https://docs.npmjs.com/misc/semver#advanced-range-syntax&quot;&gt;更新时，版本号range逻辑&lt;/a&gt;
-x:重构等;y:功能升级;z:bug修复。[x.y.z]
-~:指定了xy，只能升级z；只指定了x，则可以升级yz到最大；如果带beta，则只能升级beta-x
-^:最左边第一个不为0的不升级，0以后的升级&lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;p&gt;npm is the world’s largest software registry. Open source developers from every continent use npm to share and borrow packages, and many organizations use npm to manage private development as well.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.npmjs.com/&quot;&gt;npm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.npmjs.com/misc/semver#advanced-range-syntax&quot;&gt;更新时，版本号range逻辑&lt;/a&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;x:重构等;y:功能升级;z:bug修复。[x.y.z]
+~:指定了xy，只能升级z；只指定了x，则可以升级yz到最大；如果带beta，则只能升级beta-x
+^:最左边第一个不为0的不升级，0以后的升级&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Mon, 29 Jun 2020 00:00:00 +0800</pubDate>
         <link>/2020/06/29/npm.html</link>
@@ -345,7 +359,7 @@ x:重构等;y:功能升级;z:bug修复。[x.y.z]
       </item>
     
       <item>
-        <title>MarkDown </title>
+        <title>MarkDown</title>
         <description>&lt;h2 id=&quot;编辑工具&quot;&gt;编辑工具&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;离线：Typora&lt;/li&gt;

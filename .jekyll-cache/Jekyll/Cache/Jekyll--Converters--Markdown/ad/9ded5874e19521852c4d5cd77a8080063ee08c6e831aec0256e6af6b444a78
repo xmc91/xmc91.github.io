@@ -1,4 +1,4 @@
-I"�<blockquote>
+I"�<blockquote>
   <p>android 疑难杂症解决秘籍</p>
 </blockquote>
 
@@ -6,7 +6,7 @@
   <li>build.gradle DSL element ‘android.dataBinding.enabled’ is obsolete and has been replaced with ‘android.buildFeatures.dataBinding’
     <blockquote>
       <p>按照提示：xxxx已过期，请用yyyy替代，而且指明了哪个文件，到对应文件替换即可</p>
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android {
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android {
   ...
   // 原来
   dataBinding {
@@ -43,7 +43,7 @@
   <li>Received close_notify during handshake
     <blockquote>
       <p>库没有下载下来,修改jceter源
-<code class="highlighter-rouge">
+<code class="language-plaintext highlighter-rouge">
 // jcenter()
 maven{ url'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
 </code>`</p>

@@ -135,49 +135,41 @@ Author: Ray-Eldath
     <article class="markdown-body">
       <blockquote>
   <p>自己创建的自己亲手毁掉，哈哈哈哈，有意思</p>
-  <ul>
-    <li>安装
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install deno
-</code></pre></div>      </div>
-    </li>
-    <li>deno -h
-```
-deno 0.32.0
-A secure JavaScript and TypeScript runtime // 安全的JavaScript和TypeScript运行时</li>
-  </ul>
 </blockquote>
 
-<p>Docs: https://deno.land/std/manual.md
+<ul>
+  <li>安装
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install deno
+</code></pre></div>    </div>
+  </li>
+  <li>deno -h</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deno 0.32.0
+A secure JavaScript and TypeScript runtime // 安全的JavaScript和TypeScript运行时
+Docs: https://deno.land/std/manual.md
 Modules: https://deno.land/x/
-Bugs: https://github.com/denoland/deno/issues</p>
+Bugs: https://github.com/denoland/deno/issues
+To run the REPL supply no arguments:
 
-<p>To run the REPL supply no arguments:</p>
+  deno
+To evaluate code from the command line:
 
-<p>deno</p>
+  deno eval "console.log(30933 + 404)"
+To execute a script:
 
-<p>To evaluate code from the command line:</p>
+  deno https://deno.land/std/examples/welcome.ts
+The default subcommand is 'run'. The above is equivalent to
 
-<p>deno eval “console.log(30933 + 404)”</p>
-
-<p>To execute a script:</p>
-
-<p>deno https://deno.land/std/examples/welcome.ts</p>
-
-<p>The default subcommand is ‘run’. The above is equivalent to</p>
-
-<p>deno run https://deno.land/std/examples/welcome.ts</p>
-
-<p>See ‘deno help run’ for run specific flags.</p>
-
-<p>USAGE:
-    deno [SUBCOMMAND]</p>
-
-<p>OPTIONS:
-    -h, –help                     Prints help information
-    -L, –log-level <log-level>    Set log level [possible values: debug, info]
-    -V, --version                  Prints version information</log-level></p>
-
-<p>SUBCOMMANDS:
+  deno run https://deno.land/std/examples/welcome.ts
+See 'deno help run' for run specific flags.
+USAGE:
+    deno [SUBCOMMAND]
+OPTIONS:
+    -h, --help                     Prints help information
+    -L, --log-level &lt;log-level&gt;    Set log level [possible values: debug, info]
+    -V, --version                  Prints version information
+SUBCOMMANDS:
     bundle         Bundle module and dependencies into single file
     completions    Generate shell completions
     eval           Eval script
@@ -189,14 +181,13 @@ Bugs: https://github.com/denoland/deno/issues</p>
     repl           Read Eval Print Loop
     run            Run a program given a filename or url to the source code
     test           Run tests
-    types          Print runtime TypeScript declarations</p>
-
-<p>ENVIRONMENT VARIABLES:
-    DENO_DIR       Set deno’s base directory
+    types          Print runtime TypeScript declarations
+ENVIRONMENT VARIABLES:
+    DENO_DIR       Set deno's base directory
     NO_COLOR       Set to disable color
     HTTP_PROXY     Proxy address for HTTP requests (module downloads, fetch)// 请求的HTTP_PROXY代理地址（模块下载，获取）
     HTTPS_PROXY    Same but for HTTPS
-```</p>
+</code></pre></div></div>
 
     </article>
 
@@ -251,7 +242,7 @@ Bugs: https://github.com/denoland/deno/issues</p>
         <a href="/2020/06/30/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95.html" class="read-next-link"></a>
           <section>
             <span>日常记录</span>
-            <p>  记忆是一场没有尽头的纪录片      Foxmail今天突然想更换一下GitHub的邮箱，因为现在这些老外不太...</p>
+            <p>  记忆是一场没有尽头的纪录片  Foxmail          今天突然想更换一下GitHub的邮箱，因为现在...</p>
           </section>
           
       </div>

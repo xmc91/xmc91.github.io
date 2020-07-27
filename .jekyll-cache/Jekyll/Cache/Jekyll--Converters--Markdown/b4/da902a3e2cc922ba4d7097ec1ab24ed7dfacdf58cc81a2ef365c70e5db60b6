@@ -1,4 +1,4 @@
-I"7	<blockquote>
+I"p	<blockquote>
   <p>苹果登录有两种方式验证：jwt形式；code授权码形式.</p>
 </blockquote>
 
@@ -8,12 +8,12 @@
   <li>signtura生成方式</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HMACSHA256(base64UrlEncode(header) + "." +base64UrlEncode(payload),secret)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HMACSHA256(base64UrlEncode(header) + "." +base64UrlEncode(payload),secret)
 </code></pre></div></div>
 
 <ul>
   <li>解析之后
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ header: {
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ header: {
    kid: '86D32Kf',
    alg: 'RS256' 
  },
@@ -35,7 +35,7 @@ signature:'es-mMU2FRsILnqmo_G5VbNKMz9gHtL9GjtyuiiiiiiiiP5J9ZhttU1_EJBEDBkBnR1jcr
 </ul>
 
 <h3 id="nodejs实现">nodejs实现</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var jwt = require('jsonwebtoken');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var jwt = require('jsonwebtoken');
 const jwksClient = require('jwks-rsa');
 // 获取苹果公钥json
 var jwt_client = jwksClient({

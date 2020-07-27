@@ -54,7 +54,7 @@ Server address: http://127.0.0.1:4000/
 + 此时jekyll build运行，可能会报错如下：
 
 ```
-Dependency Error: Yikes! It looks like you don't have jek       yll-paginate or one of its dependencies installed.
+Dependency Error: Yikes! It looks like you don't have jekyll-paginate or one of its dependencies installed.
 ```
 
 + 根据提示，gem install jekyll-paginate

@@ -145,7 +145,7 @@ Author: Ray-Eldath
 
 <h3 id="安装nvm">安装nvm</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 随便用那个都行
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 随便用那个都行
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 </code></pre></div></div>
@@ -154,7 +154,7 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
   <li>
     <p>nvm example</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Example:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Example:
 nvm install 8.0.0           Install a specific version number
 nvm use 8.0              Use the latest available 8.0.x release
 nvm run 6.10.3 app.js         Run app.js using node 6.10.3
@@ -166,13 +166,13 @@ nvm alias default node
   <li>
     <p>卸载</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>to remove, delete, or uninstall nvm - just remove the `$NVM_DIR` folder (usually `~/.nvm`)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>to remove, delete, or uninstall nvm - just remove the `$NVM_DIR` folder (usually `~/.nvm`)
 </code></pre></div>    </div>
   </li>
   <li>
     <p>安装node 8.0.0</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 8.0.0
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 8.0.0
 Downloading and installing node v8.0.0...
 Downloading https://nodejs.org/dist/v8.0.0/node-v8.0.0-darwin-x64.tar.gz...
 \############################################################################################# 100.0%
@@ -185,22 +185,22 @@ Creating default alias: default -&gt; 8.0.0 (-&gt; v8.0.0)
   <li>
     <p>安装node 10.0.0</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 10.0.0
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 10.0.0
 Now using node v10.0.0 (npm v5.6.0)
 </code></pre></div>    </div>
   </li>
   <li>重命名node版本
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm alias n10 10.0.0
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm alias n10 10.0.0
 nvm alias n8 8.0.0
 </code></pre></div>    </div>
   </li>
   <li>切换版本
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm use n10
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm use n10
 nvm use n8
 </code></pre></div>    </div>
   </li>
   <li>查看可用版本
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm ls
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm ls
 -&gt;    v8.0.0
 ​    v10.0.0
 ​     system
@@ -212,14 +212,14 @@ stable -&gt; 10.0 (-&gt; v10.0.0) (default)
 </code></pre></div>    </div>
   </li>
   <li>安装稳定版本
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install stable
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install stable
 Now using node v13.3.0 (npm v6.13.1)
 </code></pre></div>    </div>
   </li>
   <li>
     <p>配置环境变量</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 编辑配置文件
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 编辑配置文件
 vim .bash_profile
 // 编辑
 export NVM_DIR="$HOME/.nvm"
@@ -246,12 +246,12 @@ source .bash_profile
   <li>下载：https://www.mongodb.com/try#community</li>
   <li>解压</li>
   <li>配置环境变量
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH=${PATH}:/usr/local/MongoDB/bin
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH=${PATH}:/usr/local/MongoDB/bin
 </code></pre></div>    </div>
   </li>
   <li>创建data和log目录</li>
   <li>启动
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mongod --dbpath data --logpath log/mongod.log --logappend
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mongod --dbpath data --logpath log/mongod.log --logappend
 </code></pre></div>    </div>
     <h3 id="安装并启动redis">安装并启动Redis</h3>
   </li>
@@ -259,24 +259,24 @@ source .bash_profile
   <li>解压：tar zxvf redis-4.0.10.tar.gz</li>
   <li>安装：sudo make install</li>
   <li>启动服务
-<code class="highlighter-rouge">
+<code class="language-plaintext highlighter-rouge">
 cd /usr/local/Cellar/redis/5.0.6/bin
 redis-server 
               _._                                                  
          _.-``__ ''-._                                             
     _.-``    `.  `_.  ''-._           Redis 5.0.6 (00000000/0) 64 bit
 .-`` .-</code>.  ```\/    <em>.,</em> ‘’-._                                 <br />
- (    ‘      ,       .-<code class="highlighter-rouge">  | </code>,    )     Running in standalone mode
- |<code class="highlighter-rouge">-._</code>-…-<code class="highlighter-rouge"> __...-.</code><code class="highlighter-rouge">-._|'</code> <em>.-‘|     Port: 6379
- |    <code class="highlighter-rouge">-._   </code>.</em>    /     <em>.-‘    |     PID: 24650
-<code class="highlighter-rouge">-._    </code>-.</em>  <code class="highlighter-rouge">-./  _.-'    _.-'                                   
- |</code>-.<em><code class="highlighter-rouge">-._    </code>-.<strong>.-‘    _.-‘_.-‘|                                <br />
- |    <code class="highlighter-rouge">-._</code>-._        _.-‘_.-‘    |           http://redis.io      <br />
-<code class="highlighter-rouge">-._    </code>-._<code class="highlighter-rouge">-.__.-'_.-'    _.-'                                   
- |</code>-._<code class="highlighter-rouge">-._    </code>-.</strong>.-‘    _.-‘</em>.-‘|                                <br />
- |    <code class="highlighter-rouge">-._</code>-._        <em>.-‘</em>.-‘    |                                <br />
-<code class="highlighter-rouge">-._    </code>-.<em><code class="highlighter-rouge">-.__.-'_.-'    _.-'                                   
-    </code>-.</em>    <code class="highlighter-rouge">-.__.-'    _.-'                                       
+ (    ‘      ,       .-<code class="language-plaintext highlighter-rouge">  | </code>,    )     Running in standalone mode
+ |<code class="language-plaintext highlighter-rouge">-._</code>-…-<code class="language-plaintext highlighter-rouge"> __...-.</code><code class="language-plaintext highlighter-rouge">-._|'</code> <em>.-‘|     Port: 6379
+ |    <code class="language-plaintext highlighter-rouge">-._   </code>.</em>    /     <em>.-‘    |     PID: 24650
+<code class="language-plaintext highlighter-rouge">-._    </code>-.</em>  <code class="language-plaintext highlighter-rouge">-./  _.-'    _.-'                                   
+ |</code>-.<em><code class="language-plaintext highlighter-rouge">-._    </code>-.<strong>.-‘    _.-‘_.-‘|                                <br />
+ |    <code class="language-plaintext highlighter-rouge">-._</code>-._        _.-‘_.-‘    |           http://redis.io      <br />
+<code class="language-plaintext highlighter-rouge">-._    </code>-._<code class="language-plaintext highlighter-rouge">-.__.-'_.-'    _.-'                                   
+ |</code>-._<code class="language-plaintext highlighter-rouge">-._    </code>-.</strong>.-‘    _.-‘</em>.-‘|                                <br />
+ |    <code class="language-plaintext highlighter-rouge">-._</code>-._        <em>.-‘</em>.-‘    |                                <br />
+<code class="language-plaintext highlighter-rouge">-._    </code>-.<em><code class="language-plaintext highlighter-rouge">-.__.-'_.-'    _.-'                                   
+    </code>-.</em>    <code class="language-plaintext highlighter-rouge">-.__.-'    _.-'                                       
         </code>-._        _.-‘                                         <br />
             `-.__.-‘</li>
 </ul>

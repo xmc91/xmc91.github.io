@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'MarkDown '
+title: 'MarkDown'
 date: 2020-06-22
 author: WindMan
 tags: Tools

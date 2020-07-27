@@ -40,7 +40,6 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
   ```
 
   
-
 + 安装node 8.0.0
 
   ```
