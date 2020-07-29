@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Android 面试 Java部分 - WindMan Blog</title>
+    <title>Android 碎片记忆 - WindMan Blog</title>
     <meta name="author"  content="WindMan">
-    <meta name="description" content="Android 面试 Java部分">
+    <meta name="description" content="Android 碎片记忆">
     <meta name="keywords"  content="android">
     <!-- Open Graph -->
-    <meta property="og:title" content="Android 面试 Java部分 - WindMan Blog">
+    <meta property="og:title" content="Android 碎片记忆 - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html">
+    <meta property="og:url" content="/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -120,10 +120,10 @@ Author: Ray-Eldath
           
         
       </div>
-      <h1>Android 面试 Java部分</h1>
+      <h1>Android 碎片记忆</h1>
       <div class="post-meta">
         <span class="post-meta-item"><i class="iconfont icon-author"></i>WindMan</span>
-        <time class="post-meta-item" datetime="20-07-27"><i class="iconfont icon-date"></i>27 Jul 2020</time>
+        <time class="post-meta-item" datetime="20-07-29"><i class="iconfont icon-date"></i>29 Jul 2020</time>
       </div>
     </div>
     
@@ -134,21 +134,21 @@ Author: Ray-Eldath
 
     <article class="markdown-body">
       <blockquote>
-  <p>java 相关</p>
+  <p>一片，两片，三四片；五片，六片，七八片。落入芦苇全不见！</p>
 </blockquote>
 
-<p>容器（HashMap、HashSet、LinkedList、ArrayList、数组等）
-内存模型
-垃圾回收算法（JVM）
-垃圾回收机制和调用 System.gc()的区别？
-类加载过程（需要多看看，重在理解，对于热修复和插件化比较重要）
-反射
-多线程和线程池
-设计模式（六大基本原则、项目中常用的设计模式、手写单例等）
-Java 四大引用
-Java 的泛型
-final、finally、finalize 的区别
-接口、抽象类的区别</p>
+<h2 id="h5唤起app">h5唤起app</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ [scheme:][//authority][path][?query][#fragment],如：https://www.baidu.com
++ scheme的触发方式会被浏览器拦截，它们都各自维护着一个白名单，但是微博之类的都是可以申请的，只是条件各不相同，比如微博的就是在你的 APP 中添加打开微博的入口，三个月内唤起超过 100w 次，就可以加入白名单了。
++ 在安卓中我们一般都是直接打开腾讯应用宝，ios 中 直接打开 App Store。点击腾讯应用宝中的“打开”按钮，可以直接唤起我们的 APP，但是无法打开 APP 中的某个功能（就是无法打开指定页面）。腾讯应用宝对外开放了一个叫做 APP Link 的申请，只要你申请了 APP Link，就可以通过在打开应用宝的时候在应用宝地址后面添加上 &amp;android_schema={your_scheme} ，来打开指定的页面了。
++ location.href跳转：window.location.href = 'sinaweibo://qrcode';
++ a标签唤起： &lt;a href="mqqapi://card/show_pslcard?src_type=internal&amp;version=1&amp;uin=123456"&gt;QQ临时交流&lt;/a&gt;
++ iframe方案： &lt;iframe src="sinaweibo://qrcode"&gt;
+
+参考：https://www.jianshu.com/p/500f4be528e3
+</code></pre></div></div>
+
+<p>##</p>
 
     </article>
 
@@ -188,22 +188,13 @@ final、finally、finalize 的区别
     </section>
     <section class="post-footer-item read-next">
       
-      <div class="read-next-item">
-        <a href="/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html" class="read-next-link"></a>
-        <section>
-          <span>Android面基2</span>
-          <p>  Android 相关部分</p>
-        </section>
-        
-     </div>
-      
 
       
       <div class="read-next-item">
-        <a href="/2020/07/18/Android-http.html" class="read-next-link"></a>
+        <a href="/2020/07/28/%E6%8E%92%E5%BA%8F.html" class="read-next-link"></a>
           <section>
-            <span>http 及其抓包</span>
-            <p></p>
+            <span>排序</span>
+            <p>  十大排序</p>
           </section>
           
       </div>
