@@ -83,6 +83,7 @@ RSS: false
 permalink: /:year/:month/:day/:title.html
 
 # Plugins
-plugins_dir: [jekyll-paginate]
-gems: [jekyll-paginate]
+# plugins_dir: [jekyll-paginate]
+#gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 

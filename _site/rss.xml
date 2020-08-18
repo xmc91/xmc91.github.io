@@ -3,10 +3,10 @@
   <channel>
     <title>WindMan Blog</title>
     <description>风一样de男子</description>
-    <link>//</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 30 Jul 2020 00:24:10 +0800</pubDate>
-    <lastBuildDate>Thu, 30 Jul 2020 00:24:10 +0800</lastBuildDate>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 18 Aug 2020 22:02:36 +0800</pubDate>
+    <lastBuildDate>Tue, 18 Aug 2020 22:02:36 +0800</lastBuildDate>
     <generator>Jekyll v4.1.0</generator>
     
       <item>
@@ -26,11 +26,89 @@
 参考：https://www.jianshu.com/p/500f4be528e3
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;##&lt;/p&gt;
+&lt;h2 id=&quot;android-9-允许http&quot;&gt;Android 9+ 允许http&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;res目录下创建xml目录,创建network_security_config.xml文件
+```
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;network-security-config&gt;
+&lt;base-config cleartextTrafficPermitted=&quot;true&quot; /&gt;
+&lt;/network-security-config&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ AndroidManifest.xml添加:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;android:networkSecurityConfig=”@xml/network_security_config”&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+## Android8.0 允许安装未知来源权限
++ 8.0之前，从除官方应用商店之外的来源安装App时，需要打开系统设置当中的”允许未知来源”，在最新的Android O当中谷歌已经删除了该永久授权的选项，从系统设置当中已经找不到该开关。谷歌将永久授权修改为每次的单独授权，当用户每次安装第三方来源（包括华为应用市场等）的android软件时需要对软件权限进行手动确认
++ 添加权限
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;uses-permission android:name=&quot;android.permission.REQUEST_INSTALL_PACKAGES&quot; /&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ 判断运行时权限是否打开
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;if(Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.O){
+ //先判断是否有安装未知来源应用的权限
+    if(!getPackageManager().canRequestPackageInstalls()){
+    //跳转到应用详情，打开开关
+    }
+ }&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ 跳转到应用详情，打开开关
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Uri packageURI = Uri.parse(“package:”+mContext.getPackageName());
+Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,packageURI);
+startActivityForResult(intent, INSTALL_PERMISS_CODE);&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ onActivityResult回调
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;if (resultCode == RESULT_OK &amp;amp;&amp;amp; requestCode == INSTALL_PERMISS_CODE) {
+   // 安装APP
+ }&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+## AlertDialog 回调 
++ 创建 AlertDialog
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public static void showAlert(Context context, String title, String message, OnClickListener listener){
+    Builder builder = new Builder(context);
+    builder.setTitle(title);
+    builder.setMessage(message);
+    builder.setPositiveButton(&quot;确定&quot;, listener);
+    builder.setCancelable(false);
+    builder.setIcon(R.mipmap.ic_launcher);
+    AlertDialog dialog = builder.create();
+    dialog.show();
+} ``` + 接管点击事件 ``` showAlert(this, &quot;title&quot;, &quot;message&quot;, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    
+                }
+            }); ``` ## TextView 小特性 + 可复制，如果是在listview里，替换为RecyclerView 即可 ``` android:textIsSelectable=&quot;true&quot; ``` + 可滑动 ```  tv.movementMethod = ScrollingMovementMethod.getInstance() ``` + 支持富文本:SpannableString或者html ``` //设置Hello World前三个字符为红色,背景为蓝色 SpannableString textSpanned = new SpannableString(&quot;Hello World&quot;); // ForegroundColorSpan(Color.RED) 设置前景 // BackgroundColorSpan(Color.RED) 设置背景 // new StyleSpan(Typeface.ITALIC) 斜体 // new UnderlineSpan() 下划线 // ClickableSpan 点击事件 textSpanned.setSpan(xxxSpan,0, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE); tv.setMovementMethod(LinkMovementMethod.getInstance()); tv.setText(textSpanned4); ``` + 跑马灯：借助系统或者自定义或者直接用别人的轮子 ```
+&amp;lt;TextView
+    android:layout_marginTop=&quot;30dp&quot;
+    android:layout_width=&quot;100dp&quot;
+    android:layout_height=&quot;30dp&quot;
+    android:text=&quot;Hello World! wertyuiodfghjklxcvbnm,.dfghjklghjkl&quot;
+    android:singleLine=&quot;true&quot;
+    android:scrollHorizontally=&quot;true&quot;
+    android:ellipsize=&quot;marquee&quot;
+    android:focusable=&quot;true&quot;
+    android:focusableInTouchMode=&quot;true&quot;
+    android:marqueeRepeatLimit=&quot;marquee_forever&quot;
+    /&amp;gt; ```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;android-多国语言&quot;&gt;android 多国语言&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;报错is-not-accessible-from-javalangclass-androidappactivitythread&quot;&gt;【报错】is not accessible from java.lang.Class android.app.ActivityThread&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;修饰改为public&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Wed, 29 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</link>
-        <guid isPermaLink="true">/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</guid>
+        <link>http://localhost:4000/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</guid>
         
         <category>android</category>
         
@@ -324,12 +402,12 @@ for(var i = 0; i &amp;lt; maxDigit; i++, dev *= 10, mod *= 10) {
       }
     }
 }
-return arr; } ```
+return arr; } ``` 参考：https://www.cnblogs.com/onepixel/p/7674659.html
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 28 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/28/%E6%8E%92%E5%BA%8F.html</link>
-        <guid isPermaLink="true">/2020/07/28/%E6%8E%92%E5%BA%8F.html</guid>
+        <link>http://localhost:4000/2020/07/28/%E6%8E%92%E5%BA%8F.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/07/28/%E6%8E%92%E5%BA%8F.html</guid>
         
         <category>android</category>
         
@@ -435,8 +513,8 @@ return arr; } ```
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</link>
-        <guid isPermaLink="true">/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</guid>
+        <link>http://localhost:4000/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</guid>
         
         <category>android</category>
         
@@ -465,8 +543,8 @@ final、finally、finalize 的区别
 接口、抽象类的区别&lt;/p&gt;
 </description>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</link>
-        <guid isPermaLink="true">/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</guid>
+        <link>http://localhost:4000/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</guid>
         
         <category>android</category>
         
@@ -480,8 +558,8 @@ final、finally、finalize 的区别
         <description>
 </description>
         <pubDate>Sat, 18 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/18/Android-http.html</link>
-        <guid isPermaLink="true">/2020/07/18/Android-http.html</guid>
+        <link>http://localhost:4000/2020/07/18/Android-http.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/07/18/Android-http.html</guid>
         
         <category>android</category>
         
@@ -495,8 +573,8 @@ final、finally、finalize 的区别
         <description>
 </description>
         <pubDate>Fri, 17 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/17/svg.html</link>
-        <guid isPermaLink="true">/2020/07/17/svg.html</guid>
+        <link>http://localhost:4000/2020/07/17/svg.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/07/17/svg.html</guid>
         
         <category>android</category>
         
@@ -571,8 +649,8 @@ exports.verifyAppleSignin = function(req, res) {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 01 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html</link>
-        <guid isPermaLink="true">/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html</guid>
+        <link>http://localhost:4000/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html</guid>
         
         <category>nodejs</category>
         
@@ -640,8 +718,8 @@ ENVIRONMENT VARIABLES:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 01 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/01/deno.html</link>
-        <guid isPermaLink="true">/2020/07/01/deno.html</guid>
+        <link>http://localhost:4000/2020/07/01/deno.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/07/01/deno.html</guid>
         
         <category>deno</category>
         
@@ -665,8 +743,8 @@ ENVIRONMENT VARIABLES:
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 30 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/30/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95.html</link>
-        <guid isPermaLink="true">/2020/06/30/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95.html</guid>
+        <link>http://localhost:4000/2020/06/30/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/30/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95.html</guid>
         
         <category>read</category>
         
@@ -737,12 +815,81 @@ git checkout –file // 撤销未提交的修改
 git checkout xx 切换分支
 git reset HEAD xx 把xx文件从暂存区恢复到工作区
 git rm删掉，并且git commit&lt;/p&gt;
-
 &lt;/blockquote&gt;
+
+&lt;h2 id=&quot;git&quot;&gt;git&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;git配置&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ git config --gloable/--system user.name/user.email
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;创建仓库&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git init 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;查看文件状态&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;丢弃修改&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;添加到暂存区&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add xxx/ .    // .代表全部
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;从暂存区丢弃&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git reset
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;提交&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit -m 'xxx' // 如果不加m，则会进入注释引导
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;查看提交log&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// man git -log 可以看git log命令
+git log
+// 漂亮的展示
+git log --pretty=oneline
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;配置别名&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[alias]
+        st = status
+        br = branch
+        ck = checkout
+// 或者
+alias go = 'git checkout' // 这种配置，要防止与其他命令冲突
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;+&lt;/p&gt;
 </description>
         <pubDate>Tue, 30 Jun 2020 00:00:00 +0800</pubDate>
-        <link>/2020/06/30/git.html</link>
-        <guid isPermaLink="true">/2020/06/30/git.html</guid>
+        <link>http://localhost:4000/2020/06/30/git.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/30/git.html</guid>
         
         <category>Tool</category>
         

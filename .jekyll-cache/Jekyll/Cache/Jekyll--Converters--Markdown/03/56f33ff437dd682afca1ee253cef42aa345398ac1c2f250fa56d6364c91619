@@ -1,4 +1,4 @@
-I"�	<blockquote>
+I"�<blockquote>
   <p>2005年，神一样的linus，两周就用C写完了Git，一个月之内，Linux系统的源码已经由Git管理了，2008年，GitHub上线，为开源项目免费提供Git存储。</p>
 </blockquote>
 
@@ -58,6 +58,75 @@ git checkout –file // 撤销未提交的修改
 git checkout xx 切换分支
 git reset HEAD xx 把xx文件从暂存区恢复到工作区
 git rm删掉，并且git commit</p>
-
 </blockquote>
+
+<h2 id="git">git</h2>
+
+<ul>
+  <li>
+    <p>git配置</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ git config --gloable/--system user.name/user.email
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>创建仓库</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init 
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>查看文件状态</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>丢弃修改</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>添加到暂存区</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add xxx/ .    // .代表全部
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>从暂存区丢弃</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>提交</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m 'xxx' // 如果不加m，则会进入注释引导
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>查看提交log</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// man git -log 可以看git log命令
+git log
+// 漂亮的展示
+git log --pretty=oneline
+...
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>配置别名</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[alias]
+        st = status
+        br = branch
+        ck = checkout
+// 或者
+alias go = 'git checkout' // 这种配置，要防止与其他命令冲突
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>+</p>
 :ET

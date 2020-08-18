@@ -1,4 +1,4 @@
-I"� <blockquote>
+I"� <blockquote>
   <p>十大排序</p>
 </blockquote>
 
@@ -281,6 +281,6 @@ for(var i = 0; i &lt; maxDigit; i++, dev *= 10, mod *= 10) {
       }
     }
 }
-return arr; } ```
+return arr; } ``` 参考：https://www.cnblogs.com/onepixel/p/7674659.html
 </code></pre></div></div>
 :ET
