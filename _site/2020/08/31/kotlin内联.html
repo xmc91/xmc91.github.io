@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Android面基2 - WindMan Blog</title>
+    <title>kotlin 内联函数 - WindMan Blog</title>
     <meta name="author"  content="WindMan">
-    <meta name="description" content="Android面基2">
-    <meta name="keywords"  content="android">
+    <meta name="description" content="kotlin 内联函数">
+    <meta name="keywords"  content="kotlin">
     <!-- Open Graph -->
-    <meta property="og:title" content="Android面基2 - WindMan Blog">
+    <meta property="og:title" content="kotlin 内联函数 - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html">
+    <meta property="og:url" content="/2020/08/31/kotlin%E5%86%85%E8%81%94.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -116,14 +116,14 @@ Author: Ray-Eldath
       <div class="post-tags">
         
           
-            <a href="/tags.html#android" class="post-tag">android</a>
+            <a href="/tags.html#kotlin" class="post-tag">kotlin</a>
           
         
       </div>
-      <h1>Android面基2</h1>
+      <h1>kotlin 内联函数</h1>
       <div class="post-meta">
         <span class="post-meta-item"><i class="iconfont icon-author"></i>WindMan</span>
-        <time class="post-meta-item" datetime="20-07-27"><i class="iconfont icon-date"></i>27 Jul 2020</time>
+        <time class="post-meta-item" datetime="20-08-31"><i class="iconfont icon-date"></i>31 Aug 2020</time>
       </div>
     </div>
     
@@ -134,98 +134,66 @@ Author: Ray-Eldath
 
     <article class="markdown-body">
       <blockquote>
-  <p>Android 相关部分</p>
+  <p>let和with合并为run，孪生出apply，also又孪生与let</p>
 </blockquote>
 
-<h2 id="自定义-view">自定义 View</h2>
-<h2 id="事件拦截分发">事件拦截分发</h2>
-<h2 id="性能优化工具">性能优化工具</h2>
-<h2 id="https请求慢的解决办法dns携带数据直接访问-ip">Http[s]请求慢的解决办法（DNS、携带数据、直接访问 IP）</h2>
-<h2 id="缓存自己如何实现lrucache-原理">缓存自己如何实现（LRUCache 原理）</h2>
-<h2 id="图形图像相关opengl-es-管线流程egl-的认识shader-相关">图形图像相关：OpenGL ES 管线流程、EGL 的认识、Shader 相关</h2>
-<h2 id="surfaceviewtextureviewglsurfaceview-区别及使用场景">SurfaceView、TextureView、GLSurfaceView 区别及使用场景</h2>
-<h2 id="动画差值器估值器android中的view动画和属性动画-android-动画-介绍与使用">动画、差值器、估值器（Android中的View动画和属性动画 、Android 动画 介绍与使用）</h2>
-<h2 id="mvcmvpmvvm">MVC、MVP、MVVM</h2>
-<h2 id="handlerthreadlocalasynctaskintentservice-原理及应用">Handler、ThreadLocal、AsyncTask、IntentService 原理及应用</h2>
-<h2 id="gradlegroovy-语法gradle-插件开发基础">Gradle（Groovy 语法、Gradle 插件开发基础）</h2>
-<h2 id="热修复插件化">热修复、插件化</h2>
-<h2 id="组件化架构思路">组件化架构思路</h2>
-<h2 id="系统打包流程">系统打包流程</h2>
-<h2 id="android-有哪些存储数据的方式">Android 有哪些存储数据的方式。</h2>
-<h2 id="sharedprefrence-源码和问题点">SharedPrefrence 源码和问题点；</h2>
-<h2 id="sqlite-相关">sqlite 相关</h2>
 <ul>
-  <li>创建或者打开数据库
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class DBHelper extends SQLiteOpenHelper {
-  private static final String DATABASE_NAME = "db.db";
-  private static final int DATABASE_VERSION = 1;
+  <li>let，it代理对象，且返回最后一行代码或者指定return</li>
+</ul>
 
-  /** Create a helper object for the Events database */
-  public ProvinceDataHelper(Context ctx) {
-      super(ctx, DATABASE_NAME, null, DATABASE_VERSION);
-  }
-
-  @Override
-  public void onCreate(SQLiteDatabase db) {}
-
-  @Override
-  public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a.let{
+    it// 此时it就代理了a
 }
-</code></pre></div>    </div>
-  </li>
-  <li>增删改查
-```</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-
-+ 如何导入外部数据库
-1.将格式为.db的数据库文件放到android项目assets目录中；
-2.在程序必要的时候，将其“拷贝”（文件读取）到Android 程序默认的数据库存储目录中，一般路径为“/data/data/项目包名/databases/“；
-</code></pre></div></div>
-<p>InputStream is = context.getAssets().open(DB_NAME);
-                // 输出流,在指定路径下生成db文件
-                OutputStream os = new FileOutputStream(DB_PATH + DB_NAME);</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            // 文件写入
-            byte[] buffer = new byte[1024];
-            int length;
-            while ((length = is.read(buffer)) &gt; 0) {
-                os.write(buffer, 0, length);
-            } ``` 3.自定义SQLiteOpenHelper类，创建一个名字跟步骤1中.db名称一样的数据库； 4.按照平常逻辑，增删改查数据库。
 </code></pre></div></div>
 
-<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<h2 id="如何判断一个-app-在前台还是后台">如何判断一个 APP 在前台还是后台？</h2>
-<h2 id="ams-pms">AMS 、PMS</h2>
-<h2 id="activity-启动流程app-启动流程">Activity 启动流程，App 启动流程</h2>
-<h2 id="binder-机制ipcaidl-的使用">Binder 机制（IPC、AIDL 的使用）</h2>
-<h2 id="为什么使用-parcelable好处是什么">为什么使用 Parcelable，好处是什么？</h2>
-<h2 id="android-图像显示相关流程vsync-信号等">Android 图像显示相关流程，Vsync 信号等</h2>
-<h2 id="invalidate和postinvalidate的区别及使用">invalidate和postInvalidate的区别及使用</h2>
 <ul>
-  <li>Android中实现View的更新有两组方法，1. invalidate,ui线程更新; 2. postInvalidate，非UI线程更新</li>
-  <li>invalidate是在handler中使用，postInvalidate可以直接在子线程中调用更新View。
-    <h2 id="activity-window-view三者的差别">Activity-Window-View三者的差别</h2>
-  </li>
-  <li>Activity是Android四大组件之一，负责界面展示、用户交互和逻辑处理,有一个内部对象window。</li>
-  <li>Window就是负责界面展示以及交互的只能部门，就相当于Activity的下属，Activity的生命周期方法负责业务的处理。</li>
-  <li>View就是放在Window容器的元素，Window是View的载体，View是Window的具体展示。
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 在Activity中调用attach，创建了一个Window
-2. 创建的window是其子类PhoneWindow，在attach中创建PhoneWindow
-3. 在Activity中调用setContentView(R.layout.xxx)
-4. 其中实际上是调用的getWindow().setContentView()
-5. 调用PhoneWindow中的setContentView方法
-6. 创建ParentView：作为ViewGroup的子类，实际是创建的DecorView(作为FramLayout的子类）
-7. 将指定的R.layout.xxx进行填充通过布局填充器进行填充【其中的parent指的就是DecorView】
-8. 调用到ViewGroup
-9. 调用ViewGroup的removeAllView()，先将所有的view移除掉
-10. 添加新的view：addView()
-</code></pre></div>    </div>
-    <h2 id="context">Context</h2>
-  </li>
-  <li>Context数量=Activity数量+Service数量+1</li>
+  <li>with，返回最后一行代码或者指定return</li>
 </ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>with(a){
+    // 此时此作用于有个this，可省略，直接调用a的对象
+}
+</code></pre></div></div>
+
+<ul>
+  <li>run let和with的补充，省略了let内的it，解决了with调用之前的判空</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a?.run{
+    // 此时可以直接调用a的参数
+}
+</code></pre></div></div>
+
+<ul>
+  <li>apply，与run是孪生兄弟，唯一不同的是返回对象本身；还可以用来判空链式写法</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a?.apply{
+    // 此时可以省略啊直接调用a对象的成员
+    // 返回a
+}
+
+// 如果a中有b，b有b1
+
+a?.apply{
+    b?.apply{
+
+    }?.b1.apply{
+
+    }
+}
+
+</code></pre></div></div>
+
+<ul>
+  <li>also let的孪生兄弟，返回对象本省</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a.also{
+    it.// it 代理a
+    // 最终返回a
+}
+</code></pre></div></div>
 
     </article>
 
@@ -265,22 +233,13 @@ Author: Ray-Eldath
     </section>
     <section class="post-footer-item read-next">
       
-      <div class="read-next-item">
-        <a href="/2020/07/28/%E6%8E%92%E5%BA%8F.html" class="read-next-link"></a>
-        <section>
-          <span>排序</span>
-          <p>  十大排序</p>
-        </section>
-        
-     </div>
-      
 
       
       <div class="read-next-item">
-        <a href="/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html" class="read-next-link"></a>
+        <a href="/2020/08/30/activity.html" class="read-next-link"></a>
           <section>
-            <span>Android 面试 Java部分</span>
-            <p>  java 相关</p>
+            <span>Android第一侠客activity</span>
+            <p>  配置name是唯一必要的，其他都是自定义：标签、主题等  可配置强大的intent过滤器</p>
           </section>
           
       </div>

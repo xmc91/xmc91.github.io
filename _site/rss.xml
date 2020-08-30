@@ -3,16 +3,110 @@
   <channel>
     <title>WindMan Blog</title>
     <description>风一样de男子</description>
-    <link>http://localhost:4000//</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 30 Aug 2020 22:31:24 +0800</pubDate>
-    <lastBuildDate>Sun, 30 Aug 2020 22:31:24 +0800</lastBuildDate>
+    <link>//</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 31 Aug 2020 00:34:16 +0800</pubDate>
+    <lastBuildDate>Mon, 31 Aug 2020 00:34:16 +0800</lastBuildDate>
     <generator>Jekyll v4.1.0</generator>
+    
+      <item>
+        <title>kotlin 内联函数</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;let和with合并为run，孪生出apply，also又孪生与let&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;let，it代理对象，且返回最后一行代码或者指定return&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a.let{
+    it// 此时it就代理了a
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;with，返回最后一行代码或者指定return&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;with(a){
+    // 此时此作用于有个this，可省略，直接调用a的对象
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;run let和with的补充，省略了let内的it，解决了with调用之前的判空&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a?.run{
+    // 此时可以直接调用a的参数
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;apply，与run是孪生兄弟，唯一不同的是返回对象本身；还可以用来判空链式写法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a?.apply{
+    // 此时可以省略啊直接调用a对象的成员
+    // 返回a
+}
+
+// 如果a中有b，b有b1
+
+a?.apply{
+    b?.apply{
+
+    }?.b1.apply{
+
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;also let的孪生兄弟，返回对象本省&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a.also{
+    it.// it 代理a
+    // 最终返回a
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 31 Aug 2020 00:00:00 +0800</pubDate>
+        <link>/2020/08/31/kotlin%E5%86%85%E8%81%94.html</link>
+        <guid isPermaLink="true">/2020/08/31/kotlin%E5%86%85%E8%81%94.html</guid>
+        
+        <category>kotlin</category>
+        
+        
+        <category>android</category>
+        
+      </item>
+    
+      <item>
+        <title>Android第一侠客activity</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;配置name是唯一必要的，其他都是自定义：标签、主题等&lt;/li&gt;
+  &lt;li&gt;可配置强大的intent过滤器&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 30 Aug 2020 00:00:00 +0800</pubDate>
+        <link>/2020/08/30/activity.html</link>
+        <guid isPermaLink="true">/2020/08/30/activity.html</guid>
+        
+        <category>android</category>
+        
+        
+        <category>android</category>
+        
+      </item>
     
       <item>
         <title>双鱼男与12星座搭配</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;最佳配对：巨蟹座女、天蝎座女、金牛座女、摩羯座女&lt;/p&gt;
+  &lt;p&gt;最佳配对：巨蟹座女、天蝎座女、摩羯座女&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;白羊女&quot;&gt;白羊女&lt;/h2&gt;
@@ -76,8 +170,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 30 Aug 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/08/30/12%E6%98%9F%E5%BA%A7%E5%A5%B3%E4%B8%8E%E5%8F%8C%E9%B1%BC%E7%94%B7%E7%9A%84%E6%90%AD%E9%85%8D.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/08/30/12%E6%98%9F%E5%BA%A7%E5%A5%B3%E4%B8%8E%E5%8F%8C%E9%B1%BC%E7%94%B7%E7%9A%84%E6%90%AD%E9%85%8D.html</guid>
+        <link>/2020/08/30/12%E6%98%9F%E5%BA%A7%E5%A5%B3%E4%B8%8E%E5%8F%8C%E9%B1%BC%E7%94%B7%E7%9A%84%E6%90%AD%E9%85%8D.html</link>
+        <guid isPermaLink="true">/2020/08/30/12%E6%98%9F%E5%BA%A7%E5%A5%B3%E4%B8%8E%E5%8F%8C%E9%B1%BC%E7%94%B7%E7%9A%84%E6%90%AD%E9%85%8D.html</guid>
         
         <category>星座</category>
         
@@ -184,8 +278,8 @@ startActivityForResult(intent, INSTALL_PERMISS_CODE);&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 29 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</guid>
+        <link>/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</link>
+        <guid isPermaLink="true">/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</guid>
         
         <category>android</category>
         
@@ -483,8 +577,8 @@ return arr; } ``` 参考：https://www.cnblogs.com/onepixel/p/7674659.html
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 28 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/28/%E6%8E%92%E5%BA%8F.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/28/%E6%8E%92%E5%BA%8F.html</guid>
+        <link>/2020/07/28/%E6%8E%92%E5%BA%8F.html</link>
+        <guid isPermaLink="true">/2020/07/28/%E6%8E%92%E5%BA%8F.html</guid>
         
         <category>android</category>
         
@@ -590,8 +684,8 @@ return arr; } ``` 参考：https://www.cnblogs.com/onepixel/p/7674659.html
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</guid>
+        <link>/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</link>
+        <guid isPermaLink="true">/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</guid>
         
         <category>android</category>
         
@@ -620,8 +714,8 @@ final、finally、finalize 的区别
 接口、抽象类的区别&lt;/p&gt;
 </description>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</guid>
+        <link>/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</link>
+        <guid isPermaLink="true">/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</guid>
         
         <category>android</category>
         
@@ -635,8 +729,8 @@ final、finally、finalize 的区别
         <description>
 </description>
         <pubDate>Sat, 18 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/18/Android-http.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/18/Android-http.html</guid>
+        <link>/2020/07/18/Android-http.html</link>
+        <guid isPermaLink="true">/2020/07/18/Android-http.html</guid>
         
         <category>android</category>
         
@@ -650,8 +744,8 @@ final、finally、finalize 的区别
         <description>
 </description>
         <pubDate>Fri, 17 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/17/svg.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/17/svg.html</guid>
+        <link>/2020/07/17/svg.html</link>
+        <guid isPermaLink="true">/2020/07/17/svg.html</guid>
         
         <category>android</category>
         
@@ -726,107 +820,13 @@ exports.verifyAppleSignin = function(req, res) {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 01 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html</guid>
+        <link>/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html</link>
+        <guid isPermaLink="true">/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html</guid>
         
         <category>nodejs</category>
         
         
         <category>nodejs</category>
-        
-      </item>
-    
-      <item>
-        <title>deno</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;自己创建的自己亲手毁掉，哈哈哈哈，有意思&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;安装
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install deno
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;deno -h&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deno 0.32.0
-A secure JavaScript and TypeScript runtime // 安全的JavaScript和TypeScript运行时
-Docs: https://deno.land/std/manual.md
-Modules: https://deno.land/x/
-Bugs: https://github.com/denoland/deno/issues
-To run the REPL supply no arguments:
-
-  deno
-To evaluate code from the command line:
-
-  deno eval &quot;console.log(30933 + 404)&quot;
-To execute a script:
-
-  deno https://deno.land/std/examples/welcome.ts
-The default subcommand is 'run'. The above is equivalent to
-
-  deno run https://deno.land/std/examples/welcome.ts
-See 'deno help run' for run specific flags.
-USAGE:
-    deno [SUBCOMMAND]
-OPTIONS:
-    -h, --help                     Prints help information
-    -L, --log-level &amp;lt;log-level&amp;gt;    Set log level [possible values: debug, info]
-    -V, --version                  Prints version information
-SUBCOMMANDS:
-    bundle         Bundle module and dependencies into single file
-    completions    Generate shell completions
-    eval           Eval script
-    fetch          Fetch the dependencies
-    fmt            Format files
-    help           Prints this message or the help of the given subcommand(s)
-    info           Show info about cache or info related to source file
-    install        Install script as executable
-    repl           Read Eval Print Loop
-    run            Run a program given a filename or url to the source code
-    test           Run tests
-    types          Print runtime TypeScript declarations
-ENVIRONMENT VARIABLES:
-    DENO_DIR       Set deno's base directory
-    NO_COLOR       Set to disable color
-    HTTP_PROXY     Proxy address for HTTP requests (module downloads, fetch)// 请求的HTTP_PROXY代理地址（模块下载，获取）
-    HTTPS_PROXY    Same but for HTTPS
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Wed, 01 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/01/deno.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/01/deno.html</guid>
-        
-        <category>deno</category>
-        
-        
-        <category>deno</category>
-        
-      </item>
-    
-      <item>
-        <title>日常记录</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;记忆是一场没有尽头的纪录片&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Foxmail
-    &lt;blockquote&gt;
-      &lt;p&gt;今天突然想更换一下GitHub的邮箱，因为现在这些老外不太靠谱了，又加上翻墙困难，哪天Gmail无法登陆了就凉凉了，竟然发现Foxmail没有入口，一顿搜索，发现foxmail 在2005年被腾讯收购，需要在qq邮箱注册Foxmail。然后设置独立密码，于是我的GitHub就可以用双号登陆啦。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 30 Jun 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/06/30/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/30/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95.html</guid>
-        
-        <category>read</category>
-        
-        
-        <category>read</category>
         
       </item>
     
