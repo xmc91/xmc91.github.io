@@ -10,7 +10,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Git 笔记 - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:4000/2020/06/30/git.html">
+    <meta property="og:url" content="/2020/06/30/git.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -205,6 +205,13 @@ git rm删掉，并且git commit</p>
 </code></pre></div>    </div>
   </li>
   <li>
+    <p>git 配置当个仓库</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config user.name 'xxx'
+git confit user.email 'xxxx'
+</code></pre></div>    </div>
+  </li>
+  <li>
     <p>创建仓库</p>
 
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init 
@@ -267,6 +274,7 @@ alias go = 'git checkout' // 这种配置，要防止与其他命令冲突
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 个人
+# 个人的仓库地址需要改一下，测试时要用git@me.github.com；提交时要用git@me.github.com:xxx/xxxx.github.io.git
 Host me.github.com
 HostName github.com
 User git

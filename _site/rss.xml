@@ -3,10 +3,10 @@
   <channel>
     <title>WindMan Blog</title>
     <description>风一样de男子</description>
-    <link>http://localhost:4000//</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 11 Nov 2022 00:39:01 +0800</pubDate>
-    <lastBuildDate>Fri, 11 Nov 2022 00:39:01 +0800</lastBuildDate>
+    <link>//</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 11 Nov 2022 01:01:15 +0800</pubDate>
+    <lastBuildDate>Fri, 11 Nov 2022 01:01:15 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -43,8 +43,8 @@
 
 </description>
         <pubDate>Thu, 10 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/10/tools.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/10/tools.html</guid>
+        <link>/2022/11/10/tools.html</link>
+        <guid isPermaLink="true">/2022/11/10/tools.html</guid>
         
         <category>Tools</category>
         
@@ -118,8 +118,8 @@ a?.apply{
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Mon, 31 Aug 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/08/31/kotlin%E5%86%85%E8%81%94.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/08/31/kotlin%E5%86%85%E8%81%94.html</guid>
+        <link>/2020/08/31/kotlin%E5%86%85%E8%81%94.html</link>
+        <guid isPermaLink="true">/2020/08/31/kotlin%E5%86%85%E8%81%94.html</guid>
         
         <category>kotlin</category>
         
@@ -137,8 +137,8 @@ a?.apply{
 
 </description>
         <pubDate>Sun, 30 Aug 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/08/30/activity.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/08/30/activity.html</guid>
+        <link>/2020/08/30/activity.html</link>
+        <guid isPermaLink="true">/2020/08/30/activity.html</guid>
         
         <category>android</category>
         
@@ -214,8 +214,8 @@ a?.apply{
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 30 Aug 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/08/30/12%E6%98%9F%E5%BA%A7%E5%A5%B3%E4%B8%8E%E5%8F%8C%E9%B1%BC%E7%94%B7%E7%9A%84%E6%90%AD%E9%85%8D.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/08/30/12%E6%98%9F%E5%BA%A7%E5%A5%B3%E4%B8%8E%E5%8F%8C%E9%B1%BC%E7%94%B7%E7%9A%84%E6%90%AD%E9%85%8D.html</guid>
+        <link>/2020/08/30/12%E6%98%9F%E5%BA%A7%E5%A5%B3%E4%B8%8E%E5%8F%8C%E9%B1%BC%E7%94%B7%E7%9A%84%E6%90%AD%E9%85%8D.html</link>
+        <guid isPermaLink="true">/2020/08/30/12%E6%98%9F%E5%BA%A7%E5%A5%B3%E4%B8%8E%E5%8F%8C%E9%B1%BC%E7%94%B7%E7%9A%84%E6%90%AD%E9%85%8D.html</guid>
         
         <category>星座</category>
         
@@ -322,8 +322,8 @@ startActivityForResult(intent, INSTALL_PERMISS_CODE);&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 29 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</guid>
+        <link>/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</link>
+        <guid isPermaLink="true">/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</guid>
         
         <category>android</category>
         
@@ -621,8 +621,8 @@ return arr; } ``` 参考：https://www.cnblogs.com/onepixel/p/7674659.html
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 28 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/28/%E6%8E%92%E5%BA%8F.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/28/%E6%8E%92%E5%BA%8F.html</guid>
+        <link>/2020/07/28/%E6%8E%92%E5%BA%8F.html</link>
+        <guid isPermaLink="true">/2020/07/28/%E6%8E%92%E5%BA%8F.html</guid>
         
         <category>android</category>
         
@@ -728,8 +728,8 @@ return arr; } ``` 参考：https://www.cnblogs.com/onepixel/p/7674659.html
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</guid>
+        <link>/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</link>
+        <guid isPermaLink="true">/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</guid>
         
         <category>android</category>
         
@@ -758,8 +758,8 @@ final、finally、finalize 的区别
 接口、抽象类的区别&lt;/p&gt;
 </description>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</guid>
+        <link>/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</link>
+        <guid isPermaLink="true">/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</guid>
         
         <category>android</category>
         
@@ -773,8 +773,8 @@ final、finally、finalize 的区别
         <description>
 </description>
         <pubDate>Sat, 18 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/18/Android-http.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/18/Android-http.html</guid>
+        <link>/2020/07/18/Android-http.html</link>
+        <guid isPermaLink="true">/2020/07/18/Android-http.html</guid>
         
         <category>android</category>
         
@@ -788,8 +788,8 @@ final、finally、finalize 的区别
         <description>
 </description>
         <pubDate>Fri, 17 Jul 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/07/17/svg.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/17/svg.html</guid>
+        <link>/2020/07/17/svg.html</link>
+        <guid isPermaLink="true">/2020/07/17/svg.html</guid>
         
         <category>android</category>
         
