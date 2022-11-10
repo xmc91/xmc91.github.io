@@ -10,7 +10,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Git 笔记 - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/2020/06/30/git.html">
+    <meta property="og:url" content="http://localhost:4000/2020/06/30/git.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -261,7 +261,41 @@ git log --pretty=oneline
 alias go = 'git checkout' // 这种配置，要防止与其他命令冲突
 </code></pre></div>    </div>
   </li>
+  <li>
+    <p><a href="https://www.jianshu.com/p/0bebcdb7c6a4">配置多git账号</a></p>
+  </li>
 </ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 个人
+Host me.github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa_xmc91
+
+
+
+# 公司
+Host work.github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa
+
+vtand@192 .ssh % eval "$(ssh-agent -s)"
+Agent pid 9935
+
+vtand@192 .ssh % ssh-add -K id_rsa
+Identity added: id_rsa (tony.xia@vtrump.com)
+
+vtand@192 .ssh % ssh-add -K id_rsa_xmc91
+Identity added: id_rsa_xmc91 (945829056@qq.com)
+
+vtand@192 .ssh % ssh -T git@work.github.com
+Hi VT-Tony! You've successfully authenticated, but GitHub does not provide shell access.
+
+vtand@192 .ssh % ssh -T git@me.github.com
+Hi xmc91! You've successfully authenticated, but GitHub does not provide shell access.
+
+</code></pre></div></div>
 
 <p>+</p>
 
