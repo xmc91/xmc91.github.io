@@ -5,9 +5,53 @@
     <description>风一样de男子</description>
     <link>//</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 31 Aug 2020 00:34:16 +0800</pubDate>
-    <lastBuildDate>Mon, 31 Aug 2020 00:34:16 +0800</lastBuildDate>
-    <generator>Jekyll v4.1.0</generator>
+    <pubDate>Fri, 11 Nov 2022 00:03:50 +0800</pubDate>
+    <lastBuildDate>Fri, 11 Nov 2022 00:03:50 +0800</lastBuildDate>
+    <generator>Jekyll v4.3.1</generator>
+    
+      <item>
+        <title>工具集合</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;工欲善其事，必先利其器&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;android-学习&quot;&gt;Android 学习&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/u010586698/article/details/56673379&quot;&gt;android 国际化&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/yanzi1225627/article/details/48215549&quot;&gt;mac 反编译&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/73e36529cf7c&quot;&gt;路人总结，Android 激进&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.android.google.cn/&quot;&gt;Android 大本营&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.wanandroid.com/&quot;&gt;WanAndroid&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/distribute/best-practices/develop/64-bit&quot;&gt;Android 64&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_40611659/article/details/95174124&quot;&gt;Android 10适配&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://androidxref.com/&quot;&gt;androidxref&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;工具篇&quot;&gt;工具篇&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;[Google apk下载](https://apps.evozi.com/apk-downloader/?id=com.satisfyer.connect&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.deepl.com/translator&quot;&gt;翻译工具&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.apple.com/zh-cn/HT201236&quot;&gt;Mac 快捷键&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.runoob.com/markdown/md-link.html&quot;&gt;菜鸟教程&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;油猴&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;命令行&quot;&gt;命令行&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/10023495fba9&quot;&gt;ssh 使用&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 10 Nov 2022 00:00:00 +0800</pubDate>
+        <link>/2022/11/10/tools.html</link>
+        <guid isPermaLink="true">/2022/11/10/tools.html</guid>
+        
+        <category>Tools</category>
+        
+        
+        <category>Tools</category>
+        
+      </item>
     
       <item>
         <title>kotlin 内联函数</title>
@@ -201,7 +245,7 @@ a?.apply{
 &lt;ul&gt;
   &lt;li&gt;res目录下创建xml目录,创建network_security_config.xml文件
 ```
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;/li&gt;
+&amp;lt;?xml version=”1.0” encoding=”utf-8”?&amp;gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;network-security-config&gt;
 &lt;base-config cleartextTrafficPermitted=&quot;true&quot; /&gt;
@@ -751,82 +795,6 @@ final、finally、finalize 的区别
         
         
         <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>node jwt 苹果登录验证</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;苹果登录有两种方式验证：jwt形式；code授权码形式.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;jwt&quot;&gt;jwt&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;格式：heard.paylod.signture&lt;/li&gt;
-  &lt;li&gt;signtura生成方式&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;HMACSHA256(base64UrlEncode(header) + &quot;.&quot; +base64UrlEncode(payload),secret)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;解析之后
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{ header: {
-   kid: '86D32Kf',
-   alg: 'RS256' 
- },
-payload: 
- { iss: 'https://appleid.apple.com',
-   aud: 'com.company.product',
-   exp: 1594712245,
-   iat: 1594711645,
-   sub: '001610.d0b9dfa70cc24cd79f5bba662c625102.0718',
-   c_hash: 'tlydpf-lV51Gi2pKAGZKCA',
-   email: '5u2nbamwvm@privaterelay.appleid.com',
-   email_verified: 'true',
-   is_private_email: 'true',
-   auth_time: 1594711645,
-   nonce_supported: true },
-signature:'es-mMU2FRsILnqmo_G5VbNKMz9gHtL9GjtyuiiiiiiiiP5J9ZhttU1_EJBEDBkBnR1jcrq_xM7kCpq357aN_EAC6G7bgGq4_RrAlG8XwEj4RSo1GoYQX1F0sby0SQrf1D_NZzdirjuUX7yNf-ZoeglyBg-7e-CbTjqfYBOswh_jsTWZ-I3vM-Ctcg12E5tUk345678jzaKpzIuL4KvlALM-VrY-Wp_7mFj4a3KKAxls0ojAjD434EL6oPDT8452j8QOWRFtPRttrqLqfpQbJJeXMCJkW5qIKeI9CU7v6Bpo5RLz3P8yGLrUoY3UJXyKT5_5MEs2bbw' }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;nodejs实现&quot;&gt;nodejs实现&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var jwt = require('jsonwebtoken');
-const jwksClient = require('jwks-rsa');
-// 获取苹果公钥json
-var jwt_client = jwksClient({
-    jwksUri: 'https://appleid.apple.com/auth/keys'
-});
-exports.verifyAppleSignin = function(req, res) {
-    let jwtToken = req.param('jwtToken');
-    // 解析出完整的jwt数据
-    let jwtStr = jwt.decode(jwtToken, { complete: true })
-    jwt_client.getSigningKey(jwtStr.header.kid, function(err, key) {
-        // 通过header里的kid和公钥json里的kid匹配，生成公钥
-        // 当然也可以自己通过n和e生成公钥
-        let signingKey = key.rsaPublicKey;
-        // 验证，是否一致
-        jwt.verify(jwtToken, signingKey, (err, data) =&amp;gt; {
-            if (!err) {
-                console.log('verifyAppleSignin,verify ok')
-            } else {
-                console.log('err', err);
-            }
-        })
-    });
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Wed, 01 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html</link>
-        <guid isPermaLink="true">/2020/07/01/node%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.html</guid>
-        
-        <category>nodejs</category>
-        
-        
-        <category>nodejs</category>
         
       </item>
     
