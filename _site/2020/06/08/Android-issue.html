@@ -184,7 +184,23 @@ maven{ url'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
 </code>`</p>
     </blockquote>
   </li>
+  <li>Subscriber class MainActivity and its super classes have no public methods with the @Subscribe annotation
+原因：EventBus.register()的时候，会走findSubscriberMethods()，这里会检查是否能反射到注册的事件，如果没有就抛这个错误。
+错误原因有以下几种：
+    <ol>
+      <li>虽然注册、反注册了，但是没有相应事件，哪怕是不用这个，也得加个事件</li>
+      <li>事件方法必须是public类型。</li>
+      <li>混淆问题，去github 上找混淆文件。</li>
+      <li>通过混淆保证，至少有一个事件需要能被eventbug检测到。</li>
+    </ol>
+  </li>
 </ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-keepclassmembers class ** {
+    public void onEvent*(**);
+}
+如果事件的名字叫abc，那就把onEvent*改为abc。
+</code></pre></div></div>
 
     </article>
 
