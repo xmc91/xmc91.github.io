@@ -10,7 +10,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Hello Jekyll - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/2019/12/22/hello-jekyll.html">
+    <meta property="og:url" content="http://localhost:4000/2019/12/22/hello-jekyll.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -154,6 +154,7 @@ tags: Tools
 ---
 </code></pre></div>    </div>
   </li>
+  <li>mac m1 安装Jekyll:https://jekyllrb.com/docs/installation/macos/</li>
   <li>需要用Ruby语言，他的包管理工具时gem，用gem安装jekyll</li>
 </ul>
 
@@ -184,13 +185,9 @@ rvm install 2.7.2
  gem sources -a http://ruby.taobao.org/ 已废弃
  gem sources --add https://gems.ruby-china.com/ 用这个
 </code></pre></div></div>
+
 <ul>
-  <li>
-    <p>mac m1 安装Jekyll:https://jekyllrb.com/docs/installation/macos/</p>
-  </li>
-  <li>
-    <p>编译</p>
-  </li>
+  <li>编译</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
@@ -210,6 +207,8 @@ Server address: http://127.0.0.1:4000/
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/assets/*
+定制大小
+&lt;img src='/assets/img/O(y).png'  height='300' width='500' align='left'&gt;
 </code></pre></div></div>
 
 <ul>

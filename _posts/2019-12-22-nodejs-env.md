@@ -20,6 +20,11 @@ tags: nodejs
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
++ [npm](https://docs.npmjs.com/)
++ [更新时，版本号range逻辑](https://docs.npmjs.com/misc/semver#advanced-range-syntax)
+> x:重构等;y:功能升级;z:bug修复。[x.y.z]
+> ~:指定了xy，只能升级z；只指定了x，则可以升级yz到最大；如果带beta，则只能升级beta-x
+> ^:最左边第一个不为0的不升级，0以后的升级
 
 + nvm example
 

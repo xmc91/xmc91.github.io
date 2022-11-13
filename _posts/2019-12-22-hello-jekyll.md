@@ -22,7 +22,7 @@ tags: Tools
   tags: Tools
   ---
   ```
-
++ mac m1 安装Jekyll:https://jekyllrb.com/docs/installation/macos/
 + 需要用Ruby语言，他的包管理工具时gem，用gem安装jekyll
 
 ```
@@ -51,7 +51,6 @@ rvm install 2.7.2
  gem sources -a http://ruby.taobao.org/ 已废弃
  gem sources --add https://gems.ruby-china.com/ 用这个
 ```
-+ mac m1 安装Jekyll:https://jekyllrb.com/docs/installation/macos/
 
 + 编译
 
@@ -71,6 +70,8 @@ Server address: http://127.0.0.1:4000/
 
 ```
 /assets/*
+定制大小
+<img src='/assets/img/O(y).png'  height='300' width='500' align='left'>
 ```
 
 + 字体切换

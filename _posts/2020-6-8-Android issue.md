@@ -47,10 +47,10 @@ maven{ url'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
 + Subscriber class MainActivity and its super classes have no public methods with the @Subscribe annotation
 原因：EventBus.register()的时候，会走findSubscriberMethods()，这里会检查是否能反射到注册的事件，如果没有就抛这个错误。
 错误原因有以下几种：
-1. 虽然注册、反注册了，但是没有相应事件，哪怕是不用这个，也得加个事件
+1. 虽然注册、反注册了，但是没有响应事件，哪怕是不用这个，也得加个事件
 2. 事件方法必须是public类型。
 3. 混淆问题，去github 上找混淆文件。
-4. 通过混淆保证，至少有一个事件需要能被eventbug检测到。
+4. 通过混淆保证，至少有一个事件需要能被eventbus检测到。
 
 ```
 -keepclassmembers class ** {
@@ -58,3 +58,21 @@ maven{ url'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
 }
 如果事件的名字叫abc，那就把onEvent*改为abc。
 ```
+
++ 报错解决：connect to maven.google.com:443
+
+  - maven {url 'https://dl.google.com/dl/android/maven2/'} 代替之前的maven { url 'https://maven.google.com' }
+
++ 报错解决：unexpected element <queries> found in <manifest>.
+
+  - 升级gradle插件：classpath 'com.android.tools.build:gradle:4.0.1'
+
+
++ 错误处理:androidx/appcompat/R$drawable
+
+  ```
+  java.lang.NoClassDefFoundError: Failed resolution of: Landroidx/appcompat/R$drawable
+  升级部分依赖，支持gradle3.6.0 ，升级realm
+  ```
+
++   

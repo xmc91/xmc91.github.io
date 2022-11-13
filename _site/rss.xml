@@ -3,798 +3,1007 @@
   <channel>
     <title>WindMan Blog</title>
     <description>风一样de男子</description>
-    <link>//</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 12 Nov 2022 22:19:07 +0800</pubDate>
-    <lastBuildDate>Sat, 12 Nov 2022 22:19:07 +0800</lastBuildDate>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 13 Nov 2022 11:33:37 +0800</pubDate>
+    <lastBuildDate>Sun, 13 Nov 2022 11:33:37 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
-        <title>工具集合</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;工欲善其事，必先利其器&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;android-学习&quot;&gt;Android 学习&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/u010586698/article/details/56673379&quot;&gt;android 国际化&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/yanzi1225627/article/details/48215549&quot;&gt;mac 反编译&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/73e36529cf7c&quot;&gt;路人总结，Android 激进&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.android.google.cn/&quot;&gt;Android 大本营&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.wanandroid.com/&quot;&gt;WanAndroid&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.android.com/distribute/best-practices/develop/64-bit&quot;&gt;Android 64&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_40611659/article/details/95174124&quot;&gt;Android 10适配&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://androidxref.com/&quot;&gt;androidxref&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;工具篇&quot;&gt;工具篇&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;[Google apk下载](https://apps.evozi.com/apk-downloader/?id=com.satisfyer.connect&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.deepl.com/translator&quot;&gt;翻译工具&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://support.apple.com/zh-cn/HT201236&quot;&gt;Mac 快捷键&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.runoob.com/markdown/md-link.html&quot;&gt;菜鸟教程&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;&quot;&gt;油猴&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;命令行&quot;&gt;命令行&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/10023495fba9&quot;&gt;ssh 使用&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Thu, 10 Nov 2022 00:00:00 +0800</pubDate>
-        <link>/2022/11/10/tools.html</link>
-        <guid isPermaLink="true">/2022/11/10/tools.html</guid>
-        
-        <category>Tools</category>
-        
-        
-        <category>Tools</category>
-        
-      </item>
-    
-      <item>
-        <title>kotlin 内联函数</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;let和with合并为run，孪生出apply，also又孪生与let&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;let，it代理对象，且返回最后一行代码或者指定return&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a.let{
-    it// 此时it就代理了a
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;with，返回最后一行代码或者指定return&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;with(a){
-    // 此时此作用于有个this，可省略，直接调用a的对象
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;run let和with的补充，省略了let内的it，解决了with调用之前的判空&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a?.run{
-    // 此时可以直接调用a的参数
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;apply，与run是孪生兄弟，唯一不同的是返回对象本身；还可以用来判空链式写法&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a?.apply{
-    // 此时可以省略啊直接调用a对象的成员
-    // 返回a
-}
-
-// 如果a中有b，b有b1
-
-a?.apply{
-    b?.apply{
-
-    }?.b1.apply{
-
-    }
-}
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;also let的孪生兄弟，返回对象本省&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a.also{
-    it.// it 代理a
-    // 最终返回a
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Mon, 31 Aug 2020 00:00:00 +0800</pubDate>
-        <link>/2020/08/31/kotlin%E5%86%85%E8%81%94.html</link>
-        <guid isPermaLink="true">/2020/08/31/kotlin%E5%86%85%E8%81%94.html</guid>
-        
-        <category>kotlin</category>
-        
-        
-        <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>Android第一侠客activity</title>
+        <title>Mac</title>
         <description>&lt;ul&gt;
-  &lt;li&gt;配置name是唯一必要的，其他都是自定义：标签、主题等&lt;/li&gt;
-  &lt;li&gt;可配置强大的intent过滤器&lt;/li&gt;
+  &lt;li&gt;Mac远程控制-teamViewer：需要对方的id和密码&lt;/li&gt;
+  &lt;li&gt;Mac远程控制-Message：需要对方的Apple id&lt;/li&gt;
 &lt;/ul&gt;
 
-</description>
-        <pubDate>Sun, 30 Aug 2020 00:00:00 +0800</pubDate>
-        <link>/2020/08/30/activity.html</link>
-        <guid isPermaLink="true">/2020/08/30/activity.html</guid>
-        
-        <category>android</category>
-        
-        
-        <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>双鱼男与12星座搭配</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;最佳配对：巨蟹座女、天蝎座女、摩羯座女&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h1 id=&quot;安装javamd&quot;&gt;安装Java.md&lt;/h1&gt;
 
-&lt;h2 id=&quot;白羊女&quot;&gt;白羊女&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;他的罗曼蒂克令人响往，但他的情绪起伏让你吃不消。你的直言无讳可能会把他吓跑。如果想要他你得做只绵羊才行。&lt;/li&gt;
+  &lt;li&gt;http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html&lt;/li&gt;
+  &lt;li&gt;选中 Macos，选择 jdk-8u321-macosx-x64.dmg&lt;/li&gt;
+  &lt;li&gt;如果没注册，需要注册，然后下载&lt;/li&gt;
+  &lt;li&gt;安装&lt;/li&gt;
+  &lt;li&gt;测试：java -version&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;金牛女&quot;&gt;金牛女&lt;/h2&gt;
+&lt;h1 id=&quot;配置java环境变量&quot;&gt;配置java环境变量&lt;/h1&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;他总是那么温和，那么善解人意，唯一让你担心的是，他的想法会不会离现实太远了呢？&lt;/li&gt;
+  &lt;li&gt;打开配置文件：open -e .bash_profile；首次：touch .bash_profile&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;找到java路径：/Library/Java/JavaVirtualMachines/jdk1.8.0_321.jdk/Contents/Home&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;bin目录下存放JDK用于开发的一些终端命令工具。常见的工具如：&lt;/li&gt;
+  &lt;li&gt;“javac”的作用是将java源文件编译为class文件(即自解码文件)；&lt;/li&gt;
+  &lt;li&gt;“java”命令的作用是运行class文件。&lt;/li&gt;
+  &lt;li&gt;db目录下是java开发的一个开源的关系型数据库；&lt;/li&gt;
+  &lt;li&gt;include目录下是一些C语言的头文件；&lt;/li&gt;
+  &lt;li&gt;jre目录下JDK所依赖的java运行时；&lt;/li&gt;
+  &lt;li&gt;lib目录下存放JDK开发工具所依赖的一些库文件；&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;man目录下存放JDK开发工具的说明文档。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;配置&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;双子女&quot;&gt;双子女&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;你的性格多变，他的情绪多变，如果你们都能接受方“变”的本质，或许还有可为。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;巨蟹女&quot;&gt;巨蟹女&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;鱼座的男人多情本性会让你十分窝心。而巨蟹座女子的母性特质，也正是双鱼男人深切需要的。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;狮子女&quot;&gt;狮子女&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;他绝对可以满足你渴望恋爱的欲望。但是当你们一起面对现实生活时，冲突可能就要发生了。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;处女&quot;&gt;处女&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;虽然彼此都很乐于分担对方的喜乐忧伤，但是，基本上双鱼座的浪漫和处女座的实际却有着很大的冲突。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;天秤&quot;&gt;天秤&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;情绪起伏大的他，性格上和你差距很大。虽然有些时侯你们在一起会觉得很过瘾，但多数时侯仍下步调不一的。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;天蝎女&quot;&gt;天蝎女&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;你们的心灵很容易相通，彼此能完全体会到对方的爱。在生活上，你通常得要扮演照顾他的角色。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;射手女&quot;&gt;射手女&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;他是很容易引发你“南丁格尔”情结的男人，虽然个性不同，但你总会有想要陪伴他、照顾他的念头。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;摩羯女&quot;&gt;摩羯女&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;你们或许可以倾心交谈，成为相互了解的知己。但实际生活在一起，就会有许多相抵触的地方。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;水瓶女&quot;&gt;水瓶女&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;不要以自己知性的态度去看双鱼座男子的世界。你们或许不太容易起共呜，但发生冲突的机会也不大。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;双鱼女&quot;&gt;双鱼女&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;两只鱼的搭配，自然“永浴爱河”的机会很大。就怕情绪暗潮汹涌时，两人会游向相反的方向。方觉得非常愉快的性伴侣。&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 30 Aug 2020 00:00:00 +0800</pubDate>
-        <link>/2020/08/30/12%E6%98%9F%E5%BA%A7%E5%A5%B3%E4%B8%8E%E5%8F%8C%E9%B1%BC%E7%94%B7%E7%9A%84%E6%90%AD%E9%85%8D.html</link>
-        <guid isPermaLink="true">/2020/08/30/12%E6%98%9F%E5%BA%A7%E5%A5%B3%E4%B8%8E%E5%8F%8C%E9%B1%BC%E7%94%B7%E7%9A%84%E6%90%AD%E9%85%8D.html</guid>
-        
-        <category>星座</category>
-        
-        
-        <category>星座</category>
-        
-      </item>
-    
-      <item>
-        <title>Android 碎片记忆</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;一片，两片，三四片；五片，六片，七八片。落入芦苇全不见！&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;h5唤起app&quot;&gt;h5唤起app&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ [scheme:][//authority][path][?query][#fragment],如：https://www.baidu.com
-+ scheme的触发方式会被浏览器拦截，它们都各自维护着一个白名单，但是微博之类的都是可以申请的，只是条件各不相同，比如微博的就是在你的 APP 中添加打开微博的入口，三个月内唤起超过 100w 次，就可以加入白名单了。
-+ 在安卓中我们一般都是直接打开腾讯应用宝，ios 中 直接打开 App Store。点击腾讯应用宝中的“打开”按钮，可以直接唤起我们的 APP，但是无法打开 APP 中的某个功能（就是无法打开指定页面）。腾讯应用宝对外开放了一个叫做 APP Link 的申请，只要你申请了 APP Link，就可以通过在打开应用宝的时候在应用宝地址后面添加上 &amp;amp;android_schema={your_scheme} ，来打开指定的页面了。
-+ location.href跳转：window.location.href = 'sinaweibo://qrcode';
-+ a标签唤起： &amp;lt;a href=&quot;mqqapi://card/show_pslcard?src_type=internal&amp;amp;version=1&amp;amp;uin=123456&quot;&amp;gt;QQ临时交流&amp;lt;/a&amp;gt;
-+ iframe方案： &amp;lt;iframe src=&quot;sinaweibo://qrcode&quot;&amp;gt;
-
-参考：https://www.jianshu.com/p/500f4be528e3
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
+PATH=$JAVA_HOME/bin:$PATH:.
+CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
+export JAVA_HOME
+export PATH
+export CLASSPATH
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;android-9-允许http&quot;&gt;Android 9+ 允许http&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;res目录下创建xml目录,创建network_security_config.xml文件
-```
-&amp;lt;?xml version=”1.0” encoding=”utf-8”?&amp;gt;&lt;/li&gt;
+  &lt;li&gt;生效：source .bash_profile&lt;/li&gt;
 &lt;/ul&gt;
-&lt;network-security-config&gt;
-&lt;base-config cleartextTrafficPermitted=&quot;true&quot; /&gt;
-&lt;/network-security-config&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ AndroidManifest.xml添加:
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;android:networkSecurityConfig=”@xml/network_security_config”&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-## Android8.0 允许安装未知来源权限
-+ 8.0之前，从除官方应用商店之外的来源安装App时，需要打开系统设置当中的”允许未知来源”，在最新的Android O当中谷歌已经删除了该永久授权的选项，从系统设置当中已经找不到该开关。谷歌将永久授权修改为每次的单独授权，当用户每次安装第三方来源（包括华为应用市场等）的android软件时需要对软件权限进行手动确认
-+ 添加权限
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;uses-permission android:name=&quot;android.permission.REQUEST_INSTALL_PACKAGES&quot; /&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ 判断运行时权限是否打开
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;if(Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.O){
- //先判断是否有安装未知来源应用的权限
-    if(!getPackageManager().canRequestPackageInstalls()){
-    //跳转到应用详情，打开开关
-    }
- }&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ 跳转到应用详情，打开开关
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Uri packageURI = Uri.parse(“package:”+mContext.getPackageName());
-Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,packageURI);
-startActivityForResult(intent, INSTALL_PERMISS_CODE);&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ onActivityResult回调
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;if (resultCode == RESULT_OK &amp;amp;&amp;amp; requestCode == INSTALL_PERMISS_CODE) {
-   // 安装APP
- }&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-## AlertDialog 回调 
-+ 创建 AlertDialog
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public static void showAlert(Context context, String title, String message, OnClickListener listener){
-    Builder builder = new Builder(context);
-    builder.setTitle(title);
-    builder.setMessage(message);
-    builder.setPositiveButton(&quot;确定&quot;, listener);
-    builder.setCancelable(false);
-    builder.setIcon(R.mipmap.ic_launcher);
-    AlertDialog dialog = builder.create();
-    dialog.show();
-} ``` + 接管点击事件 ``` showAlert(this, &quot;title&quot;, &quot;message&quot;, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    
-                }
-            }); ``` ## TextView 小特性 + 可复制，如果是在listview里，替换为RecyclerView 即可 ``` android:textIsSelectable=&quot;true&quot; ``` + 可滑动 ```  tv.movementMethod = ScrollingMovementMethod.getInstance() ``` + 支持富文本:SpannableString或者html ``` //设置Hello World前三个字符为红色,背景为蓝色 SpannableString textSpanned = new SpannableString(&quot;Hello World&quot;); // ForegroundColorSpan(Color.RED) 设置前景 // BackgroundColorSpan(Color.RED) 设置背景 // new StyleSpan(Typeface.ITALIC) 斜体 // new UnderlineSpan() 下划线 // ClickableSpan 点击事件 textSpanned.setSpan(xxxSpan,0, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE); tv.setMovementMethod(LinkMovementMethod.getInstance()); tv.setText(textSpanned4); ``` + 跑马灯：借助系统或者自定义或者直接用别人的轮子 ```
-&amp;lt;TextView
-    android:layout_marginTop=&quot;30dp&quot;
-    android:layout_width=&quot;100dp&quot;
-    android:layout_height=&quot;30dp&quot;
-    android:text=&quot;Hello World! wertyuiodfghjklxcvbnm,.dfghjklghjkl&quot;
-    android:singleLine=&quot;true&quot;
-    android:scrollHorizontally=&quot;true&quot;
-    android:ellipsize=&quot;marquee&quot;
-    android:focusable=&quot;true&quot;
-    android:focusableInTouchMode=&quot;true&quot;
-    android:marqueeRepeatLimit=&quot;marquee_forever&quot;
-    /&amp;gt; ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&quot;反编译apk&quot;&gt;反编译apk&lt;/h1&gt;
 
-&lt;h2 id=&quot;android-多国语言&quot;&gt;android 多国语言&lt;/h2&gt;
 &lt;ul&gt;
+  &lt;li&gt;安装apktool：https://ibotpeaches.github.io/Apktool/install/&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;下载jd-gui：http://java-decompiler.github.io/&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;已经安装了java8还提示java版本不对的&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;右键xx.app&lt;/li&gt;
+  &lt;li&gt;打开info.plist&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;找到1.8+，去掉+号&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;sublime  块操作，Mac option+左键&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Mac  ssh配置之后，push失败的，再次add即可：ssh-add ~/.ssh/id_rsa_xxx&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Phone 安装非APP store 应用：https://www.i4.cn/，，，然后把IPA导入到应用。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;iphone翻墙&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;安装shadowrocket&lt;/li&gt;
+      &lt;li&gt;https://book.v2rayx.org/ios.html&lt;/li&gt;
+      &lt;li&gt;输入密码等：https://store.holytech.tech/clientarea.php?action=productdetails&amp;amp;id=75496&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;报错is-not-accessible-from-javalangclass-androidappactivitythread&quot;&gt;【报错】is not accessible from java.lang.Class android.app.ActivityThread&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;修饰改为public&lt;/li&gt;
-&lt;/ul&gt;
 </description>
-        <pubDate>Wed, 29 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</link>
-        <guid isPermaLink="true">/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html</guid>
+        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/12/Mac.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/12/Mac.html</guid>
         
-        <category>android</category>
+        <category>Tools</category>
         
         
-        <category>android</category>
+        <category>Tools</category>
         
       </item>
     
       <item>
-        <title>排序</title>
+        <title>随笔</title>
+        <description>&lt;p&gt;2022-11-12-随笔.md&lt;/p&gt;
+
+&lt;h2 id=&quot;2022-4-14-阴-中午12点核酸&quot;&gt;2022-4-14 阴 中午12点核酸&lt;/h2&gt;
+
+&lt;h3 id=&quot;钱和我&quot;&gt;钱和我&lt;/h3&gt;
+
+&lt;p&gt;我并不是一个很在乎钱的人&lt;/p&gt;
+
+&lt;p&gt;然而我生活在了一个很在乎钱的时代&lt;/p&gt;
+
+&lt;p&gt;又在一个特别在乎钱的城市&lt;/p&gt;
+
+&lt;h2 id=&quot;2022-4-20-半阴半晴-今天买到馒头了&quot;&gt;2022-4-20 半阴半晴 今天买到馒头了&lt;/h2&gt;
+
+&lt;h3 id=&quot;情绪&quot;&gt;情绪&lt;/h3&gt;
+
+&lt;p&gt;你没有必要告诉或者展现给别人&lt;/p&gt;
+
+&lt;p&gt;你活的很开心&lt;/p&gt;
+
+&lt;p&gt;你只需要回答自己&lt;/p&gt;
+
+&lt;p&gt;你活的并不悲伤&lt;/p&gt;
+</description>
+        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/12/%E9%9A%8F%E7%AC%94.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/12/%E9%9A%8F%E7%AC%94.html</guid>
+        
+        <category>Read</category>
+        
+        
+        <category>Read</category>
+        
+      </item>
+    
+      <item>
+        <title>缓存</title>
+        <description>&lt;h1 id=&quot;缓存&quot;&gt;缓存&lt;/h1&gt;
+
+&lt;p&gt;是为了节省时间，达到更快的目的，但是也要考虑缓存带来的负面影响。Android的缓存是基于Java的缓存&lt;/p&gt;
+
+&lt;h2 id=&quot;n级缓存&quot;&gt;n级缓存&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一级缓存，直接从内存加载&lt;/li&gt;
+  &lt;li&gt;二级缓存，先从内存加载；如果内存没有，再从文件加载&lt;/li&gt;
+  &lt;li&gt;三级缓存，先看内存；如果没有，去文件找；如果还没有，从网络下载&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;引用&quot;&gt;引用&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;强引用&lt;/li&gt;
+  &lt;li&gt;软引用&lt;/li&gt;
+  &lt;li&gt;弱引用&lt;/li&gt;
+  &lt;li&gt;虚引用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;常用框架&quot;&gt;常用框架&lt;/h2&gt;
+
+&lt;h3 id=&quot;lrucash&quot;&gt;LRUCash&lt;/h3&gt;
+
+&lt;p&gt;Least recently used，最近最少使用。核心思想是“如果数据最近被访问过，那么将来被访问的几率也更高”。&lt;/p&gt;
+
+&lt;h3 id=&quot;disklrucash&quot;&gt;DiskLRUCash&lt;/h3&gt;
+
+&lt;h3 id=&quot;lru-cash--k&quot;&gt;LRU cash -K&lt;/h3&gt;
+
+&lt;p&gt;K代表最近使用的次数，LRU可以认为是LRU-1。核心思想是将“最近使用过1次”的判断标准扩展为“最近使用过K次”。&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/12/%E7%BC%93%E5%AD%98.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/12/%E7%BC%93%E5%AD%98.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>缓存</title>
+        <description>&lt;h2 id=&quot;算法复杂度oy&quot;&gt;算法复杂度O(y)&lt;/h2&gt;
+
+&lt;p&gt;算法是偏底层的东西，最注重效率，这里y其实是一个函数，代表了时间或者空间的复杂度。比如O(n^2)，这里代表复杂度是y=n^2，数据量增大n倍时，耗时需要n^2。常见复杂度如下
+&lt;img src=&quot;/assets/img/O(y).png&quot; alt=&quot;复杂度&quot; /&gt;
+根据函数可以看到，当x相等时，logx的值最小，logn的效率最高（x代表数据量，y代表耗时或者消耗空间）&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;O(1)&lt;/p&gt;
+
+    &lt;p&gt;这里y=1，无论数据量增大多大，1次就找到，比如哈希算法&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;O(n)&lt;/p&gt;
+
+    &lt;p&gt;数据量增大n倍，耗时也增大n倍。比如常见的遍历算法。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;O(logn)&lt;/p&gt;
+
+    &lt;p&gt;ax =N，x=logaN。数据增大n倍时，耗时增大logn倍（这里的log是以2为底的，比如，当数据增大256倍时，耗时只增大8倍，是比线性还要低的时间复杂度）。二分查找就是O(logn)的算法，每找一次排除一半的可能，256个数据中查找只要找8次就可以找到目标。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;O(nlogn)&lt;/p&gt;
+
+    &lt;p&gt;n乘以logn肯定比logn大，当数据增大256倍时，耗时增大256*8=2048倍。这个复杂度高于线性低于平方。归并排序就是O(nlogn)的时间复杂度。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/12/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/12/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>杂记</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;马赛人，视力可达6.0，能看到800米的地方。&lt;/li&gt;
+  &lt;li&gt;走马承受：宋朝边境一官职，相当于皇帝的眼线。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;元数据：（&lt;strong&gt;Metadata&lt;/strong&gt;），又称&lt;strong&gt;中介数据&lt;/strong&gt;、&lt;strong&gt;中继数据&lt;/strong&gt;，为描述&lt;a href=&quot;https://baike.baidu.com/item/数据/5947370&quot;&gt;数据&lt;/a&gt;的数据，就是关于数据的数据&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;地母经&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;《地母经》通常附载于“春牛图”一页内。观《地母经》文字，见其失律兼不协韵，当属不通文墨者所造。六十甲子周而复始，《地母经》一诗一卜，亦周而复始，
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;人体构造成分&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;蛋白质：生命物质的基础，约占16%~20%&lt;/li&gt;
+      &lt;li&gt;肌肉：约639块，最长的肌纤维达60厘米，最短的仅有1毫米左右。约占35%~40%&lt;/li&gt;
+      &lt;li&gt;水分：成年人约占70%，儿童约占80%&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;五大常人理事国（二战的五大战胜国，自二战来保留最强军事实力，在联合国有一票否决权，确立时间1945年）：中国、俄罗斯、英国、法国、美国。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;联合国不成文规定，常任理事国不能担任秘书长&lt;/li&gt;
+  &lt;li&gt;fi两个字母连起来少了一个点：https://www.zhihu.com/question/25872415?rf=27404379&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;冬瓜：雌雄同株，起源于中国和东印度，广泛分布于亚洲的热带、亚热带及温带地区。春植播期为12月至次年3月，秋植播期为6-7月&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;万用表&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;黑线接com，红线接测试的对应功能&lt;/li&gt;
+      &lt;li&gt;测量电压不分正负极，如果反了，屏幕上是负值&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/12/%E6%9D%82%E8%AE%B0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/12/%E6%9D%82%E8%AE%B0.html</guid>
+        
+        <category>Read</category>
+        
+        
+        <category>Read</category>
+        
+      </item>
+    
+      <item>
+        <title>wepy</title>
+        <description>&lt;h2 id=&quot;wepy&quot;&gt;wepy&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install n -g
+n list
+n xxx版本//stable稳定版本，latest最新版本，如果有就切换到这个版本
+n rm xxx版本
+遇到Permission denied，sudo chmod -R 777 路径//没有的自己创建
+npm install
+npm run build
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;目录结构&quot;&gt;目录结构&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;src是源代码&lt;/li&gt;
+  &lt;li&gt;weapp是编译后的代码&lt;/li&gt;
+  &lt;li&gt;插件测试ID，dev-xxxxx&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/12/wepy.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/12/wepy.html</guid>
+        
+        <category>wx</category>
+        
+        
+        <category>wx</category>
+        
+      </item>
+    
+      <item>
+        <title>iOS相关</title>
+        <description>&lt;h2 id=&quot;testflight&quot;&gt;testFlight&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;需要填写的信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ app 描述：概括应用，列出功能，数据使用（healthkit）等一定要说明
++ 反馈电子邮件：support@xxx.com
++ 营销网址：http://www.xxx.com/
++ 隐私政策网址：http://www.xxx.com/
++ 联系信息：姓氏:xxx、名字:xxx、电话号码:+8618221220047、电子邮件:xxxx@xxxx.com.cn
++ 审核备注：xxxxx app work with our smart scales. The following video show how to use the scale with our app.
+https://youtu.be/tGH45ffce8K-umo
+
+Please contact us if you meet any problem when reviewing Vitafit app.
+
+thanks.
+
+br,
+xxxx
++ 是否需要登录：用户名：xxx@qq.com、密码：123456
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;构建群组&lt;/li&gt;
+  &lt;li&gt;构建版本&lt;/li&gt;
+  &lt;li&gt;提交&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;等待审核，出现测试连接&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;苹果账号相关知识：https://www.cnblogs.com/niit-soft-518/p/10383634.html&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;区分：个人、公司、企业
++ 个人的不需要邓白氏码，其他两个需要
++ 企业的不能上架APP store，其他两个可以
++ 企业299$,其他两个99$
++ 个人的只能自己操作，其他两个可以多人协作
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;苹果上架截图尺寸要求：https://www.applebyme.store/article/show/1590&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;6.5 英寸（iPhone 11 Pro Max、iPhone XS Max）：纵向分辨率为 1242 x 2688 像素
+5.5 英寸（iPhone 8 Plus、iPhone 7 Plus、iPhone 6s Plus）：纵向分辨率为 1242 x 2208 像素
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;腾讯wetest：https://wetest.qq.com/&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;区分：个人、公司
++ 产品：兼容测试、性能测试、安全测试等。
++ iOS上架前测试：免费
++ 可以测Android应用、iOS应用、小程序、后端等
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;xcode 修改项目编译版本号&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://www.huaweicloud.com/articles/1238804f05d57cf444ac046a33ee9116.html
+https://blog.csdn.net/nmjkl001/article/details/101177805
+https://www.jianshu.com/p/bc1a8f5463ec
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;iOS上架IPA，下载transporter，双重机制验证登录苹果开发者账号。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;= html的meta添加标签，可在苹果手机的网页上显示对应网站对应的APP 的banner：https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;meta name=&quot;apple-itunes-app&quot; content=&quot;app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/12/ios.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/12/ios.html</guid>
+        
+        <category>Tools</category>
+        
+        
+        <category>Tools</category>
+        
+      </item>
+    
+      <item>
+        <title>deepin</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;deepin  升级&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;大版本升级，不会自动提示，真是醉了。要换成社区的源&lt;/p&gt;
+
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /etc/apt/
+sudo  vim sources.list
+修改为社区源
+deb [by-hash=force] https://community-packages.deepin.com/deepin/ apricot main contrib non-free
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;检查升级：sudo apt update&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;执行升级：sudo apt upgrade&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;重启&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;升级商店源&lt;/p&gt;
+
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /etc/apt/sources.list.d/
+作者：ep探索实践
+https://www.bilibili.com/read/cv7591028/
+出处： bilibili
+sudo  vim appstore.list
+修改为社区源
+deb https://community-store-packages.deepin.com/appstore eagle appstore
+升级
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Deepin 高级用法：https://www.uc23.net/jiaocheng/71436.html&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/12/deepin.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/12/deepin.html</guid>
+        
+        <category>Tools</category>
+        
+        
+        <category>Tools</category>
+        
+      </item>
+    
+      <item>
+        <title>adb</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;十大排序&lt;/p&gt;
+  &lt;p&gt;NodeJs 磨刀霍霍向猪羊&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;冒泡排序&quot;&gt;冒泡排序&lt;/h2&gt;
+&lt;h2 id=&quot;adb-路径&quot;&gt;adb 路径&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;adb --help
+Android Debug Bridge version 1.0.41
+Version 30.0.5-6877874
+Installed as /Users/developer/Desktop/Work/Tools/sdk/platform-tools/adb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;工作原理&quot;&gt;工作原理&lt;/h2&gt;
+
+&lt;p&gt;adb 客户端启动时，先检查服务器是否启动，服务器启动后绑定本地5073端口，监听客户端命令。server 和adbd是多对多关系，&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;从前往后，每一次，交换一个前者大于后者的位置&lt;/li&gt;
-  &lt;li&gt;最大排序次数情况：整个数据倒序&lt;/li&gt;
-  &lt;li&gt;最大排序次数：n*（n-1）/2
-```
-/**&lt;/li&gt;
-  &lt;li&gt;冒泡排序
- */
-function bubbleSort(arr) {
- let time=0
- var len = arr.length;
- for (var i = 0; i &amp;lt; len - 1; i++) {
-     for (var j = 0; j &amp;lt; len - 1 - i; j++) {
-         if (arr[j] &amp;gt; arr[j + 1]) {// 相邻元素两两对比
-             var temp = arr[j + 1];// 元素交换
-             arr[j + 1] = arr[j];
-             arr[j] = temp;
-             time++;
-             // console.log(j, arr[j])
-             // console.log(j + 1, arr[j])
-             console.log(time,’bubbleSort: ‘, arr)
-             console.log(‘——————-‘)
-         }
-     }
- }
- console.log(‘bubbleSort: ‘, arr)
- return arr;
-}
-```
-    &lt;h2 id=&quot;选择排序&quot;&gt;选择排序&lt;/h2&gt;
+  &lt;li&gt;adb client ：运行在pc,发送命令给server，3种命令：1- 不需server 的version、help；2- 不需要adbd但需要server的 devices；3- 需要adbd执行的命令&lt;/li&gt;
+  &lt;li&gt;adb server：运行在pc，检查设备连接状态，中转各个通信&lt;/li&gt;
+  &lt;li&gt;adbd（adb daemon 守护进程）：运行在Android 上，用来连接server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;adb-通过wlan连接android-10-及更低版本&quot;&gt;adb 通过wlan连接(（Android 10 及更低版本）)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;手机和电脑连接同一个网络&lt;/li&gt;
+  &lt;li&gt;查看当前主机连接的设备：adb devices -l&lt;/li&gt;
+  &lt;li&gt;插入USB，监听手机5555的tcpip连接： adb tcpip 5555&lt;/li&gt;
+  &lt;li&gt;拔掉USB，查看手机ip&lt;/li&gt;
+  &lt;li&gt;连接手机：adb connect phone_ip&lt;/li&gt;
+  &lt;li&gt;查看主机目前连接的设备：adb devices&lt;/li&gt;
+  &lt;li&gt;重置主机adb：adb kill-server&lt;/li&gt;
+  &lt;li&gt;启动主机：adb start-server&lt;/li&gt;
+  &lt;li&gt;断开后，可重连&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;adb命令&quot;&gt;adb命令&lt;/h2&gt;
+
+&lt;p&gt;adb自带了很多命令，其中shell命令是Android特有&lt;/p&gt;
+
+&lt;p&gt;包含以下几大块命令&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一般命令3个：
+    &lt;ul&gt;
+      &lt;li&gt;devices 查看当前连接的设备&lt;/li&gt;
+      &lt;li&gt;help 查看帮助&lt;/li&gt;
+      &lt;li&gt;version&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;找到最小数，记住下标，从0以此 往后排，且和当前同下标数据交换位置&lt;/li&gt;
-  &lt;li&gt;排序次数一定等于n-1&lt;/li&gt;
-  &lt;li&gt;排序次数变小，但是寻找最小数次数很多
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function selectionSort(arr) {
-  var len = arr.length;
-  var minIndex, temp;
-  for (var i = 0; i &amp;lt; len - 1; i++) {
-      minIndex = i;
-      for (var j = i + 1; j &amp;lt; len; j++) {
-          if (arr[j] &amp;lt; arr[minIndex]) {// 寻找最小的数
-              minIndex = j;// 将最小数的索引保存
-          }
-      }
-      temp = arr[i];
-      arr[i] = arr[minIndex];
-      arr[minIndex] = temp;
-      console.log(minIndex, 'selectionSort: ', arr)
-      console.log('-------------------')
-  }
-  return arr;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;h2 id=&quot;插入排序&quot;&gt;插入排序&lt;/h2&gt;
-    &lt;p&gt;```
-/**&lt;/p&gt;
+  &lt;li&gt;网络操作
+    &lt;ul&gt;
+      &lt;li&gt;connect 、disconnect、pair  [port]&lt;/li&gt;
+      &lt;li&gt;forward&lt;/li&gt;
+      &lt;li&gt;reverse&lt;/li&gt;
+      &lt;li&gt;mdns&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;插入排序
- */
-function insertionSort(arr) {
- var len = arr.length;
- var preIndex, current;
- for (var i = 1; i &amp;lt; len; i++) {
-     preIndex = i - 1;
-     current = arr[i];
-     while (preIndex &amp;gt;= 0 &amp;amp;&amp;amp; arr[preIndex] &amp;gt; current) {
-         arr[preIndex + 1] = arr[preIndex];
-         preIndex–;
-     }
-     arr[preIndex + 1] = current;
- }
- return arr;
-}
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;## 希尔排序
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;function shellSort(arr) {
- var len = arr.length;
- for(var gap = Math.floor(len / 2); gap &amp;gt; 0; gap = Math.floor(gap / 2)) {
-     // 注意：这里和动图演示的不一样，动图是分组执行，实际操作是多个分组交替执行
-     for(var i = gap; i &amp;lt; len; i++) {
-         var j = i;
-         varcurrent = arr[i];
-         while(j - gap &amp;gt;= 0 &amp;amp;&amp;amp; current &amp;lt; arr[j - gap]) {
-              arr[j] = arr[j - gap];
-              j = j - gap;
-         }
-         arr[j] = current;
-     }
- }
- return arr;
-}&lt;/p&gt;
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;## 归并排序
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;function mergeSort(arr) {
- var len = arr.length;
- if(len &amp;lt; 2) {
-     retur narr;
- }
- var middle = Math.floor(len / 2),
-     left = arr.slice(0, middle),
-     right = arr.slice(middle);
- return merge(mergeSort(left), mergeSort(right));
-}&lt;/p&gt;
+  &lt;li&gt;文件转换
+    &lt;ul&gt;
+      &lt;li&gt;push&lt;/li&gt;
+      &lt;li&gt;pull&lt;/li&gt;
+      &lt;li&gt;sync&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;APP 安装
+    &lt;ul&gt;
+      &lt;li&gt;install、uninstall&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;调试
+    &lt;ul&gt;
+      &lt;li&gt;bugreport&lt;/li&gt;
+      &lt;li&gt;jdwp&lt;/li&gt;
+      &lt;li&gt;logcat&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;安全
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;table&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Disable&lt;/td&gt;
+              &lt;td&gt;Enable-verity&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Keygen 生成秘钥和公钥，Mac系统自带这个工具&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;脚本
+    &lt;ul&gt;
+      &lt;li&gt;wait-for&lt;/li&gt;
+      &lt;li&gt;
+        &lt;table&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Get-state&lt;/td&gt;
+              &lt;td&gt;serialno&lt;/td&gt;
+              &lt;td&gt;devpath&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/li&gt;
+      &lt;li&gt;remount&lt;/li&gt;
+      &lt;li&gt;reboot&lt;/li&gt;
+      &lt;li&gt;Tcpip&lt;/li&gt;
+      &lt;li&gt;
+        &lt;table&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;root&lt;/td&gt;
+              &lt;td&gt;unroot&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;内部调试
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;table&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;start&lt;/td&gt;
+              &lt;td&gt;kill-server&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Reconnect&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;function merge(left, right) {
-    var result = [];&lt;/p&gt;
+&lt;h2 id=&quot;常用命令&quot;&gt;常用命令&lt;/h2&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;while(left.length&amp;gt;0 &amp;amp;&amp;amp; right.length&amp;gt;0) {
-    if(left[0] &amp;lt;= right[0]) {
-        result.push(left.shift());
-    } else{
-        result.push(right.shift());
-    }
-}
- 
-while(left.length)
-    result.push(left.shift());
- 
-while(right.length)
-    result.push(right.shift());
- 
-return result; } ``` ## 快速排序 ``` function quickSort(arr, left, right) {
-var len = arr.length,
-    partitionIndex,
-    left = typeofleft != 'number'? 0 : left,
-    right = typeofright != 'number'? len - 1 : right;
- 
-if(left &amp;lt; right) {
-    partitionIndex = partition(arr, left, right);
-    quickSort(arr, left, partitionIndex-1);
-    quickSort(arr, partitionIndex+1, right);
-}
-return arr; }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;function partition(arr, left ,right) {     // 分区操作
-    var pivot = left,                      // 设定基准值（pivot）
-        index = pivot + 1;
-    for(var i = index; i &amp;lt;= right; i++) {
-        if(arr[i] &amp;lt; arr[pivot]) {
-            swap(arr, i, index);
-            index++;
-        }     &lt;br /&gt;
-    }
-    swap(arr, pivot, index - 1);
-    return index-1;
-}&lt;/p&gt;
-
-&lt;p&gt;function swap(arr, i, j) {
-    var temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;## 堆排序
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;var len;    // 因为声明的多个函数都需要数据长度，所以把len设置成为全局变量&lt;/p&gt;
-
-&lt;p&gt;function buildMaxHeap(arr) {   // 建立大顶堆
-    len = arr.length;
-    for(var i = Math.floor(len/2); i &amp;gt;= 0; i–) {
-        heapify(arr, i);
-    }
-}&lt;/p&gt;
-
-&lt;p&gt;function heapify(arr, i) {     // 堆调整
-    var left = 2 * i + 1,
-        right = 2 * i + 2,
-        largest = i;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if(left &amp;lt; len &amp;amp;&amp;amp; arr[left] &amp;gt; arr[largest]) {
-    largest = left;
-}
- 
-if(right &amp;lt; len &amp;amp;&amp;amp; arr[right] &amp;gt; arr[largest]) {
-    largest = right;
-}
- 
-if(largest != i) {
-    swap(arr, i, largest);
-    heapify(arr, largest);
-} }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;function swap(arr, i, j) {
-    var temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}&lt;/p&gt;
-
-&lt;p&gt;function heapSort(arr) {
-    buildMaxHeap(arr);&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for(var i = arr.length - 1; i &amp;gt; 0; i--) {
-    swap(arr, 0, i);
-    len--;
-    heapify(arr, 0);
-}
-return arr; } ``` ## 计数排序 ``` function countingSort(arr, maxValue) {
-var bucket = newArray(maxValue + 1),
-    sortedIndex = 0;
-    arrLen = arr.length,
-    bucketLen = maxValue + 1;
- 
-for(var i = 0; i &amp;lt; arrLen; i++) {
-    if(!bucket[arr[i]]) {
-        bucket[arr[i]] = 0;
-    }
-    bucket[arr[i]]++;
-}
- 
-for(var j = 0; j &amp;lt; bucketLen; j++) {
-    while(bucket[j] &amp;gt; 0) {
-        arr[sortedIndex++] = j;
-        bucket[j]--;
-    }
-}
- 
-return arr; } ``` ## 桶排序 ``` function bucketSort(arr, bucketSize) {
-if(arr.length === 0) {
-  returnarr;
-}
- 
-var i;
-var minValue = arr[0];
-var maxValue = arr[0];
-for(i = 1; i &amp;lt; arr.length; i++) {
-  if(arr[i] &amp;lt; minValue) {
-      minValue = arr[i];                // 输入数据的最小值
-  } else if(arr[i] &amp;gt; maxValue) {
-      maxValue = arr[i];                // 输入数据的最大值
-  }
-}
- 
-// 桶的初始化
-var DEFAULT_BUCKET_SIZE = 5;            // 设置桶的默认数量为5
-bucketSize = bucketSize || DEFAULT_BUCKET_SIZE;
-var bucketCount = Math.floor((maxValue - minValue) / bucketSize) + 1;  
-var buckets = newArray(bucketCount);
-for(i = 0; i &amp;lt; buckets.length; i++) {
-    buckets[i] = [];
-}
- 
-// 利用映射函数将数据分配到各个桶中
-for(i = 0; i &amp;lt; arr.length; i++) {
-    buckets[Math.floor((arr[i] - minValue) / bucketSize)].push(arr[i]);
-}
- 
-arr.length = 0;
-for(i = 0; i &amp;lt; buckets.length; i++) {
-    insertionSort(buckets[i]);                      // 对每个桶进行排序，这里使用了插入排序
-    for(var j = 0; j &amp;lt; buckets[i].length; j++) {
-        arr.push(buckets[i][j]);                     
-    }
-}
- 
-return arr; } ``` ## 基数排序 ``` var counter = []; function radixSort(arr, maxDigit) {
-var mod = 10;
-var dev = 1;
-for(var i = 0; i &amp;lt; maxDigit; i++, dev *= 10, mod *= 10) {
-    for(var j = 0; j &amp;lt; arr.length; j++) {
-        varbucket = parseInt((arr[j] % mod) / dev);
-        if(counter[bucket]==null) {
-            counter[bucket] = [];
-        }
-        counter[bucket].push(arr[j]);
-    }
-    var pos = 0;
-    for(var j = 0; j &amp;lt; counter.length; j++) {
-        var value = null;
-        if(counter[j]!=null) {
-            while((value = counter[j].shift()) != null) {
-                  arr[pos++] = value;
-            }
-      }
-    }
-}
-return arr; } ``` 参考：https://www.cnblogs.com/onepixel/p/7674659.html
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Tue, 28 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/28/%E6%8E%92%E5%BA%8F.html</link>
-        <guid isPermaLink="true">/2020/07/28/%E6%8E%92%E5%BA%8F.html</guid>
-        
-        <category>android</category>
-        
-        
-        <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>Android面基2</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Android 相关部分&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;自定义-view&quot;&gt;自定义 View&lt;/h2&gt;
-&lt;h2 id=&quot;事件拦截分发&quot;&gt;事件拦截分发&lt;/h2&gt;
-&lt;h2 id=&quot;性能优化工具&quot;&gt;性能优化工具&lt;/h2&gt;
-&lt;h2 id=&quot;https请求慢的解决办法dns携带数据直接访问-ip&quot;&gt;Http[s]请求慢的解决办法（DNS、携带数据、直接访问 IP）&lt;/h2&gt;
-&lt;h2 id=&quot;缓存自己如何实现lrucache-原理&quot;&gt;缓存自己如何实现（LRUCache 原理）&lt;/h2&gt;
-&lt;h2 id=&quot;图形图像相关opengl-es-管线流程egl-的认识shader-相关&quot;&gt;图形图像相关：OpenGL ES 管线流程、EGL 的认识、Shader 相关&lt;/h2&gt;
-&lt;h2 id=&quot;surfaceviewtextureviewglsurfaceview-区别及使用场景&quot;&gt;SurfaceView、TextureView、GLSurfaceView 区别及使用场景&lt;/h2&gt;
-&lt;h2 id=&quot;动画差值器估值器android中的view动画和属性动画-android-动画-介绍与使用&quot;&gt;动画、差值器、估值器（Android中的View动画和属性动画 、Android 动画 介绍与使用）&lt;/h2&gt;
-&lt;h2 id=&quot;mvcmvpmvvm&quot;&gt;MVC、MVP、MVVM&lt;/h2&gt;
-&lt;h2 id=&quot;handlerthreadlocalasynctaskintentservice-原理及应用&quot;&gt;Handler、ThreadLocal、AsyncTask、IntentService 原理及应用&lt;/h2&gt;
-&lt;h2 id=&quot;gradlegroovy-语法gradle-插件开发基础&quot;&gt;Gradle（Groovy 语法、Gradle 插件开发基础）&lt;/h2&gt;
-&lt;h2 id=&quot;热修复插件化&quot;&gt;热修复、插件化&lt;/h2&gt;
-&lt;h2 id=&quot;组件化架构思路&quot;&gt;组件化架构思路&lt;/h2&gt;
-&lt;h2 id=&quot;系统打包流程&quot;&gt;系统打包流程&lt;/h2&gt;
-&lt;h2 id=&quot;android-有哪些存储数据的方式&quot;&gt;Android 有哪些存储数据的方式。&lt;/h2&gt;
-&lt;h2 id=&quot;sharedprefrence-源码和问题点&quot;&gt;SharedPrefrence 源码和问题点；&lt;/h2&gt;
-&lt;h2 id=&quot;sqlite-相关&quot;&gt;sqlite 相关&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;创建或者打开数据库
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class DBHelper extends SQLiteOpenHelper {
-  private static final String DATABASE_NAME = &quot;db.db&quot;;
-  private static final int DATABASE_VERSION = 1;
-
-  /** Create a helper object for the Events database */
-  public ProvinceDataHelper(Context ctx) {
-      super(ctx, DATABASE_NAME, null, DATABASE_VERSION);
-  }
-
-  @Override
-  public void onCreate(SQLiteDatabase db) {}
-
-  @Override
-  public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;增删改查
-```&lt;/li&gt;
+  &lt;li&gt;安装apk：adb install xxx.apk。如果是debug版本，需要加 -t&lt;/li&gt;
+  &lt;li&gt;客户机-&amp;gt;主机复制文件：adb pull remote local，比如 adb pull /sdcard/test.md desktop/test.md&lt;/li&gt;
+  &lt;li&gt;主机-&amp;gt;客户机复制文件：adb push local remote，比如 adb push test.md /sdcard/test.md&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;h2 id=&quot;adb-shell-android-特有命令&quot;&gt;adb shell (Android 特有命令)&lt;/h2&gt;
 
-+ 如何导入外部数据库
-1.将格式为.db的数据库文件放到android项目assets目录中；
-2.在程序必要的时候，将其“拷贝”（文件读取）到Android 程序默认的数据库存储目录中，一般路径为“/data/data/项目包名/databases/“；
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;InputStream is = context.getAssets().open(DB_NAME);
-                // 输出流,在指定路径下生成db文件
-                OutputStream os = new FileOutputStream(DB_PATH + DB_NAME);&lt;/p&gt;
+&lt;p&gt;adb shell ls /system/bin 可查看所有shell命令&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;            // 文件写入
-            byte[] buffer = new byte[1024];
-            int length;
-            while ((length = is.read(buffer)) &amp;gt; 0) {
-                os.write(buffer, 0, length);
-            } ``` 3.自定义SQLiteOpenHelper类，创建一个名字跟步骤1中.db名称一样的数据库； 4.按照平常逻辑，增删改查数据库。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。&lt;/p&gt;
-&lt;h2 id=&quot;如何判断一个-app-在前台还是后台&quot;&gt;如何判断一个 APP 在前台还是后台？&lt;/h2&gt;
-&lt;h2 id=&quot;ams-pms&quot;&gt;AMS 、PMS&lt;/h2&gt;
-&lt;h2 id=&quot;activity-启动流程app-启动流程&quot;&gt;Activity 启动流程，App 启动流程&lt;/h2&gt;
-&lt;h2 id=&quot;binder-机制ipcaidl-的使用&quot;&gt;Binder 机制（IPC、AIDL 的使用）&lt;/h2&gt;
-&lt;h2 id=&quot;为什么使用-parcelable好处是什么&quot;&gt;为什么使用 Parcelable，好处是什么？&lt;/h2&gt;
-&lt;h2 id=&quot;android-图像显示相关流程vsync-信号等&quot;&gt;Android 图像显示相关流程，Vsync 信号等&lt;/h2&gt;
-&lt;h2 id=&quot;invalidate和postinvalidate的区别及使用&quot;&gt;invalidate和postInvalidate的区别及使用&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Android中实现View的更新有两组方法，1. invalidate,ui线程更新; 2. postInvalidate，非UI线程更新&lt;/li&gt;
-  &lt;li&gt;invalidate是在handler中使用，postInvalidate可以直接在子线程中调用更新View。
-    &lt;h2 id=&quot;activity-window-view三者的差别&quot;&gt;Activity-Window-View三者的差别&lt;/h2&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Activity是Android四大组件之一，负责界面展示、用户交互和逻辑处理,有一个内部对象window。&lt;/li&gt;
-  &lt;li&gt;Window就是负责界面展示以及交互的只能部门，就相当于Activity的下属，Activity的生命周期方法负责业务的处理。&lt;/li&gt;
-  &lt;li&gt;View就是放在Window容器的元素，Window是View的载体，View是Window的具体展示。
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 在Activity中调用attach，创建了一个Window
-2. 创建的window是其子类PhoneWindow，在attach中创建PhoneWindow
-3. 在Activity中调用setContentView(R.layout.xxx)
-4. 其中实际上是调用的getWindow().setContentView()
-5. 调用PhoneWindow中的setContentView方法
-6. 创建ParentView：作为ViewGroup的子类，实际是创建的DecorView(作为FramLayout的子类）
-7. 将指定的R.layout.xxx进行填充通过布局填充器进行填充【其中的parent指的就是DecorView】
-8. 调用到ViewGroup
-9. 调用ViewGroup的removeAllView()，先将所有的view移除掉
-10. 添加新的view：addView()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;h2 id=&quot;context&quot;&gt;Context&lt;/h2&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Context数量=Activity数量+Service数量+1&lt;/li&gt;
+  &lt;li&gt;获取系统版本&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-        <pubDate>Mon, 27 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</link>
-        <guid isPermaLink="true">/2020/07/27/Android%E9%9D%A2%E5%9F%BA-2.html</guid>
-        
-        <category>android</category>
-        
-        
-        <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>Android 面试 Java部分</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;java 相关&lt;/p&gt;
-&lt;/blockquote&gt;
 
-&lt;p&gt;容器（HashMap、HashSet、LinkedList、ArrayList、数组等）
-内存模型
-垃圾回收算法（JVM）
-垃圾回收机制和调用 System.gc()的区别？
-类加载过程（需要多看看，重在理解，对于热修复和插件化比较重要）
-反射
-多线程和线程池
-设计模式（六大基本原则、项目中常用的设计模式、手写单例等）
-Java 四大引用
-Java 的泛型
-final、finally、finalize 的区别
-接口、抽象类的区别&lt;/p&gt;
+&lt;p&gt;adb shell getprop ro.build.version.release&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;获取系统api版本&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell getprop ro.build.version.sdk&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;获取手机相关制造商信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell getprop | grep “model|version.sdk|manufacture
+r|hardware|platform|revision|serialno|product.name|brand”&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;获取手机系统信息（ CPU，厂商名称等）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;adb shell “cat /system/build.prop&lt;/td&gt;
+      &lt;td&gt;grep “product””&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;获取手机设备型号&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb -d shell getprop ro.product.model&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;获取手机厂商名称&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb -d shell getprop ro.product.brand&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;获取手机的序列号&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;有两种方式&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- adb get-serialno
+- adb shell getprop ro.serialno
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;获取手机MAC地址&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell cat /sys/class/net/wlan0/address&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;获取手机内存信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell cat /proc/meminfo&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;获取手机存储信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell df&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;获取手机内部存储信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell df /data&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;获取Android设备屏幕分辨率&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;adb shell “dumpsys window&lt;/td&gt;
+      &lt;td&gt;grep mUnrestrictedScreen”&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;连接多个设备对其中一个进行操作
+//以adb shell 为例
+adb -s 192.168.101.37:5555 shell&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;查看运行进程&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell procrank&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;关闭或杀掉进程&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell kill 366&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;保留数据和缓存文件，重新安装，升级&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb install -r test.apk&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;卸载app但保留数据和缓存文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb uninstall -k cnblogs.apk&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;查看目录下的文件大小&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell du -sh *&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;查看正在运行的Services&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell dumpsys activity services [&lt;packagename&gt;]&lt;/packagename&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;查看正在运行的Activity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell dumpsys activity [&lt;packagename&gt;]&lt;/packagename&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;clear 清除应用数据&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell pm clear com.baidu&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cp复制文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell 进入Android Linux命令中&lt;/p&gt;
+
+&lt;p&gt;cp -f system/app/Music/Music.apk /sdcard/Music.apk&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;删除命令&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb shell 进入Android Linux命令中&lt;/p&gt;
+
+&lt;p&gt;rm  -r  /mnt/sdcard/a.mp3&lt;/p&gt;
+
+&lt;p&gt;删除文件夹的时候需要加上-r参数&lt;/p&gt;
+
+&lt;p&gt;cd dir 
+rm *    删除dir中所有文件&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;重启进入recovery模式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;adb reboot recovery&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cat查看文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cat  /sdcard/test.txt&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;查看指定进程PID&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ps +  进程的包名&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;查看进程具体的信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;例如：1460是要查看的进程的PID
+cat /proc/1460/maps    查看进程的文件结构 
+cat /proc/1460/status   查看进程的状态&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;findstr 和 grep过滤搜索&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;1）cmd下搜索包名为com.android.launcher3的进程 
+adb shell ps|findstr /i “com.android.launcher3”&lt;/p&gt;
+
+&lt;p&gt;2）shell下面搜索 
+先使用adb shell进去，然后使用grep命令过滤 
+ps | grep “com.linux.test”&lt;/p&gt;
 </description>
-        <pubDate>Mon, 27 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</link>
-        <guid isPermaLink="true">/2020/07/27/Android-%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</guid>
+        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/12/adb.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/12/adb.html</guid>
         
-        <category>android</category>
+        <category>Android</category>
         
         
-        <category>android</category>
+        <category>Android</category>
         
       </item>
     
       <item>
-        <title>http 及其抓包</title>
-        <description>
+        <title>SVG</title>
+        <description>&lt;h1 id=&quot;svg&quot;&gt;SVG&lt;/h1&gt;
+
+&lt;p&gt;svg 是矢量图，和bitmap（位图）不一样。就像数学里学的矢量一样，svg是有方向有大小长度等位置的可渲染的图像文件。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;可缩放矢量图形&lt;/strong&gt;（英语：&lt;strong&gt;Scalable Vector Graphics&lt;/strong&gt;，&lt;strong&gt;SVG&lt;/strong&gt;）是一种基于可扩展标记语言（XML），用于描述二维矢量图形的图形格式。SVG由W3C制定，是一个开放标准。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;图像与分辨率无关，适配Android分辨率；&lt;/li&gt;
+  &lt;li&gt;体积小，一般复杂图像简单搞。&lt;/li&gt;
+  &lt;li&gt;很多平台都可用：web、Android、iOS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;SVG定义了很多形状，&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;矩形 &lt;rect&gt;&lt;/rect&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;圆形 &lt;circle&gt;&lt;/circle&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;椭圆 &lt;ellipse&gt;&lt;/ellipse&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;线 &lt;line&gt;&lt;/line&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;折线 &lt;polyline&gt;&lt;/polyline&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;多边形 &lt;polygon&gt;&lt;/polygon&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;路径 &lt;path&gt;，这个相当于自定义形状，命令很多&lt;/path&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;M = moveto，新建起点，参数x，y（M20， 30）
+L = lineto，连接直线，参数x，y（L30， 20）
+H = horizontal lineto，纵坐标不变，横向连线，参数x（H20）
+V = vertical lineto，横坐标不变，纵向连线，参数y（V30）
+C = curveto，三次贝塞尔曲线，参数x1，y1，x2，y2，x3，y3（C10，20，30，40，50， 60）
+S = smooth curveto，S x2 y2 x y
+简化的贝塞尔曲线
+1.如果S命令跟在一个C命令或者另一个S命令的后面，它的第一个控制点，就会被假设成前一个控制点的对称点。
+2.如果S命令单独使用，前面没有C命令或者另一个S命令，那么它的两个控制点就会被假设为同一个点。
+  
+Q = quadratic Bézier curve，二次贝塞尔曲线，参数x1，y1，x2，y2（Q10，20，30，40）
+T = smooth quadratic Bézier curveto 
+Q命令的简写命令。
+与S命令相似，T也会通过前一个控制点，推断出一个新的控制点。
+1.T命令前面必须是一个Q命令，或者是另一个T命令
+2.如果T单独使用，那么控制点就会被认为和终点是同一个点，所以画出来的将是一条直线
+  
+A = elliptical Arc
+A rx,ry x-axis-rotation large-arc-flag sweep-flag x,y
+rx 弧的半长轴长度
+ry 弧的半短轴长度
+x-axis-rotation 是此段弧所在的x轴与水平方向的夹角，即x轴的逆时针旋转角度，负数代表顺时针旋转角度。
+large-arc-flag 为1表示大角度弧线，0表示小角度弧线
+sweep-flag 为1表示从起点到终点弧线绕中心顺时针方向，0表示逆时针方向。
+xy 是终点坐标。
+  
+Z = closepath ，连接首尾，闭合曲线，无参数
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;文本&lt;polyline&gt;&lt;/polyline&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;还定义了很多效果&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;轮廓 Stroke&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;滤镜&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;模糊&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;阴影&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;渐变- 线性&lt;/td&gt;
+          &lt;td&gt;放射性&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;p&gt;参考实例：https://www.runoob.com/svg/svg-reference.html&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;## 在Android 中使用svg&lt;/p&gt;
+
+&lt;p&gt;Android 官方svg：https://developer.android.com/studio/write/vector-asset-studio#svg&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;自定义svg，http://editor.method.ac/ ，或者：https://c.runoob.com/more/svgeditor/  。file-save。然后AS安装SVG2VectorDrawable插件转换&lt;/li&gt;
+  &lt;li&gt;创建xml：可以从AS直接创建，也可以到iconfont中找，还可以去svg的其他网址下载，还可以让美工提供&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这是一个大人拉着小孩的图片。 boy.xml&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    android:width=&quot;24dp&quot;
+    android:height=&quot;24dp&quot;
+    android:viewportWidth=&quot;24&quot;
+    android:viewportHeight=&quot;24&quot;
+    android:tint=&quot;?attr/colorControlNormal&quot;&amp;gt;
+  &amp;lt;path
+  		android:name=&quot;path_id&quot;
+      android:fillColor=&quot;@android:color/white&quot;
+      android:pathData=&quot;M6.5,2c1.1,0 2,0.9 2,2s-0.9,2 -2,2s-2,-0.9 -2,-2S5.4,2 6.5,2zM15.5,9.5c0,0.83 0.67,1.5 1.5,1.5s1.5,-0.67 1.5,-1.5S17.83,8 17,8S15.5,8.67 15.5,9.5zM18.5,12h-2.84c-0.58,0.01 -1.14,0.32 -1.45,0.86l-0.92,1.32L9.72,8C9.35,7.37 8.69,7.01 8.01,7H5C3.9,7 3,7.9 3,9v6h1.5v7h5V11.61L12.03,16h2.2L15,14.9V22h4v-5h1v-3.5C20,12.68 19.33,12 18.5,12z&quot;/&amp;gt;
+&amp;lt;/vector&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;imageview引用&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ImageView
+        android:id=&quot;@+id/img_svg&quot;
+        android:src=&quot;@drawable/boy&quot;
+        android:layout_width=&quot;200dp&quot;
+        android:layout_height=&quot;200dp&quot;
+        android:layout_centerInParent=&quot;true&quot;
+        android:scaleType=&quot;fitXY&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;动起来&lt;/p&gt;
+
+    &lt;p&gt;定义动画&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;animated-vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+	    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+	    android:drawable=&quot;@drawable/ic_svg&quot;
+	    tools:targetApi=&quot;lollipop&quot;&amp;gt;
+  	
+	    &amp;lt;target
+	        android:name=&quot;path_id&quot;
+	        android:animation=&quot;@animator/pathchange&quot; /&amp;gt;
+  	
+	&amp;lt;/animated-vector&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;放在res/animator目录并替换资源文件&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;开始动画&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ImageView svgImageView = findViewById(R.id.img_svg);
+  AnimatedVectorDrawable animatedVectorDrawable = (AnimatedVectorDrawable) svgImageView.getDrawable();
+  animatedVectorDrawable.start();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 </description>
-        <pubDate>Sat, 18 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/18/Android-http.html</link>
-        <guid isPermaLink="true">/2020/07/18/Android-http.html</guid>
+        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/12/SVG.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/12/SVG.html</guid>
         
-        <category>android</category>
-        
-        
-        <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>svg 在Android中的使用</title>
-        <description>
-</description>
-        <pubDate>Fri, 17 Jul 2020 00:00:00 +0800</pubDate>
-        <link>/2020/07/17/svg.html</link>
-        <guid isPermaLink="true">/2020/07/17/svg.html</guid>
-        
-        <category>android</category>
+        <category>Android</category>
         
         
-        <category>android</category>
+        <category>Android</category>
         
       </item>
     

@@ -1,6 +1,96 @@
 [
   
     {
+      "title"    : "Mac",
+      "tags"     : "Tools",
+      "url"      : "/2022/11/12/Mac.html"
+    } ,
+  
+    {
+      "title"    : "随笔",
+      "tags"     : "Read",
+      "url"      : "/2022/11/12/%E9%9A%8F%E7%AC%94.html"
+    } ,
+  
+    {
+      "title"    : "缓存",
+      "tags"     : "Android",
+      "url"      : "/2022/11/12/%E7%BC%93%E5%AD%98.html"
+    } ,
+  
+    {
+      "title"    : "缓存",
+      "tags"     : "Android",
+      "url"      : "/2022/11/12/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6.html"
+    } ,
+  
+    {
+      "title"    : "杂记",
+      "tags"     : "Read",
+      "url"      : "/2022/11/12/%E6%9D%82%E8%AE%B0.html"
+    } ,
+  
+    {
+      "title"    : "wepy",
+      "tags"     : "wx",
+      "url"      : "/2022/11/12/wepy.html"
+    } ,
+  
+    {
+      "title"    : "iOS相关",
+      "tags"     : "Tools",
+      "url"      : "/2022/11/12/ios.html"
+    } ,
+  
+    {
+      "title"    : "deepin",
+      "tags"     : "Tools",
+      "url"      : "/2022/11/12/deepin.html"
+    } ,
+  
+    {
+      "title"    : "adb",
+      "tags"     : "Android",
+      "url"      : "/2022/11/12/adb.html"
+    } ,
+  
+    {
+      "title"    : "SVG",
+      "tags"     : "Android",
+      "url"      : "/2022/11/12/SVG.html"
+    } ,
+  
+    {
+      "title"    : "LifeCycler",
+      "tags"     : "Android",
+      "url"      : "/2022/11/12/LifeCycle.html"
+    } ,
+  
+    {
+      "title"    : "FileProvider",
+      "tags"     : "Android",
+      "url"      : "/2022/11/12/FileProvider.html"
+    } ,
+  
+    {
+      "title"    : "Facebook集成",
+      "tags"     : "Android",
+      "url"      : "/2022/11/12/Facebook%E9%9B%86%E6%88%90.html"
+    } ,
+  
+    {
+      "title"    : "English",
+      "tags"     : "Tools",
+      "url"      : "/2022/11/12/English.html"
+    } ,
+  
+    {
+      "title"    : "Android 版本适配",
+      "tags"     : "Android",
+      "url"      : "/2022/11/12/Android-Version-Adapter.html"
+    } ,
+  
+    {
       "title"    : "工具集合",
       "tags"     : "Tools",
       "url"      : "/2022/11/10/tools.html"
@@ -27,7 +117,7 @@
     {
       "title"    : "Android 碎片记忆",
       "tags"     : "android",
-      "url"      : "/2020/07/29/%E7%A2%8E%E7%89%87%E8%AE%B0%E5%BF%86.html"
+      "url"      : "/2020/07/29/Android-record.html"
     } ,
   
     {
@@ -166,6 +256,12 @@
       "title"    : "Plugin 一蓑烟雨任平生",
       "tags"     : "Plugin",
       "url"      : "/2020/06/02/ASPlugin.html"
+    } ,
+  
+    {
+      "title"    : "Android Studio",
+      "tags"     : "Tools",
+      "url"      : "/2020/06/01/Android-Studio.html"
     } ,
   
     {
