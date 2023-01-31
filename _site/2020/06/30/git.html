@@ -257,6 +257,14 @@ git log --pretty=oneline
 ...
 </code></pre></div>    </div>
   </li>
+  <li>关联远程分支
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//创建本地分支 并关联
+git checkout -b 本地分支 origin/远程分支
+
+//已有本地分支 关联远程分支
+git branch --set-upstream-to origin/远程分支名 本地分支名
+</code></pre></div>    </div>
+  </li>
   <li>
     <p>配置别名</p>
 
@@ -268,9 +276,7 @@ git log --pretty=oneline
 alias go = 'git checkout' // 这种配置，要防止与其他命令冲突
 </code></pre></div>    </div>
   </li>
-  <li>
-    <p><a href="https://www.jianshu.com/p/0bebcdb7c6a4">配置多git账号</a></p>
-  </li>
+  <li><a href="https://www.jianshu.com/p/0bebcdb7c6a4">配置多git账号</a></li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 个人
@@ -380,7 +386,7 @@ Hi xmc91! You've successfully authenticated, but GitHub does not provide shell a
     2019
     -
   
-  2022
+  2023
   </section>
   <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>  
 

@@ -181,8 +181,22 @@ Execution failed for task ':app:processDebugManifest'.
       </li>
     </ul>
   </li>
-  <li></li>
+  <li>自定义apk、aab前缀
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  // 自定义apk、aab前缀（替换原app部分，渠道和正式版gradle自动添加）
+  // 如果需要时间：new Date().format("yyyy.MM.dd HH.mm.ss", TimeZone.getDefault());
+  setProperty("archivesBaseName", "xxxxxx-v${defaultConfig.versionName}")
+</code></pre></div>    </div>
+  </li>
+  <li>默认debug.keystore</li>
 </ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>默认debug.keystore的信息如下：
+Keystore name: “debug.keystore”
+Keystore password: “android”
+Key alias: “androiddebugkey”
+Key password: “android”
+CN: “CN=Android Debug,O=Android,C=US”
+</code></pre></div></div>
 
 
     </article>
@@ -235,10 +249,10 @@ Execution failed for task ':app:processDebugManifest'.
 
       
       <div class="read-next-item">
-        <a href="/2020/05/31/kotlin.html" class="read-next-link"></a>
+        <a href="/2020/05/31/realm.html" class="read-next-link"></a>
           <section>
-            <span>Kotlin 蓦然回首</span>
-            <p>  【青玉案·元夕】[辛弃疾]东风夜放花千树，更吹落，星如雨。宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。蛾儿...</p>
+            <span>Android Realm</span>
+            <p>  官方网站 https://www.mongodb.com/docs/realm/sdk/java/quick-...</p>
           </section>
           
       </div>
@@ -258,7 +272,7 @@ Execution failed for task ':app:processDebugManifest'.
     2019
     -
   
-  2022
+  2023
   </section>
   <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>  
 

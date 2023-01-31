@@ -5,102 +5,203 @@
     <description>风一样de男子</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 13 Nov 2022 11:33:37 +0800</pubDate>
-    <lastBuildDate>Sun, 13 Nov 2022 11:33:37 +0800</lastBuildDate>
+    <pubDate>Tue, 31 Jan 2023 14:48:53 +0800</pubDate>
+    <lastBuildDate>Tue, 31 Jan 2023 14:48:53 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
-        <title>Mac</title>
+        <title>Android知识点</title>
         <description>&lt;ul&gt;
-  &lt;li&gt;Mac远程控制-teamViewer：需要对方的id和密码&lt;/li&gt;
-  &lt;li&gt;Mac远程控制-Message：需要对方的Apple id&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;安装javamd&quot;&gt;安装Java.md&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html&lt;/li&gt;
-  &lt;li&gt;选中 Macos，选择 jdk-8u321-macosx-x64.dmg&lt;/li&gt;
-  &lt;li&gt;如果没注册，需要注册，然后下载&lt;/li&gt;
-  &lt;li&gt;安装&lt;/li&gt;
-  &lt;li&gt;测试：java -version&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;配置java环境变量&quot;&gt;配置java环境变量&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;打开配置文件：open -e .bash_profile；首次：touch .bash_profile&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;找到java路径：/Library/Java/JavaVirtualMachines/jdk1.8.0_321.jdk/Contents/Home&lt;/p&gt;
+  &lt;li&gt;Intent 传值的上限。
+    &lt;blockquote&gt;
+      &lt;p&gt;取决于binder事务缓存的分配，每个进程分配1M。&lt;/p&gt;
+    &lt;/blockquote&gt;
   &lt;/li&gt;
-  &lt;li&gt;bin目录下存放JDK用于开发的一些终端命令工具。常见的工具如：&lt;/li&gt;
-  &lt;li&gt;“javac”的作用是将java源文件编译为class文件(即自解码文件)；&lt;/li&gt;
-  &lt;li&gt;“java”命令的作用是运行class文件。&lt;/li&gt;
-  &lt;li&gt;db目录下是java开发的一个开源的关系型数据库；&lt;/li&gt;
-  &lt;li&gt;include目录下是一些C语言的头文件；&lt;/li&gt;
-  &lt;li&gt;jre目录下JDK所依赖的java运行时；&lt;/li&gt;
-  &lt;li&gt;lib目录下存放JDK开发工具所依赖的一些库文件；&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 21 Jan 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>心声</title>
+        <description>&lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;man目录下存放JDK开发工具的说明文档。&lt;/p&gt;
+    &lt;p&gt;哲学如果需要举例来证明，那它就很快会夸，只可意会。&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;配置&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;随着年纪的增大，过年已经不在乎是否精彩，而是觉得，陪伴、相聚变得很珍贵。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 12 Jan 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/01/12/%E5%BF%83%E5%A3%B0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/01/12/%E5%BF%83%E5%A3%B0.html</guid>
+        
+        <category>read</category>
+        
+        
+        <category>read</category>
+        
+      </item>
+    
+      <item>
+        <title>JS</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;创建对象&lt;/li&gt;
+  &lt;li&gt;临时用
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; var obj={}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;工厂
+ ```
+ function createAlarm(date,repeat){
+ 	return {
+ 		date:date,
+ 		repeat:repeat
+ 	}
+ }&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
-PATH=$JAVA_HOME/bin:$PATH:.
-CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
-export JAVA_HOME
-export PATH
-export CLASSPATH
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+ - 可以new的
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;function Alarm(date,repeat){
+ 	this.date=date
+ 	this.repeat=repeat
+ 	this.test=function(){
+ 		console.log(date.getTime())
+ 	}
+ }&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;生效：source .bash_profile&lt;/li&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
++ 时间对象Date 
+ - new Date() 可以指定时间
+ - 可以获取年月日时分秒
+ - 通过getTime()比较先后
+
++ 枚举。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;var CMDType = {
+    MOTOR: 1,
+    ALARM: 2, 
+    RING: 3 
+}
+```&lt;/p&gt;
+</description>
+        <pubDate>Tue, 29 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/29/JS.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/29/JS.html</guid>
+        
+        <category>JS</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>基金</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;下载、安装、移除Quarantine
+https://www.jianshu.com/p/ddeb6c4f5c01&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 22 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/22/ps.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/22/ps.html</guid>
+        
+        <category>ps</category>
+        
+        
+        <category>Tools</category>
+        
+      </item>
+    
+      <item>
+        <title>BLE</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;通用服务
+&lt;img src=&quot;/assets/img/ble_uuid.png&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ADType
+&lt;img src=&quot;/assets/img/ble.png&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 21 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/21/ble.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/21/ble.html</guid>
+        
+        <category>ble</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>Google play</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;自管签名，千万别用Google play托管的签名&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;反编译apk&quot;&gt;反编译apk&lt;/h1&gt;
-
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -jar pepk.jar --keystore xxxx.jks --alias xxxx --output=xxxxx.zip --encryptionkey=034200041E224EE22B45D4861F9E140F278A5D2860846C2CF5D2C3C02 --include-cert
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;ul&gt;
-  &lt;li&gt;安装apktool：https://ibotpeaches.github.io/Apktool/install/&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;下载jd-gui：http://java-decompiler.github.io/&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;已经安装了java8还提示java版本不对的&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;右键xx.app&lt;/li&gt;
-  &lt;li&gt;打开info.plist&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;找到1.8+，去掉+号&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;sublime  块操作，Mac option+左键&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Mac  ssh配置之后，push失败的，再次add即可：ssh-add ~/.ssh/id_rsa_xxx&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Phone 安装非APP store 应用：https://www.i4.cn/，，，然后把IPA导入到应用。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;iphone翻墙&lt;/p&gt;
+  &lt;li&gt;如果不小心被Google 签名了。可以在Google play改成自签名，但是老用户就不会提示升级了。
+Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/article/details/88720357
+还原jks：https://blog.csdn.net/Jason_HD/article/details/124443963&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 17 Nov 2022 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2022/11/17/Google-play.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/17/Google-play.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>Android 车载入门</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://developer.android.google.cn/training/cars&quot;&gt;android for car&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-    &lt;ul&gt;
-      &lt;li&gt;安装shadowrocket&lt;/li&gt;
-      &lt;li&gt;https://book.v2rayx.org/ios.html&lt;/li&gt;
-      &lt;li&gt;输入密码等：https://store.holytech.tech/clientarea.php?action=productdetails&amp;amp;id=75496&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
+&lt;h2 id=&quot;auto-和-automotive&quot;&gt;Auto 和 Automotive&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Automotive是一个和Android一样的系统(os)，扩展了android os，简称AAOS&lt;/li&gt;
+  &lt;li&gt;Auto 不是 OS。它是集成在 Android OS 里的 feature。当通过 USB、Wi-Fi 将 Android Phone 连接到支持 Android Auto 的车机上后，Android OS 将自动加载支持 Auto 模式下的 App 并将图像投屏到车机屏幕上。&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&quot;安装模拟器&quot;&gt;安装模拟器&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;添加sdk update site：vilvo：https://developer.volvocars.com/sdk/volvo-sys-img.xml&lt;/li&gt;
+  &lt;li&gt;下载android10的vilvo的镜像&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/12/Mac.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/12/Mac.html</guid>
+        <link>http://localhost:4000/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</guid>
         
-        <category>Tools</category>
+        <category>Android</category>
+        
+        <category>Auto</category>
         
         
-        <category>Tools</category>
+        <category>Android</category>
+        
+        <category>Auto</category>
         
       </item>
     
@@ -223,782 +324,6 @@ export CLASSPATH
         <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2022/11/12/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6.html</link>
         <guid isPermaLink="true">http://localhost:4000/2022/11/12/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6.html</guid>
-        
-        <category>Android</category>
-        
-        
-        <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>杂记</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;马赛人，视力可达6.0，能看到800米的地方。&lt;/li&gt;
-  &lt;li&gt;走马承受：宋朝边境一官职，相当于皇帝的眼线。&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;元数据：（&lt;strong&gt;Metadata&lt;/strong&gt;），又称&lt;strong&gt;中介数据&lt;/strong&gt;、&lt;strong&gt;中继数据&lt;/strong&gt;，为描述&lt;a href=&quot;https://baike.baidu.com/item/数据/5947370&quot;&gt;数据&lt;/a&gt;的数据，就是关于数据的数据&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;地母经&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;《地母经》通常附载于“春牛图”一页内。观《地母经》文字，见其失律兼不协韵，当属不通文墨者所造。六十甲子周而复始，《地母经》一诗一卜，亦周而复始，
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;人体构造成分&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;蛋白质：生命物质的基础，约占16%~20%&lt;/li&gt;
-      &lt;li&gt;肌肉：约639块，最长的肌纤维达60厘米，最短的仅有1毫米左右。约占35%~40%&lt;/li&gt;
-      &lt;li&gt;水分：成年人约占70%，儿童约占80%&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;五大常人理事国（二战的五大战胜国，自二战来保留最强军事实力，在联合国有一票否决权，确立时间1945年）：中国、俄罗斯、英国、法国、美国。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;联合国不成文规定，常任理事国不能担任秘书长&lt;/li&gt;
-  &lt;li&gt;fi两个字母连起来少了一个点：https://www.zhihu.com/question/25872415?rf=27404379&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;冬瓜：雌雄同株，起源于中国和东印度，广泛分布于亚洲的热带、亚热带及温带地区。春植播期为12月至次年3月，秋植播期为6-7月&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;万用表&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;黑线接com，红线接测试的对应功能&lt;/li&gt;
-      &lt;li&gt;测量电压不分正负极，如果反了，屏幕上是负值&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/12/%E6%9D%82%E8%AE%B0.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/12/%E6%9D%82%E8%AE%B0.html</guid>
-        
-        <category>Read</category>
-        
-        
-        <category>Read</category>
-        
-      </item>
-    
-      <item>
-        <title>wepy</title>
-        <description>&lt;h2 id=&quot;wepy&quot;&gt;wepy&lt;/h2&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install n -g
-n list
-n xxx版本//stable稳定版本，latest最新版本，如果有就切换到这个版本
-n rm xxx版本
-遇到Permission denied，sudo chmod -R 777 路径//没有的自己创建
-npm install
-npm run build
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;目录结构&quot;&gt;目录结构&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;src是源代码&lt;/li&gt;
-  &lt;li&gt;weapp是编译后的代码&lt;/li&gt;
-  &lt;li&gt;插件测试ID，dev-xxxxx&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/12/wepy.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/12/wepy.html</guid>
-        
-        <category>wx</category>
-        
-        
-        <category>wx</category>
-        
-      </item>
-    
-      <item>
-        <title>iOS相关</title>
-        <description>&lt;h2 id=&quot;testflight&quot;&gt;testFlight&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;需要填写的信息&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ app 描述：概括应用，列出功能，数据使用（healthkit）等一定要说明
-+ 反馈电子邮件：support@xxx.com
-+ 营销网址：http://www.xxx.com/
-+ 隐私政策网址：http://www.xxx.com/
-+ 联系信息：姓氏:xxx、名字:xxx、电话号码:+8618221220047、电子邮件:xxxx@xxxx.com.cn
-+ 审核备注：xxxxx app work with our smart scales. The following video show how to use the scale with our app.
-https://youtu.be/tGH45ffce8K-umo
-
-Please contact us if you meet any problem when reviewing Vitafit app.
-
-thanks.
-
-br,
-xxxx
-+ 是否需要登录：用户名：xxx@qq.com、密码：123456
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;构建群组&lt;/li&gt;
-  &lt;li&gt;构建版本&lt;/li&gt;
-  &lt;li&gt;提交&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;等待审核，出现测试连接&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;苹果账号相关知识：https://www.cnblogs.com/niit-soft-518/p/10383634.html&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;区分：个人、公司、企业
-+ 个人的不需要邓白氏码，其他两个需要
-+ 企业的不能上架APP store，其他两个可以
-+ 企业299$,其他两个99$
-+ 个人的只能自己操作，其他两个可以多人协作
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;苹果上架截图尺寸要求：https://www.applebyme.store/article/show/1590&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;6.5 英寸（iPhone 11 Pro Max、iPhone XS Max）：纵向分辨率为 1242 x 2688 像素
-5.5 英寸（iPhone 8 Plus、iPhone 7 Plus、iPhone 6s Plus）：纵向分辨率为 1242 x 2208 像素
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;腾讯wetest：https://wetest.qq.com/&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;区分：个人、公司
-+ 产品：兼容测试、性能测试、安全测试等。
-+ iOS上架前测试：免费
-+ 可以测Android应用、iOS应用、小程序、后端等
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;xcode 修改项目编译版本号&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://www.huaweicloud.com/articles/1238804f05d57cf444ac046a33ee9116.html
-https://blog.csdn.net/nmjkl001/article/details/101177805
-https://www.jianshu.com/p/bc1a8f5463ec
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;iOS上架IPA，下载transporter，双重机制验证登录苹果开发者账号。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;= html的meta添加标签，可在苹果手机的网页上显示对应网站对应的APP 的banner：https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;meta name=&quot;apple-itunes-app&quot; content=&quot;app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL&quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/12/ios.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/12/ios.html</guid>
-        
-        <category>Tools</category>
-        
-        
-        <category>Tools</category>
-        
-      </item>
-    
-      <item>
-        <title>deepin</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;deepin  升级&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;大版本升级，不会自动提示，真是醉了。要换成社区的源&lt;/p&gt;
-
-        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /etc/apt/
-sudo  vim sources.list
-修改为社区源
-deb [by-hash=force] https://community-packages.deepin.com/deepin/ apricot main contrib non-free
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;检查升级：sudo apt update&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;执行升级：sudo apt upgrade&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;重启&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;升级商店源&lt;/p&gt;
-
-        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /etc/apt/sources.list.d/
-作者：ep探索实践
-https://www.bilibili.com/read/cv7591028/
-出处： bilibili
-sudo  vim appstore.list
-修改为社区源
-deb https://community-store-packages.deepin.com/appstore eagle appstore
-升级
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Deepin 高级用法：https://www.uc23.net/jiaocheng/71436.html&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/12/deepin.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/12/deepin.html</guid>
-        
-        <category>Tools</category>
-        
-        
-        <category>Tools</category>
-        
-      </item>
-    
-      <item>
-        <title>adb</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;NodeJs 磨刀霍霍向猪羊&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;adb-路径&quot;&gt;adb 路径&lt;/h2&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;adb --help
-Android Debug Bridge version 1.0.41
-Version 30.0.5-6877874
-Installed as /Users/developer/Desktop/Work/Tools/sdk/platform-tools/adb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;工作原理&quot;&gt;工作原理&lt;/h2&gt;
-
-&lt;p&gt;adb 客户端启动时，先检查服务器是否启动，服务器启动后绑定本地5073端口，监听客户端命令。server 和adbd是多对多关系，&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;adb client ：运行在pc,发送命令给server，3种命令：1- 不需server 的version、help；2- 不需要adbd但需要server的 devices；3- 需要adbd执行的命令&lt;/li&gt;
-  &lt;li&gt;adb server：运行在pc，检查设备连接状态，中转各个通信&lt;/li&gt;
-  &lt;li&gt;adbd（adb daemon 守护进程）：运行在Android 上，用来连接server&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;adb-通过wlan连接android-10-及更低版本&quot;&gt;adb 通过wlan连接(（Android 10 及更低版本）)&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;手机和电脑连接同一个网络&lt;/li&gt;
-  &lt;li&gt;查看当前主机连接的设备：adb devices -l&lt;/li&gt;
-  &lt;li&gt;插入USB，监听手机5555的tcpip连接： adb tcpip 5555&lt;/li&gt;
-  &lt;li&gt;拔掉USB，查看手机ip&lt;/li&gt;
-  &lt;li&gt;连接手机：adb connect phone_ip&lt;/li&gt;
-  &lt;li&gt;查看主机目前连接的设备：adb devices&lt;/li&gt;
-  &lt;li&gt;重置主机adb：adb kill-server&lt;/li&gt;
-  &lt;li&gt;启动主机：adb start-server&lt;/li&gt;
-  &lt;li&gt;断开后，可重连&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;adb命令&quot;&gt;adb命令&lt;/h2&gt;
-
-&lt;p&gt;adb自带了很多命令，其中shell命令是Android特有&lt;/p&gt;
-
-&lt;p&gt;包含以下几大块命令&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;一般命令3个：
-    &lt;ul&gt;
-      &lt;li&gt;devices 查看当前连接的设备&lt;/li&gt;
-      &lt;li&gt;help 查看帮助&lt;/li&gt;
-      &lt;li&gt;version&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;网络操作
-    &lt;ul&gt;
-      &lt;li&gt;connect 、disconnect、pair  [port]&lt;/li&gt;
-      &lt;li&gt;forward&lt;/li&gt;
-      &lt;li&gt;reverse&lt;/li&gt;
-      &lt;li&gt;mdns&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;文件转换
-    &lt;ul&gt;
-      &lt;li&gt;push&lt;/li&gt;
-      &lt;li&gt;pull&lt;/li&gt;
-      &lt;li&gt;sync&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;APP 安装
-    &lt;ul&gt;
-      &lt;li&gt;install、uninstall&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;调试
-    &lt;ul&gt;
-      &lt;li&gt;bugreport&lt;/li&gt;
-      &lt;li&gt;jdwp&lt;/li&gt;
-      &lt;li&gt;logcat&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;安全
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;table&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td&gt;Disable&lt;/td&gt;
-              &lt;td&gt;Enable-verity&lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Keygen 生成秘钥和公钥，Mac系统自带这个工具&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;脚本
-    &lt;ul&gt;
-      &lt;li&gt;wait-for&lt;/li&gt;
-      &lt;li&gt;
-        &lt;table&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td&gt;Get-state&lt;/td&gt;
-              &lt;td&gt;serialno&lt;/td&gt;
-              &lt;td&gt;devpath&lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
-      &lt;/li&gt;
-      &lt;li&gt;remount&lt;/li&gt;
-      &lt;li&gt;reboot&lt;/li&gt;
-      &lt;li&gt;Tcpip&lt;/li&gt;
-      &lt;li&gt;
-        &lt;table&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td&gt;root&lt;/td&gt;
-              &lt;td&gt;unroot&lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;内部调试
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;table&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td&gt;start&lt;/td&gt;
-              &lt;td&gt;kill-server&lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Reconnect&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;常用命令&quot;&gt;常用命令&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;安装apk：adb install xxx.apk。如果是debug版本，需要加 -t&lt;/li&gt;
-  &lt;li&gt;客户机-&amp;gt;主机复制文件：adb pull remote local，比如 adb pull /sdcard/test.md desktop/test.md&lt;/li&gt;
-  &lt;li&gt;主机-&amp;gt;客户机复制文件：adb push local remote，比如 adb push test.md /sdcard/test.md&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;adb-shell-android-特有命令&quot;&gt;adb shell (Android 特有命令)&lt;/h2&gt;
-
-&lt;p&gt;adb shell ls /system/bin 可查看所有shell命令&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;获取系统版本&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell getprop ro.build.version.release&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;获取系统api版本&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell getprop ro.build.version.sdk&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;获取手机相关制造商信息&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell getprop | grep “model|version.sdk|manufacture
-r|hardware|platform|revision|serialno|product.name|brand”&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;获取手机系统信息（ CPU，厂商名称等）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;adb shell “cat /system/build.prop&lt;/td&gt;
-      &lt;td&gt;grep “product””&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;获取手机设备型号&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb -d shell getprop ro.product.model&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;获取手机厂商名称&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb -d shell getprop ro.product.brand&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;获取手机的序列号&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;有两种方式&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- adb get-serialno
-- adb shell getprop ro.serialno
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;获取手机MAC地址&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell cat /sys/class/net/wlan0/address&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;获取手机内存信息&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell cat /proc/meminfo&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;获取手机存储信息&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell df&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;获取手机内部存储信息&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell df /data&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;获取Android设备屏幕分辨率&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;adb shell “dumpsys window&lt;/td&gt;
-      &lt;td&gt;grep mUnrestrictedScreen”&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;连接多个设备对其中一个进行操作
-//以adb shell 为例
-adb -s 192.168.101.37:5555 shell&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;查看运行进程&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell procrank&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;关闭或杀掉进程&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell kill 366&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;保留数据和缓存文件，重新安装，升级&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb install -r test.apk&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;卸载app但保留数据和缓存文件&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb uninstall -k cnblogs.apk&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;查看目录下的文件大小&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell du -sh *&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;查看正在运行的Services&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell dumpsys activity services [&lt;packagename&gt;]&lt;/packagename&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;查看正在运行的Activity&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell dumpsys activity [&lt;packagename&gt;]&lt;/packagename&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;clear 清除应用数据&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell pm clear com.baidu&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;cp复制文件&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell 进入Android Linux命令中&lt;/p&gt;
-
-&lt;p&gt;cp -f system/app/Music/Music.apk /sdcard/Music.apk&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;删除命令&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb shell 进入Android Linux命令中&lt;/p&gt;
-
-&lt;p&gt;rm  -r  /mnt/sdcard/a.mp3&lt;/p&gt;
-
-&lt;p&gt;删除文件夹的时候需要加上-r参数&lt;/p&gt;
-
-&lt;p&gt;cd dir 
-rm *    删除dir中所有文件&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;重启进入recovery模式&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;adb reboot recovery&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;cat查看文件&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;cat  /sdcard/test.txt&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;查看指定进程PID&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ps +  进程的包名&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;查看进程具体的信息&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;例如：1460是要查看的进程的PID
-cat /proc/1460/maps    查看进程的文件结构 
-cat /proc/1460/status   查看进程的状态&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;findstr 和 grep过滤搜索&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;1）cmd下搜索包名为com.android.launcher3的进程 
-adb shell ps|findstr /i “com.android.launcher3”&lt;/p&gt;
-
-&lt;p&gt;2）shell下面搜索 
-先使用adb shell进去，然后使用grep命令过滤 
-ps | grep “com.linux.test”&lt;/p&gt;
-</description>
-        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/12/adb.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/12/adb.html</guid>
-        
-        <category>Android</category>
-        
-        
-        <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>SVG</title>
-        <description>&lt;h1 id=&quot;svg&quot;&gt;SVG&lt;/h1&gt;
-
-&lt;p&gt;svg 是矢量图，和bitmap（位图）不一样。就像数学里学的矢量一样，svg是有方向有大小长度等位置的可渲染的图像文件。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;可缩放矢量图形&lt;/strong&gt;（英语：&lt;strong&gt;Scalable Vector Graphics&lt;/strong&gt;，&lt;strong&gt;SVG&lt;/strong&gt;）是一种基于可扩展标记语言（XML），用于描述二维矢量图形的图形格式。SVG由W3C制定，是一个开放标准。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;图像与分辨率无关，适配Android分辨率；&lt;/li&gt;
-  &lt;li&gt;体积小，一般复杂图像简单搞。&lt;/li&gt;
-  &lt;li&gt;很多平台都可用：web、Android、iOS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;SVG定义了很多形状，&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;矩形 &lt;rect&gt;&lt;/rect&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;圆形 &lt;circle&gt;&lt;/circle&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;椭圆 &lt;ellipse&gt;&lt;/ellipse&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;线 &lt;line&gt;&lt;/line&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;折线 &lt;polyline&gt;&lt;/polyline&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;多边形 &lt;polygon&gt;&lt;/polygon&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;路径 &lt;path&gt;，这个相当于自定义形状，命令很多&lt;/path&gt;&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;M = moveto，新建起点，参数x，y（M20， 30）
-L = lineto，连接直线，参数x，y（L30， 20）
-H = horizontal lineto，纵坐标不变，横向连线，参数x（H20）
-V = vertical lineto，横坐标不变，纵向连线，参数y（V30）
-C = curveto，三次贝塞尔曲线，参数x1，y1，x2，y2，x3，y3（C10，20，30，40，50， 60）
-S = smooth curveto，S x2 y2 x y
-简化的贝塞尔曲线
-1.如果S命令跟在一个C命令或者另一个S命令的后面，它的第一个控制点，就会被假设成前一个控制点的对称点。
-2.如果S命令单独使用，前面没有C命令或者另一个S命令，那么它的两个控制点就会被假设为同一个点。
-  
-Q = quadratic Bézier curve，二次贝塞尔曲线，参数x1，y1，x2，y2（Q10，20，30，40）
-T = smooth quadratic Bézier curveto 
-Q命令的简写命令。
-与S命令相似，T也会通过前一个控制点，推断出一个新的控制点。
-1.T命令前面必须是一个Q命令，或者是另一个T命令
-2.如果T单独使用，那么控制点就会被认为和终点是同一个点，所以画出来的将是一条直线
-  
-A = elliptical Arc
-A rx,ry x-axis-rotation large-arc-flag sweep-flag x,y
-rx 弧的半长轴长度
-ry 弧的半短轴长度
-x-axis-rotation 是此段弧所在的x轴与水平方向的夹角，即x轴的逆时针旋转角度，负数代表顺时针旋转角度。
-large-arc-flag 为1表示大角度弧线，0表示小角度弧线
-sweep-flag 为1表示从起点到终点弧线绕中心顺时针方向，0表示逆时针方向。
-xy 是终点坐标。
-  
-Z = closepath ，连接首尾，闭合曲线，无参数
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;文本&lt;polyline&gt;&lt;/polyline&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;还定义了很多效果&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;轮廓 Stroke&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;滤镜&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;模糊&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;阴影&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;渐变- 线性&lt;/td&gt;
-          &lt;td&gt;放射性&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-
-    &lt;p&gt;参考实例：https://www.runoob.com/svg/svg-reference.html&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;## 在Android 中使用svg&lt;/p&gt;
-
-&lt;p&gt;Android 官方svg：https://developer.android.com/studio/write/vector-asset-studio#svg&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;自定义svg，http://editor.method.ac/ ，或者：https://c.runoob.com/more/svgeditor/  。file-save。然后AS安装SVG2VectorDrawable插件转换&lt;/li&gt;
-  &lt;li&gt;创建xml：可以从AS直接创建，也可以到iconfont中找，还可以去svg的其他网址下载，还可以让美工提供&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;这是一个大人拉着小孩的图片。 boy.xml&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-    android:width=&quot;24dp&quot;
-    android:height=&quot;24dp&quot;
-    android:viewportWidth=&quot;24&quot;
-    android:viewportHeight=&quot;24&quot;
-    android:tint=&quot;?attr/colorControlNormal&quot;&amp;gt;
-  &amp;lt;path
-  		android:name=&quot;path_id&quot;
-      android:fillColor=&quot;@android:color/white&quot;
-      android:pathData=&quot;M6.5,2c1.1,0 2,0.9 2,2s-0.9,2 -2,2s-2,-0.9 -2,-2S5.4,2 6.5,2zM15.5,9.5c0,0.83 0.67,1.5 1.5,1.5s1.5,-0.67 1.5,-1.5S17.83,8 17,8S15.5,8.67 15.5,9.5zM18.5,12h-2.84c-0.58,0.01 -1.14,0.32 -1.45,0.86l-0.92,1.32L9.72,8C9.35,7.37 8.69,7.01 8.01,7H5C3.9,7 3,7.9 3,9v6h1.5v7h5V11.61L12.03,16h2.2L15,14.9V22h4v-5h1v-3.5C20,12.68 19.33,12 18.5,12z&quot;/&amp;gt;
-&amp;lt;/vector&amp;gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;imageview引用&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ImageView
-        android:id=&quot;@+id/img_svg&quot;
-        android:src=&quot;@drawable/boy&quot;
-        android:layout_width=&quot;200dp&quot;
-        android:layout_height=&quot;200dp&quot;
-        android:layout_centerInParent=&quot;true&quot;
-        android:scaleType=&quot;fitXY&quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;动起来&lt;/p&gt;
-
-    &lt;p&gt;定义动画&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;animated-vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-	    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
-	    android:drawable=&quot;@drawable/ic_svg&quot;
-	    tools:targetApi=&quot;lollipop&quot;&amp;gt;
-  	
-	    &amp;lt;target
-	        android:name=&quot;path_id&quot;
-	        android:animation=&quot;@animator/pathchange&quot; /&amp;gt;
-  	
-	&amp;lt;/animated-vector&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;放在res/animator目录并替换资源文件&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;开始动画&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  ImageView svgImageView = findViewById(R.id.img_svg);
-  AnimatedVectorDrawable animatedVectorDrawable = (AnimatedVectorDrawable) svgImageView.getDrawable();
-  animatedVectorDrawable.start();
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/12/SVG.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/12/SVG.html</guid>
         
         <category>Android</category>
         
