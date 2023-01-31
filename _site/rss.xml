@@ -3,10 +3,10 @@
   <channel>
     <title>WindMan Blog</title>
     <description>风一样de男子</description>
-    <link>http://localhost:4000//</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 31 Jan 2023 14:48:53 +0800</pubDate>
-    <lastBuildDate>Tue, 31 Jan 2023 14:48:53 +0800</lastBuildDate>
+    <link>//</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 31 Jan 2023 15:01:45 +0800</pubDate>
+    <lastBuildDate>Tue, 31 Jan 2023 15:01:45 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -20,8 +20,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 21 Jan 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</guid>
+        <link>/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</link>
+        <guid isPermaLink="true">/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</guid>
         
         <category>Android</category>
         
@@ -42,8 +42,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 12 Jan 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/01/12/%E5%BF%83%E5%A3%B0.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/01/12/%E5%BF%83%E5%A3%B0.html</guid>
+        <link>/2023/01/12/%E5%BF%83%E5%A3%B0.html</link>
+        <guid isPermaLink="true">/2023/01/12/%E5%BF%83%E5%A3%B0.html</guid>
         
         <category>read</category>
         
@@ -97,8 +97,8 @@
 ```&lt;/p&gt;
 </description>
         <pubDate>Tue, 29 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/29/JS.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/29/JS.html</guid>
+        <link>/2022/11/29/JS.html</link>
+        <guid isPermaLink="true">/2022/11/29/JS.html</guid>
         
         <category>JS</category>
         
@@ -113,8 +113,8 @@ https://www.jianshu.com/p/ddeb6c4f5c01&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 22 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/22/ps.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/22/ps.html</guid>
+        <link>/2022/11/22/ps.html</link>
+        <guid isPermaLink="true">/2022/11/22/ps.html</guid>
         
         <category>ps</category>
         
@@ -137,8 +137,8 @@ https://www.jianshu.com/p/ddeb6c4f5c01&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 21 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/21/ble.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/21/ble.html</guid>
+        <link>/2022/11/21/ble.html</link>
+        <guid isPermaLink="true">/2022/11/21/ble.html</guid>
         
         <category>ble</category>
         
@@ -162,8 +162,8 @@ Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 17 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/17/Google-play.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/17/Google-play.html</guid>
+        <link>/2022/11/17/Google-play.html</link>
+        <guid isPermaLink="true">/2022/11/17/Google-play.html</guid>
         
         <category>Android</category>
         
@@ -191,8 +191,8 @@ Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</guid>
+        <link>/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</link>
+        <guid isPermaLink="true">/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</guid>
         
         <category>Android</category>
         
@@ -232,8 +232,8 @@ Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/
 &lt;p&gt;你活的并不悲伤&lt;/p&gt;
 </description>
         <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/12/%E9%9A%8F%E7%AC%94.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/12/%E9%9A%8F%E7%AC%94.html</guid>
+        <link>/2022/11/12/%E9%9A%8F%E7%AC%94.html</link>
+        <guid isPermaLink="true">/2022/11/12/%E9%9A%8F%E7%AC%94.html</guid>
         
         <category>Read</category>
         
@@ -279,8 +279,8 @@ Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/
 
 </description>
         <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/12/%E7%BC%93%E5%AD%98.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/12/%E7%BC%93%E5%AD%98.html</guid>
+        <link>/2022/11/12/%E7%BC%93%E5%AD%98.html</link>
+        <guid isPermaLink="true">/2022/11/12/%E7%BC%93%E5%AD%98.html</guid>
         
         <category>Android</category>
         
@@ -322,8 +322,8 @@ Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/
 
 </description>
         <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/12/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/12/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6.html</guid>
+        <link>/2022/11/12/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6.html</link>
+        <guid isPermaLink="true">/2022/11/12/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6.html</guid>
         
         <category>Android</category>
         
