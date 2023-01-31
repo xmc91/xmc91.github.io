@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具集合 - WindMan Blog</title>
+    <meta name="author"  content="xmc91">
+    <meta name="description" content="工具集合">
+    <meta name="keywords"  content="Tools">
+    <!-- Open Graph -->
+    <meta property="og:title" content="工具集合 - WindMan Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/2022/11/10/tools.html">
+    <meta property="og:description" content="风一样de男子">
+    <meta property="og:site_name" content="WindMan Blog">
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_roc50gemkxpw4s4i.css">
+    <link rel="stylesheet" href="/assets/css/github-markdown.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
+    <link rel="stylesheet" href="/assets/css/share.min.css">
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!--
+Author: Ray-Eldath
+refer to:
+ - http://docs.mathjax.org/en/latest/options/index.html
+-->
+
+	<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ["$", "$"] ],
+			displayMath: [ ["$$", "$$"] ],
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		},
+		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+      });
+    </script>
+
+	
+    <!--
+Author: Ray-Eldath
+-->
+<style>
+    .markdown-body .anchor{
+        float: left;
+        margin-top: -8px;
+        margin-left: -20px;
+        padding-right: 4px;
+        line-height: 1;
+        opacity: 0;
+    }
+    
+    .markdown-body .anchor .anchor-icon{
+        font-size: 15px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let nodes = document.querySelector(".markdown-body").querySelectorAll("h1,h2,h3")
+        for(let node of nodes) {
+            var anchor = document.createElement("a")
+            var anchorIcon = document.createElement("i")
+            anchorIcon.setAttribute("class", "fa fa-anchor fa-lg anchor-icon")
+            anchorIcon.setAttribute("aria-hidden", true)
+            anchor.setAttribute("class", "anchor")
+            anchor.setAttribute("href", "#" + node.getAttribute("id"))
+            
+            anchor.onmouseover = function() {
+                this.style.opacity = "0.4"
+            }
+            
+            anchor.onmouseout = function() {
+                this.style.opacity = "0"
+            }
+            
+            anchor.appendChild(anchorIcon)
+            node.appendChild(anchor)
+        }
+    })
+</script>
+</head>
+
+
+<body>
+  <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+  <input id="nm-switch" type="hidden" value="true"> <header class="g-header">
+    <div class="g-logo">
+      <a href="/"></a>
+    </div>
+    <i id="menu-toggle" class="iconfont icon-menu"></i>
+    <nav class="g-nav">
+        <ul>
+            
+            <li><a href="/">home</a></li>
+            
+            <li><a href="/tags.html">tags</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+
+  <header
+    class="g-banner post-header post-pattern-circuitBoard bgcolor-pink post-no-cover"
+    data-theme="pink"
+  >
+    <div class="post-wrapper">
+      <div class="post-tags">
+        
+          
+            <a href="/tags.html#Tools" class="post-tag">Tools</a>
+          
+        
+      </div>
+      <h1>工具集合</h1>
+      <div class="post-meta">
+        <span class="post-meta-item"><i class="iconfont icon-author"></i>xmc91</span>
+        <time class="post-meta-item" datetime="22-11-10"><i class="iconfont icon-date"></i>10 Nov 2022</time>
+      </div>
+    </div>
+    
+  </header>
+
+  <div class="post-content visible">
+    
+
+    <article class="markdown-body">
+      <blockquote>
+  <p>工欲善其事，必先利其器</p>
+</blockquote>
+
+<h2 id="android-学习">Android 学习</h2>
+<ul>
+  <li><a href="https://blog.csdn.net/u010586698/article/details/56673379">android 国际化</a></li>
+  <li><a href="https://blog.csdn.net/yanzi1225627/article/details/48215549">mac 反编译</a></li>
+  <li><a href="https://www.jianshu.com/p/73e36529cf7c">路人总结，Android 激进</a></li>
+  <li><a href="https://developer.android.google.cn/">Android 大本营</a></li>
+  <li><a href="https://www.wanandroid.com/">WanAndroid</a></li>
+  <li><a href="https://developer.android.com/distribute/best-practices/develop/64-bit">Android 64</a></li>
+  <li><a href="https://blog.csdn.net/weixin_40611659/article/details/95174124">Android 10适配</a></li>
+  <li><a href="http://androidxref.com/">androidxref</a></li>
+</ul>
+
+<h2 id="工具篇">工具篇</h2>
+<ul>
+  <li>[Google apk下载](https://apps.evozi.com/apk-downloader/?id=com.satisfyer.connect</li>
+  <li><a href="https://www.deepl.com/translator">翻译工具</a>)</li>
+  <li><a href="https://support.apple.com/zh-cn/HT201236">Mac 快捷键</a></li>
+  <li><a href="https://www.runoob.com/markdown/md-link.html">菜鸟教程</a></li>
+  <li><a href="">油猴</a></li>
+</ul>
+
+<h2 id="命令行">命令行</h2>
+<ul>
+  <li><a href="https://www.jianshu.com/p/10023495fba9">ssh 使用</a></li>
+</ul>
+
+
+    </article>
+
+    
+    <div class="social-share-wrapper">
+      <div class="social-share"></div>
+    </div>
+    
+  </div>
+
+  <section class="author-detail">
+    <section class="post-footer-item author-card">
+      <div class="avatar">
+        <img src="/assets/img/profile.png" alt="">
+      </div>
+      <div class="author-name" rel="author">xmc91</div>
+      <div class="bio">
+        <p>Android、Nodejs、WX Plugin 开发者,历史、杂谈</p>
+      </div>
+      
+      <ul class="sns-links">
+        
+        <li>
+          <a href="//juejin.im/user/58b513f0570c35006b0be9c1" target="_blank">
+                    <i class="iconfont icon-juejin"></i>
+                </a>
+        </li>
+        
+        <li>
+          <a href="//github.com/xmc91" target="_blank">
+                    <i class="iconfont icon-github"></i>
+                </a>
+        </li>
+        
+      </ul>
+      
+    </section>
+    <section class="post-footer-item read-next">
+      
+      <div class="read-next-item">
+        <a href="/2022/11/12/Android-Version-Adapter.html" class="read-next-link"></a>
+        <section>
+          <span>Android 版本适配</span>
+          <p>  升级AndroidX ，AndroidX概念：https://developer.android.google...</p>
+        </section>
+        
+     </div>
+      
+
+      
+      <div class="read-next-item">
+        <a href="/2020/08/31/kotlin%E5%86%85%E8%81%94.html" class="read-next-link"></a>
+          <section>
+            <span>kotlin 内联函数</span>
+            <p>  let和with合并为run，孪生出apply，also又孪生与let  let，it代理对象，且返回最后一行...</p>
+          </section>
+          
+      </div>
+      
+    </section>
+    
+    <section class="post-footer-item comment">
+        <div id="disqus_thread"></div>
+    </section>
+    
+  </section>
+
+  <footer class="g-footer">
+  <section>WindMan Blog ©
+  
+  
+    2019
+    -
+  
+  2023
+  </section>
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>  
+
+ 总访问量<span id="busuanzi_value_site_pv"></span>次
+ |访客数<span id="busuanzi_value_site_uv"></span>人次
+ 
+</footer>
+
+
+  <script src="/assets/js/social-share.min.js"></script>
+  <script>
+    socialShare('.social-share', {
+      sites: [
+        
+          'wechat'
+          ,
+          
+        
+          'weibo'
+          ,
+          
+        
+          'douban'
+          ,
+          
+        
+          'twitter'
+          
+        
+      ],
+      wechatQrcodeTitle: "分享到微信朋友圈",
+      wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
+    });
+  </script>
+
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://xwindman.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+
+  <script src="/assets/js/prism.js"></script>
+  <script src="/assets/js/index.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android 碎片记忆 - WindMan Blog</title>
+    <meta name="author"  content="xmc91">
+    <meta name="description" content="Android 碎片记忆">
+    <meta name="keywords"  content="android">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Android 碎片记忆 - WindMan Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/2020/07/29/Android-record.html">
+    <meta property="og:description" content="风一样de男子">
+    <meta property="og:site_name" content="WindMan Blog">
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_roc50gemkxpw4s4i.css">
+    <link rel="stylesheet" href="/assets/css/github-markdown.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
+    <link rel="stylesheet" href="/assets/css/share.min.css">
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!--
+Author: Ray-Eldath
+refer to:
+ - http://docs.mathjax.org/en/latest/options/index.html
+-->
+
+	<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ["$", "$"] ],
+			displayMath: [ ["$$", "$$"] ],
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		},
+		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+      });
+    </script>
+
+	
+    <!--
+Author: Ray-Eldath
+-->
+<style>
+    .markdown-body .anchor{
+        float: left;
+        margin-top: -8px;
+        margin-left: -20px;
+        padding-right: 4px;
+        line-height: 1;
+        opacity: 0;
+    }
+    
+    .markdown-body .anchor .anchor-icon{
+        font-size: 15px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let nodes = document.querySelector(".markdown-body").querySelectorAll("h1,h2,h3")
+        for(let node of nodes) {
+            var anchor = document.createElement("a")
+            var anchorIcon = document.createElement("i")
+            anchorIcon.setAttribute("class", "fa fa-anchor fa-lg anchor-icon")
+            anchorIcon.setAttribute("aria-hidden", true)
+            anchor.setAttribute("class", "anchor")
+            anchor.setAttribute("href", "#" + node.getAttribute("id"))
+            
+            anchor.onmouseover = function() {
+                this.style.opacity = "0.4"
+            }
+            
+            anchor.onmouseout = function() {
+                this.style.opacity = "0"
+            }
+            
+            anchor.appendChild(anchorIcon)
+            node.appendChild(anchor)
+        }
+    })
+</script>
+</head>
+
+
+<body>
+  <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+  <input id="nm-switch" type="hidden" value="true"> <header class="g-header">
+    <div class="g-logo">
+      <a href="/"></a>
+    </div>
+    <i id="menu-toggle" class="iconfont icon-menu"></i>
+    <nav class="g-nav">
+        <ul>
+            
+            <li><a href="/">home</a></li>
+            
+            <li><a href="/tags.html">tags</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+
+  <header
+    class="g-banner post-header post-pattern-circuitBoard bgcolor-pink post-no-cover"
+    data-theme="pink"
+  >
+    <div class="post-wrapper">
+      <div class="post-tags">
+        
+          
+            <a href="/tags.html#android" class="post-tag">android</a>
+          
+        
+      </div>
+      <h1>Android 碎片记忆</h1>
+      <div class="post-meta">
+        <span class="post-meta-item"><i class="iconfont icon-author"></i>WindMan</span>
+        <time class="post-meta-item" datetime="20-07-29"><i class="iconfont icon-date"></i>29 Jul 2020</time>
+      </div>
+    </div>
+    
+  </header>
+
+  <div class="post-content visible">
+    
+
+    <article class="markdown-body">
+      <blockquote>
+  <p>一片，两片，三四片；五片，六片，七八片。落入芦苇全不见！</p>
+</blockquote>
+
+<h2 id="h5唤起app">h5唤起app</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ [scheme:][//authority][path][?query][#fragment],如：https://www.baidu.com
++ scheme的触发方式会被浏览器拦截，它们都各自维护着一个白名单，但是微博之类的都是可以申请的，只是条件各不相同，比如微博的就是在你的 APP 中添加打开微博的入口，三个月内唤起超过 100w 次，就可以加入白名单了。
++ 在安卓中我们一般都是直接打开腾讯应用宝，ios 中 直接打开 App Store。点击腾讯应用宝中的“打开”按钮，可以直接唤起我们的 APP，但是无法打开 APP 中的某个功能（就是无法打开指定页面）。腾讯应用宝对外开放了一个叫做 APP Link 的申请，只要你申请了 APP Link，就可以通过在打开应用宝的时候在应用宝地址后面添加上 &amp;android_schema={your_scheme} ，来打开指定的页面了。
++ location.href跳转：window.location.href = 'sinaweibo://qrcode';
++ a标签唤起： &lt;a href="mqqapi://card/show_pslcard?src_type=internal&amp;version=1&amp;uin=123456"&gt;QQ临时交流&lt;/a&gt;
++ iframe方案： &lt;iframe src="sinaweibo://qrcode"&gt;
+
+</code></pre></div></div>
+
+<h2 id="android-9-允许http">Android 9+ 允许http</h2>
+<ul>
+  <li>res目录下创建xml目录,创建network_security_config.xml文件
+```
+&lt;?xml version=”1.0” encoding=”utf-8”?&gt;</li>
+</ul>
+<network-security-config>
+<base-config cleartextTrafficPermitted="true" />
+</network-security-config>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ AndroidManifest.xml添加:
+</code></pre></div></div>
+<p>android:networkSecurityConfig=”@xml/network_security_config”</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## Android8.0 允许安装未知来源权限
++ 8.0之前，从除官方应用商店之外的来源安装App时，需要打开系统设置当中的”允许未知来源”，在最新的Android O当中谷歌已经删除了该永久授权的选项，从系统设置当中已经找不到该开关。谷歌将永久授权修改为每次的单独授权，当用户每次安装第三方来源（包括华为应用市场等）的android软件时需要对软件权限进行手动确认
++ 添加权限
+</code></pre></div></div>
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ 判断运行时权限是否打开
+</code></pre></div></div>
+<p>if(Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O){
+ //先判断是否有安装未知来源应用的权限
+    if(!getPackageManager().canRequestPackageInstalls()){
+    //跳转到应用详情，打开开关
+    }
+ }</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ 跳转到应用详情，打开开关
+</code></pre></div></div>
+<p>Uri packageURI = Uri.parse(“package:”+mContext.getPackageName());
+Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,packageURI);
+startActivityForResult(intent, INSTALL_PERMISS_CODE);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ onActivityResult回调
+</code></pre></div></div>
+<p>if (resultCode == RESULT_OK &amp;&amp; requestCode == INSTALL_PERMISS_CODE) {
+   // 安装APP
+ }</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## AlertDialog 回调 
++ 创建 AlertDialog
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static void showAlert(Context context, String title, String message, OnClickListener listener){
+    Builder builder = new Builder(context);
+    builder.setTitle(title);
+    builder.setMessage(message);
+    builder.setPositiveButton("确定", listener);
+    builder.setCancelable(false);
+    builder.setIcon(R.mipmap.ic_launcher);
+    AlertDialog dialog = builder.create();
+    dialog.show();
+} ``` + 接管点击事件 ``` showAlert(this, "title", "message", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    
+                }
+            }); ``` ## TextView 小特性 + 可复制，如果是在listview里，替换为RecyclerView 即可 ``` android:textIsSelectable="true" ``` + 可滑动 ```  tv.movementMethod = ScrollingMovementMethod.getInstance() ``` + 支持富文本:SpannableString或者html ``` //设置Hello World前三个字符为红色,背景为蓝色 SpannableString textSpanned = new SpannableString("Hello World"); // ForegroundColorSpan(Color.RED) 设置前景 // BackgroundColorSpan(Color.RED) 设置背景 // new StyleSpan(Typeface.ITALIC) 斜体 // new UnderlineSpan() 下划线 // ClickableSpan 点击事件 textSpanned.setSpan(xxxSpan,0, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE); tv.setMovementMethod(LinkMovementMethod.getInstance()); tv.setText(textSpanned4); ``` + 跑马灯：借助系统或者自定义或者直接用别人的轮子 ```
+&lt;TextView
+    android:layout_marginTop="30dp"
+    android:layout_width="100dp"
+    android:layout_height="30dp"
+    android:text="Hello World! wertyuiodfghjklxcvbnm,.dfghjklghjkl"
+    android:singleLine="true"
+    android:scrollHorizontally="true"
+    android:ellipsize="marquee"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:marqueeRepeatLimit="marquee_forever"
+    /&gt; ```
+</code></pre></div></div>
+
+<h2 id="android-多国语言">android 多国语言</h2>
+<ul>
+  <li></li>
+</ul>
+
+<h2 id="报错is-not-accessible-from-javalangclass-androidappactivitythread">【报错】is not accessible from java.lang.Class android.app.ActivityThread</h2>
+<ul>
+  <li>修饰改为public</li>
+</ul>
+
+<h2 id="android32位和64位">Android32位和64位</h2>
+
+<ul>
+  <li>64比32位宽，32可操作内存最高4gb，64可操作内存最高192gb。https://blog.csdn.net/weixin_36213756/article/details/117615529</li>
+  <li>指令集不同，带64的都是64位，每一种abi向下兼容。从lancher启动后，32位只有一个zygote，43有两个：zytote和zygote64，64的art等优于32的art。  https://blog.csdn.net/u012739527/article/details/124012420</li>
+  <li>官方Android ABI ：https://developer.android.com/ndk/guides/abis?hl=zh-cn</li>
+  <li>官方：https://developer.android.com/games/optimize/64-bit?hl=zh-cn</li>
+</ul>
+
+<h2 id="修改jdk版本">修改jdk版本</h2>
+
+<ul>
+  <li>打开AS设置，搜索gradle，修改配置。AS自带java环境</li>
+</ul>
+
+<h2 id="集成admob之开屏广告2020-8月份才有的一个广告格式httpsdevelopersgooglecomadmobandroidapp-open-adshlzh-cn">集成admob之开屏广告【2020-8月份才有的一个广告格式】：https://developers.google.com/admob/android/app-open-ads?hl=zh-CN</h2>
+
+<ul>
+  <li>
+    <p>必须androidX</p>
+  </li>
+  <li>
+    <p>依赖的依赖最终会下载到本地，但是最新的会替代其他旧版本</p>
+  </li>
+  <li>
+    <p>Android APP升级逻辑:https://blog.csdn.net/weixin_34363171/article/details/91684168</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ versionCode用来程序升级
++ versionName用来产品标识
++ packagename用来校验
+</code></pre></div>    </div>
+  </li>
+  <li>Google play 举报APP：https://support.google.com/googleplay/android-developer/contact/takedown</li>
+  <li>Google play举报版权等：https://support.google.com/googleplay/android-developer/answer/1085703?hl=zh-Hans</li>
+  <li>
+    <p>Google 广告 admob：https://developers.google.cn/admob/android/quick-start</p>
+  </li>
+  <li>
+    <p>Google banner 广告集成</p>
+
+    <ul>
+      <li>通过BuildeConfig.DEUBG配置广告id，测试版本只能用测试id，否则容易封号</li>
+      <li>下载Google 原生模板广告的代码，代码+资源全部导入APP，可修改样式</li>
+      <li>用AdLoader加载广告，然后在loaded之后用adView设置style及返回的广告实例</li>
+    </ul>
+  </li>
+  <li>
+    <p>获取某view的高度，假定view是LinearLayout，高度设置WRAP_CONTENT</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static float getRealHeight(View child){
+    LinearLayout llayout = (LinearLayout) child;
+    ViewGroup.LayoutParams params = llayout.getLayoutParams();
+    if (params == null){
+        params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+    }
+    int widthSpec = ViewGroup.getChildMeasureSpec(0,0,params.width);
+    int heightSpec;
+    if (params.height&gt;0){
+        heightSpec = View.MeasureSpec.makeMeasureSpec(params.height, View.MeasureSpec.EXACTLY);
+    }else {
+        heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+    }
+    llayout.measure(widthSpec,heightSpec);
+    return llayout.getMeasuredHeight();//获取布局高度，获取布局宽度可以调用getMeasuredWidth()
+}
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Android 实现LifecycleOwner</p>
+
+    <ul>
+      <li>定义声明状态、切换状态、查询上一个状态、管理LifecycleObserver</li>
+      <li>LifecycleRegistry
+        <ul>
+          <li>继承Lifecycle</li>
+        </ul>
+      </li>
+      <li>LifecycleObserver：生命周期观察者</li>
+      <li>LifecycleOwner：继承类LifecycleRegistryOwner管理生命周期观察者</li>
+      <li>通过ReportFragment管理生命周期，注入：ReportFragment.injectIfNeededIn(this)</li>
+    </ul>
+  </li>
+  <li>
+    <p>Android context</p>
+
+    <ul>
+      <li>
+        <p>继承关系</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>context
+    ContextImpl实现类
+    ContextWrapper封装类
+        Application
+        Service 幕后工作
+        ContextThemeWrapper带主题的封装类，即可以看的到的
+            Activity
+    
+        
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>具体实现：ContextImpl</p>
+      </li>
+      <li>
+        <p>标准的application获取方式</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class MyApplication extends Application {
+    private static MyApplication app;
+    public static MyApplication getInstance() {
+        return app;
+    }
+        
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        app = this;
+    }
+}
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Android 虚拟键处理</p>
+
+    <ul>
+      <li>
+        <p>判断是否有虚拟键</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static boolean checkDeviceHasNavigationBar(Context context) {
+        boolean hasMenuKey = ViewConfiguration.get(context)
+                .hasPermanentMenuKey();
+        boolean hasBackKey = KeyCharacterMap
+                .deviceHasKey(KeyEvent.KEYCODE_BACK);
+        if (!hasMenuKey &amp; !hasBackKey) {
+            return true;
+        }
+        return false;
+    }
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>获取高度</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static int getNavigationBarHeight(Context context) {
+        int result = 0;
+        if (checkDeviceHasNavigationBar(context)) {
+            Resources res = context.getResources();
+            int resourceId = res.getIdentifier("navigation_bar_height", "dimen", "android");
+            if (resourceId &gt; 0) {
+                result = res.getDimensionPixelSize(resourceId);
+            }
+        }
+        return result;
+    }
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>适配</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/**
+ * Android 5.0及以上 在Translucent模式下防止键盘挡住EditText
+ * https://stackoverflow.com/questions/7417123/android-how-to-adjust-layout-in-full-screen-mode-when-softkeyboard-is-visible/19494006#19494006
+ */
+public class AndroidBug5497Workaround {
+    // For more information, see https://code.google.com/p/android/issues/detail?id=5497
+    // To use this class, simply invoke assistActivity() on an Activity that already has its content view set.
+    
+    public static void assistActivity(Activity activity) {
+        new AndroidBug5497Workaround(activity);
+    }
+    
+    private View mChildOfContent;
+    private int usableHeightPrevious;
+    private FrameLayout.LayoutParams frameLayoutParams;
+    
+    private AndroidBug5497Workaround(Activity activity) {
+        FrameLayout content = activity.findViewById(android.R.id.content);
+        mChildOfContent = content.getChildAt(0);
+        mChildOfContent.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            public void onGlobalLayout() {
+                possiblyResizeChildOfContent();
+            }
+        });
+        frameLayoutParams = (FrameLayout.LayoutParams) mChildOfContent.getLayoutParams();
+    }
+    
+    private void possiblyResizeChildOfContent() {
+        Timber.e("虚拟按键高度 %d", ScreenUtils.getNavigationBarHeight());
+        int usableHeightNow = computeUsableHeight();
+        if (usableHeightNow != usableHeightPrevious) {
+            int usableHeightSansKeyboard = mChildOfContent.getRootView().getHeight();
+            int heightDifference = usableHeightSansKeyboard - usableHeightNow;
+            if (heightDifference &gt; (usableHeightSansKeyboard / 4)) {
+                // keyboard probably just became visible
+                if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.KITKAT) {
+                    frameLayoutParams.height = usableHeightSansKeyboard - heightDifference + BarUtils.getStatusBarHeight(mChildOfContent.getContext());
+                } else {
+                    frameLayoutParams.height = usableHeightSansKeyboard - heightDifference;
+                }
+            } else {
+                // keyboard probably just became hidden
+                frameLayoutParams.height = usableHeightSansKeyboard - ScreenUtils.getNavigationBarHeight();
+            }
+            mChildOfContent.requestLayout();
+            usableHeightPrevious = usableHeightNow;
+        }
+    }
+    
+    private int computeUsableHeight() {
+        Rect r = new Rect();
+        mChildOfContent.getWindowVisibleDisplayFrame(r);
+        return (r.bottom - r.top);
+    }
+}
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>android  utils 库：https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md</p>
+  </li>
+  <li>
+    <p>修复错误：android.content.res.XmlResourceParser android.content.pm.ProviderInfo.loadXmlMetaData</p>
+
+    <ul>
+      <li>
+        <p>fileProvider解析失败</p>
+      </li>
+      <li>
+        <p>manifest配置的authorities和APP里配置的要统一</p>
+      </li>
+    </ul>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android:authorities="${applicationId}.fileprovider"
+PlatformConfig.setWXFileProvider("com.diya.isense.fileprovider");
+</code></pre></div>    </div>
+  </li>
+  <li>seekbar 中间点
+```</li>
+</ul>
+<SeekBar style="@style/Widget.AppCompat.SeekBar.Discrete" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:max="5" />
+
+<p>```</p>
+
+
+    </article>
+
+    
+    <div class="social-share-wrapper">
+      <div class="social-share"></div>
+    </div>
+    
+  </div>
+
+  <section class="author-detail">
+    <section class="post-footer-item author-card">
+      <div class="avatar">
+        <img src="/assets/img/profile.png" alt="">
+      </div>
+      <div class="author-name" rel="author">xmc91</div>
+      <div class="bio">
+        <p>Android、Nodejs、WX Plugin 开发者,历史、杂谈</p>
+      </div>
+      
+      <ul class="sns-links">
+        
+        <li>
+          <a href="//juejin.im/user/58b513f0570c35006b0be9c1" target="_blank">
+                    <i class="iconfont icon-juejin"></i>
+                </a>
+        </li>
+        
+        <li>
+          <a href="//github.com/xmc91" target="_blank">
+                    <i class="iconfont icon-github"></i>
+                </a>
+        </li>
+        
+      </ul>
+      
+    </section>
+    <section class="post-footer-item read-next">
+      
+      <div class="read-next-item">
+        <a href="/2020/08/30/12%E6%98%9F%E5%BA%A7%E5%A5%B3%E4%B8%8E%E5%8F%8C%E9%B1%BC%E7%94%B7%E7%9A%84%E6%90%AD%E9%85%8D.html" class="read-next-link"></a>
+        <section>
+          <span>双鱼男与12星座搭配</span>
+          <p>  最佳配对：巨蟹座女、天蝎座女、摩羯座女白羊女  他的罗曼蒂克令人响往，但他的情绪起伏让你吃不消。你的直言无讳可...</p>
+        </section>
+        
+     </div>
+      
+
+      
+      <div class="read-next-item">
+        <a href="/2020/07/28/%E6%8E%92%E5%BA%8F.html" class="read-next-link"></a>
+          <section>
+            <span>排序</span>
+            <p>  十大排序冒泡排序  从前往后，每一次，交换一个前者大于后者的位置  最大排序次数情况：整个数据倒序  最大排序...</p>
+          </section>
+          
+      </div>
+      
+    </section>
+    
+    <section class="post-footer-item comment">
+        <div id="disqus_thread"></div>
+    </section>
+    
+  </section>
+
+  <footer class="g-footer">
+  <section>WindMan Blog ©
+  
+  
+    2019
+    -
+  
+  2023
+  </section>
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>  
+
+ 总访问量<span id="busuanzi_value_site_pv"></span>次
+ |访客数<span id="busuanzi_value_site_uv"></span>人次
+ 
+</footer>
+
+
+  <script src="/assets/js/social-share.min.js"></script>
+  <script>
+    socialShare('.social-share', {
+      sites: [
+        
+          'wechat'
+          ,
+          
+        
+          'weibo'
+          ,
+          
+        
+          'douban'
+          ,
+          
+        
+          'twitter'
+          
+        
+      ],
+      wechatQrcodeTitle: "分享到微信朋友圈",
+      wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
+    });
+  </script>
+
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://xwindman.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+
+  <script src="/assets/js/prism.js"></script>
+  <script src="/assets/js/index.min.js"></script>
+</body>
+
+</html>

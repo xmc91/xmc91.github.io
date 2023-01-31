@@ -1,0 +1,17 @@
+---
+layout: post
+title: 'Google play'
+author: xmc91
+date: 2022-11-17
+categories: Android
+tags: Android 
+---
+
++ 自管签名，千万别用Google play托管的签名
+
+```
+java -jar pepk.jar --keystore xxxx.jks --alias xxxx --output=xxxxx.zip --encryptionkey=034200041E224EE22B45D4861F9E140F278A5D2860846C2CF5D2C3C02 --include-cert
+```
++ 如果不小心被Google 签名了。可以在Google play改成自签名，但是老用户就不会提示升级了。
+Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/article/details/88720357
+还原jks：https://blog.csdn.net/Jason_HD/article/details/124443963

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adb - WindMan Blog</title>
+    <meta name="author"  content="xmc91">
+    <meta name="description" content="adb">
+    <meta name="keywords"  content="Android">
+    <!-- Open Graph -->
+    <meta property="og:title" content="adb - WindMan Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/2022/11/12/adb.html">
+    <meta property="og:description" content="风一样de男子">
+    <meta property="og:site_name" content="WindMan Blog">
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_roc50gemkxpw4s4i.css">
+    <link rel="stylesheet" href="/assets/css/github-markdown.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
+    <link rel="stylesheet" href="/assets/css/share.min.css">
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!--
+Author: Ray-Eldath
+refer to:
+ - http://docs.mathjax.org/en/latest/options/index.html
+-->
+
+	<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ["$", "$"] ],
+			displayMath: [ ["$$", "$$"] ],
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		},
+		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+      });
+    </script>
+
+	
+    <!--
+Author: Ray-Eldath
+-->
+<style>
+    .markdown-body .anchor{
+        float: left;
+        margin-top: -8px;
+        margin-left: -20px;
+        padding-right: 4px;
+        line-height: 1;
+        opacity: 0;
+    }
+    
+    .markdown-body .anchor .anchor-icon{
+        font-size: 15px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let nodes = document.querySelector(".markdown-body").querySelectorAll("h1,h2,h3")
+        for(let node of nodes) {
+            var anchor = document.createElement("a")
+            var anchorIcon = document.createElement("i")
+            anchorIcon.setAttribute("class", "fa fa-anchor fa-lg anchor-icon")
+            anchorIcon.setAttribute("aria-hidden", true)
+            anchor.setAttribute("class", "anchor")
+            anchor.setAttribute("href", "#" + node.getAttribute("id"))
+            
+            anchor.onmouseover = function() {
+                this.style.opacity = "0.4"
+            }
+            
+            anchor.onmouseout = function() {
+                this.style.opacity = "0"
+            }
+            
+            anchor.appendChild(anchorIcon)
+            node.appendChild(anchor)
+        }
+    })
+</script>
+</head>
+
+
+<body>
+  <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+  <input id="nm-switch" type="hidden" value="true"> <header class="g-header">
+    <div class="g-logo">
+      <a href="/"></a>
+    </div>
+    <i id="menu-toggle" class="iconfont icon-menu"></i>
+    <nav class="g-nav">
+        <ul>
+            
+            <li><a href="/">home</a></li>
+            
+            <li><a href="/tags.html">tags</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+
+  <header
+    class="g-banner post-header post-pattern-circuitBoard bgcolor-pink post-no-cover"
+    data-theme="pink"
+  >
+    <div class="post-wrapper">
+      <div class="post-tags">
+        
+          
+            <a href="/tags.html#Android" class="post-tag">Android</a>
+          
+        
+      </div>
+      <h1>adb</h1>
+      <div class="post-meta">
+        <span class="post-meta-item"><i class="iconfont icon-author"></i>xmc91</span>
+        <time class="post-meta-item" datetime="22-11-12"><i class="iconfont icon-date"></i>12 Nov 2022</time>
+      </div>
+    </div>
+    
+  </header>
+
+  <div class="post-content visible">
+    
+
+    <article class="markdown-body">
+      <blockquote>
+  <p>NodeJs 磨刀霍霍向猪羊</p>
+</blockquote>
+
+<h2 id="adb-路径">adb 路径</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adb --help
+Android Debug Bridge version 1.0.41
+Version 30.0.5-6877874
+Installed as /Users/developer/Desktop/Work/Tools/sdk/platform-tools/adb
+</code></pre></div></div>
+
+<h2 id="工作原理">工作原理</h2>
+
+<p>adb 客户端启动时，先检查服务器是否启动，服务器启动后绑定本地5073端口，监听客户端命令。server 和adbd是多对多关系，</p>
+
+<ul>
+  <li>adb client ：运行在pc,发送命令给server，3种命令：1- 不需server 的version、help；2- 不需要adbd但需要server的 devices；3- 需要adbd执行的命令</li>
+  <li>adb server：运行在pc，检查设备连接状态，中转各个通信</li>
+  <li>adbd（adb daemon 守护进程）：运行在Android 上，用来连接server</li>
+</ul>
+
+<h2 id="adb-通过wlan连接android-10-及更低版本">adb 通过wlan连接(（Android 10 及更低版本）)</h2>
+
+<ul>
+  <li>手机和电脑连接同一个网络</li>
+  <li>查看当前主机连接的设备：adb devices -l</li>
+  <li>插入USB，监听手机5555的tcpip连接： adb tcpip 5555</li>
+  <li>拔掉USB，查看手机ip</li>
+  <li>连接手机：adb connect phone_ip</li>
+  <li>查看主机目前连接的设备：adb devices</li>
+  <li>重置主机adb：adb kill-server</li>
+  <li>启动主机：adb start-server</li>
+  <li>断开后，可重连</li>
+</ul>
+
+<h2 id="adb命令">adb命令</h2>
+
+<p>adb自带了很多命令，其中shell命令是Android特有</p>
+
+<p>包含以下几大块命令</p>
+
+<ul>
+  <li>一般命令3个：
+    <ul>
+      <li>devices 查看当前连接的设备</li>
+      <li>help 查看帮助</li>
+      <li>version</li>
+    </ul>
+  </li>
+  <li>网络操作
+    <ul>
+      <li>connect 、disconnect、pair  [port]</li>
+      <li>forward</li>
+      <li>reverse</li>
+      <li>mdns</li>
+    </ul>
+  </li>
+  <li>文件转换
+    <ul>
+      <li>push</li>
+      <li>pull</li>
+      <li>sync</li>
+    </ul>
+  </li>
+  <li>APP 安装
+    <ul>
+      <li>install、uninstall</li>
+    </ul>
+  </li>
+  <li>调试
+    <ul>
+      <li>bugreport</li>
+      <li>jdwp</li>
+      <li>logcat</li>
+    </ul>
+  </li>
+  <li>安全
+    <ul>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>Disable</td>
+              <td>Enable-verity</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>Keygen 生成秘钥和公钥，Mac系统自带这个工具</li>
+    </ul>
+  </li>
+  <li>脚本
+    <ul>
+      <li>wait-for</li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>Get-state</td>
+              <td>serialno</td>
+              <td>devpath</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>remount</li>
+      <li>reboot</li>
+      <li>Tcpip</li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>root</td>
+              <td>unroot</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </li>
+  <li>内部调试
+    <ul>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>start</td>
+              <td>kill-server</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>Reconnect</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="常用命令">常用命令</h2>
+
+<ul>
+  <li>安装apk：adb install xxx.apk。如果是debug版本，需要加 -t</li>
+  <li>客户机-&gt;主机复制文件：adb pull remote local，比如 adb pull /sdcard/test.md desktop/test.md</li>
+  <li>主机-&gt;客户机复制文件：adb push local remote，比如 adb push test.md /sdcard/test.md</li>
+</ul>
+
+<h2 id="adb-shell-android-特有命令">adb shell (Android 特有命令)</h2>
+
+<p>adb shell ls /system/bin 可查看所有shell命令</p>
+
+<ul>
+  <li>获取系统版本</li>
+</ul>
+
+<p>adb shell getprop ro.build.version.release</p>
+
+<ul>
+  <li>获取系统api版本</li>
+</ul>
+
+<p>adb shell getprop ro.build.version.sdk</p>
+
+<ul>
+  <li>获取手机相关制造商信息</li>
+</ul>
+
+<p>adb shell getprop | grep “model|version.sdk|manufacture
+r|hardware|platform|revision|serialno|product.name|brand”</p>
+
+<ul>
+  <li>获取手机系统信息（ CPU，厂商名称等）</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>adb shell “cat /system/build.prop</td>
+      <td>grep “product””</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>获取手机设备型号</li>
+</ul>
+
+<p>adb -d shell getprop ro.product.model</p>
+
+<ul>
+  <li>获取手机厂商名称</li>
+</ul>
+
+<p>adb -d shell getprop ro.product.brand</p>
+
+<ul>
+  <li>获取手机的序列号</li>
+</ul>
+
+<p>有两种方式</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- adb get-serialno
+- adb shell getprop ro.serialno
+</code></pre></div></div>
+
+<ul>
+  <li>获取手机MAC地址</li>
+</ul>
+
+<p>adb shell cat /sys/class/net/wlan0/address</p>
+
+<ul>
+  <li>获取手机内存信息</li>
+</ul>
+
+<p>adb shell cat /proc/meminfo</p>
+
+<ul>
+  <li>获取手机存储信息</li>
+</ul>
+
+<p>adb shell df</p>
+
+<ul>
+  <li>获取手机内部存储信息</li>
+</ul>
+
+<p>adb shell df /data</p>
+
+<ul>
+  <li>获取Android设备屏幕分辨率</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>adb shell “dumpsys window</td>
+      <td>grep mUnrestrictedScreen”</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    <p>连接多个设备对其中一个进行操作
+//以adb shell 为例
+adb -s 192.168.101.37:5555 shell</p>
+  </li>
+  <li>
+    <p>查看运行进程</p>
+  </li>
+</ul>
+
+<p>adb shell procrank</p>
+
+<ul>
+  <li>关闭或杀掉进程</li>
+</ul>
+
+<p>adb shell kill 366</p>
+
+<ul>
+  <li>保留数据和缓存文件，重新安装，升级</li>
+</ul>
+
+<p>adb install -r test.apk</p>
+
+<ul>
+  <li>卸载app但保留数据和缓存文件</li>
+</ul>
+
+<p>adb uninstall -k cnblogs.apk</p>
+
+<ul>
+  <li>查看目录下的文件大小</li>
+</ul>
+
+<p>adb shell du -sh *</p>
+
+<ul>
+  <li>查看正在运行的Services</li>
+</ul>
+
+<p>adb shell dumpsys activity services [<packagename>]</packagename></p>
+
+<ul>
+  <li>查看正在运行的Activity</li>
+</ul>
+
+<p>adb shell dumpsys activity [<packagename>]</packagename></p>
+
+<ul>
+  <li>clear 清除应用数据</li>
+</ul>
+
+<p>adb shell pm clear com.baidu</p>
+
+<ul>
+  <li>cp复制文件</li>
+</ul>
+
+<p>adb shell 进入Android Linux命令中</p>
+
+<p>cp -f system/app/Music/Music.apk /sdcard/Music.apk</p>
+
+<ul>
+  <li>删除命令</li>
+</ul>
+
+<p>adb shell 进入Android Linux命令中</p>
+
+<p>rm  -r  /mnt/sdcard/a.mp3</p>
+
+<p>删除文件夹的时候需要加上-r参数</p>
+
+<p>cd dir 
+rm *    删除dir中所有文件</p>
+
+<ul>
+  <li>重启进入recovery模式</li>
+</ul>
+
+<p>adb reboot recovery</p>
+
+<ul>
+  <li>cat查看文件</li>
+</ul>
+
+<p>cat  /sdcard/test.txt</p>
+
+<ul>
+  <li>查看指定进程PID</li>
+</ul>
+
+<p>ps +  进程的包名</p>
+
+<ul>
+  <li>查看进程具体的信息</li>
+</ul>
+
+<p>例如：1460是要查看的进程的PID
+cat /proc/1460/maps    查看进程的文件结构 
+cat /proc/1460/status   查看进程的状态</p>
+
+<ul>
+  <li>findstr 和 grep过滤搜索</li>
+</ul>
+
+<p>1）cmd下搜索包名为com.android.launcher3的进程 
+adb shell ps|findstr /i “com.android.launcher3”</p>
+
+<p>2）shell下面搜索 
+先使用adb shell进去，然后使用grep命令过滤 
+ps | grep “com.linux.test”</p>
+
+    </article>
+
+    
+    <div class="social-share-wrapper">
+      <div class="social-share"></div>
+    </div>
+    
+  </div>
+
+  <section class="author-detail">
+    <section class="post-footer-item author-card">
+      <div class="avatar">
+        <img src="/assets/img/profile.png" alt="">
+      </div>
+      <div class="author-name" rel="author">xmc91</div>
+      <div class="bio">
+        <p>Android、Nodejs、WX Plugin 开发者,历史、杂谈</p>
+      </div>
+      
+      <ul class="sns-links">
+        
+        <li>
+          <a href="//juejin.im/user/58b513f0570c35006b0be9c1" target="_blank">
+                    <i class="iconfont icon-juejin"></i>
+                </a>
+        </li>
+        
+        <li>
+          <a href="//github.com/xmc91" target="_blank">
+                    <i class="iconfont icon-github"></i>
+                </a>
+        </li>
+        
+      </ul>
+      
+    </section>
+    <section class="post-footer-item read-next">
+      
+      <div class="read-next-item">
+        <a href="/2022/11/12/deepin.html" class="read-next-link"></a>
+        <section>
+          <span>deepin</span>
+          <p>  deepin  升级</p>
+        </section>
+        
+     </div>
+      
+
+      
+      <div class="read-next-item">
+        <a href="/2022/11/12/SVG.html" class="read-next-link"></a>
+          <section>
+            <span>SVG</span>
+            <p>SVG</p>
+          </section>
+          
+      </div>
+      
+    </section>
+    
+    <section class="post-footer-item comment">
+        <div id="disqus_thread"></div>
+    </section>
+    
+  </section>
+
+  <footer class="g-footer">
+  <section>WindMan Blog ©
+  
+  
+    2019
+    -
+  
+  2023
+  </section>
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>  
+
+ 总访问量<span id="busuanzi_value_site_pv"></span>次
+ |访客数<span id="busuanzi_value_site_uv"></span>人次
+ 
+</footer>
+
+
+  <script src="/assets/js/social-share.min.js"></script>
+  <script>
+    socialShare('.social-share', {
+      sites: [
+        
+          'wechat'
+          ,
+          
+        
+          'weibo'
+          ,
+          
+        
+          'douban'
+          ,
+          
+        
+          'twitter'
+          
+        
+      ],
+      wechatQrcodeTitle: "分享到微信朋友圈",
+      wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
+    });
+  </script>
+
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://xwindman.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+
+  <script src="/assets/js/prism.js"></script>
+  <script src="/assets/js/index.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG - WindMan Blog</title>
+    <meta name="author"  content="xmc91">
+    <meta name="description" content="SVG">
+    <meta name="keywords"  content="Android">
+    <!-- Open Graph -->
+    <meta property="og:title" content="SVG - WindMan Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/2022/11/12/SVG.html">
+    <meta property="og:description" content="风一样de男子">
+    <meta property="og:site_name" content="WindMan Blog">
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_roc50gemkxpw4s4i.css">
+    <link rel="stylesheet" href="/assets/css/github-markdown.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
+    <link rel="stylesheet" href="/assets/css/share.min.css">
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!--
+Author: Ray-Eldath
+refer to:
+ - http://docs.mathjax.org/en/latest/options/index.html
+-->
+
+	<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ["$", "$"] ],
+			displayMath: [ ["$$", "$$"] ],
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		},
+		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+      });
+    </script>
+
+	
+    <!--
+Author: Ray-Eldath
+-->
+<style>
+    .markdown-body .anchor{
+        float: left;
+        margin-top: -8px;
+        margin-left: -20px;
+        padding-right: 4px;
+        line-height: 1;
+        opacity: 0;
+    }
+    
+    .markdown-body .anchor .anchor-icon{
+        font-size: 15px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let nodes = document.querySelector(".markdown-body").querySelectorAll("h1,h2,h3")
+        for(let node of nodes) {
+            var anchor = document.createElement("a")
+            var anchorIcon = document.createElement("i")
+            anchorIcon.setAttribute("class", "fa fa-anchor fa-lg anchor-icon")
+            anchorIcon.setAttribute("aria-hidden", true)
+            anchor.setAttribute("class", "anchor")
+            anchor.setAttribute("href", "#" + node.getAttribute("id"))
+            
+            anchor.onmouseover = function() {
+                this.style.opacity = "0.4"
+            }
+            
+            anchor.onmouseout = function() {
+                this.style.opacity = "0"
+            }
+            
+            anchor.appendChild(anchorIcon)
+            node.appendChild(anchor)
+        }
+    })
+</script>
+</head>
+
+
+<body>
+  <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+  <input id="nm-switch" type="hidden" value="true"> <header class="g-header">
+    <div class="g-logo">
+      <a href="/"></a>
+    </div>
+    <i id="menu-toggle" class="iconfont icon-menu"></i>
+    <nav class="g-nav">
+        <ul>
+            
+            <li><a href="/">home</a></li>
+            
+            <li><a href="/tags.html">tags</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+
+  <header
+    class="g-banner post-header post-pattern-circuitBoard bgcolor-pink post-no-cover"
+    data-theme="pink"
+  >
+    <div class="post-wrapper">
+      <div class="post-tags">
+        
+          
+            <a href="/tags.html#Android" class="post-tag">Android</a>
+          
+        
+      </div>
+      <h1>SVG</h1>
+      <div class="post-meta">
+        <span class="post-meta-item"><i class="iconfont icon-author"></i>xmc91</span>
+        <time class="post-meta-item" datetime="22-11-12"><i class="iconfont icon-date"></i>12 Nov 2022</time>
+      </div>
+    </div>
+    
+  </header>
+
+  <div class="post-content visible">
+    
+
+    <article class="markdown-body">
+      <h1 id="svg">SVG</h1>
+
+<p>svg 是矢量图，和bitmap（位图）不一样。就像数学里学的矢量一样，svg是有方向有大小长度等位置的可渲染的图像文件。</p>
+
+<p><strong>可缩放矢量图形</strong>（英语：<strong>Scalable Vector Graphics</strong>，<strong>SVG</strong>）是一种基于可扩展标记语言（XML），用于描述二维矢量图形的图形格式。SVG由W3C制定，是一个开放标准。</p>
+
+<ul>
+  <li>图像与分辨率无关，适配Android分辨率；</li>
+  <li>体积小，一般复杂图像简单搞。</li>
+  <li>很多平台都可用：web、Android、iOS</li>
+</ul>
+
+<p>SVG定义了很多形状，</p>
+
+<ul>
+  <li>
+    <p>矩形 <rect></rect></p>
+  </li>
+  <li>
+    <p>圆形 <circle></circle></p>
+  </li>
+  <li>
+    <p>椭圆 <ellipse></ellipse></p>
+  </li>
+  <li>
+    <p>线 <line></line></p>
+  </li>
+  <li>
+    <p>折线 <polyline></polyline></p>
+  </li>
+  <li>
+    <p>多边形 <polygon></polygon></p>
+  </li>
+  <li>
+    <p>路径 <path>，这个相当于自定义形状，命令很多</path></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>M = moveto，新建起点，参数x，y（M20， 30）
+L = lineto，连接直线，参数x，y（L30， 20）
+H = horizontal lineto，纵坐标不变，横向连线，参数x（H20）
+V = vertical lineto，横坐标不变，纵向连线，参数y（V30）
+C = curveto，三次贝塞尔曲线，参数x1，y1，x2，y2，x3，y3（C10，20，30，40，50， 60）
+S = smooth curveto，S x2 y2 x y
+简化的贝塞尔曲线
+1.如果S命令跟在一个C命令或者另一个S命令的后面，它的第一个控制点，就会被假设成前一个控制点的对称点。
+2.如果S命令单独使用，前面没有C命令或者另一个S命令，那么它的两个控制点就会被假设为同一个点。
+  
+Q = quadratic Bézier curve，二次贝塞尔曲线，参数x1，y1，x2，y2（Q10，20，30，40）
+T = smooth quadratic Bézier curveto 
+Q命令的简写命令。
+与S命令相似，T也会通过前一个控制点，推断出一个新的控制点。
+1.T命令前面必须是一个Q命令，或者是另一个T命令
+2.如果T单独使用，那么控制点就会被认为和终点是同一个点，所以画出来的将是一条直线
+  
+A = elliptical Arc
+A rx,ry x-axis-rotation large-arc-flag sweep-flag x,y
+rx 弧的半长轴长度
+ry 弧的半短轴长度
+x-axis-rotation 是此段弧所在的x轴与水平方向的夹角，即x轴的逆时针旋转角度，负数代表顺时针旋转角度。
+large-arc-flag 为1表示大角度弧线，0表示小角度弧线
+sweep-flag 为1表示从起点到终点弧线绕中心顺时针方向，0表示逆时针方向。
+xy 是终点坐标。
+  
+Z = closepath ，连接首尾，闭合曲线，无参数
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>文本<polyline></polyline></p>
+  </li>
+</ul>
+
+<p>还定义了很多效果</p>
+
+<ul>
+  <li>
+    <p>轮廓 Stroke</p>
+  </li>
+  <li>
+    <p>滤镜</p>
+  </li>
+  <li>
+    <p>模糊</p>
+  </li>
+  <li>
+    <p>阴影</p>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>渐变- 线性</td>
+          <td>放射性</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>参考实例：https://www.runoob.com/svg/svg-reference.html</p>
+  </li>
+</ul>
+
+<p>## 在Android 中使用svg</p>
+
+<p>Android 官方svg：https://developer.android.com/studio/write/vector-asset-studio#svg</p>
+
+<ul>
+  <li>自定义svg，http://editor.method.ac/ ，或者：https://c.runoob.com/more/svgeditor/  。file-save。然后AS安装SVG2VectorDrawable插件转换</li>
+  <li>创建xml：可以从AS直接创建，也可以到iconfont中找，还可以去svg的其他网址下载，还可以让美工提供</li>
+</ul>
+
+<p>这是一个大人拉着小孩的图片。 boy.xml</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal"&gt;
+  &lt;path
+  		android:name="path_id"
+      android:fillColor="@android:color/white"
+      android:pathData="M6.5,2c1.1,0 2,0.9 2,2s-0.9,2 -2,2s-2,-0.9 -2,-2S5.4,2 6.5,2zM15.5,9.5c0,0.83 0.67,1.5 1.5,1.5s1.5,-0.67 1.5,-1.5S17.83,8 17,8S15.5,8.67 15.5,9.5zM18.5,12h-2.84c-0.58,0.01 -1.14,0.32 -1.45,0.86l-0.92,1.32L9.72,8C9.35,7.37 8.69,7.01 8.01,7H5C3.9,7 3,7.9 3,9v6h1.5v7h5V11.61L12.03,16h2.2L15,14.9V22h4v-5h1v-3.5C20,12.68 19.33,12 18.5,12z"/&gt;
+&lt;/vector&gt;
+
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>imageview引用</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ImageView
+        android:id="@+id/img_svg"
+        android:src="@drawable/boy"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>动起来</p>
+
+    <p>定义动画</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:drawable="@drawable/ic_svg"
+	    tools:targetApi="lollipop"&gt;
+  	
+	    &lt;target
+	        android:name="path_id"
+	        android:animation="@animator/pathchange" /&gt;
+  	
+	&lt;/animated-vector&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>放在res/animator目录并替换资源文件</p>
+  </li>
+  <li>
+    <p>开始动画</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ImageView svgImageView = findViewById(R.id.img_svg);
+  AnimatedVectorDrawable animatedVectorDrawable = (AnimatedVectorDrawable) svgImageView.getDrawable();
+  animatedVectorDrawable.start();
+</code></pre></div></div>
+
+
+    </article>
+
+    
+    <div class="social-share-wrapper">
+      <div class="social-share"></div>
+    </div>
+    
+  </div>
+
+  <section class="author-detail">
+    <section class="post-footer-item author-card">
+      <div class="avatar">
+        <img src="/assets/img/profile.png" alt="">
+      </div>
+      <div class="author-name" rel="author">xmc91</div>
+      <div class="bio">
+        <p>Android、Nodejs、WX Plugin 开发者,历史、杂谈</p>
+      </div>
+      
+      <ul class="sns-links">
+        
+        <li>
+          <a href="//juejin.im/user/58b513f0570c35006b0be9c1" target="_blank">
+                    <i class="iconfont icon-juejin"></i>
+                </a>
+        </li>
+        
+        <li>
+          <a href="//github.com/xmc91" target="_blank">
+                    <i class="iconfont icon-github"></i>
+                </a>
+        </li>
+        
+      </ul>
+      
+    </section>
+    <section class="post-footer-item read-next">
+      
+      <div class="read-next-item">
+        <a href="/2022/11/12/adb.html" class="read-next-link"></a>
+        <section>
+          <span>adb</span>
+          <p>  NodeJs 磨刀霍霍向猪羊</p>
+        </section>
+        
+     </div>
+      
+
+      
+      <div class="read-next-item">
+        <a href="/2022/11/12/Mac.html" class="read-next-link"></a>
+          <section>
+            <span>Mac</span>
+            <p>  Mac远程控制-teamViewer：需要对方的id和密码  Mac远程控制-Message：需要对方的App...</p>
+          </section>
+          
+      </div>
+      
+    </section>
+    
+    <section class="post-footer-item comment">
+        <div id="disqus_thread"></div>
+    </section>
+    
+  </section>
+
+  <footer class="g-footer">
+  <section>WindMan Blog ©
+  
+  
+    2019
+    -
+  
+  2023
+  </section>
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>  
+
+ 总访问量<span id="busuanzi_value_site_pv"></span>次
+ |访客数<span id="busuanzi_value_site_uv"></span>人次
+ 
+</footer>
+
+
+  <script src="/assets/js/social-share.min.js"></script>
+  <script>
+    socialShare('.social-share', {
+      sites: [
+        
+          'wechat'
+          ,
+          
+        
+          'weibo'
+          ,
+          
+        
+          'douban'
+          ,
+          
+        
+          'twitter'
+          
+        
+      ],
+      wechatQrcodeTitle: "分享到微信朋友圈",
+      wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
+    });
+  </script>
+
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://xwindman.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+
+  <script src="/assets/js/prism.js"></script>
+  <script src="/assets/js/index.min.js"></script>
+</body>
+
+</html>

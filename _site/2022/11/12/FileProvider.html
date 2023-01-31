@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileProvider - WindMan Blog</title>
+    <meta name="author"  content="xmc91">
+    <meta name="description" content="FileProvider">
+    <meta name="keywords"  content="Android">
+    <!-- Open Graph -->
+    <meta property="og:title" content="FileProvider - WindMan Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/2022/11/12/FileProvider.html">
+    <meta property="og:description" content="风一样de男子">
+    <meta property="og:site_name" content="WindMan Blog">
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_roc50gemkxpw4s4i.css">
+    <link rel="stylesheet" href="/assets/css/github-markdown.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
+    <link rel="stylesheet" href="/assets/css/share.min.css">
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!--
+Author: Ray-Eldath
+refer to:
+ - http://docs.mathjax.org/en/latest/options/index.html
+-->
+
+	<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ["$", "$"] ],
+			displayMath: [ ["$$", "$$"] ],
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		},
+		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+      });
+    </script>
+
+	
+    <!--
+Author: Ray-Eldath
+-->
+<style>
+    .markdown-body .anchor{
+        float: left;
+        margin-top: -8px;
+        margin-left: -20px;
+        padding-right: 4px;
+        line-height: 1;
+        opacity: 0;
+    }
+    
+    .markdown-body .anchor .anchor-icon{
+        font-size: 15px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let nodes = document.querySelector(".markdown-body").querySelectorAll("h1,h2,h3")
+        for(let node of nodes) {
+            var anchor = document.createElement("a")
+            var anchorIcon = document.createElement("i")
+            anchorIcon.setAttribute("class", "fa fa-anchor fa-lg anchor-icon")
+            anchorIcon.setAttribute("aria-hidden", true)
+            anchor.setAttribute("class", "anchor")
+            anchor.setAttribute("href", "#" + node.getAttribute("id"))
+            
+            anchor.onmouseover = function() {
+                this.style.opacity = "0.4"
+            }
+            
+            anchor.onmouseout = function() {
+                this.style.opacity = "0"
+            }
+            
+            anchor.appendChild(anchorIcon)
+            node.appendChild(anchor)
+        }
+    })
+</script>
+</head>
+
+
+<body>
+  <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+  <input id="nm-switch" type="hidden" value="true"> <header class="g-header">
+    <div class="g-logo">
+      <a href="/"></a>
+    </div>
+    <i id="menu-toggle" class="iconfont icon-menu"></i>
+    <nav class="g-nav">
+        <ul>
+            
+            <li><a href="/">home</a></li>
+            
+            <li><a href="/tags.html">tags</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+
+  <header
+    class="g-banner post-header post-pattern-circuitBoard bgcolor-pink post-no-cover"
+    data-theme="pink"
+  >
+    <div class="post-wrapper">
+      <div class="post-tags">
+        
+          
+            <a href="/tags.html#Android" class="post-tag">Android</a>
+          
+        
+      </div>
+      <h1>FileProvider</h1>
+      <div class="post-meta">
+        <span class="post-meta-item"><i class="iconfont icon-author"></i>xmc91</span>
+        <time class="post-meta-item" datetime="22-11-12"><i class="iconfont icon-date"></i>12 Nov 2022</time>
+      </div>
+    </div>
+    
+  </header>
+
+  <div class="post-content visible">
+    
+
+    <article class="markdown-body">
+      <h2 id="文件共享">文件共享</h2>
+
+<p>file:// 协议不再支持共享，需要用content:// 协议。</p>
+
+<h3 id="创建fileprovider">创建FileProvider</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;provider
+    android:name="android.support.v4.content.FileProvider"
+    android:authorities="app的包名.fileProvider"
+    android:grantUriPermissions="true"
+    android:exported="false"&gt;
+    &lt;meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/file_paths" /&gt;
+&lt;/provider&gt;
+</code></pre></div></div>
+
+<h3 id="创建xml">创建xml</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;paths xmlns:android="http://schemas.android.com/apk/res/android"&gt;
+    &lt;root-path name="root" path="" /&gt; //代表设备的根目录new File("/");
+    &lt;files-path name="files" path="" /&gt; //context.getFilesDir()
+    &lt;cache-path name="cache" path="" /&gt; //context.getCacheDir()
+    &lt;external-path name="external" path="" /&gt; //Environment.getExternalStorageDirectory()
+    &lt;external-files-path name="name" path="path" /&gt; //context.getExternalFilesDirs()
+     &lt;external-cache-path name="name" path="path" /&gt; //getExternalCacheDirs()
+     
+        &lt;!--内置SD卡 Environment.getExternalStorageDirectory() .表示共享所有的目录，也可以指定共享的目录--&gt;
+    &lt;external-path
+        name="external-path"
+        path="."/&gt;
+    &lt;!--内置SD卡 Context.getExternalCacheDir() .表示共享所有的目录，也可以指定共享的目录--&gt;
+    &lt;external-cache-path
+        name="external-cache-path"
+        path="."/&gt;
+    &lt;!--内置SD卡 Context.getExternalFilesDir(null) .表示共享所有的目录，也可以指定共享的目录--&gt;
+    &lt;external-files-path
+        name="external-files-path"
+        path="."/&gt;
+    &lt;!--data目录下 Context.getFilesDir() .表示共享所有的目录，也可以指定共享的目录--&gt;
+    &lt;files-path
+        name="files_path"
+        path="."/&gt;
+    &lt;!--data缓存目录 Context.getCacheDir() .表示共享所有的目录，也可以指定共享的目录--&gt;
+    &lt;cache-path
+        name="cache-path"
+        path="."/&gt;
+    &lt;!--这个标签Android官方文档中是没有提及，Android设备的根目录，该目录下包含着手机内部存储器，外置SD卡等所有文件的目录--&gt;
+    &lt;root-path
+        name="name"
+        path="."/&gt;
+&lt;/paths&gt;
+</code></pre></div></div>
+
+<h3 id="使用">使用</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N) {
+    Uri uri = FileProvider.getUriForFile(CameraActivity.this, "app的包名.fileProvider", photoFile);
+} else {
+    Uri uri = Uri.fromFile(photoFile);
+}
+</code></pre></div></div>
+
+<h2 id="源码解析">源码解析</h2>
+
+<ul>
+  <li>
+    <p>核心方法：</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static Uri getUriForFile(@NonNull Context context, @NonNull String authority,
+            @NonNull File file) {
+        final PathStrategy strategy = getPathStrategy(context, authority);
+        return strategy.getUriForFile(file);
+    }
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>核心中间接口PathStrategy，file和uri映射</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>interface PathStrategy {
+    Uri getUriForFile(File file);
+    File getFileForUri(Uri uri);
+}
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>缓存pathStrategy，下次就不需要解析了</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private static HashMap&lt;String, PathStrategy&gt; sCache = new HashMap&lt;String, PathStrategy&gt;();
+ PathStrategy strat;
+        synchronized (sCache) {
+            strat = sCache.get(authority);
+            if (strat == null) {
+                try {
+                    strat = parsePathStrategy(context, authority);
+                } catch (IOException e) {
+               。。。
+                sCache.put(authority, strat);
+            }
+        }
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>解析PathStrategy，返回SimplePathStrategy</p>
+
+    <p>这里的核心类就是XmlResourceParser，用来解析xml</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>final SimplePathStrategy strat = new SimplePathStrategy(authority);
+        final ProviderInfo info = context.getPackageManager()
+                .resolveContentProvider(authority, PackageManager.GET_META_DATA);
+        if (info == null) {
+        // 这里就是配置meta的检验
+            throw new IllegalArgumentException(
+                    "Couldn't find meta-data for provider with authority " + authority);
+        }
+				// 解析我们写的那个file_path.xml
+				// 其中META_DATA_FILE_PROVIDER_PATHS = "android.support.FILE_PROVIDER_PATHS";这个字符串是要卸载provider的meta中的
+        final XmlResourceParser in = info.loadXmlMetaData(
+                context.getPackageManager(), META_DATA_FILE_PROVIDER_PATHS);
+        if (in == null) {
+            throw new IllegalArgumentException(
+                    "Missing " + META_DATA_FILE_PROVIDER_PATHS + " meta-data");
+        }
+  
+        int type;
+        while ((type = in.next()) != END_DOCUMENT) {
+            if (type == START_TAG) {
+            // tag、name、path都是我们配置在xml里的
+                final String tag = in.getName();
+  
+                final String name = in.getAttributeValue(null, ATTR_NAME);
+                String path = in.getAttributeValue(null, ATTR_PATH);
+  
+                File target = null;
+                // tag 类型如下：
+                private static final String TAG_ROOT_PATH = "root-path";
+                private static final String TAG_FILES_PATH = "files-path";
+                private static final String TAG_CACHE_PATH = "cache-path";
+                private static final String TAG_EXTERNAL = "external-path";
+                private static final String TAG_EXTERNAL_FILES = "external-files-path";
+                private static final String TAG_EXTERNAL_CACHE = "external-cache-path";
+                private static final String TAG_EXTERNAL_MEDIA = "external-media-path";
+                  
+                if (TAG_ROOT_PATH.equals(tag)) {
+                    target = DEVICE_ROOT;
+                } else if (TAG_FILES_PATH.equals(tag)) {
+                    target = context.getFilesDir();
+                } else if (TAG_CACHE_PATH.equals(tag)) {
+                    target = context.getCacheDir();
+                } else if (TAG_EXTERNAL.equals(tag)) {
+                    target = Environment.getExternalStorageDirectory();
+                } else if (TAG_EXTERNAL_FILES.equals(tag)) {
+                    File[] externalFilesDirs = ContextCompat.getExternalFilesDirs(context, null);
+                    if (externalFilesDirs.length &gt; 0) {
+                        target = externalFilesDirs[0];
+                    }
+                } else if (TAG_EXTERNAL_CACHE.equals(tag)) {
+                    File[] externalCacheDirs = ContextCompat.getExternalCacheDirs(context);
+                    if (externalCacheDirs.length &gt; 0) {
+                        target = externalCacheDirs[0];
+                    }
+                } else if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.LOLLIPOP
+                        &amp;&amp; TAG_EXTERNAL_MEDIA.equals(tag)) {
+                    File[] externalMediaDirs = context.getExternalMediaDirs();
+                    if (externalMediaDirs.length &gt; 0) {
+                        target = externalMediaDirs[0];
+                    }
+                }
+  
+                if (target != null) {
+                // buildPath(target, path)就是根据配置重新生成path
+                    strat.addRoot(name, buildPath(target, path));
+                }
+            }
+        }
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>SimplePathStrategy实现想要的content://</p>
+
+    <ul>
+      <li>
+        <p>添加到集合里</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>				private final HashMap&lt;String, File&gt; mRoots = new HashMap&lt;String, File&gt;();
+        /**
+         * Add a mapping from a name to a filesystem root. The provider only offers
+         * access to files that live under configured roots.
+         */
+        void addRoot(String name, File root) {
+            if (TextUtils.isEmpty(name)) {
+                throw new IllegalArgumentException("Name must not be empty");
+            }
+            try {
+                // Resolve to canonical path to keep path checking fast
+                root = root.getCanonicalFile();
+            } catch (IOException e) {
+                throw new IllegalArgumentException(
+                        "Failed to resolve canonical path for " + root, e);
+            }
+            mRoots.put(name, root);
+        }
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>从roots遍历并解析到path，修改协议，华丽转身</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>new Uri.Builder().scheme("content").authority(mAuthority).encodedPath(path).build();
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>回到我们出发的地方</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static Uri getUriForFile(@NonNull Context context, @NonNull String authority,
+            @NonNull File file) {
+        final PathStrategy strategy = getPathStrategy(context, authority);
+        // 这里的strategy的实例是SimplePathStrategy
+        return strategy.getUriForFile(file);
+    }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="感悟">感悟</h2>
+
+<ul>
+  <li>两层缓存：sCache缓存了PathStrategy，SimplePathStrategy里的mRoots缓存了File</li>
+  <li>接口定义，子类实现PathStrategy–&gt;SimplePathStrategy</li>
+</ul>
+
+<h2 id="微信分享">微信分享</h2>
+
+<ul>
+  <li>如果用的是File的形式分享，则需要用到FileProvider，如果是bitmap直接分享，是用不到的。</li>
+</ul>
+
+    </article>
+
+    
+    <div class="social-share-wrapper">
+      <div class="social-share"></div>
+    </div>
+    
+  </div>
+
+  <section class="author-detail">
+    <section class="post-footer-item author-card">
+      <div class="avatar">
+        <img src="/assets/img/profile.png" alt="">
+      </div>
+      <div class="author-name" rel="author">xmc91</div>
+      <div class="bio">
+        <p>Android、Nodejs、WX Plugin 开发者,历史、杂谈</p>
+      </div>
+      
+      <ul class="sns-links">
+        
+        <li>
+          <a href="//juejin.im/user/58b513f0570c35006b0be9c1" target="_blank">
+                    <i class="iconfont icon-juejin"></i>
+                </a>
+        </li>
+        
+        <li>
+          <a href="//github.com/xmc91" target="_blank">
+                    <i class="iconfont icon-github"></i>
+                </a>
+        </li>
+        
+      </ul>
+      
+    </section>
+    <section class="post-footer-item read-next">
+      
+      <div class="read-next-item">
+        <a href="/2022/11/12/LifeCycle.html" class="read-next-link"></a>
+        <section>
+          <span>LifeCycler</span>
+          <p>Activity使用</p>
+        </section>
+        
+     </div>
+      
+
+      
+      <div class="read-next-item">
+        <a href="/2022/11/12/Facebook%E9%9B%86%E6%88%90.html" class="read-next-link"></a>
+          <section>
+            <span>Facebook集成</span>
+            <p>Facebook集成</p>
+          </section>
+          
+      </div>
+      
+    </section>
+    
+    <section class="post-footer-item comment">
+        <div id="disqus_thread"></div>
+    </section>
+    
+  </section>
+
+  <footer class="g-footer">
+  <section>WindMan Blog ©
+  
+  
+    2019
+    -
+  
+  2023
+  </section>
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>  
+
+ 总访问量<span id="busuanzi_value_site_pv"></span>次
+ |访客数<span id="busuanzi_value_site_uv"></span>人次
+ 
+</footer>
+
+
+  <script src="/assets/js/social-share.min.js"></script>
+  <script>
+    socialShare('.social-share', {
+      sites: [
+        
+          'wechat'
+          ,
+          
+        
+          'weibo'
+          ,
+          
+        
+          'douban'
+          ,
+          
+        
+          'twitter'
+          
+        
+      ],
+      wechatQrcodeTitle: "分享到微信朋友圈",
+      wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
+    });
+  </script>
+
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://xwindman.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+
+  <script src="/assets/js/prism.js"></script>
+  <script src="/assets/js/index.min.js"></script>
+</body>
+
+</html>

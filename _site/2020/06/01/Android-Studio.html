@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Studio - WindMan Blog</title>
+    <meta name="author"  content="xmc91">
+    <meta name="description" content="Android Studio">
+    <meta name="keywords"  content="Tools">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Android Studio - WindMan Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/2020/06/01/Android-Studio.html">
+    <meta property="og:description" content="风一样de男子">
+    <meta property="og:site_name" content="WindMan Blog">
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_roc50gemkxpw4s4i.css">
+    <link rel="stylesheet" href="/assets/css/github-markdown.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
+    <link rel="stylesheet" href="/assets/css/share.min.css">
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!--
+Author: Ray-Eldath
+refer to:
+ - http://docs.mathjax.org/en/latest/options/index.html
+-->
+
+	<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ["$", "$"] ],
+			displayMath: [ ["$$", "$$"] ],
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		},
+		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+      });
+    </script>
+
+	
+    <!--
+Author: Ray-Eldath
+-->
+<style>
+    .markdown-body .anchor{
+        float: left;
+        margin-top: -8px;
+        margin-left: -20px;
+        padding-right: 4px;
+        line-height: 1;
+        opacity: 0;
+    }
+    
+    .markdown-body .anchor .anchor-icon{
+        font-size: 15px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let nodes = document.querySelector(".markdown-body").querySelectorAll("h1,h2,h3")
+        for(let node of nodes) {
+            var anchor = document.createElement("a")
+            var anchorIcon = document.createElement("i")
+            anchorIcon.setAttribute("class", "fa fa-anchor fa-lg anchor-icon")
+            anchorIcon.setAttribute("aria-hidden", true)
+            anchor.setAttribute("class", "anchor")
+            anchor.setAttribute("href", "#" + node.getAttribute("id"))
+            
+            anchor.onmouseover = function() {
+                this.style.opacity = "0.4"
+            }
+            
+            anchor.onmouseout = function() {
+                this.style.opacity = "0"
+            }
+            
+            anchor.appendChild(anchorIcon)
+            node.appendChild(anchor)
+        }
+    })
+</script>
+</head>
+
+
+<body>
+  <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+  <input id="nm-switch" type="hidden" value="true"> <header class="g-header">
+    <div class="g-logo">
+      <a href="/"></a>
+    </div>
+    <i id="menu-toggle" class="iconfont icon-menu"></i>
+    <nav class="g-nav">
+        <ul>
+            
+            <li><a href="/">home</a></li>
+            
+            <li><a href="/tags.html">tags</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+
+  <header
+    class="g-banner post-header post-pattern-circuitBoard bgcolor-pink post-no-cover"
+    data-theme="pink"
+  >
+    <div class="post-wrapper">
+      <div class="post-tags">
+        
+          
+            <a href="/tags.html#Tools" class="post-tag">Tools</a>
+          
+        
+      </div>
+      <h1>Android Studio</h1>
+      <div class="post-meta">
+        <span class="post-meta-item"><i class="iconfont icon-author"></i>xmc91</span>
+        <time class="post-meta-item" datetime="20-06-01"><i class="iconfont icon-date"></i>01 Jun 2020</time>
+      </div>
+    </div>
+    
+  </header>
+
+  <div class="post-content visible">
+    
+
+    <article class="markdown-body">
+      <h3 id="mac-修改某个应用可使用的最大内存升级之后就没了">mac 修改某个应用可使用的最大内存，升级之后就没了</h3>
+
+<ul>
+  <li>
+    <p>访达 -&gt; 应用程序 -&gt; xxx.app -&gt; 右键 -&gt; 显示包内容 -&gt; Contents -&gt; bin 下 studio.vmoptions 文件</p>
+  </li>
+  <li>
+    <p>调整大小</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-Xms512m
+-Xmx4096m
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>As 可以通过help-edit jvm option直接修改</p>
+  </li>
+</ul>
+
+<h3 id="mac-永久修改as内存大小">Mac 永久修改as内存大小</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">~/Library/Preferences/AndroidStudio2.0/</code>目录下的studio.vmoptions文件</li>
+  <li>调整大小</li>
+  <li>windows ：c盘\yourname\ .androidstuidoxx</li>
+  <li>Linux:/home/yourname/.androidstudioxx</li>
+</ul>
+
+<h3 id="as-push失败">as push失败</h3>
+
+<ul>
+  <li>
+    <p>email private</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Can't finish GitHub sharing process
+        Successfully created project 'Exam' on GitHub, but initial push failed:
+        remote: error: GH007: Your push would publish a private email address.
+        failed to push some refs to 'https://github.com/xxx/xxx.git'
+          
+ 解决：setting-&gt;emails-&gt;Keep my email address private 把这一项去掉勾选即可。
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>失败后解决：点项目右键，点git-repository-pull，即可再次提交</p>
+  </li>
+  <li>
+    <p>As 统一各个moduel配置</p>
+
+    <ul>
+      <li>创建全局config</li>
+    </ul>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ext {
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.3",
+    ]
+    dependencies = [
+    ]
+}
+</code></pre></div>    </div>
+
+    <ul>
+      <li>
+        <p>Project 引用:apply from: “config.gradle”</p>
+      </li>
+      <li>
+        <p>使用</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>as gradle 配置：https://developer.android.com/studio/build/index.html</p>
+  </li>
+  <li>
+    <p>as gradle插件说明：https://developer.android.com/studio/releases/gradle-plugin#updating-plugin</p>
+  </li>
+  <li>
+    <p>minifyEnabled代码压缩，shrinkResources 资源压缩，代码确定不使用后才移除资源压缩才生效</p>
+  </li>
+  <li>
+    <p>指定的类打包到住dex</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>multiDexEnabled true
+multiDexKeepFile file('multiDexKeep.txt')
+  
+androidx.work.R$Bool.class
+</code></pre></div>    </div>
+
+    <ul>
+      <li>Attribute data@scheme at AndroidManifest.xml requires a placeholder substitution but no value for <qqappid> is provided：https://developer.umeng.com/docs/128606/detail/201296</qqappid></li>
+    </ul>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaultConfig {
+        manifestPlaceholders=[qqappid:"110xxxxxx6633sdsafa296"]
+    }
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>65535限制</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>添加依赖：implementation 'androidx.multidex:multidex:2.0.0'
+启用分包:
+android {
+    defaultConfig {
+        multiDexEnabled true
+    }
+}
+加载：
+public class App extends Application {
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>异或</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>不同为true
+所以有两个定律：与自身异或=0；与0异或=自身
+实用：
++ 加密：密码^文件=密文;密文^密码=文件
++ 
++ 取
+</code></pre></div>    </div>
+  </li>
+  <li>Ctrl+H查看继承关系</li>
+  <li>
+    <p>查看kotlin的字节码及反编译Java</p>
+
+    <ul>
+      <li>查看字节码：Tools -&gt; Kotlin -&gt; Show Kotlin Bytecode</li>
+      <li>反编译到老面孔：在弹出窗口中点击Decompile</li>
+    </ul>
+  </li>
+  <li>xml无法预览
+    <ul>
+      <li>File &gt; Sync Project with Gradle Files</li>
+      <li>File &gt; Invalidate Cache and Restart</li>
+      <li>都勾选，Invalidate and Restart</li>
+      <li>waiting。。。</li>
+    </ul>
+  </li>
+</ul>
+
+
+    </article>
+
+    
+    <div class="social-share-wrapper">
+      <div class="social-share"></div>
+    </div>
+    
+  </div>
+
+  <section class="author-detail">
+    <section class="post-footer-item author-card">
+      <div class="avatar">
+        <img src="/assets/img/profile.png" alt="">
+      </div>
+      <div class="author-name" rel="author">xmc91</div>
+      <div class="bio">
+        <p>Android、Nodejs、WX Plugin 开发者,历史、杂谈</p>
+      </div>
+      
+      <ul class="sns-links">
+        
+        <li>
+          <a href="//juejin.im/user/58b513f0570c35006b0be9c1" target="_blank">
+                    <i class="iconfont icon-juejin"></i>
+                </a>
+        </li>
+        
+        <li>
+          <a href="//github.com/xmc91" target="_blank">
+                    <i class="iconfont icon-github"></i>
+                </a>
+        </li>
+        
+      </ul>
+      
+    </section>
+    <section class="post-footer-item read-next">
+      
+      <div class="read-next-item">
+        <a href="/2020/06/02/ASPlugin.html" class="read-next-link"></a>
+        <section>
+          <span>Plugin 一蓑烟雨任平生</span>
+          <p>  【定风波·莫听穿林打叶声】 [宋代：苏轼]三月七日，沙湖道中遇雨，雨具先去，同行皆狼狈，余独不觉。已而遂晴，故...</p>
+        </section>
+        
+     </div>
+      
+
+      
+      <div class="read-next-item">
+        <a href="/2020/06/01/gradle.html" class="read-next-link"></a>
+          <section>
+            <span>Gradle 水龙吟</span>
+            <p>  【水龙吟·次韵章质夫杨花词】[宋代：苏轼]似花还似非花，也无人惜从教坠。抛家傍路，思量却是，无情有思。萦损柔肠...</p>
+          </section>
+          
+      </div>
+      
+    </section>
+    
+    <section class="post-footer-item comment">
+        <div id="disqus_thread"></div>
+    </section>
+    
+  </section>
+
+  <footer class="g-footer">
+  <section>WindMan Blog ©
+  
+  
+    2019
+    -
+  
+  2023
+  </section>
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>  
+
+ 总访问量<span id="busuanzi_value_site_pv"></span>次
+ |访客数<span id="busuanzi_value_site_uv"></span>人次
+ 
+</footer>
+
+
+  <script src="/assets/js/social-share.min.js"></script>
+  <script>
+    socialShare('.social-share', {
+      sites: [
+        
+          'wechat'
+          ,
+          
+        
+          'weibo'
+          ,
+          
+        
+          'douban'
+          ,
+          
+        
+          'twitter'
+          
+        
+      ],
+      wechatQrcodeTitle: "分享到微信朋友圈",
+      wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
+    });
+  </script>
+
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://xwindman.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+
+  <script src="/assets/js/prism.js"></script>
+  <script src="/assets/js/index.min.js"></script>
+</body>
+
+</html>

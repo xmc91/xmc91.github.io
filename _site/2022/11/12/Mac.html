@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac - WindMan Blog</title>
+    <meta name="author"  content="xmc91">
+    <meta name="description" content="Mac">
+    <meta name="keywords"  content="Tools">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mac - WindMan Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/2022/11/12/Mac.html">
+    <meta property="og:description" content="风一样de男子">
+    <meta property="og:site_name" content="WindMan Blog">
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_roc50gemkxpw4s4i.css">
+    <link rel="stylesheet" href="/assets/css/github-markdown.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
+    <link rel="stylesheet" href="/assets/css/share.min.css">
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!--
+Author: Ray-Eldath
+refer to:
+ - http://docs.mathjax.org/en/latest/options/index.html
+-->
+
+	<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ["$", "$"] ],
+			displayMath: [ ["$$", "$$"] ],
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		},
+		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+      });
+    </script>
+
+	
+    <!--
+Author: Ray-Eldath
+-->
+<style>
+    .markdown-body .anchor{
+        float: left;
+        margin-top: -8px;
+        margin-left: -20px;
+        padding-right: 4px;
+        line-height: 1;
+        opacity: 0;
+    }
+    
+    .markdown-body .anchor .anchor-icon{
+        font-size: 15px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let nodes = document.querySelector(".markdown-body").querySelectorAll("h1,h2,h3")
+        for(let node of nodes) {
+            var anchor = document.createElement("a")
+            var anchorIcon = document.createElement("i")
+            anchorIcon.setAttribute("class", "fa fa-anchor fa-lg anchor-icon")
+            anchorIcon.setAttribute("aria-hidden", true)
+            anchor.setAttribute("class", "anchor")
+            anchor.setAttribute("href", "#" + node.getAttribute("id"))
+            
+            anchor.onmouseover = function() {
+                this.style.opacity = "0.4"
+            }
+            
+            anchor.onmouseout = function() {
+                this.style.opacity = "0"
+            }
+            
+            anchor.appendChild(anchorIcon)
+            node.appendChild(anchor)
+        }
+    })
+</script>
+</head>
+
+
+<body>
+  <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+  <input id="nm-switch" type="hidden" value="true"> <header class="g-header">
+    <div class="g-logo">
+      <a href="/"></a>
+    </div>
+    <i id="menu-toggle" class="iconfont icon-menu"></i>
+    <nav class="g-nav">
+        <ul>
+            
+            <li><a href="/">home</a></li>
+            
+            <li><a href="/tags.html">tags</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+
+  <header
+    class="g-banner post-header post-pattern-circuitBoard bgcolor-pink post-no-cover"
+    data-theme="pink"
+  >
+    <div class="post-wrapper">
+      <div class="post-tags">
+        
+          
+            <a href="/tags.html#Tools" class="post-tag">Tools</a>
+          
+        
+      </div>
+      <h1>Mac</h1>
+      <div class="post-meta">
+        <span class="post-meta-item"><i class="iconfont icon-author"></i>xmc91</span>
+        <time class="post-meta-item" datetime="22-11-12"><i class="iconfont icon-date"></i>12 Nov 2022</time>
+      </div>
+    </div>
+    
+  </header>
+
+  <div class="post-content visible">
+    
+
+    <article class="markdown-body">
+      <ul>
+  <li>Mac远程控制-teamViewer：需要对方的id和密码</li>
+  <li>Mac远程控制-Message：需要对方的Apple id</li>
+</ul>
+
+<h1 id="安装javamd">安装Java.md</h1>
+
+<ul>
+  <li>http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</li>
+  <li>选中 Macos，选择 jdk-8u321-macosx-x64.dmg</li>
+  <li>如果没注册，需要注册，然后下载</li>
+  <li>安装</li>
+  <li>测试：java -version</li>
+</ul>
+
+<h1 id="配置java环境变量">配置java环境变量</h1>
+
+<ul>
+  <li>打开配置文件：open -e .bash_profile；首次：touch .bash_profile</li>
+  <li>
+    <p>找到java路径：/Library/Java/JavaVirtualMachines/jdk1.8.0_321.jdk/Contents/Home</p>
+  </li>
+  <li>bin目录下存放JDK用于开发的一些终端命令工具。常见的工具如：</li>
+  <li>“javac”的作用是将java源文件编译为class文件(即自解码文件)；</li>
+  <li>“java”命令的作用是运行class文件。</li>
+  <li>db目录下是java开发的一个开源的关系型数据库；</li>
+  <li>include目录下是一些C语言的头文件；</li>
+  <li>jre目录下JDK所依赖的java运行时；</li>
+  <li>lib目录下存放JDK开发工具所依赖的一些库文件；</li>
+  <li>
+    <p>man目录下存放JDK开发工具的说明文档。</p>
+  </li>
+  <li>配置</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
+PATH=$JAVA_HOME/bin:$PATH:.
+CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
+export JAVA_HOME
+export PATH
+export CLASSPATH
+</code></pre></div></div>
+
+<ul>
+  <li>生效：source .bash_profile</li>
+</ul>
+
+<h1 id="反编译apk">反编译apk</h1>
+
+<ul>
+  <li>安装apktool：https://ibotpeaches.github.io/Apktool/install/</li>
+  <li>
+    <p>下载jd-gui：http://java-decompiler.github.io/</p>
+  </li>
+  <li>
+    <p>已经安装了java8还提示java版本不对的</p>
+  </li>
+  <li>右键xx.app</li>
+  <li>打开info.plist</li>
+  <li>
+    <p>找到1.8+，去掉+号</p>
+  </li>
+  <li>
+    <p>Mac  ssh配置之后，push失败的，再次add即可：ssh-add ~/.ssh/id_rsa_xxx</p>
+  </li>
+  <li>
+    <p>Phone 安装非APP store 应用：https://www.i4.cn/，，，然后把IPA导入到应用。</p>
+  </li>
+  <li>
+    <p>iphone翻墙</p>
+
+    <ul>
+      <li>安装shadowrocket</li>
+      <li>https://book.v2rayx.org/ios.html</li>
+      <li>输入密码等：https://store.holytech.tech/clientarea.php?action=productdetails&amp;id=75496</li>
+    </ul>
+  </li>
+  <li>关闭mac chrome 侧滑返回：
+重启
+```
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false</li>
+</ul>
+
+<p>```</p>
+<h2 id="sublime">sublime</h2>
+<ul>
+  <li>sublime  块操作，Mac option+左键</li>
+  <li>修复侧边栏字体大小
+    <ul>
+      <li>安装package control</li>
+      <li>安装packageResoureceView</li>
+      <li>使用PackageResoureceView open resource</li>
+      <li>修复sidebar lable下的font.size</li>
+    </ul>
+  </li>
+</ul>
+
+
+    </article>
+
+    
+    <div class="social-share-wrapper">
+      <div class="social-share"></div>
+    </div>
+    
+  </div>
+
+  <section class="author-detail">
+    <section class="post-footer-item author-card">
+      <div class="avatar">
+        <img src="/assets/img/profile.png" alt="">
+      </div>
+      <div class="author-name" rel="author">xmc91</div>
+      <div class="bio">
+        <p>Android、Nodejs、WX Plugin 开发者,历史、杂谈</p>
+      </div>
+      
+      <ul class="sns-links">
+        
+        <li>
+          <a href="//juejin.im/user/58b513f0570c35006b0be9c1" target="_blank">
+                    <i class="iconfont icon-juejin"></i>
+                </a>
+        </li>
+        
+        <li>
+          <a href="//github.com/xmc91" target="_blank">
+                    <i class="iconfont icon-github"></i>
+                </a>
+        </li>
+        
+      </ul>
+      
+    </section>
+    <section class="post-footer-item read-next">
+      
+      <div class="read-next-item">
+        <a href="/2022/11/12/SVG.html" class="read-next-link"></a>
+        <section>
+          <span>SVG</span>
+          <p>SVG</p>
+        </section>
+        
+     </div>
+      
+
+      
+      <div class="read-next-item">
+        <a href="/2022/11/12/LifeCycle.html" class="read-next-link"></a>
+          <section>
+            <span>LifeCycler</span>
+            <p>Activity使用</p>
+          </section>
+          
+      </div>
+      
+    </section>
+    
+    <section class="post-footer-item comment">
+        <div id="disqus_thread"></div>
+    </section>
+    
+  </section>
+
+  <footer class="g-footer">
+  <section>WindMan Blog ©
+  
+  
+    2019
+    -
+  
+  2023
+  </section>
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>  
+
+ 总访问量<span id="busuanzi_value_site_pv"></span>次
+ |访客数<span id="busuanzi_value_site_uv"></span>人次
+ 
+</footer>
+
+
+  <script src="/assets/js/social-share.min.js"></script>
+  <script>
+    socialShare('.social-share', {
+      sites: [
+        
+          'wechat'
+          ,
+          
+        
+          'weibo'
+          ,
+          
+        
+          'douban'
+          ,
+          
+        
+          'twitter'
+          
+        
+      ],
+      wechatQrcodeTitle: "分享到微信朋友圈",
+      wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
+    });
+  </script>
+
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://xwindman.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+
+  <script src="/assets/js/prism.js"></script>
+  <script src="/assets/js/index.min.js"></script>
+</body>
+
+</html>
