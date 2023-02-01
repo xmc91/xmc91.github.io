@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Android CameraX - WindMan Blog</title>
+    <title>ViewPage2 - WindMan Blog</title>
     <meta name="author"  content="xmc91">
-    <meta name="description" content="Android CameraX">
+    <meta name="description" content="ViewPage2">
     <meta name="keywords"  content="Android">
     <!-- Open Graph -->
-    <meta property="og:title" content="Android CameraX - WindMan Blog">
+    <meta property="og:title" content="ViewPage2 - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:4000/2020/05/06/CameraX.html">
+    <meta property="og:url" content="http://localhost:4000/2023/02/01/Android-ViewPage2.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -120,10 +120,10 @@ Author: Ray-Eldath
           
         
       </div>
-      <h1>Android CameraX</h1>
+      <h1>ViewPage2</h1>
       <div class="post-meta">
-        <span class="post-meta-item"><i class="iconfont icon-author"></i>WindMan</span>
-        <time class="post-meta-item" datetime="20-05-06"><i class="iconfont icon-date"></i>06 May 2020</time>
+        <span class="post-meta-item"><i class="iconfont icon-author"></i>xmc91</span>
+        <time class="post-meta-item" datetime="23-02-01"><i class="iconfont icon-date"></i>01 Feb 2023</time>
       </div>
     </div>
     
@@ -134,13 +134,62 @@ Author: Ray-Eldath
 
     <article class="markdown-body">
       <blockquote>
-  <p>Android的碎片化导致处理相机并没有那么容易，But，新的 Jetpack 库可帮助您以简单且一致的方式针对 90% 的 Android 设备开发相机应用。听起来是不是很nice</p>
+  <p>基于RecyclerView，替代ViewPage</p>
 </blockquote>
 
+<h2 id="基本使用">基本使用</h2>
 <ul>
-  <li><a href="https://www.jianshu.com/p/a5c58b1c95a7">androidX兼容 module/jar/aar 中的support</a></li>
+  <li>绑定adapter和监听
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>viewpage.adapter = ViewPagerAdapter()
+viewpage.currentItem = 1
+viewpage.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+          override fun onPageSelected(position: Int) {
+              super.onPageSelected(position)
+              Log.e(TAG, "onPageSelected: $position")
+              lastPosiont = position
+          }
+      })
+</code></pre></div>    </div>
+  </li>
+  <li>adapter
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class ViewPagerAdapter(private val mLevel: Array&lt;ByteArray&gt;) : RecyclerView.Adapter&lt;ViewPagerAdapter.ViewHolder&gt;() {
+  override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+      return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.mode_item, parent, false))
+  }
+
+  override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+      holder.itemImg.setLevel(mLevel[position])
+  }
+
+  override fun getItemCount(): Int {
+      return mLevel.size
+  }
+
+  inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+      var itemImg: ImageView
+
+      init {
+          itemImg = itemView.findViewById(R.id.item_img)
+          itemView.tag = this
+      }
+  }
+}
+</code></pre></div>    </div>
+  </li>
 </ul>
 
+<h2 id="知识点">知识点</h2>
+<ul>
+  <li>初始化后会先走一次监听，位置为设定的，如果没有设定，就是0</li>
+  <li>ViewPage2基于RecyclerView，第一个就是它
+```
+var recyclerView: RecyclerView = viewpage.getChildAt(0) as RecyclerView</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ 获取ItemView，借道RecyclerView
+</code></pre></div></div>
+<p>var curItemView = recyclerView.layoutManager?.findViewByPosition(position)
+```</p>
 
     </article>
 
@@ -180,22 +229,13 @@ Author: Ray-Eldath
     </section>
     <section class="post-footer-item read-next">
       
-      <div class="read-next-item">
-        <a href="/2020/05/31/kotlin.html" class="read-next-link"></a>
-        <section>
-          <span>Kotlin 蓦然回首</span>
-          <p>  【青玉案·元夕】[辛弃疾]东风夜放花千树，更吹落，星如雨。宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。蛾儿...</p>
-        </section>
-        
-     </div>
-      
 
       
       <div class="read-next-item">
-        <a href="/2020/05/06/Handle.html" class="read-next-link"></a>
+        <a href="/2023/02/01/Android-RecyclewView.html" class="read-next-link"></a>
           <section>
-            <span>Handle 水调歌头</span>
-            <p>  【水调歌头·明月几时有】  [宋代： 苏轼]丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。明月几时有？把酒问青天...</p>
+            <span>RecyclewView</span>
+            <p>基本使用</p>
           </section>
           
       </div>

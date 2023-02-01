@@ -1,8 +1,8 @@
 ---
 layout: post
-title: '基金'
+title: 'Wise Yellow Joke'
 author: WindMan
-date: 2020-6-20
+date: 2020-6-30
 categories: read
 tags: read 
 ---

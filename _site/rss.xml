@@ -3,11 +3,97 @@
   <channel>
     <title>WindMan Blog</title>
     <description>风一样de男子</description>
-    <link>//</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 31 Jan 2023 15:27:18 +0800</pubDate>
-    <lastBuildDate>Tue, 31 Jan 2023 15:27:18 +0800</lastBuildDate>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 01 Feb 2023 11:56:15 +0800</pubDate>
+    <lastBuildDate>Wed, 01 Feb 2023 11:56:15 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
+    
+      <item>
+        <title>ViewPage2</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;基于RecyclerView，替代ViewPage&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;基本使用&quot;&gt;基本使用&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;绑定adapter和监听
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;viewpage.adapter = ViewPagerAdapter()
+viewpage.currentItem = 1
+viewpage.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+          override fun onPageSelected(position: Int) {
+              super.onPageSelected(position)
+              Log.e(TAG, &quot;onPageSelected: $position&quot;)
+              lastPosiont = position
+          }
+      })
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;adapter
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class ViewPagerAdapter(private val mLevel: Array&amp;lt;ByteArray&amp;gt;) : RecyclerView.Adapter&amp;lt;ViewPagerAdapter.ViewHolder&amp;gt;() {
+  override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+      return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.mode_item, parent, false))
+  }
+
+  override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+      holder.itemImg.setLevel(mLevel[position])
+  }
+
+  override fun getItemCount(): Int {
+      return mLevel.size
+  }
+
+  inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+      var itemImg: ImageView
+
+      init {
+          itemImg = itemView.findViewById(R.id.item_img)
+          itemView.tag = this
+      }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;知识点&quot;&gt;知识点&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;初始化后会先走一次监听，位置为设定的，如果没有设定，就是0&lt;/li&gt;
+  &lt;li&gt;ViewPage2基于RecyclerView，第一个就是它
+```
+var recyclerView: RecyclerView = viewpage.getChildAt(0) as RecyclerView&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ 获取ItemView，借道RecyclerView
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;var curItemView = recyclerView.layoutManager?.findViewByPosition(position)
+```&lt;/p&gt;
+</description>
+        <pubDate>Wed, 01 Feb 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/02/01/Android-ViewPage2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/02/01/Android-ViewPage2.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>RecyclewView</title>
+        <description>&lt;h2 id=&quot;基本使用&quot;&gt;基本使用&lt;/h2&gt;
+</description>
+        <pubDate>Wed, 01 Feb 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/02/01/Android-RecyclewView.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/02/01/Android-RecyclewView.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
     
       <item>
         <title>Android知识点</title>
@@ -20,8 +106,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 21 Jan 2023 00:00:00 +0800</pubDate>
-        <link>/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</link>
-        <guid isPermaLink="true">/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</guid>
+        <link>http://localhost:4000/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</guid>
         
         <category>Android</category>
         
@@ -42,8 +128,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 12 Jan 2023 00:00:00 +0800</pubDate>
-        <link>/2023/01/12/%E5%BF%83%E5%A3%B0.html</link>
-        <guid isPermaLink="true">/2023/01/12/%E5%BF%83%E5%A3%B0.html</guid>
+        <link>http://localhost:4000/2023/01/12/%E5%BF%83%E5%A3%B0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/01/12/%E5%BF%83%E5%A3%B0.html</guid>
         
         <category>read</category>
         
@@ -97,8 +183,8 @@
 ```&lt;/p&gt;
 </description>
         <pubDate>Tue, 29 Nov 2022 00:00:00 +0800</pubDate>
-        <link>/2022/11/29/JS.html</link>
-        <guid isPermaLink="true">/2022/11/29/JS.html</guid>
+        <link>http://localhost:4000/2022/11/29/JS.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/29/JS.html</guid>
         
         <category>JS</category>
         
@@ -113,8 +199,8 @@ https://www.jianshu.com/p/ddeb6c4f5c01&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 22 Nov 2022 00:00:00 +0800</pubDate>
-        <link>/2022/11/22/ps.html</link>
-        <guid isPermaLink="true">/2022/11/22/ps.html</guid>
+        <link>http://localhost:4000/2022/11/22/ps.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/22/ps.html</guid>
         
         <category>ps</category>
         
@@ -137,8 +223,8 @@ https://www.jianshu.com/p/ddeb6c4f5c01&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 21 Nov 2022 00:00:00 +0800</pubDate>
-        <link>/2022/11/21/ble.html</link>
-        <guid isPermaLink="true">/2022/11/21/ble.html</guid>
+        <link>http://localhost:4000/2022/11/21/ble.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/21/ble.html</guid>
         
         <category>ble</category>
         
@@ -162,8 +248,8 @@ Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 17 Nov 2022 00:00:00 +0800</pubDate>
-        <link>/2022/11/17/Google-play.html</link>
-        <guid isPermaLink="true">/2022/11/17/Google-play.html</guid>
+        <link>http://localhost:4000/2022/11/17/Google-play.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/17/Google-play.html</guid>
         
         <category>Android</category>
         
@@ -191,8 +277,8 @@ Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</link>
-        <guid isPermaLink="true">/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</guid>
+        <link>http://localhost:4000/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</guid>
         
         <category>Android</category>
         
@@ -232,103 +318,13 @@ Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/
 &lt;p&gt;你活的并不悲伤&lt;/p&gt;
 </description>
         <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>/2022/11/12/%E9%9A%8F%E7%AC%94.html</link>
-        <guid isPermaLink="true">/2022/11/12/%E9%9A%8F%E7%AC%94.html</guid>
+        <link>http://localhost:4000/2022/11/12/%E9%9A%8F%E7%AC%94.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/11/12/%E9%9A%8F%E7%AC%94.html</guid>
         
         <category>Read</category>
         
         
         <category>Read</category>
-        
-      </item>
-    
-      <item>
-        <title>缓存</title>
-        <description>&lt;h1 id=&quot;缓存&quot;&gt;缓存&lt;/h1&gt;
-
-&lt;p&gt;是为了节省时间，达到更快的目的，但是也要考虑缓存带来的负面影响。Android的缓存是基于Java的缓存&lt;/p&gt;
-
-&lt;h2 id=&quot;n级缓存&quot;&gt;n级缓存&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;一级缓存，直接从内存加载&lt;/li&gt;
-  &lt;li&gt;二级缓存，先从内存加载；如果内存没有，再从文件加载&lt;/li&gt;
-  &lt;li&gt;三级缓存，先看内存；如果没有，去文件找；如果还没有，从网络下载&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;引用&quot;&gt;引用&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;强引用&lt;/li&gt;
-  &lt;li&gt;软引用&lt;/li&gt;
-  &lt;li&gt;弱引用&lt;/li&gt;
-  &lt;li&gt;虚引用&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;常用框架&quot;&gt;常用框架&lt;/h2&gt;
-
-&lt;h3 id=&quot;lrucash&quot;&gt;LRUCash&lt;/h3&gt;
-
-&lt;p&gt;Least recently used，最近最少使用。核心思想是“如果数据最近被访问过，那么将来被访问的几率也更高”。&lt;/p&gt;
-
-&lt;h3 id=&quot;disklrucash&quot;&gt;DiskLRUCash&lt;/h3&gt;
-
-&lt;h3 id=&quot;lru-cash--k&quot;&gt;LRU cash -K&lt;/h3&gt;
-
-&lt;p&gt;K代表最近使用的次数，LRU可以认为是LRU-1。核心思想是将“最近使用过1次”的判断标准扩展为“最近使用过K次”。&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>/2022/11/12/%E7%BC%93%E5%AD%98.html</link>
-        <guid isPermaLink="true">/2022/11/12/%E7%BC%93%E5%AD%98.html</guid>
-        
-        <category>Android</category>
-        
-        
-        <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>缓存</title>
-        <description>&lt;h2 id=&quot;算法复杂度oy&quot;&gt;算法复杂度O(y)&lt;/h2&gt;
-
-&lt;p&gt;算法是偏底层的东西，最注重效率，这里y其实是一个函数，代表了时间或者空间的复杂度。比如O(n^2)，这里代表复杂度是y=n^2，数据量增大n倍时，耗时需要n^2。常见复杂度如下
-&lt;img src=&quot;/assets/img/O(y).png&quot; alt=&quot;复杂度&quot; /&gt;
-根据函数可以看到，当x相等时，logx的值最小，logn的效率最高（x代表数据量，y代表耗时或者消耗空间）&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;O(1)&lt;/p&gt;
-
-    &lt;p&gt;这里y=1，无论数据量增大多大，1次就找到，比如哈希算法&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;O(n)&lt;/p&gt;
-
-    &lt;p&gt;数据量增大n倍，耗时也增大n倍。比如常见的遍历算法。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;O(logn)&lt;/p&gt;
-
-    &lt;p&gt;ax =N，x=logaN。数据增大n倍时，耗时增大logn倍（这里的log是以2为底的，比如，当数据增大256倍时，耗时只增大8倍，是比线性还要低的时间复杂度）。二分查找就是O(logn)的算法，每找一次排除一半的可能，256个数据中查找只要找8次就可以找到目标。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;O(nlogn)&lt;/p&gt;
-
-    &lt;p&gt;n乘以logn肯定比logn大，当数据增大256倍时，耗时增大256*8=2048倍。这个复杂度高于线性低于平方。归并排序就是O(nlogn)的时间复杂度。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>/2022/11/12/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6.html</link>
-        <guid isPermaLink="true">/2022/11/12/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6.html</guid>
-        
-        <category>Android</category>
-        
-        
-        <category>Android</category>
         
       </item>
     
