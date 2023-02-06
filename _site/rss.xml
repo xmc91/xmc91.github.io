@@ -3,10 +3,10 @@
   <channel>
     <title>WindMan Blog</title>
     <description>风一样de男子</description>
-    <link>http://localhost:4000//</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 06 Feb 2023 10:08:34 +0800</pubDate>
-    <lastBuildDate>Mon, 06 Feb 2023 10:08:34 +0800</lastBuildDate>
+    <link>//</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 06 Feb 2023 10:42:34 +0800</pubDate>
+    <lastBuildDate>Mon, 06 Feb 2023 10:42:34 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -27,13 +27,13 @@
 
 &lt;h2 id=&quot;悲观锁&quot;&gt;悲观锁&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;常见&lt;/li&gt;
-  &lt;li&gt;sync关键字，同时只有一个线程可访问。&lt;/li&gt;
+  &lt;li&gt;常见。&lt;/li&gt;
+  &lt;li&gt;Synchronized 关键字，同时只有一个线程可访问。&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 06 Feb 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/02/06/%E9%94%81.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/02/06/%E9%94%81.html</guid>
+        <link>/2023/02/06/%E9%94%81.html</link>
+        <guid isPermaLink="true">/2023/02/06/%E9%94%81.html</guid>
         
         <category>Java</category>
         
@@ -103,8 +103,8 @@ viewpage.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback()
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 01 Feb 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/02/01/Android-ViewPage2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/02/01/Android-ViewPage2.html</guid>
+        <link>/2023/02/01/Android-ViewPage2.html</link>
+        <guid isPermaLink="true">/2023/02/01/Android-ViewPage2.html</guid>
         
         <category>Android</category>
         
@@ -118,8 +118,8 @@ viewpage.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback()
         <description>&lt;h2 id=&quot;基本使用&quot;&gt;基本使用&lt;/h2&gt;
 </description>
         <pubDate>Wed, 01 Feb 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/02/01/Android-RecyclewView.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/02/01/Android-RecyclewView.html</guid>
+        <link>/2023/02/01/Android-RecyclewView.html</link>
+        <guid isPermaLink="true">/2023/02/01/Android-RecyclewView.html</guid>
         
         <category>Android</category>
         
@@ -139,8 +139,8 @@ viewpage.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback()
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 21 Jan 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</guid>
+        <link>/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</link>
+        <guid isPermaLink="true">/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</guid>
         
         <category>Android</category>
         
@@ -161,8 +161,8 @@ viewpage.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback()
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 12 Jan 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/01/12/%E5%BF%83%E5%A3%B0.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/01/12/%E5%BF%83%E5%A3%B0.html</guid>
+        <link>/2023/01/12/%E5%BF%83%E5%A3%B0.html</link>
+        <guid isPermaLink="true">/2023/01/12/%E5%BF%83%E5%A3%B0.html</guid>
         
         <category>read</category>
         
@@ -216,8 +216,8 @@ viewpage.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback()
 ```&lt;/p&gt;
 </description>
         <pubDate>Tue, 29 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/29/JS.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/29/JS.html</guid>
+        <link>/2022/11/29/JS.html</link>
+        <guid isPermaLink="true">/2022/11/29/JS.html</guid>
         
         <category>JS</category>
         
@@ -232,8 +232,8 @@ https://www.jianshu.com/p/ddeb6c4f5c01&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 22 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/22/ps.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/22/ps.html</guid>
+        <link>/2022/11/22/ps.html</link>
+        <guid isPermaLink="true">/2022/11/22/ps.html</guid>
         
         <category>ps</category>
         
@@ -256,8 +256,8 @@ https://www.jianshu.com/p/ddeb6c4f5c01&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 21 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/21/ble.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/21/ble.html</guid>
+        <link>/2022/11/21/ble.html</link>
+        <guid isPermaLink="true">/2022/11/21/ble.html</guid>
         
         <category>ble</category>
         
@@ -281,8 +281,8 @@ Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 17 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/17/Google-play.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/17/Google-play.html</guid>
+        <link>/2022/11/17/Google-play.html</link>
+        <guid isPermaLink="true">/2022/11/17/Google-play.html</guid>
         
         <category>Android</category>
         
@@ -310,8 +310,8 @@ Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</guid>
+        <link>/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</link>
+        <guid isPermaLink="true">/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html</guid>
         
         <category>Android</category>
         
