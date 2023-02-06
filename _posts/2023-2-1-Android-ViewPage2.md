@@ -53,9 +53,8 @@ class ViewPagerAdapter(private val mLevel: Array<ByteArray>) : RecyclerView.Adap
 + ViewPage2基于RecyclerView，第一个就是它
 ```
 var recyclerView: RecyclerView = viewpage.getChildAt(0) as RecyclerView
-
 ```
-+ 获取ItemView，借道RecyclerView
++ 获取ItemView，借道RecyclerView 
 ```
 var curItemView = recyclerView.layoutManager?.findViewByPosition(position)
 ```

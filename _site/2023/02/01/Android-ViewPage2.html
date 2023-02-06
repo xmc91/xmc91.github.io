@@ -182,14 +182,14 @@ viewpage.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback()
 <ul>
   <li>初始化后会先走一次监听，位置为设定的，如果没有设定，就是0</li>
   <li>ViewPage2基于RecyclerView，第一个就是它
-```
-var recyclerView: RecyclerView = viewpage.getChildAt(0) as RecyclerView</li>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var recyclerView: RecyclerView = viewpage.getChildAt(0) as RecyclerView
+</code></pre></div>    </div>
+  </li>
+  <li>获取ItemView，借道RecyclerView
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var curItemView = recyclerView.layoutManager?.findViewByPosition(position)
+</code></pre></div>    </div>
+  </li>
 </ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ 获取ItemView，借道RecyclerView
-</code></pre></div></div>
-<p>var curItemView = recyclerView.layoutManager?.findViewByPosition(position)
-```</p>
 
     </article>
 
@@ -228,6 +228,15 @@ var recyclerView: RecyclerView = viewpage.getChildAt(0) as RecyclerView</li>
       
     </section>
     <section class="post-footer-item read-next">
+      
+      <div class="read-next-item">
+        <a href="/2023/02/06/%E9%94%81.html" class="read-next-link"></a>
+        <section>
+          <span>乐观锁和悲观锁</span>
+          <p>  乐观锁、悲观锁</p>
+        </section>
+        
+     </div>
       
 
       

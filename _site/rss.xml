@@ -5,9 +5,42 @@
     <description>风一样de男子</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Feb 2023 11:56:15 +0800</pubDate>
-    <lastBuildDate>Wed, 01 Feb 2023 11:56:15 +0800</lastBuildDate>
+    <pubDate>Mon, 06 Feb 2023 10:08:34 +0800</pubDate>
+    <lastBuildDate>Mon, 06 Feb 2023 10:08:34 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
+    
+      <item>
+        <title>乐观锁和悲观锁</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;乐观锁、悲观锁&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;乐观锁&quot;&gt;乐观锁&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;使用场景：多读少写。增加吞吐量。&lt;/li&gt;
+  &lt;li&gt;一般对比version实现
+    &lt;blockquote&gt;
+      &lt;p&gt;常用例子：银行柜台，某人账号100，操作员A取走30，操作员B取走20。A提交版本加一，B提交时被驳回，B读后再加一才能更新。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;悲观锁&quot;&gt;悲观锁&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;常见&lt;/li&gt;
+  &lt;li&gt;sync关键字，同时只有一个线程可访问。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 06 Feb 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/02/06/%E9%94%81.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/02/06/%E9%94%81.html</guid>
+        
+        <category>Java</category>
+        
+        
+        <category>Java</category>
+        
+      </item>
     
       <item>
         <title>ViewPage2</title>
@@ -60,14 +93,14 @@ viewpage.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback()
 &lt;ul&gt;
   &lt;li&gt;初始化后会先走一次监听，位置为设定的，如果没有设定，就是0&lt;/li&gt;
   &lt;li&gt;ViewPage2基于RecyclerView，第一个就是它
-```
-var recyclerView: RecyclerView = viewpage.getChildAt(0) as RecyclerView&lt;/li&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var recyclerView: RecyclerView = viewpage.getChildAt(0) as RecyclerView
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;获取ItemView，借道RecyclerView
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var curItemView = recyclerView.layoutManager?.findViewByPosition(position)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+ 获取ItemView，借道RecyclerView
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;var curItemView = recyclerView.layoutManager?.findViewByPosition(position)
-```&lt;/p&gt;
 </description>
         <pubDate>Wed, 01 Feb 2023 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2023/02/01/Android-ViewPage2.html</link>
@@ -288,43 +321,6 @@ Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/
         <category>Android</category>
         
         <category>Auto</category>
-        
-      </item>
-    
-      <item>
-        <title>随笔</title>
-        <description>&lt;p&gt;2022-11-12-随笔.md&lt;/p&gt;
-
-&lt;h2 id=&quot;2022-4-14-阴-中午12点核酸&quot;&gt;2022-4-14 阴 中午12点核酸&lt;/h2&gt;
-
-&lt;h3 id=&quot;钱和我&quot;&gt;钱和我&lt;/h3&gt;
-
-&lt;p&gt;我并不是一个很在乎钱的人&lt;/p&gt;
-
-&lt;p&gt;然而我生活在了一个很在乎钱的时代&lt;/p&gt;
-
-&lt;p&gt;又在一个特别在乎钱的城市&lt;/p&gt;
-
-&lt;h2 id=&quot;2022-4-20-半阴半晴-今天买到馒头了&quot;&gt;2022-4-20 半阴半晴 今天买到馒头了&lt;/h2&gt;
-
-&lt;h3 id=&quot;情绪&quot;&gt;情绪&lt;/h3&gt;
-
-&lt;p&gt;你没有必要告诉或者展现给别人&lt;/p&gt;
-
-&lt;p&gt;你活的很开心&lt;/p&gt;
-
-&lt;p&gt;你只需要回答自己&lt;/p&gt;
-
-&lt;p&gt;你活的并不悲伤&lt;/p&gt;
-</description>
-        <pubDate>Sat, 12 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/12/%E9%9A%8F%E7%AC%94.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/12/%E9%9A%8F%E7%AC%94.html</guid>
-        
-        <category>Read</category>
-        
-        
-        <category>Read</category>
         
       </item>
     

@@ -1,6 +1,12 @@
 [
   
     {
+      "title"    : "乐观锁和悲观锁",
+      "tags"     : "Java",
+      "url"      : "/2023/02/06/%E9%94%81.html"
+    } ,
+  
+    {
       "title"    : "ViewPage2",
       "tags"     : "Android",
       "url"      : "/2023/02/01/Android-ViewPage2.html"
