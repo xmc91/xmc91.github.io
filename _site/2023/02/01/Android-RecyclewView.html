@@ -10,7 +10,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="RecyclewView - WindMan Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/2023/02/01/Android-RecyclewView.html">
+    <meta property="og:url" content="http://localhost:4000/2023/02/01/Android-RecyclewView.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="WindMan Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -133,7 +133,175 @@ Author: Ray-Eldath
     
 
     <article class="markdown-body">
-      <h2 id="基本使用">基本使用</h2>
+      <blockquote>
+  <p>Android 使用最频繁的一个group组件</p>
+</blockquote>
+
+<h2 id="基本使用">基本使用</h2>
+<ul>
+  <li>初始化及监听</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mAdapter = new XXXAdapter(mContext);
+LinearLayoutManager layoutManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
+mRecyclerView.setLayoutManager(layoutManager);
+mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+mRecyclerView.setAdapter(mAdapter);
+
+mAdapter.setOnItemClickListener(type -&gt; {
+});
+</code></pre></div></div>
+<ul>
+  <li>adapter</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class XXXAdapter extends RecyclerView.Adapter&lt;XXXAdapter.ItemViewHolder&gt; {
+
+    private LayoutInflater mInflater;
+
+    private OnItemClickListener mOnItemClickListener;
+
+    private MsgEntity mMsgEntity;
+
+    public MsgCenterAdapter(Context context) {
+        mInflater = LayoutInflater.from(context);
+    }
+
+    public void setMsgEntity(MsgEntity msgEntity) {
+        mMsgEntity = msgEntity;
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        mOnItemClickListener = onItemClickListener;
+    }
+
+    @Override
+    public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new ItemViewHolder(mInflater.inflate(R.layout.item_msg_center, parent, false));
+    }
+
+    @Override
+    public void onBindViewHolder(ItemViewHolder holder, int position) {
+        Context context = holder.itemView.getContext();
+        holder.mIcon.setImageResource(R.mipmap.icon_msg_center_comment);
+        holder.mName.setText(R.string.msgCenterComment);
+    }
+
+    @Override
+    public int getItemCount() {
+        return 4;
+    }
+
+    static class ItemViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.icon)
+        ImageView mIcon;
+
+        public ItemViewHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+            setIsRecyclable(false);
+        }
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(@MsgType String type);
+    }
+}
+</code></pre></div></div>
+
+<h2 id="进阶">进阶</h2>
+<ul>
+  <li>LayoutManager
+    <ul>
+      <li>LinearLayoutManager 横向、纵向。</li>
+      <li>GridLayoutManager 网格</li>
+      <li>StaggeredGridLayoutManager 瀑布</li>
+    </ul>
+  </li>
+  <li>分割线 ItemDecoration：onDraw、onDrawOver、getItemOffsets
+    <ul>
+      <li>onDraw方法先于drawChildren</li>
+      <li>onDrawOver在drawChildren之后，一般我们选择复写其中一个即可。</li>
+      <li>getItemOffsets 可以通过outRect.set()为每个Item设置一定的偏移量，主要用于绘制Decorator。</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class DividerGridItemDecoration extends RecyclerView.ItemDecoration{
+
+    private static final int[] ATTRS = new int[] { android.R.attr.listDivider };
+    private Drawable mDivider;
+
+    public DividerGridItemDecoration(Context context){
+        final TypedArray a = context.obtainStyledAttributes(ATTRS);
+        mDivider = a.getDrawable(0);
+        a.recycle();
+    }
+
+    @Override
+    public void onDraw(Canvas c, RecyclerView parent, State state){
+        drawHorizontal(c, parent);
+        drawVertical(c, parent);
+    }
+
+    public void drawHorizontal(Canvas c, RecyclerView parent){
+        int childCount = parent.getChildCount();
+        for (int i = 0; i &lt; childCount; i++){
+            final View child = parent.getChildAt(i);
+            final RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child.getLayoutParams();
+            final int left = child.getLeft() - params.leftMargin;
+            final int right = child.getRight() + params.rightMargin
+                    + mDivider.getIntrinsicWidth();
+            final int top = child.getBottom() + params.bottomMargin;
+            final int bottom = top + mDivider.getIntrinsicHeight();
+            mDivider.setBounds(left, top, right, bottom);
+            mDivider.draw(c);
+        }
+    }
+
+    public void drawVertical(Canvas c, RecyclerView parent){
+        final int childCount = parent.getChildCount();
+        for (int i = 0; i &lt; childCount; i++){
+            final View child = parent.getChildAt(i);
+            final RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child.getLayoutParams();
+            final int top = child.getTop() - params.topMargin;
+            final int bottom = child.getBottom() + params.bottomMargin;
+            final int left = child.getRight() + params.rightMargin;
+            final int right = left + mDivider.getIntrinsicWidth();
+            mDivider.setBounds(left, top, right, bottom);
+            mDivider.draw(c);
+        }
+    }
+
+    @Override
+    public void getItemOffsets(Rect outRect, int itemPosition,
+            RecyclerView parent){
+        int spanCount = getSpanCount(parent);
+        int childCount = parent.getAdapter().getItemCount();
+        outRect.set(0, 0, mDivider.getIntrinsicWidth(), 0);
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>动画</p>
+  </li>
+  <li>
+    <p>绘制：测量 onMeasure 和布局 onLayout 工作委托给 LayoutManager 来执行，不同的 LayoutManager 会有不同风格的布局显示，这是一种策略模式
+<img src="/assets/img/recyclerview_draw.png" alt="复杂度" /></p>
+  </li>
+  <li>
+    <p>Recycler</p>
+  </li>
+  <li>
+    <p>四级缓存</p>
+  </li>
+  <li>
+    <p>header 和 footer</p>
+  </li>
+</ul>
+
 
     </article>
 
@@ -188,7 +356,7 @@ Author: Ray-Eldath
         <a href="/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html" class="read-next-link"></a>
           <section>
             <span>Android知识点</span>
-            <p>  Intent 传值的上限。          取决于binder事务缓存的分配，每个进程分配1M。      </p>
+            <p>  基于RecyclerView，替代ViewPage      Intent 传值的上限。取决于binder事务...</p>
           </section>
           
       </div>
