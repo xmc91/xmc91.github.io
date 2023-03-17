@@ -1,7 +1,7 @@
 # Site settings 配置站点
-title: 'WindMan Blog'
+title: '雪木 Blog'
 description: '风一样de男子'
-keyword: 'WindMan, WindMan的独立博客, WindMan的博客,蓝牙, 小程序, Android,nodejs'
+keyword: '雪木, 雪木的独立博客, 雪木的博客,蓝牙, 小程序, Android,nodejs'
 url: '' # your host
 
 # when build blog on server, if you don't need baseurl, you should leave this value blank.
@@ -24,9 +24,9 @@ footer:
   since: 2019
 
 # Author 配置博主信息
-author: 'xmc91'
+author: '雪木'
 nickname: '风一样de男子'
-bio: 'Android、Nodejs、WX Plugin 开发者,历史、杂谈'
+bio: 'Android、Nodejs、Wx Plugin开发者,历史,杂谈'
 avatar: '/assets/img/profile.png'
 
 # Search
@@ -45,7 +45,7 @@ mathjax: true
 
 # Share
 social-share: true
-social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
+social-share-items: ['wechat', 'weibo', 'twitter']
 
 # theme color 主题皮肤
 theme-color: 'pink'  # pink or default
@@ -58,6 +58,7 @@ postPatterns: 'circuitBoard'
 sns:
   juejin: '//juejin.im/user/58b513f0570c35006b0be9c1'
   github: '//github.com/xmc91'
+  weibo:  '//weibo.com/u/6206849398'
  
 
 # Tags 设置标签

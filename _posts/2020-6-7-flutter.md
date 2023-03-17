@@ -6,18 +6,21 @@ date: 2020-6-7
 categories: flutter
 tags: flutter 
 ---
-> 念奴娇·赤壁怀古【作者】苏轼 
-大江东去，浪淘尽，千古风流人物。
-故垒西边，人道是，三国周郎赤壁。
-乱石穿空，惊涛拍岸，卷起千堆雪。
-江山如画，一时多少豪杰。
-遥想公瑾当年，小乔初嫁了，雄姿英发。
-羽扇纶巾，谈笑间，樯橹灰飞烟灭。
-故国神游，多情应笑我，早生华发。
-人生如梦，一尊还酹江月。
+> flutter 官网：https://flutterchina.club/
 
 ## 环境搭建
 + 下载flutter sdk，[慢的夜啤](https://flutterchina.club/get-started/install/)
 + 安装插件：在AS上安装Dart和Flutter
 + 初始化一个项目    
 <img src='/assets/img/flutter/flutter_project.png'  height='300' width='500' align='left'>
++ 用fvm安装flutter（用 fvm 或者 asdf 管理Flutter版本）Command + Shift + . 显示隐藏文件夹	
++ fvm： https://fvm.app/docs/getting_started/installation/
++ asdf： https://devpress.csdn.net/opensource/62f91986c6770329307fd264.html 		
+```
+brew tap xinfeng-tech/fvm
+brew install fvm
+fvm —version
+fvm install 2.0.0
+fvm list
+cd 到项目中，使用fvm use 1.22.4 --local
+```

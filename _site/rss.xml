@@ -1,13 +1,203 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>WindMan Blog</title>
+    <title>雪木 Blog</title>
     <description>风一样de男子</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 07 Mar 2023 12:31:00 +0800</pubDate>
-    <lastBuildDate>Tue, 07 Mar 2023 12:31:00 +0800</lastBuildDate>
+    <pubDate>Fri, 17 Mar 2023 17:23:34 +0800</pubDate>
+    <lastBuildDate>Fri, 17 Mar 2023 17:23:34 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
+    
+      <item>
+        <title>Android小功能</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;小功能积累&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;空间不够滚动来凑&quot;&gt;空间不够，滚动来凑&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;TextView
+    android:id=&quot;@+id/device_name&quot;
+    android:layout_width=&quot;100dp&quot;
+    android:layout_height=&quot;wrap_content&quot;
+    android:ellipsize=&quot;marquee&quot;
+    android:focusable=&quot;true&quot;
+    android:focusableInTouchMode=&quot;true&quot;
+    android:marqueeRepeatLimit=&quot;marquee_forever&quot;
+    android:maxWidth=&quot;100dp&quot;
+    android:scrollHorizontally=&quot;true&quot;
+    android:singleLine=&quot;true&quot;
+    android:textColor=&quot;@color/black&quot;
+    android:textSize=&quot;18sp&quot;
+    android:textStyle=&quot;bold&quot; /&amp;gt;
+最后 setSelected(true)    
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;log写入本地文件系统&quot;&gt;log写入本地文件系统&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    public static void write(String text) {
+        SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss:SSS&quot;);
+        text = sdf.format(new Date()) + &quot;: &quot; + text + &quot; \n&quot;;
+        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
+            if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+                String sdPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + &quot;/&quot;;// sd/Download
+                File file1 = new File(sdPath + &quot;log.txt&quot;);
+                if (!file1.exists()) {
+                    try {
+                        file1.createNewFile();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                FileOutputStream fileOutputStream = null;
+                try {
+                    fileOutputStream = new FileOutputStream(file1,true);
+                    fileOutputStream.write(text.getBytes());
+                    VTLog.d(&quot;write&quot;, &quot;&quot; + text);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    if (fileOutputStream != null) {
+                        try {
+                            fileOutputStream.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+        }
+    }
+八大目录可保存。    
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Fri, 17 Mar 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/03/17/%E5%B0%8F%E5%8A%9F%E8%83%BD.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/03/17/%E5%B0%8F%E5%8A%9F%E8%83%BD.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>安全评估报告</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;有舆论或社会动员能力的功能的软件的自查报告&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;指导：https://baijiahao.baidu.com/s?id=1620538698297450950&amp;amp;wfr=spider&amp;amp;for=pc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;https://www.zhihu.com/question/307071708/answer/1035153886&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;填写报告网址：http://www.beian.gov.cn/portal/index.do&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 14 Mar 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/03/14/%E5%AE%89%E5%85%A8%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/03/14/%E5%AE%89%E5%85%A8%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A.html</guid>
+        
+        <category>政策</category>
+        
+        
+        <category>上架</category>
+        
+      </item>
+    
+      <item>
+        <title>Android12适配</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Google 正式推出的系统，两年后都会强制要求在Google Play上架需要适配，比如今年推出Android99，两年后target小于99就不让在Google play上架了。同时Google play严禁应用内置其他下载途径，会触犯【网络和设备滥用】。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;android12-适配其实很简单大多数应用只需修改以下几点&quot;&gt;Android12 适配其实很简单，大多数应用只需修改以下几点。&lt;/h1&gt;
+
+&lt;h2 id=&quot;target&quot;&gt;target&lt;/h2&gt;
+&lt;p&gt;修改为31即可。&lt;/p&gt;
+
+&lt;h2 id=&quot;pendingintent&quot;&gt;PendingIntent&lt;/h2&gt;
+&lt;p&gt;flag修改为 FLAG_IMMUTABLE 或者或上 FLAG_IMMUTABLE 即可。&lt;/p&gt;
+
+&lt;h2 id=&quot;exported&quot;&gt;exported&lt;/h2&gt;
+&lt;p&gt;在使用了 intent-filter 的组件上修改 exported = true 即可。&lt;/p&gt;
+
+&lt;h2 id=&quot;require-包名&quot;&gt;require 包名&lt;/h2&gt;
+&lt;p&gt;要访问的其他app的包名，要提前声明&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &amp;lt;queries&amp;gt;
+        &amp;lt;package android:name=&quot;com.whatsapp&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.facebook.katana&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.facebook.orca&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.twitter.android&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.tencent.tim&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.tencent.mm&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.sina.weibo&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.tencent.mobileqq&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.instagram.android&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;jp.naver.line.android&quot; /&amp;gt;
+    &amp;lt;/queries&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;ble&quot;&gt;BLE&lt;/h2&gt;
+&lt;p&gt;增加以下权限并请求&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	// app模拟蓝牙设备时使用
+    &amp;lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADVERTISE&quot; /&amp;gt;
+    // app连接外围设备时使用
+    &amp;lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_CONNECT&quot; /&amp;gt;
+    // app扫描外围设备时使用
+    &amp;lt;uses-permission
+        android:name=&quot;android.permission.BLUETOOTH_SCAN&quot;
+        android:usesPermissionFlags=&quot;neverForLocation&quot; /&amp;gt;
+
+    ArrayList&amp;lt;String&amp;gt; permissions = new ArrayList&amp;lt;&amp;gt;();
+        if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.S) {
+            permissions.add(Manifest.permission.BLUETOOTH_SCAN);
+            permissions.add(Manifest.permission.BLUETOOTH_CONNECT);
+        } else if (Build.VERSION.SDK_INT &amp;gt; Build.VERSION_CODES.P) {
+            permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
+        } else if (Build.VERSION.SDK_INT &amp;gt; Build.VERSION_CODES.M) {
+            permissions.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+        }   
+
+		BluetoothAdapter bluetoothAdapter = bluetoothManager.getAdapter();
+            if (!bluetoothAdapter.isEnabled()) {
+                // Android 12没有权限，去打开蓝牙，会gg!!!
+                new RxPermissions(mActivity).requestEachCombined(Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT)
+                        .subscribe(new Consumer&amp;lt;Permission&amp;gt;() {
+                            @Override
+                            public void accept(Permission permission) throws Exception {
+                                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                                startActivityForResult(enableBtIntent, OPEN_REQUEST_CODE);
+                            }
+                        }, new Consumer&amp;lt;Throwable&amp;gt;() {
+                            @Override
+                            public void accept(Throwable throwable) throws Exception {
+
+                            }
+                        });
+            }else {
+                requestBlePermision(permissions.toArray(new String[permissions.size()]))    
+
+            }        
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Tue, 14 Mar 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/03/14/Android12%E9%80%82%E9%85%8D.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/03/14/Android12%E9%80%82%E9%85%8D.html</guid>
+        
+        <category>update</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
     
       <item>
         <title>Android关键词</title>
@@ -434,101 +624,6 @@ mAdapter.setOnItemClickListener(type -&amp;gt; {
         
         
         <category>read</category>
-        
-      </item>
-    
-      <item>
-        <title>JS</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;创建对象&lt;/li&gt;
-  &lt;li&gt;临时用
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; var obj={}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;工厂
- ```
- function createAlarm(date,repeat){
- 	return {
- 		date:date,
- 		repeat:repeat
- 	}
- }&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
- - 可以new的
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;function Alarm(date,repeat){
- 	this.date=date
- 	this.repeat=repeat
- 	this.test=function(){
- 		console.log(date.getTime())
- 	}
- }&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-+ 时间对象Date 
- - new Date() 可以指定时间
- - 可以获取年月日时分秒
- - 通过getTime()比较先后
-
-+ 枚举。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;var CMDType = {
-    MOTOR: 1,
-    ALARM: 2, 
-    RING: 3 
-}
-```&lt;/p&gt;
-</description>
-        <pubDate>Tue, 29 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/29/JS.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/29/JS.html</guid>
-        
-        <category>JS</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>基金</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;下载、安装、移除Quarantine
-https://www.jianshu.com/p/ddeb6c4f5c01&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 22 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/22/ps.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/22/ps.html</guid>
-        
-        <category>ps</category>
-        
-        
-        <category>Tools</category>
-        
-      </item>
-    
-      <item>
-        <title>BLE</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;通用服务
-&lt;img src=&quot;/assets/img/ble_uuid.png&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;ADType
-&lt;img src=&quot;/assets/img/ble.png&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 21 Nov 2022 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2022/11/21/ble.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/11/21/ble.html</guid>
-        
-        <category>ble</category>
-        
-        
-        <category>Android</category>
         
       </item>
     
