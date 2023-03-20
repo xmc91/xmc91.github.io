@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android12适配 - 雪木 Blog</title>
+    <meta name="author"  content="雪木">
+    <meta name="description" content="Android12适配">
+    <meta name="keywords"  content="update">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Android12适配 - 雪木 Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:4000/2023/03/14/Android12%E9%80%82%E9%85%8D.html">
+    <meta property="og:description" content="风一样de男子">
+    <meta property="og:site_name" content="雪木 Blog">
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_roc50gemkxpw4s4i.css">
+    <link rel="stylesheet" href="/assets/css/github-markdown.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
+    <link rel="stylesheet" href="/assets/css/share.min.css">
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!--
+Author: Ray-Eldath
+refer to:
+ - http://docs.mathjax.org/en/latest/options/index.html
+-->
+
+	<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ["$", "$"] ],
+			displayMath: [ ["$$", "$$"] ],
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		},
+		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+      });
+    </script>
+
+	
+    <!--
+Author: Ray-Eldath
+-->
+<style>
+    .markdown-body .anchor{
+        float: left;
+        margin-top: -8px;
+        margin-left: -20px;
+        padding-right: 4px;
+        line-height: 1;
+        opacity: 0;
+    }
+    
+    .markdown-body .anchor .anchor-icon{
+        font-size: 15px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let nodes = document.querySelector(".markdown-body").querySelectorAll("h1,h2,h3")
+        for(let node of nodes) {
+            var anchor = document.createElement("a")
+            var anchorIcon = document.createElement("i")
+            anchorIcon.setAttribute("class", "fa fa-anchor fa-lg anchor-icon")
+            anchorIcon.setAttribute("aria-hidden", true)
+            anchor.setAttribute("class", "anchor")
+            anchor.setAttribute("href", "#" + node.getAttribute("id"))
+            
+            anchor.onmouseover = function() {
+                this.style.opacity = "0.4"
+            }
+            
+            anchor.onmouseout = function() {
+                this.style.opacity = "0"
+            }
+            
+            anchor.appendChild(anchorIcon)
+            node.appendChild(anchor)
+        }
+    })
+</script>
+</head>
+
+
+<body>
+  <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+  <input id="nm-switch" type="hidden" value="true"> <header class="g-header">
+    <div class="g-logo">
+      <a href="/"></a>
+    </div>
+    <i id="menu-toggle" class="iconfont icon-menu"></i>
+    <nav class="g-nav">
+        <ul>
+            
+            <li><a href="/">home</a></li>
+            
+            <li><a href="/tags.html">tags</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+
+  <header
+    class="g-banner post-header post-pattern-circuitBoard bgcolor-pink post-no-cover"
+    data-theme="pink"
+  >
+    <div class="post-wrapper">
+      <div class="post-tags">
+        
+          
+            <a href="/tags.html#update" class="post-tag">update</a>
+          
+        
+      </div>
+      <h1>Android12适配</h1>
+      <div class="post-meta">
+        <span class="post-meta-item"><i class="iconfont icon-author"></i>雪木</span>
+        <time class="post-meta-item" datetime="23-03-14"><i class="iconfont icon-date"></i>14 Mar 2023</time>
+      </div>
+    </div>
+    
+  </header>
+
+  <div class="post-content visible">
+    
+
+    <article class="markdown-body">
+      <blockquote>
+  <p>Google 正式推出的系统，两年后都会强制要求在Google Play上架需要适配，比如今年推出Android99，两年后target小于99就不让在Google play上架了。同时Google play严禁应用内置其他下载途径，会触犯【网络和设备滥用】。</p>
+</blockquote>
+
+<h1 id="android12-适配其实很简单大多数应用只需修改以下几点">Android12 适配其实很简单，大多数应用只需修改以下几点。</h1>
+
+<h2 id="target">target</h2>
+<p>修改为31即可。</p>
+
+<h2 id="pendingintent">PendingIntent</h2>
+<p>flag修改为 FLAG_IMMUTABLE 或者或上 FLAG_IMMUTABLE 即可。</p>
+
+<h2 id="exported">exported</h2>
+<p>在使用了 intent-filter 的组件上修改 exported = true 即可。</p>
+
+<h2 id="require-包名">require 包名</h2>
+<p>要访问的其他app的包名，要提前声明</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;queries&gt;
+        &lt;package android:name="com.whatsapp" /&gt;
+        &lt;package android:name="com.facebook.katana" /&gt;
+        &lt;package android:name="com.facebook.orca" /&gt;
+        &lt;package android:name="com.twitter.android" /&gt;
+        &lt;package android:name="com.tencent.tim" /&gt;
+        &lt;package android:name="com.tencent.mm" /&gt;
+        &lt;package android:name="com.sina.weibo" /&gt;
+        &lt;package android:name="com.tencent.mobileqq" /&gt;
+        &lt;package android:name="com.instagram.android" /&gt;
+        &lt;package android:name="jp.naver.line.android" /&gt;
+    &lt;/queries&gt;
+</code></pre></div></div>
+
+<h2 id="ble">BLE</h2>
+<p>增加以下权限并请求</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	// app模拟蓝牙设备时使用
+    &lt;uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" /&gt;
+    // app连接外围设备时使用
+    &lt;uses-permission android:name="android.permission.BLUETOOTH_CONNECT" /&gt;
+    // app扫描外围设备时使用
+    &lt;uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" /&gt;
+
+    ArrayList&lt;String&gt; permissions = new ArrayList&lt;&gt;();
+        if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.S) {
+            permissions.add(Manifest.permission.BLUETOOTH_SCAN);
+            permissions.add(Manifest.permission.BLUETOOTH_CONNECT);
+        } else if (Build.VERSION.SDK_INT &gt; Build.VERSION_CODES.P) {
+            permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
+        } else if (Build.VERSION.SDK_INT &gt; Build.VERSION_CODES.M) {
+            permissions.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+        }   
+
+		BluetoothAdapter bluetoothAdapter = bluetoothManager.getAdapter();
+            if (!bluetoothAdapter.isEnabled()) {
+                // Android 12没有权限，去打开蓝牙，会gg!!!
+                new RxPermissions(mActivity).requestEachCombined(Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT)
+                        .subscribe(new Consumer&lt;Permission&gt;() {
+                            @Override
+                            public void accept(Permission permission) throws Exception {
+                                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                                startActivityForResult(enableBtIntent, OPEN_REQUEST_CODE);
+                            }
+                        }, new Consumer&lt;Throwable&gt;() {
+                            @Override
+                            public void accept(Throwable throwable) throws Exception {
+
+                            }
+                        });
+            }else {
+                requestBlePermision(permissions.toArray(new String[permissions.size()]))    
+
+            }        
+</code></pre></div></div>
+
+
+    </article>
+
+    
+    <div class="social-share-wrapper">
+      <div class="social-share"></div>
+    </div>
+    
+  </div>
+
+  <section class="author-detail">
+    <section class="post-footer-item author-card">
+      <div class="avatar">
+        <img src="/assets/img/profile.png" alt="">
+      </div>
+      <div class="author-name" rel="author">雪木</div>
+      <div class="bio">
+        <p>Android、Nodejs、Wx Plugin开发者,历史,杂谈</p>
+      </div>
+      
+      <ul class="sns-links">
+        
+        <li>
+          <a href="//juejin.im/user/58b513f0570c35006b0be9c1" target="_blank">
+                    <i class="iconfont icon-juejin"></i>
+                </a>
+        </li>
+        
+        <li>
+          <a href="//github.com/xmc91" target="_blank">
+                    <i class="iconfont icon-github"></i>
+                </a>
+        </li>
+        
+        <li>
+          <a href="//weibo.com/u/6206849398" target="_blank">
+                    <i class="iconfont icon-weibo"></i>
+                </a>
+        </li>
+        
+      </ul>
+      
+    </section>
+    <section class="post-footer-item read-next">
+      
+      <div class="read-next-item">
+        <a href="/2023/03/14/%E5%AE%89%E5%85%A8%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A.html" class="read-next-link"></a>
+        <section>
+          <span>安全评估报告</span>
+          <p>  有舆论或社会动员能力的功能的软件的自查报告</p>
+        </section>
+        
+     </div>
+      
+
+      
+      <div class="read-next-item">
+        <a href="/2023/03/06/Android%E5%85%B3%E9%94%AE%E8%AF%8D.html" class="read-next-link"></a>
+          <section>
+            <span>Android关键词</span>
+            <p>  key word</p>
+          </section>
+          
+      </div>
+      
+    </section>
+    
+    <section class="post-footer-item comment">
+        <div id="disqus_thread"></div>
+    </section>
+    
+  </section>
+
+  <footer class="g-footer">
+  <section>雪木 Blog ©
+  
+  
+    2019
+    -
+  
+  2023
+  </section>
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>  
+
+ 总访问量<span id="busuanzi_value_site_pv"></span>次
+ |访客数<span id="busuanzi_value_site_uv"></span>人次
+ 
+</footer>
+
+
+  <script src="/assets/js/social-share.min.js"></script>
+  <script>
+    socialShare('.social-share', {
+      sites: [
+        
+          'wechat'
+          ,
+          
+        
+          'weibo'
+          ,
+          
+        
+          'twitter'
+          
+        
+      ],
+      wechatQrcodeTitle: "分享到微信朋友圈",
+      wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
+    });
+  </script>
+
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://xwindman.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+
+  <script src="/assets/js/prism.js"></script>
+  <script src="/assets/js/index.min.js"></script>
+</body>
+
+</html>
