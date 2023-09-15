@@ -5,14 +5,166 @@
     <description>风一样de男子</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 17 Mar 2023 17:23:34 +0800</pubDate>
-    <lastBuildDate>Fri, 17 Mar 2023 17:23:34 +0800</lastBuildDate>
+    <pubDate>Thu, 14 Sep 2023 16:43:14 +0800</pubDate>
+    <lastBuildDate>Thu, 14 Sep 2023 16:43:14 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
+    
+      <item>
+        <title>Android13升级</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Android12升级到Android13&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;多语言支持此功能在国内被阉割&quot;&gt;多语言支持，此功能在国内被阉割&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;配置后在设置内可以选择&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;
+&amp;lt;locale-config xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&amp;gt;
+    &amp;lt;locale android:name=&quot;zh&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;en&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;tw&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;ar&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;de&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;es&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;fa&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;fr&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;it&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;ja&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;ko&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;ms&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;pl&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;pt&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;ru&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;sk&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;th&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;tr&quot; /&amp;gt;
+    &amp;lt;locale android:name=&quot;vi&quot; /&amp;gt;
+&amp;lt;/locale-config&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;拆分sd卡权限&quot;&gt;拆分sd卡权限&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;把原来的storage权限拆分成image、audio、video三个权限。如果仅仅是操作图片，视频、语音没有操作文件类的，可以使用Android内置的图片选择器。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;String p;
+            if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.TIRAMISU) {
+                p = Manifest.permission.READ_MEDIA_IMAGES;
+            } else {
+                p = Manifest.permission.READ_EXTERNAL_STORAGE;
+            }
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;声明广告id&quot;&gt;声明广告ID&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;如果接入了Google广告，需要声明广告ID权限&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;uses-permission android:name=&quot;com.google.android.gms.permission.AD_ID&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;webview-废弃api&quot;&gt;webview 废弃API&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//  废弃      webSettings.setAppCachePath(appCachePath);
+  替代      webSettings.setDatabasePath(appCachePath);
+  
+//  废弃      webSettings.setAppCacheEnabled(true);
+//        setAppCacheEnabled(false) 可以用setCacheMode(WebSettings.LOAD_NO_CACHE)替代。
+//        setAppCacheEnabled(true) 可以用setCacheMode(WebSettings.LOAD_DEFAULT)替代      
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 07 Sep 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/09/07/Android13%E5%8D%87%E7%BA%A7.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/09/07/Android13%E5%8D%87%E7%BA%A7.html</guid>
+        
+        <category>Android</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>支付宝小程序</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Html 小功能积累&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;小程序&quot;&gt;小程序&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;牛逼，这么多平台
+&lt;img src=&quot;https://docimg4.docs.qq.com/image/AgAABh4JP1su1BG13HRG5rjA2mRWumBY.png?w=1036&amp;amp;h=728&quot; alt=&quot;11&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;模版
+&lt;img src=&quot;https://docimg5.docs.qq.com/image/AgAABh4JP1sBLA9A-RZB2LNvbk_z52VU.png?w=1014&amp;amp;h=715&quot; alt=&quot;12&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;插件&quot;&gt;插件&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;比小程序少一些平台
+&lt;img src=&quot;https://docimg9.docs.qq.com/image/AgAABh4JP1vc-F-YehlMPI087FL0-y71.png?w=1051&amp;amp;h=759&quot; alt=&quot;21&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;只有空白模版
+&lt;img src=&quot;https://docimg9.docs.qq.com/image/AgAABh4JP1vvbx7Ewx1GzJCtoMPG-_q3.png?w=1031&amp;amp;h=710&quot; alt=&quot;22&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;create
+&lt;img src=&quot;https://docimg2.docs.qq.com/image/AgAABh4JP1u5vFxBZrhB5pf21_JJhiqE.png?w=1022&amp;amp;h=722&quot; alt=&quot;23&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 06 Sep 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/09/06/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8F%92%E4%BB%B6.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/09/06/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8F%92%E4%BB%B6.html</guid>
+        
+        <category>小程序</category>
+        
+        
+        <category>小程序</category>
+        
+      </item>
+    
+      <item>
+        <title>html小功能</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Html 小功能积累&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;图片处理&quot;&gt;图片处理&lt;/h2&gt;
+&lt;h3 id=&quot;图片链接&quot;&gt;图片链接&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;a href=&quot;超链接地址&quot;&amp;gt;&amp;lt;img src=&quot;路径&quot; alt=&quot;替代文本&quot;&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;图片不同区域点击跳转不同连接&quot;&gt;图片不同区域点击跳转不同连接&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;连接map&lt;/li&gt;
+  &lt;li&gt;设置map&lt;/li&gt;
+  &lt;li&gt;设置不同的area&lt;/li&gt;
+  &lt;li&gt;设置坐标 coords&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;img src=&quot;./img/bg-home.jpg&quot; alt=&quot;&quot; usemap=&quot;#map&quot;&amp;gt;
+&amp;lt;map name=&quot;map&quot; id=&quot;map&quot;&amp;gt;
+     &amp;lt;area shape=&quot;poly&quot; coords=&quot;583,382,587,357,609,359,611,283,1014,247,1392,352,1362,410,1218,445,583,382&quot; href=&quot;https://www.baidu.com/&quot; alt=&quot;&quot;&amp;gt;
+     &amp;lt;area shape=&quot;poly&quot; coords=&quot;584,392,532,500,1194,587,1386,533,1414,398,1231,448,584,392&quot; href=&quot;https://www.mi.com/&quot; alt=&quot;&quot;&amp;gt;
+     &amp;lt;area shape=&quot;poly&quot; coords=&quot;591,520,565,595,510,618,1169,731,1406,641,1395,542,1170,601,591,520&quot; href=&quot;https://huaban.com/&quot; alt=&quot;&quot;&amp;gt;
+     &amp;lt;area shape=&quot;poly&quot; coords=&quot;570,641,569,742,1164,867,1395,767,1398,655,1172,734,570,641&quot; href=&quot;https://www.qingnian8.com/&quot; alt=&quot;&quot;&amp;gt;        
+&amp;lt;/map&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 06 Sep 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/09/06/html.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/09/06/html.html</guid>
+        
+        <category>html</category>
+        
+        
+        <category>html</category>
+        
+      </item>
     
       <item>
         <title>Android小功能</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;小功能积累&lt;/p&gt;
+  &lt;p&gt;Android 小功能积累&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;空间不够滚动来凑&quot;&gt;空间不够，滚动来凑&lt;/h2&gt;
@@ -31,6 +183,7 @@
     android:textColor=&quot;@color/black&quot;
     android:textSize=&quot;18sp&quot;
     android:textStyle=&quot;bold&quot; /&amp;gt;
+
 最后 setSelected(true)    
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -69,9 +222,61 @@
             }
         }
     }
+    
 八大目录可保存。    
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;沉浸式状态栏&quot;&gt;沉浸式状态栏&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;状态栏透明，然后根据内容适配颜色&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;简单的就是fitsSystemWindows，让系统自适配。&lt;/li&gt;
+  &lt;li&gt;复杂的就是现接管window的标识（清除、add），设置activity全屏且状态栏不消失，自己适配padding和margin，根据距离适当移动内容区并控制状态栏字体颜色
+ https://juejin.cn/post/7203563038301061181?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;splite-sqlitedatabase&quot;&gt;splite （SQLiteDatabase）&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;轻量数据库，借用辅助类SQLiteOpenHelper实现增删改查&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SQLiteOpenHelper，自己写一个继承之， &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onCreate&lt;/code&gt; 仅首次创建数据执行，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onUpgrade&lt;/code&gt; 仅新版本大于老版本执行。创建表时，可以指定主键&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;insert&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;update&lt;/code&gt; : 借助ContentValues&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;delete&lt;/code&gt;：”xxx=?”,填充？即可&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;query&lt;/code&gt; :借助Cursor&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;android-三种定时方法&quot;&gt;Android 三种定时方法&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 需要更新UI的
+private Handler mHandler = new Handler(Looper.myLooper());
+mHandler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            mTabRecycleView.scrollToPosition(position);
+                        }
+                    }, 50);
+
+2.Timer 与线程无关
+Timer timer = new Timer();
+timer.schedule(new TimerTask() {
+    @Override
+    public void run() {
+       
+    }
+}, 50);
+
+3.ScheduledExecutorService 与线程无关
+ScheduledExecutorService scheduledExecutor = Executors.newScheduledThreadPool(1);
+scheduledExecutor.schedule(new Runnable() {
+    @Override
+    public void run() {
+        // 需要进行延时执行的操作
+    }
+}, delayMillis, TimeUnit.MILLISECONDS);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 </description>
         <pubDate>Fri, 17 Mar 2023 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2023/03/17/%E5%B0%8F%E5%8A%9F%E8%83%BD.html</link>
@@ -193,52 +398,6 @@
         <guid isPermaLink="true">http://localhost:4000/2023/03/14/Android12%E9%80%82%E9%85%8D.html</guid>
         
         <category>update</category>
-        
-        
-        <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>Android关键词</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;key word&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;context&quot;&gt;Context&lt;/h2&gt;
-
-&lt;h2 id=&quot;activity&quot;&gt;Activity&lt;/h2&gt;
-
-&lt;h2 id=&quot;wms&quot;&gt;WMS&lt;/h2&gt;
-
-&lt;h2 id=&quot;沉浸式状态栏&quot;&gt;沉浸式状态栏&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;状态栏透明，然后根据内容适配颜色&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;简单的就是fitsSystemWindows，让系统自适配。&lt;/li&gt;
-  &lt;li&gt;复杂的就是现接管window的标识（清除、add），设置activity全屏且状态栏不消失，自己适配padding和margin，根据距离适当移动内容区并控制状态栏字体颜色
- https://juejin.cn/post/7203563038301061181?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;splite-sqlitedatabase&quot;&gt;splite （SQLiteDatabase）&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;轻量数据库，借用辅助类SQLiteOpenHelper实现增删改查&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;SQLiteOpenHelper，自己写一个继承之， &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onCreate&lt;/code&gt; 仅首次创建数据执行，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onUpgrade&lt;/code&gt; 仅新版本大于老版本执行。创建表时，可以指定主键&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;insert&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;update&lt;/code&gt; : 借助ContentValues&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;delete&lt;/code&gt;：”xxx=?”,填充？即可&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;query&lt;/code&gt; :借助Cursor&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 06 Mar 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/03/06/Android%E5%85%B3%E9%94%AE%E8%AF%8D.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/03/06/Android%E5%85%B3%E9%94%AE%E8%AF%8D.html</guid>
-        
-        <category>Android</category>
         
         
         <category>Android</category>
@@ -581,49 +740,6 @@ mAdapter.setOnItemClickListener(type -&amp;gt; {
         
         
         <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>Android知识点</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;基于RecyclerView，替代ViewPage&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Intent 传值的上限。
-取决于binder事务缓存的分配，每个进程分配1M。&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Sat, 21 Jan 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/01/21/%E6%8A%80%E6%9C%AF%E7%82%B9.html</guid>
-        
-        <category>Android</category>
-        
-        
-        <category>Android</category>
-        
-      </item>
-    
-      <item>
-        <title>心声</title>
-        <description>&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;哲学如果需要举例来证明，那它就很快会夸，只可意会。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;随着年纪的增大，过年已经不在乎是否精彩，而是觉得，陪伴、相聚变得很珍贵。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 12 Jan 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/01/12/%E5%BF%83%E5%A3%B0.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/01/12/%E5%BF%83%E5%A3%B0.html</guid>
-        
-        <category>read</category>
-        
-        
-        <category>read</category>
         
       </item>
     

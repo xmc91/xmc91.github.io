@@ -134,7 +134,7 @@ Author: Ray-Eldath
 
     <article class="markdown-body">
       <blockquote>
-  <p>小功能积累</p>
+  <p>Android 小功能积累</p>
 </blockquote>
 
 <h2 id="空间不够滚动来凑">空间不够，滚动来凑</h2>
@@ -153,6 +153,7 @@ Author: Ray-Eldath
     android:textColor="@color/black"
     android:textSize="18sp"
     android:textStyle="bold" /&gt;
+
 最后 setSelected(true)    
 </code></pre></div></div>
 
@@ -191,9 +192,61 @@ Author: Ray-Eldath
             }
         }
     }
+    
 八大目录可保存。    
-
 </code></pre></div></div>
+<h2 id="沉浸式状态栏">沉浸式状态栏</h2>
+<blockquote>
+  <p>状态栏透明，然后根据内容适配颜色</p>
+</blockquote>
+
+<ol>
+  <li>简单的就是fitsSystemWindows，让系统自适配。</li>
+  <li>复杂的就是现接管window的标识（清除、add），设置activity全屏且状态栏不消失，自己适配padding和margin，根据距离适当移动内容区并控制状态栏字体颜色
+ https://juejin.cn/post/7203563038301061181?</li>
+</ol>
+
+<h2 id="splite-sqlitedatabase">splite （SQLiteDatabase）</h2>
+<blockquote>
+  <p>轻量数据库，借用辅助类SQLiteOpenHelper实现增删改查</p>
+</blockquote>
+
+<ul>
+  <li>SQLiteOpenHelper，自己写一个继承之， <code class="language-plaintext highlighter-rouge">onCreate</code> 仅首次创建数据执行，<code class="language-plaintext highlighter-rouge">onUpgrade</code> 仅新版本大于老版本执行。创建表时，可以指定主键</li>
+  <li><code class="language-plaintext highlighter-rouge">insert</code> <code class="language-plaintext highlighter-rouge">update</code> : 借助ContentValues</li>
+  <li><code class="language-plaintext highlighter-rouge">delete</code>：”xxx=?”,填充？即可</li>
+  <li><code class="language-plaintext highlighter-rouge">query</code> :借助Cursor</li>
+</ul>
+
+<h2 id="android-三种定时方法">Android 三种定时方法</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 需要更新UI的
+private Handler mHandler = new Handler(Looper.myLooper());
+mHandler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            mTabRecycleView.scrollToPosition(position);
+                        }
+                    }, 50);
+
+2.Timer 与线程无关
+Timer timer = new Timer();
+timer.schedule(new TimerTask() {
+    @Override
+    public void run() {
+       
+    }
+}, 50);
+
+3.ScheduledExecutorService 与线程无关
+ScheduledExecutorService scheduledExecutor = Executors.newScheduledThreadPool(1);
+scheduledExecutor.schedule(new Runnable() {
+    @Override
+    public void run() {
+        // 需要进行延时执行的操作
+    }
+}, delayMillis, TimeUnit.MILLISECONDS);
+</code></pre></div></div>
+
 
     </article>
 
@@ -238,6 +291,15 @@ Author: Ray-Eldath
       
     </section>
     <section class="post-footer-item read-next">
+      
+      <div class="read-next-item">
+        <a href="/2023/09/06/html.html" class="read-next-link"></a>
+        <section>
+          <span>html小功能</span>
+          <p>  Html 小功能积累</p>
+        </section>
+        
+     </div>
       
 
       

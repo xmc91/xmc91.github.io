@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Android12适配 - 雪木 Blog</title>
+    <title>html小功能 - 雪木 Blog</title>
     <meta name="author"  content="雪木">
-    <meta name="description" content="Android12适配">
-    <meta name="keywords"  content="update">
+    <meta name="description" content="html小功能">
+    <meta name="keywords"  content="html">
     <!-- Open Graph -->
-    <meta property="og:title" content="Android12适配 - 雪木 Blog">
+    <meta property="og:title" content="html小功能 - 雪木 Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:4000/2023/03/14/Android12%E9%80%82%E9%85%8D.html">
+    <meta property="og:url" content="http://localhost:4000/2023/09/06/html.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="雪木 Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -116,14 +116,14 @@ Author: Ray-Eldath
       <div class="post-tags">
         
           
-            <a href="/tags.html#update" class="post-tag">update</a>
+            <a href="/tags.html#html" class="post-tag">html</a>
           
         
       </div>
-      <h1>Android12适配</h1>
+      <h1>html小功能</h1>
       <div class="post-meta">
-        <span class="post-meta-item"><i class="iconfont icon-author"></i>雪木</span>
-        <time class="post-meta-item" datetime="23-03-14"><i class="iconfont icon-date"></i>14 Mar 2023</time>
+        <span class="post-meta-item"><i class="iconfont icon-author"></i>xmc91</span>
+        <time class="post-meta-item" datetime="23-09-06"><i class="iconfont icon-date"></i>06 Sep 2023</time>
       </div>
     </div>
     
@@ -134,77 +134,29 @@ Author: Ray-Eldath
 
     <article class="markdown-body">
       <blockquote>
-  <p>Google 正式推出的系统，两年后都会强制要求在Google Play上架需要适配，比如今年推出Android99，两年后target小于99就不让在Google play上架了。同时Google play严禁应用内置其他下载途径，会触犯【网络和设备滥用】。</p>
+  <p>Html 小功能积累</p>
 </blockquote>
 
-<h1 id="android12-适配其实很简单大多数应用只需修改以下几点">Android12 适配其实很简单，大多数应用只需修改以下几点。</h1>
+<h2 id="图片处理">图片处理</h2>
+<h3 id="图片链接">图片链接</h3>
 
-<h2 id="target">target</h2>
-<p>修改为31即可。</p>
-
-<h2 id="pendingintent">PendingIntent</h2>
-<p>flag修改为 FLAG_IMMUTABLE 或者或上 FLAG_IMMUTABLE 即可。</p>
-
-<h2 id="exported">exported</h2>
-<p>在使用了 intent-filter 的组件上修改 exported = true 即可。</p>
-
-<h2 id="require-包名">require 包名</h2>
-<p>要访问的其他app的包名，要提前声明</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;queries&gt;
-        &lt;package android:name="com.whatsapp" /&gt;
-        &lt;package android:name="com.facebook.katana" /&gt;
-        &lt;package android:name="com.facebook.orca" /&gt;
-        &lt;package android:name="com.twitter.android" /&gt;
-        &lt;package android:name="com.tencent.tim" /&gt;
-        &lt;package android:name="com.tencent.mm" /&gt;
-        &lt;package android:name="com.sina.weibo" /&gt;
-        &lt;package android:name="com.tencent.mobileqq" /&gt;
-        &lt;package android:name="com.instagram.android" /&gt;
-        &lt;package android:name="jp.naver.line.android" /&gt;
-    &lt;/queries&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="超链接地址"&gt;&lt;img src="路径" alt="替代文本"&gt;&lt;/a&gt;
 </code></pre></div></div>
+<h3 id="图片不同区域点击跳转不同连接">图片不同区域点击跳转不同连接</h3>
+<ul>
+  <li>连接map</li>
+  <li>设置map</li>
+  <li>设置不同的area</li>
+  <li>设置坐标 coords</li>
+</ul>
 
-<h2 id="ble">BLE</h2>
-<p>增加以下权限并请求</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	// app模拟蓝牙设备时使用
-    &lt;uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" /&gt;
-    // app连接外围设备时使用
-    &lt;uses-permission android:name="android.permission.BLUETOOTH_CONNECT" /&gt;
-    // app扫描外围设备时使用
-    &lt;uses-permission
-        android:name="android.permission.BLUETOOTH_SCAN"
-        android:usesPermissionFlags="neverForLocation" /&gt;
-
-    ArrayList&lt;String&gt; permissions = new ArrayList&lt;&gt;();
-        if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.S) {
-            permissions.add(Manifest.permission.BLUETOOTH_SCAN);
-            permissions.add(Manifest.permission.BLUETOOTH_CONNECT);
-        } else if (Build.VERSION.SDK_INT &gt; Build.VERSION_CODES.P) {
-            permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
-        } else if (Build.VERSION.SDK_INT &gt; Build.VERSION_CODES.M) {
-            permissions.add(Manifest.permission.ACCESS_COARSE_LOCATION);
-        }   
-
-		BluetoothAdapter bluetoothAdapter = bluetoothManager.getAdapter();
-            if (!bluetoothAdapter.isEnabled()) {
-                // Android 12没有权限，去打开蓝牙，会gg!!!
-                new RxPermissions(mActivity).requestEachCombined(Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT)
-                        .subscribe(new Consumer&lt;Permission&gt;() {
-                            @Override
-                            public void accept(Permission permission) throws Exception {
-                                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                                startActivityForResult(enableBtIntent, OPEN_REQUEST_CODE);
-                            }
-                        }, new Consumer&lt;Throwable&gt;() {
-                            @Override
-                            public void accept(Throwable throwable) throws Exception {
-
-                            }
-                        });
-            }else {
-                requestBlePermision(permissions.toArray(new String[permissions.size()]))    
-
-            }        
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="./img/bg-home.jpg" alt="" usemap="#map"&gt;
+&lt;map name="map" id="map"&gt;
+     &lt;area shape="poly" coords="583,382,587,357,609,359,611,283,1014,247,1392,352,1362,410,1218,445,583,382" href="https://www.baidu.com/" alt=""&gt;
+     &lt;area shape="poly" coords="584,392,532,500,1194,587,1386,533,1414,398,1231,448,584,392" href="https://www.mi.com/" alt=""&gt;
+     &lt;area shape="poly" coords="591,520,565,595,510,618,1169,731,1406,641,1395,542,1170,601,591,520" href="https://huaban.com/" alt=""&gt;
+     &lt;area shape="poly" coords="570,641,569,742,1164,867,1395,767,1398,655,1172,734,570,641" href="https://www.qingnian8.com/" alt=""&gt;        
+&lt;/map&gt;
 </code></pre></div></div>
 
 
@@ -253,10 +205,10 @@ Author: Ray-Eldath
     <section class="post-footer-item read-next">
       
       <div class="read-next-item">
-        <a href="/2023/03/14/%E5%AE%89%E5%85%A8%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A.html" class="read-next-link"></a>
+        <a href="/2023/09/06/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8F%92%E4%BB%B6.html" class="read-next-link"></a>
         <section>
-          <span>安全评估报告</span>
-          <p>  有舆论或社会动员能力的功能的软件的自查报告</p>
+          <span>支付宝小程序</span>
+          <p>  Html 小功能积累</p>
         </section>
         
      </div>
@@ -264,10 +216,10 @@ Author: Ray-Eldath
 
       
       <div class="read-next-item">
-        <a href="/2023/02/07/list%E5%BE%AA%E7%8E%AF%E5%88%A0%E9%99%A4.html" class="read-next-link"></a>
+        <a href="/2023/03/17/%E5%B0%8F%E5%8A%9F%E8%83%BD.html" class="read-next-link"></a>
           <section>
-            <span>list循环删除</span>
-            <p>  倒着删、迭代器删、stream删</p>
+            <span>Android小功能</span>
+            <p>  Android 小功能积累</p>
           </section>
           
       </div>
