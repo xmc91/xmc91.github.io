@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG - 雪木 Blog</title>
+    <title>Android学习资源 - 雪木 Blog</title>
     <meta name="author"  content="雪木">
-    <meta name="description" content="SVG">
+    <meta name="description" content="Android学习资源">
     <meta name="keywords"  content="Android">
     <!-- Open Graph -->
-    <meta property="og:title" content="SVG - 雪木 Blog">
+    <meta property="og:title" content="Android学习资源 - 雪木 Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:4000/2022/11/12/SVG.html">
+    <meta property="og:url" content="http://localhost:4000/2020/05/06/Android%E8%B5%84%E6%BA%90%E8%AE%B0%E5%BD%95.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="雪木 Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -120,10 +120,10 @@ Author: Ray-Eldath
           
         
       </div>
-      <h1>SVG</h1>
+      <h1>Android学习资源</h1>
       <div class="post-meta">
-        <span class="post-meta-item"><i class="iconfont icon-author"></i>xmc91</span>
-        <time class="post-meta-item" datetime="22-11-12"><i class="iconfont icon-date"></i>12 Nov 2022</time>
+        <span class="post-meta-item"><i class="iconfont icon-author"></i>WindMan</span>
+        <time class="post-meta-item" datetime="20-05-06"><i class="iconfont icon-date"></i>06 May 2020</time>
       </div>
     </div>
     
@@ -133,172 +133,64 @@ Author: Ray-Eldath
     
 
     <article class="markdown-body">
-      <h1 id="svg">SVG</h1>
-
-<p>svg 是矢量图，和bitmap（位图）不一样。就像数学里学的矢量一样，svg是有方向有大小长度等位置的可渲染的图像文件。</p>
-
-<p><strong>可缩放矢量图形</strong>（英语：<strong>Scalable Vector Graphics</strong>，<strong>SVG</strong>）是一种基于可扩展标记语言（XML），用于描述二维矢量图形的图形格式。SVG由W3C制定，是一个开放标准。</p>
+      <blockquote>
+  <p>纵向学一个，横向学几个。口里的是纵向，眼里的是横向。</p>
+</blockquote>
 
 <ul>
-  <li>图像与分辨率无关，适配Android分辨率；</li>
-  <li>体积小，一般复杂图像简单搞。</li>
-  <li>很多平台都可用：web、Android、iOS</li>
+  <li><a href="https://developer.android.google.cn/">Android 大本营</a>
+    <blockquote>
+      <p>Android最根本的学习地儿</p>
+    </blockquote>
+  </li>
+  <li><a href="http://androidxref.com/">androidxref</a>
+    <blockquote>
+      <p>Android 源码学习学习</p>
+    </blockquote>
+  </li>
+  <li><a href="https://www.wanandroid.com/">WanAndroid</a>
+    <blockquote>
+      <p>适合日常逛街</p>
+    </blockquote>
+  </li>
+  <li><a href="https://developer.android.com/distribute/best-practices/develop/64-bit">Android 64</a></li>
+  <li><a href="https://blog.csdn.net/weixin_40611659/article/details/95174124">Android 10适配</a></li>
+  <li><a href="https://www.jianshu.com/p/10023495fba9">ssh 使用</a></li>
+  <li><a href="https://blog.csdn.net/u010586698/article/details/56673379">android 国际化</a></li>
+  <li><a href="https://blog.csdn.net/yanzi1225627/article/details/48215549">mac 反编译</a></li>
+  <li><a href="https://www.jianshu.com/p/73e36529cf7c">路人总结，Android 激进</a></li>
 </ul>
 
-<p>SVG定义了很多形状，</p>
+<h2 id="检查工具lint">检查工具lint</h2>
+<p><a href="http://tools.android.com/tips/lint">主要参考</a>
+https://blog.csdn.net/luzhenyuxfcy/article/details/79398761
+https://blog.csdn.net/qq_34895720/article/details/102859115?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3</p>
 
+<h2 id="android-学习">Android 学习</h2>
 <ul>
-  <li>
-    <p>矩形 <rect></rect></p>
-  </li>
-  <li>
-    <p>圆形 <circle></circle></p>
-  </li>
-  <li>
-    <p>椭圆 <ellipse></ellipse></p>
-  </li>
-  <li>
-    <p>线 <line></line></p>
-  </li>
-  <li>
-    <p>折线 <polyline></polyline></p>
-  </li>
-  <li>
-    <p>多边形 <polygon></polygon></p>
-  </li>
-  <li>
-    <p>路径 <path>，这个相当于自定义形状，命令很多</path></p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>M = moveto，新建起点，参数x，y（M20， 30）
-L = lineto，连接直线，参数x，y（L30， 20）
-H = horizontal lineto，纵坐标不变，横向连线，参数x（H20）
-V = vertical lineto，横坐标不变，纵向连线，参数y（V30）
-C = curveto，三次贝塞尔曲线，参数x1，y1，x2，y2，x3，y3（C10，20，30，40，50， 60）
-S = smooth curveto，S x2 y2 x y
-简化的贝塞尔曲线
-1.如果S命令跟在一个C命令或者另一个S命令的后面，它的第一个控制点，就会被假设成前一个控制点的对称点。
-2.如果S命令单独使用，前面没有C命令或者另一个S命令，那么它的两个控制点就会被假设为同一个点。
-  
-Q = quadratic Bézier curve，二次贝塞尔曲线，参数x1，y1，x2，y2（Q10，20，30，40）
-T = smooth quadratic Bézier curveto 
-Q命令的简写命令。
-与S命令相似，T也会通过前一个控制点，推断出一个新的控制点。
-1.T命令前面必须是一个Q命令，或者是另一个T命令
-2.如果T单独使用，那么控制点就会被认为和终点是同一个点，所以画出来的将是一条直线
-  
-A = elliptical Arc
-A rx,ry x-axis-rotation large-arc-flag sweep-flag x,y
-rx 弧的半长轴长度
-ry 弧的半短轴长度
-x-axis-rotation 是此段弧所在的x轴与水平方向的夹角，即x轴的逆时针旋转角度，负数代表顺时针旋转角度。
-large-arc-flag 为1表示大角度弧线，0表示小角度弧线
-sweep-flag 为1表示从起点到终点弧线绕中心顺时针方向，0表示逆时针方向。
-xy 是终点坐标。
-  
-Z = closepath ，连接首尾，闭合曲线，无参数
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>文本<polyline></polyline></p>
-  </li>
+  <li><a href="https://blog.csdn.net/u010586698/article/details/56673379">android 国际化</a></li>
+  <li><a href="https://blog.csdn.net/yanzi1225627/article/details/48215549">mac 反编译</a></li>
+  <li><a href="https://www.jianshu.com/p/73e36529cf7c">路人总结，Android 激进</a></li>
+  <li><a href="https://developer.android.google.cn/">Android 大本营</a></li>
+  <li><a href="https://www.wanandroid.com/">WanAndroid</a></li>
+  <li><a href="https://developer.android.com/distribute/best-practices/develop/64-bit">Android 64</a></li>
+  <li><a href="https://blog.csdn.net/weixin_40611659/article/details/95174124">Android 10适配</a></li>
+  <li><a href="http://androidxref.com/">androidxref</a></li>
 </ul>
 
-<p>还定义了很多效果</p>
-
+<h2 id="工具篇">工具篇</h2>
 <ul>
-  <li>
-    <p>轮廓 Stroke</p>
-  </li>
-  <li>
-    <p>滤镜</p>
-  </li>
-  <li>
-    <p>模糊</p>
-  </li>
-  <li>
-    <p>阴影</p>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>渐变- 线性</td>
-          <td>放射性</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>参考实例：https://www.runoob.com/svg/svg-reference.html</p>
-  </li>
+  <li>[Google apk下载](https://apps.evozi.com/apk-downloader/?id=com.satisfyer.connect</li>
+  <li><a href="https://www.deepl.com/translator">翻译工具</a>)</li>
+  <li><a href="https://support.apple.com/zh-cn/HT201236">Mac 快捷键</a></li>
+  <li><a href="https://www.runoob.com/markdown/md-link.html">菜鸟教程</a></li>
+  <li><a href="">油猴</a></li>
 </ul>
 
-<p>## 在Android 中使用svg</p>
-
-<p>Android 官方svg：https://developer.android.com/studio/write/vector-asset-studio#svg</p>
-
+<h2 id="命令行">命令行</h2>
 <ul>
-  <li>自定义svg，http://editor.method.ac/ ，或者：https://c.runoob.com/more/svgeditor/  。file-save。然后AS安装SVG2VectorDrawable插件转换</li>
-  <li>创建xml：可以从AS直接创建，也可以到iconfont中找，还可以去svg的其他网址下载，还可以让美工提供</li>
+  <li><a href="https://www.jianshu.com/p/10023495fba9">ssh 使用</a></li>
 </ul>
-
-<p>这是一个大人拉着小孩的图片。 boy.xml</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="24dp"
-    android:height="24dp"
-    android:viewportWidth="24"
-    android:viewportHeight="24"
-    android:tint="?attr/colorControlNormal"&gt;
-  &lt;path
-  		android:name="path_id"
-      android:fillColor="@android:color/white"
-      android:pathData="M6.5,2c1.1,0 2,0.9 2,2s-0.9,2 -2,2s-2,-0.9 -2,-2S5.4,2 6.5,2zM15.5,9.5c0,0.83 0.67,1.5 1.5,1.5s1.5,-0.67 1.5,-1.5S17.83,8 17,8S15.5,8.67 15.5,9.5zM18.5,12h-2.84c-0.58,0.01 -1.14,0.32 -1.45,0.86l-0.92,1.32L9.72,8C9.35,7.37 8.69,7.01 8.01,7H5C3.9,7 3,7.9 3,9v6h1.5v7h5V11.61L12.03,16h2.2L15,14.9V22h4v-5h1v-3.5C20,12.68 19.33,12 18.5,12z"/&gt;
-&lt;/vector&gt;
-
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <p>imageview引用</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ImageView
-        android:id="@+id/img_svg"
-        android:src="@drawable/boy"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:scaleType="fitXY" /&gt;
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>动起来</p>
-
-    <p>定义动画</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
-	    xmlns:tools="http://schemas.android.com/tools"
-	    android:drawable="@drawable/ic_svg"
-	    tools:targetApi="lollipop"&gt;
-  	
-	    &lt;target
-	        android:name="path_id"
-	        android:animation="@animator/pathchange" /&gt;
-  	
-	&lt;/animated-vector&gt;
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>放在res/animator目录并替换资源文件</p>
-  </li>
-  <li>
-    <p>开始动画</p>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ImageView svgImageView = findViewById(R.id.img_svg);
-  AnimatedVectorDrawable animatedVectorDrawable = (AnimatedVectorDrawable) svgImageView.getDrawable();
-  animatedVectorDrawable.start();
-</code></pre></div></div>
 
 
     </article>
@@ -346,10 +238,10 @@ Z = closepath ，连接首尾，闭合曲线，无参数
     <section class="post-footer-item read-next">
       
       <div class="read-next-item">
-        <a href="/2022/11/12/adb.html" class="read-next-link"></a>
+        <a href="/2020/05/06/Handle.html" class="read-next-link"></a>
         <section>
-          <span>adb</span>
-          <p>  NodeJs 磨刀霍霍向猪羊</p>
+          <span>Handle 水调歌头</span>
+          <p>  【水调歌头·明月几时有】  [宋代： 苏轼]丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。明月几时有？把酒问青天...</p>
         </section>
         
      </div>
@@ -357,10 +249,10 @@ Z = closepath ，连接首尾，闭合曲线，无参数
 
       
       <div class="read-next-item">
-        <a href="/2022/11/12/Mac.html" class="read-next-link"></a>
+        <a href="/2019/12/31/nice-video.html" class="read-next-link"></a>
           <section>
-            <span>Mac</span>
-            <p>  Mac远程控制-teamViewer：需要对方的id和密码  Mac远程控制-Message：需要对方的App...</p>
+            <span>Nice Video</span>
+            <p>  好看的剧历史剧  三十六计与孙子兵法  三国演义  大明王朝  康熙王朝  雍正皇帝  乾隆皇帝  大染坊，不...</p>
           </section>
           
       </div>

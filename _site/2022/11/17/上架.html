@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG - 雪木 Blog</title>
+    <title>Google play - 雪木 Blog</title>
     <meta name="author"  content="雪木">
-    <meta name="description" content="SVG">
+    <meta name="description" content="Google play">
     <meta name="keywords"  content="Android">
     <!-- Open Graph -->
-    <meta property="og:title" content="SVG - 雪木 Blog">
+    <meta property="og:title" content="Google play - 雪木 Blog">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:4000/2022/11/12/SVG.html">
+    <meta property="og:url" content="http://localhost:4000/2022/11/17/%E4%B8%8A%E6%9E%B6.html">
     <meta property="og:description" content="风一样de男子">
     <meta property="og:site_name" content="雪木 Blog">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -120,10 +120,10 @@ Author: Ray-Eldath
           
         
       </div>
-      <h1>SVG</h1>
+      <h1>Google play</h1>
       <div class="post-meta">
         <span class="post-meta-item"><i class="iconfont icon-author"></i>xmc91</span>
-        <time class="post-meta-item" datetime="22-11-12"><i class="iconfont icon-date"></i>12 Nov 2022</time>
+        <time class="post-meta-item" datetime="22-11-17"><i class="iconfont icon-date"></i>17 Nov 2022</time>
       </div>
     </div>
     
@@ -133,173 +133,17 @@ Author: Ray-Eldath
     
 
     <article class="markdown-body">
-      <h1 id="svg">SVG</h1>
-
-<p>svg 是矢量图，和bitmap（位图）不一样。就像数学里学的矢量一样，svg是有方向有大小长度等位置的可渲染的图像文件。</p>
-
-<p><strong>可缩放矢量图形</strong>（英语：<strong>Scalable Vector Graphics</strong>，<strong>SVG</strong>）是一种基于可扩展标记语言（XML），用于描述二维矢量图形的图形格式。SVG由W3C制定，是一个开放标准。</p>
-
-<ul>
-  <li>图像与分辨率无关，适配Android分辨率；</li>
-  <li>体积小，一般复杂图像简单搞。</li>
-  <li>很多平台都可用：web、Android、iOS</li>
+      <ul>
+  <li>自管签名，千万别用Google play托管的签名</li>
 </ul>
 
-<p>SVG定义了很多形状，</p>
-
-<ul>
-  <li>
-    <p>矩形 <rect></rect></p>
-  </li>
-  <li>
-    <p>圆形 <circle></circle></p>
-  </li>
-  <li>
-    <p>椭圆 <ellipse></ellipse></p>
-  </li>
-  <li>
-    <p>线 <line></line></p>
-  </li>
-  <li>
-    <p>折线 <polyline></polyline></p>
-  </li>
-  <li>
-    <p>多边形 <polygon></polygon></p>
-  </li>
-  <li>
-    <p>路径 <path>，这个相当于自定义形状，命令很多</path></p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>M = moveto，新建起点，参数x，y（M20， 30）
-L = lineto，连接直线，参数x，y（L30， 20）
-H = horizontal lineto，纵坐标不变，横向连线，参数x（H20）
-V = vertical lineto，横坐标不变，纵向连线，参数y（V30）
-C = curveto，三次贝塞尔曲线，参数x1，y1，x2，y2，x3，y3（C10，20，30，40，50， 60）
-S = smooth curveto，S x2 y2 x y
-简化的贝塞尔曲线
-1.如果S命令跟在一个C命令或者另一个S命令的后面，它的第一个控制点，就会被假设成前一个控制点的对称点。
-2.如果S命令单独使用，前面没有C命令或者另一个S命令，那么它的两个控制点就会被假设为同一个点。
-  
-Q = quadratic Bézier curve，二次贝塞尔曲线，参数x1，y1，x2，y2（Q10，20，30，40）
-T = smooth quadratic Bézier curveto 
-Q命令的简写命令。
-与S命令相似，T也会通过前一个控制点，推断出一个新的控制点。
-1.T命令前面必须是一个Q命令，或者是另一个T命令
-2.如果T单独使用，那么控制点就会被认为和终点是同一个点，所以画出来的将是一条直线
-  
-A = elliptical Arc
-A rx,ry x-axis-rotation large-arc-flag sweep-flag x,y
-rx 弧的半长轴长度
-ry 弧的半短轴长度
-x-axis-rotation 是此段弧所在的x轴与水平方向的夹角，即x轴的逆时针旋转角度，负数代表顺时针旋转角度。
-large-arc-flag 为1表示大角度弧线，0表示小角度弧线
-sweep-flag 为1表示从起点到终点弧线绕中心顺时针方向，0表示逆时针方向。
-xy 是终点坐标。
-  
-Z = closepath ，连接首尾，闭合曲线，无参数
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>文本<polyline></polyline></p>
-  </li>
-</ul>
-
-<p>还定义了很多效果</p>
-
-<ul>
-  <li>
-    <p>轮廓 Stroke</p>
-  </li>
-  <li>
-    <p>滤镜</p>
-  </li>
-  <li>
-    <p>模糊</p>
-  </li>
-  <li>
-    <p>阴影</p>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>渐变- 线性</td>
-          <td>放射性</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>参考实例：https://www.runoob.com/svg/svg-reference.html</p>
-  </li>
-</ul>
-
-<p>## 在Android 中使用svg</p>
-
-<p>Android 官方svg：https://developer.android.com/studio/write/vector-asset-studio#svg</p>
-
-<ul>
-  <li>自定义svg，http://editor.method.ac/ ，或者：https://c.runoob.com/more/svgeditor/  。file-save。然后AS安装SVG2VectorDrawable插件转换</li>
-  <li>创建xml：可以从AS直接创建，也可以到iconfont中找，还可以去svg的其他网址下载，还可以让美工提供</li>
-</ul>
-
-<p>这是一个大人拉着小孩的图片。 boy.xml</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="24dp"
-    android:height="24dp"
-    android:viewportWidth="24"
-    android:viewportHeight="24"
-    android:tint="?attr/colorControlNormal"&gt;
-  &lt;path
-  		android:name="path_id"
-      android:fillColor="@android:color/white"
-      android:pathData="M6.5,2c1.1,0 2,0.9 2,2s-0.9,2 -2,2s-2,-0.9 -2,-2S5.4,2 6.5,2zM15.5,9.5c0,0.83 0.67,1.5 1.5,1.5s1.5,-0.67 1.5,-1.5S17.83,8 17,8S15.5,8.67 15.5,9.5zM18.5,12h-2.84c-0.58,0.01 -1.14,0.32 -1.45,0.86l-0.92,1.32L9.72,8C9.35,7.37 8.69,7.01 8.01,7H5C3.9,7 3,7.9 3,9v6h1.5v7h5V11.61L12.03,16h2.2L15,14.9V22h4v-5h1v-3.5C20,12.68 19.33,12 18.5,12z"/&gt;
-&lt;/vector&gt;
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar pepk.jar --keystore xxxx.jks --alias xxxx --output=xxxxx.zip --encryptionkey=034200041E224EE22B45D4861F9E140F278A5D2860846C2CF5D2C3C02 --include-cert
 </code></pre></div></div>
-
 <ul>
-  <li>
-    <p>imageview引用</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ImageView
-        android:id="@+id/img_svg"
-        android:src="@drawable/boy"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:scaleType="fitXY" /&gt;
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>动起来</p>
-
-    <p>定义动画</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
-	    xmlns:tools="http://schemas.android.com/tools"
-	    android:drawable="@drawable/ic_svg"
-	    tools:targetApi="lollipop"&gt;
-  	
-	    &lt;target
-	        android:name="path_id"
-	        android:animation="@animator/pathchange" /&gt;
-  	
-	&lt;/animated-vector&gt;
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>放在res/animator目录并替换资源文件</p>
-  </li>
-  <li>
-    <p>开始动画</p>
-  </li>
+  <li>如果不小心被Google 签名了。可以在Google play改成自签名，但是老用户就不会提示升级了。
+Facebook需要的key shah，key通过der生成：https://blog.csdn.net/changcsw/article/details/88720357
+还原jks：https://blog.csdn.net/Jason_HD/article/details/124443963</li>
 </ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ImageView svgImageView = findViewById(R.id.img_svg);
-  AnimatedVectorDrawable animatedVectorDrawable = (AnimatedVectorDrawable) svgImageView.getDrawable();
-  animatedVectorDrawable.start();
-</code></pre></div></div>
-
 
     </article>
 
@@ -346,10 +190,10 @@ Z = closepath ，连接首尾，闭合曲线，无参数
     <section class="post-footer-item read-next">
       
       <div class="read-next-item">
-        <a href="/2022/11/12/adb.html" class="read-next-link"></a>
+        <a href="/2022/11/21/ble.html" class="read-next-link"></a>
         <section>
-          <span>adb</span>
-          <p>  NodeJs 磨刀霍霍向猪羊</p>
+          <span>BLE</span>
+          <p>  通用服务</p>
         </section>
         
      </div>
@@ -357,10 +201,10 @@ Z = closepath ，连接首尾，闭合曲线，无参数
 
       
       <div class="read-next-item">
-        <a href="/2022/11/12/Mac.html" class="read-next-link"></a>
+        <a href="/2022/11/12/Android-%E8%BD%A6%E8%BD%BD%E5%85%A5%E9%97%A8.html" class="read-next-link"></a>
           <section>
-            <span>Mac</span>
-            <p>  Mac远程控制-teamViewer：需要对方的id和密码  Mac远程控制-Message：需要对方的App...</p>
+            <span>Android 车载入门</span>
+            <p>  android for car</p>
           </section>
           
       </div>
