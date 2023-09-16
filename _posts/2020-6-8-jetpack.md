@@ -3,7 +3,6 @@ layout: post
 title: 'Jetpack 纪传志表'
 author: WindMan
 date: 2020-6-8
-categories: Android
 tags: Android 
 ---
 > 纪：一般只写皇帝；    

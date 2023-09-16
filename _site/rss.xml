@@ -5,8 +5,8 @@
     <description>风一样de男子</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 14 Sep 2023 16:43:14 +0800</pubDate>
-    <lastBuildDate>Thu, 14 Sep 2023 16:43:14 +0800</lastBuildDate>
+    <pubDate>Sat, 16 Sep 2023 14:01:43 +0800</pubDate>
+    <lastBuildDate>Sat, 16 Sep 2023 14:01:43 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -82,8 +82,6 @@
         <category>Android</category>
         
         
-        <category>Android</category>
-        
       </item>
     
       <item>
@@ -114,10 +112,8 @@
         <link>http://localhost:4000/2023/09/06/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8F%92%E4%BB%B6.html</link>
         <guid isPermaLink="true">http://localhost:4000/2023/09/06/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8F%92%E4%BB%B6.html</guid>
         
-        <category>小程序</category>
+        <category>ali</category>
         
-        
-        <category>小程序</category>
         
       </item>
     
@@ -154,7 +150,7 @@
         <link>http://localhost:4000/2023/09/06/html.html</link>
         <guid isPermaLink="true">http://localhost:4000/2023/09/06/html.html</guid>
         
-        <category>html</category>
+        <category>JS</category>
         
         
         <category>html</category>
@@ -285,8 +281,6 @@ scheduledExecutor.schedule(new Runnable() {
         <category>Android</category>
         
         
-        <category>Android</category>
-        
       </item>
     
       <item>
@@ -309,10 +303,8 @@ scheduledExecutor.schedule(new Runnable() {
         <link>http://localhost:4000/2023/03/14/%E5%AE%89%E5%85%A8%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A.html</link>
         <guid isPermaLink="true">http://localhost:4000/2023/03/14/%E5%AE%89%E5%85%A8%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A.html</guid>
         
-        <category>政策</category>
-        
-        
         <category>上架</category>
+        
         
       </item>
     
@@ -397,10 +389,8 @@ scheduledExecutor.schedule(new Runnable() {
         <link>http://localhost:4000/2023/03/14/Android12%E9%80%82%E9%85%8D.html</link>
         <guid isPermaLink="true">http://localhost:4000/2023/03/14/Android12%E9%80%82%E9%85%8D.html</guid>
         
-        <category>update</category>
-        
-        
         <category>Android</category>
+        
         
       </item>
     
@@ -452,8 +442,6 @@ scheduledExecutor.schedule(new Runnable() {
         <category>Java</category>
         
         
-        <category>Java</category>
-        
       </item>
     
       <item>
@@ -484,8 +472,6 @@ scheduledExecutor.schedule(new Runnable() {
         
         <category>Java</category>
         
-        
-        <category>Java</category>
         
       </item>
     
@@ -555,8 +541,6 @@ viewpage.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback()
         
         <category>Android</category>
         
-        
-        <category>Android</category>
         
       </item>
     
@@ -738,8 +722,6 @@ mAdapter.setOnItemClickListener(type -&amp;gt; {
         
         <category>Android</category>
         
-        
-        <category>Android</category>
         
       </item>
     

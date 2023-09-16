@@ -3,7 +3,6 @@ layout: post
 title: 'Nice Video'
 author: WindMan
 date: 2019-12-31
-categories: video
 tags: video 
 ---
 > 好看的剧

@@ -3,7 +3,6 @@ layout: post
 title: 'Android 版本适配'
 author: xmc91
 date: 2022-11-12
-categories: Android
 tags: Android 
 ---
 + 升级AndroidX ，AndroidX概念：https://developer.android.google.cn/jetpack/androidx

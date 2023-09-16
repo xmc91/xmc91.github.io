@@ -3,8 +3,7 @@ layout: post
 title: 'Android 碎片记忆'
 author: WindMan
 date: 2020-7-29
-categories: android
-tags: android 
+tags: Android 
 ---
 > 一片，两片，三四片；五片，六片，七八片。落入芦苇全不见！
 
@@ -350,5 +349,70 @@ tv.setText(textSpanned4);
                             android:layout_weight="1"
                             android:max="5" />
 ```
+
+## sqlite 相关
++ 创建或者打开数据库
+```
+public class DBHelper extends SQLiteOpenHelper {
+    private static final String DATABASE_NAME = "db.db";
+    private static final int DATABASE_VERSION = 1;
+
+    /** Create a helper object for the Events database */
+    public ProvinceDataHelper(Context ctx) {
+        super(ctx, DATABASE_NAME, null, DATABASE_VERSION);
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {}
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
+}
+```
++ 增删改查
+```
+
+```
+
+
++ 如何导入外部数据库
+1.将格式为.db的数据库文件放到android项目assets目录中；
+2.在程序必要的时候，将其“拷贝”（文件读取）到Android 程序默认的数据库存储目录中，一般路径为“/data/data/项目包名/databases/“；
+```
+InputStream is = context.getAssets().open(DB_NAME);
+                // 输出流,在指定路径下生成db文件
+                OutputStream os = new FileOutputStream(DB_PATH + DB_NAME);
+
+                // 文件写入
+                byte[] buffer = new byte[1024];
+                int length;
+                while ((length = is.read(buffer)) > 0) {
+                    os.write(buffer, 0, length);
+                }
+```
+3.自定义SQLiteOpenHelper类，创建一个名字跟步骤1中.db名称一样的数据库；
+4.按照平常逻辑，增删改查数据库。
+
+## invalidate和postInvalidate的区别及使用
++ Android中实现View的更新有两组方法，1. invalidate,ui线程更新; 2. postInvalidate，非UI线程更新
++ invalidate是在handler中使用，postInvalidate可以直接在子线程中调用更新View。
+## Activity-Window-View三者的差别
++ Activity是Android四大组件之一，负责界面展示、用户交互和逻辑处理,有一个内部对象window。
++ Window就是负责界面展示以及交互的只能部门，就相当于Activity的下属，Activity的生命周期方法负责业务的处理。
++ View就是放在Window容器的元素，Window是View的载体，View是Window的具体展示。
+```
+1. 在Activity中调用attach，创建了一个Window
+2. 创建的window是其子类PhoneWindow，在attach中创建PhoneWindow
+3. 在Activity中调用setContentView(R.layout.xxx)
+4. 其中实际上是调用的getWindow().setContentView()
+5. 调用PhoneWindow中的setContentView方法
+6. 创建ParentView：作为ViewGroup的子类，实际是创建的DecorView(作为FramLayout的子类）
+7. 将指定的R.layout.xxx进行填充通过布局填充器进行填充【其中的parent指的就是DecorView】
+8. 调用到ViewGroup
+9. 调用ViewGroup的removeAllView()，先将所有的view移除掉
+10. 添加新的view：addView()
+```
++ Intent 传值的上限。
+> 取决于binder事务缓存的分配，每个进程分配1M。
   
 

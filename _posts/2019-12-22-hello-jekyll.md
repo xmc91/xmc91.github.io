@@ -2,7 +2,6 @@
 layout: post
 title: 'Hello Jekyll'
 date: 2019-12-22
-author: WindMan
 cover: 'http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg'
 tags: Tools
 ---
@@ -17,7 +16,7 @@ tags: Tools
   layout: post
   title: 'Hello Jekyll'
   date: 2019-12-22
-  author: WindMan
+  author: WindMan// 这里如果不写，会从_config.yml 中读取author
   cover:'http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg'
   tags: Tools
   ---
@@ -79,6 +78,8 @@ Server address: http://127.0.0.1:4000/
 ```
 /assets/font
 ```
+
++ config 文件有修改保存后不会立即更新，需要重新build
 
 + 提交即可
 + [Jekyll主题](http://jekyllthemes.org/)

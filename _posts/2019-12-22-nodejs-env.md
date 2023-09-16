@@ -1,9 +1,7 @@
 ---
 layout: post
 title: 'Nodejs 环境搭建'
-author: WindMan
 date: 2019-12-22
-categories: node
 tags: nodejs 
 ---
 

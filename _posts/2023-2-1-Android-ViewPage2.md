@@ -3,7 +3,6 @@ layout: post
 title: 'ViewPage2'
 author: xmc91
 date: 2023-2-1
-categories: Android
 tags: Android 
 ---
 > 基于RecyclerView，替代ViewPage

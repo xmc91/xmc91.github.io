@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Android 碎片记忆 - 雪木 Blog</title>
-    <meta name="author"  content="雪木">
+    <meta name="author"  content="雪木3333">
     <meta name="description" content="Android 碎片记忆">
-    <meta name="keywords"  content="android">
+    <meta name="keywords"  content="Android">
     <!-- Open Graph -->
     <meta property="og:title" content="Android 碎片记忆 - 雪木 Blog">
     <meta property="og:type" content="website">
@@ -116,7 +116,7 @@ Author: Ray-Eldath
       <div class="post-tags">
         
           
-            <a href="/tags.html#android" class="post-tag">android</a>
+            <a href="/tags.html#Android" class="post-tag">Android</a>
           
         
       </div>
@@ -470,7 +470,71 @@ PlatformConfig.setWXFileProvider("com.diya.isense.fileprovider");
 </ul>
 <SeekBar style="@style/Widget.AppCompat.SeekBar.Discrete" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:max="5" />
 
-<p>```</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## sqlite 相关
++ 创建或者打开数据库
+</code></pre></div></div>
+<p>public class DBHelper extends SQLiteOpenHelper {
+    private static final String DATABASE_NAME = “db.db”;
+    private static final int DATABASE_VERSION = 1;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/** Create a helper object for the Events database */
+public ProvinceDataHelper(Context ctx) {
+    super(ctx, DATABASE_NAME, null, DATABASE_VERSION);
+}
+
+@Override
+public void onCreate(SQLiteDatabase db) {}
+
+@Override
+public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {} } ``` + 增删改查 ```
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
++ 如何导入外部数据库
+1.将格式为.db的数据库文件放到android项目assets目录中；
+2.在程序必要的时候，将其“拷贝”（文件读取）到Android 程序默认的数据库存储目录中，一般路径为“/data/data/项目包名/databases/“；
+</code></pre></div></div>
+<p>InputStream is = context.getAssets().open(DB_NAME);
+                // 输出流,在指定路径下生成db文件
+                OutputStream os = new FileOutputStream(DB_PATH + DB_NAME);</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            // 文件写入
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = is.read(buffer)) &gt; 0) {
+                os.write(buffer, 0, length);
+            } ``` 3.自定义SQLiteOpenHelper类，创建一个名字跟步骤1中.db名称一样的数据库； 4.按照平常逻辑，增删改查数据库。
+</code></pre></div></div>
+
+<h2 id="invalidate和postinvalidate的区别及使用">invalidate和postInvalidate的区别及使用</h2>
+<ul>
+  <li>Android中实现View的更新有两组方法，1. invalidate,ui线程更新; 2. postInvalidate，非UI线程更新</li>
+  <li>invalidate是在handler中使用，postInvalidate可以直接在子线程中调用更新View。
+    <h2 id="activity-window-view三者的差别">Activity-Window-View三者的差别</h2>
+  </li>
+  <li>Activity是Android四大组件之一，负责界面展示、用户交互和逻辑处理,有一个内部对象window。</li>
+  <li>Window就是负责界面展示以及交互的只能部门，就相当于Activity的下属，Activity的生命周期方法负责业务的处理。</li>
+  <li>View就是放在Window容器的元素，Window是View的载体，View是Window的具体展示。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 在Activity中调用attach，创建了一个Window
+2. 创建的window是其子类PhoneWindow，在attach中创建PhoneWindow
+3. 在Activity中调用setContentView(R.layout.xxx)
+4. 其中实际上是调用的getWindow().setContentView()
+5. 调用PhoneWindow中的setContentView方法
+6. 创建ParentView：作为ViewGroup的子类，实际是创建的DecorView(作为FramLayout的子类）
+7. 将指定的R.layout.xxx进行填充通过布局填充器进行填充【其中的parent指的就是DecorView】
+8. 调用到ViewGroup
+9. 调用ViewGroup的removeAllView()，先将所有的view移除掉
+10. 添加新的view：addView()
+</code></pre></div>    </div>
+  </li>
+  <li>Intent 传值的上限。
+    <blockquote>
+      <p>取决于binder事务缓存的分配，每个进程分配1M。</p>
+    </blockquote>
+  </li>
+</ul>
 
 
     </article>
@@ -487,9 +551,9 @@ PlatformConfig.setWXFileProvider("com.diya.isense.fileprovider");
       <div class="avatar">
         <img src="/assets/img/profile.png" alt="">
       </div>
-      <div class="author-name" rel="author">雪木</div>
+      <div class="author-name" rel="author">雪木3333</div>
       <div class="bio">
-        <p>Android、Nodejs、Wx Plugin开发者,历史,杂谈</p>
+        <p>开发者,哲学,历史,杂谈</p>
       </div>
       
       <ul class="sns-links">
@@ -518,10 +582,10 @@ PlatformConfig.setWXFileProvider("com.diya.isense.fileprovider");
     <section class="post-footer-item read-next">
       
       <div class="read-next-item">
-        <a href="/2020/08/30/12%E6%98%9F%E5%BA%A7%E5%A5%B3%E4%B8%8E%E5%8F%8C%E9%B1%BC%E7%94%B7%E7%9A%84%E6%90%AD%E9%85%8D.html" class="read-next-link"></a>
+        <a href="/2020/08/31/kotlin%E5%86%85%E8%81%94.html" class="read-next-link"></a>
         <section>
-          <span>双鱼男与12星座搭配</span>
-          <p>  最佳配对：巨蟹座女、天蝎座女、摩羯座女白羊女  他的罗曼蒂克令人响往，但他的情绪起伏让你吃不消。你的直言无讳可...</p>
+          <span>kotlin 内联函数</span>
+          <p>  let和with合并为run，孪生出apply，also又孪生与let  let，it代理对象，且返回最后一行...</p>
         </section>
         
      </div>

@@ -3,8 +3,7 @@ layout: post
 title: 'Android 面试 Java部分'
 author: WindMan
 date: 2020-7-27
-categories: android
-tags: android 
+tags: Android 
 ---
 > java 相关
 

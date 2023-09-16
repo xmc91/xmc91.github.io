@@ -3,7 +3,6 @@ layout: post
 title: 'Android issue'
 author: WindMan
 date: 2020-6-8
-categories: Android
 tags: Android 
 ---
 > android 疑难杂症解决秘籍
