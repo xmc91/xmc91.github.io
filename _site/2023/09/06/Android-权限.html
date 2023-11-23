@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android-权限 - 雪木 Blog</title>
+    <meta name="author"  content="雪木">
+    <meta name="description" content="Android-权限">
+    <meta name="keywords"  content="">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Android-权限 - 雪木 Blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:4000/2023/09/06/Android-%E6%9D%83%E9%99%90.html">
+    <meta property="og:description" content="风一样de男子">
+    <meta property="og:site_name" content="雪木 Blog">
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_roc50gemkxpw4s4i.css">
+    <link rel="stylesheet" href="/assets/css/github-markdown.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
+    <link rel="stylesheet" href="/assets/css/share.min.css">
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!--
+Author: Ray-Eldath
+refer to:
+ - http://docs.mathjax.org/en/latest/options/index.html
+-->
+
+	<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ["$", "$"] ],
+			displayMath: [ ["$$", "$$"] ],
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		},
+		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+      });
+    </script>
+
+	
+    <!--
+Author: Ray-Eldath
+-->
+<style>
+    .markdown-body .anchor{
+        float: left;
+        margin-top: -8px;
+        margin-left: -20px;
+        padding-right: 4px;
+        line-height: 1;
+        opacity: 0;
+    }
+    
+    .markdown-body .anchor .anchor-icon{
+        font-size: 15px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let nodes = document.querySelector(".markdown-body").querySelectorAll("h1,h2,h3")
+        for(let node of nodes) {
+            var anchor = document.createElement("a")
+            var anchorIcon = document.createElement("i")
+            anchorIcon.setAttribute("class", "fa fa-anchor fa-lg anchor-icon")
+            anchorIcon.setAttribute("aria-hidden", true)
+            anchor.setAttribute("class", "anchor")
+            anchor.setAttribute("href", "#" + node.getAttribute("id"))
+            
+            anchor.onmouseover = function() {
+                this.style.opacity = "0.4"
+            }
+            
+            anchor.onmouseout = function() {
+                this.style.opacity = "0"
+            }
+            
+            anchor.appendChild(anchorIcon)
+            node.appendChild(anchor)
+        }
+    })
+</script>
+</head>
+
+
+<body>
+  <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+  <input id="nm-switch" type="hidden" value="true"> <header class="g-header">
+    <div class="g-logo">
+      <a href="/"></a>
+    </div>
+    <i id="menu-toggle" class="iconfont icon-menu"></i>
+    <nav class="g-nav">
+        <ul>
+            
+            <li><a href="/">home</a></li>
+            
+            <li><a href="/tags.html">tags</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+
+  <header
+    class="g-banner post-header post-pattern-circuitBoard bgcolor-pink post-no-cover"
+    data-theme="pink"
+  >
+    <div class="post-wrapper">
+      <div class="post-tags">
+        
+      </div>
+      <h1>Android-权限</h1>
+      <div class="post-meta">
+        <span class="post-meta-item"><i class="iconfont icon-author"></i>xmc91</span>
+        <time class="post-meta-item" datetime="23-09-06"><i class="iconfont icon-date"></i>06 Sep 2023</time>
+      </div>
+    </div>
+    
+  </header>
+
+  <div class="post-content visible">
+    
+
+    <article class="markdown-body">
+      <blockquote>
+  <p>Android,权限</p>
+</blockquote>
+
+<h2 id="蓝牙权限">蓝牙权限</h2>
+
+<ul>
+  <li>声明权限</li>
+</ul>
+
+<blockquote>
+  <p>必须声明neverForLocation，如果不声明就代表需要用蓝牙定位，不主动申请定位就扫描不到设备</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;uses-permission android:name="android.permission.BLUETOOTH" /&gt;
+    &lt;uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /&gt;
+
+    &lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&gt; 
+    &lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
+
+	&lt;uses-permission android:name="android.permission.BLUETOOTH_CONNECT" /&gt;
+	&lt;uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" /&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>根据版本申请不同的权限</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		ArrayList&lt;String&gt; permissions = new ArrayList&lt;&gt;();
+        if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.S) {
+            permissions.add(Manifest.permission.BLUETOOTH_SCAN);
+            permissions.add(Manifest.permission.BLUETOOTH_CONNECT);
+        } else if (Build.VERSION.SDK_INT &gt; Build.VERSION_CODES.P) {
+            permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
+        } else if (Build.VERSION.SDK_INT &gt; Build.VERSION_CODES.M) {
+            permissions.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+        }
+
+</code></pre></div></div>
+
+<ul>
+  <li>部分手机没有BLUETOOTH_SCAN权限，都无法打开蓝牙。</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (!bluetoothAdapter.isEnabled()) {
+                    new RxPermissions(mActivity).requestEachCombined(Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT)
+                            .subscribe(new Consumer&lt;Permission&gt;() {
+                                @Override
+                                public void accept(Permission permission) throws Exception {
+                                    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                                    startActivityForResult(enableBtIntent, OPEN_REQUEST_CODE);
+                                }
+                            }, new Consumer&lt;Throwable&gt;() {
+                                @Override
+                                public void accept(Throwable throwable) throws Exception {
+
+                                }
+                            });
+
+                } else {
+                    requestBlePermission();
+                }
+</code></pre></div></div>
+
+<h2 id="存储权限">存储权限</h2>
+
+<ul>
+  <li>Android10以后，开始分区存储，八大目录不再需要sd卡权限</li>
+  <li>Android13以后，新出 READ_MEDIA_IMAGES &amp; READ_MEDIA_VIDEO 权限。</li>
+  <li>手QQ也不需要sd卡权限</li>
+  <li>
+    <p>权限组，官方说，在Android O之前，同一权限组的权限，只要用户授权一个，则整个权限组都被授权；Android O对此进行了修改。同一权限组不同权限，必须都要动态申请权限。但是如果第一个被用户同意了，后面的同组权限再申请时，就不会再弹窗而是被直接同意了。 but，部分厂商太狗了，改的啥也不符合。安全起见，同组的也申请。例子参考：https://blog.csdn.net/qihoo_tech/article/details/105828426。</p>
+  </li>
+  <li>外置sd卡，app私有目录：/storage/emulated/0/Android/data/pkg/files，获取方法：getExternalFilesDir(null)</li>
+  <li>外置sd卡：/mnt/sdcard/ 或者 /storage/emulated/0/</li>
+  <li>app私有目录有两个。卸载后都会删除，都不需要权限，都是其他应用不可访问
+    <ul>
+      <li>一个在内置sd卡：getFilesDir() 或 getCacheDir() ，文件管理路径：/data/data/package_name/，Android10+，系统会对这些位置加密</li>
+      <li>一个在外置：getExternalFilesDir() 或 getExternalCacheDir()，文件管理路径：/storage/emulated/0/Android/data/pkg/。其他应用可以在具有适当权限的情况下访问这些目录，但存储在这些目录中的文件仅供您的应用使用</li>
+    </ul>
+  </li>
+  <li>在搭载 Android 9（API 级别 28）或更低版本的设备上，只要您的应用具有适当的存储权限，就可以访问属于其他应用的应用专用文件。为了让用户更好地管理自己的文件并减少混乱，以 Android 10（API 级别 29）及更高版本为目标平台的应用在默认情况下被授予了对外部存储空间的分区访问权限（即分区存储）。启用分区存储后，应用将无法访问属于其他应用的应用专属目录。</li>
+  <li>公用空间，通过 MediaStore API，Android11+访问其他应用放在这里的数据需要read权限；Android10访问其他应用放在这的数据需要read或者write权限；Android9- 访问所有文件都需要权限。八大目录：图片（DCIM/ 和 Pictures/）、视频（DCIM/、Movies/ 和 Pictures/）、音频（Alarms/、Audiobooks/、Music/、Notifications/、Podcasts/ 和 Ringtones/）、下载的文件（Download/）</li>
+  <li>相册里边的图片和视频，都是八大目录。比如，相机拍的无论是视频还是照片，都在DCIM/；其他地方下载的一般放在 DOWNLOAD/ 或者 Movice。截屏的放在DCIM/Screenshorts， 微信保存的图片放在Picture/WeiXin/</li>
+</ul>
+
+<p><strong>总结：数据库、SP、其他比较重要的放在内置私有目录，，头像、图片保存在外置私有目录，，明确共享的放在八大目录</strong></p>
+
+<h2 id="检索第三方app">检索第三方app</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;queries&gt;&lt;!--配置需要查询的三方app的包名--&gt;
+        &lt;package android:name="com.whatsapp" /&gt;
+        &lt;package android:name="com.facebook.katana" /&gt;
+        &lt;package android:name="com.facebook.orca" /&gt;
+        &lt;package android:name="com.tencent.tim" /&gt;
+        &lt;package android:name="com.tencent.mm" /&gt;
+        &lt;package android:name="com.tencent.mobileqq" /&gt;
+        &lt;package android:name="com.instagram.android" /&gt;
+        &lt;package android:name="com.linkedin.android" /&gt;
+        &lt;package android:name="com.pinterest" /&gt;
+    &lt;/queries&gt;
+
+</code></pre></div></div>
+
+
+    </article>
+
+    
+    <div class="social-share-wrapper">
+      <div class="social-share"></div>
+    </div>
+    
+  </div>
+
+  <section class="author-detail">
+    <section class="post-footer-item author-card">
+      <div class="avatar">
+        <img src="/assets/img/profile.png" alt="">
+      </div>
+      <div class="author-name" rel="author">雪木</div>
+      <div class="bio">
+        <p>开发者,哲学,历史,杂谈</p>
+      </div>
+      
+      <ul class="sns-links">
+        
+        <li>
+          <a href="//juejin.im/user/58b513f0570c35006b0be9c1" target="_blank">
+                    <i class="iconfont icon-juejin"></i>
+                </a>
+        </li>
+        
+        <li>
+          <a href="//github.com/xmc91" target="_blank">
+                    <i class="iconfont icon-github"></i>
+                </a>
+        </li>
+        
+        <li>
+          <a href="//weibo.com/u/6206849398" target="_blank">
+                    <i class="iconfont icon-weibo"></i>
+                </a>
+        </li>
+        
+      </ul>
+      
+    </section>
+    <section class="post-footer-item read-next">
+      
+      <div class="read-next-item">
+        <a href="/2023/09/06/html.html" class="read-next-link"></a>
+        <section>
+          <span>html小功能</span>
+          <p>  Html 小功能积累</p>
+        </section>
+        
+     </div>
+      
+
+      
+      <div class="read-next-item">
+        <a href="/2023/03/17/%E5%B0%8F%E5%8A%9F%E8%83%BD.html" class="read-next-link"></a>
+          <section>
+            <span>Android小功能</span>
+            <p>  Android 小功能积累</p>
+          </section>
+          
+      </div>
+      
+    </section>
+    
+    <section class="post-footer-item comment">
+        <div id="disqus_thread"></div>
+    </section>
+    
+  </section>
+
+  <footer class="g-footer">
+  <section>雪木 Blog ©
+  
+  
+    2019
+    -
+  
+  2023
+  </section>
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>  
+
+ 总访问量<span id="busuanzi_value_site_pv"></span>次
+ |访客数<span id="busuanzi_value_site_uv"></span>人次
+ 
+</footer>
+
+
+  <script src="/assets/js/social-share.min.js"></script>
+  <script>
+    socialShare('.social-share', {
+      sites: [
+        
+          'wechat'
+          ,
+          
+        
+          'weibo'
+          ,
+          
+        
+          'twitter'
+          
+        
+      ],
+      wechatQrcodeTitle: "分享到微信朋友圈",
+      wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
+    });
+  </script>
+
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://xwindman.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+
+  <script src="/assets/js/prism.js"></script>
+  <script src="/assets/js/index.min.js"></script>
+</body>
+
+</html>
