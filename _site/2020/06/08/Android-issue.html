@@ -224,7 +224,12 @@ maven{ url'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
 升级部分依赖，支持gradle3.6.0 ，升级realm
 </code></pre></div>    </div>
   </li>
-  <li></li>
+  <li>
+    <p>申请动态权限，oppo手机，如果权限组的权限差距大，可能存在只弹出一种弹框。比如申请蓝牙的scan权限和sd卡权限，此时可能只弹出scan的提示，不会出现sd卡授权，然后grant=false。</p>
+  </li>
+  <li>
+    <p>Android10以上，不再需要wreite sd卡权限，因为file写入app目录，八大目录又不需要权限；read sd卡权限，安迪的13以上拆分成：imgage、media、video。</p>
+  </li>
 </ul>
 
 

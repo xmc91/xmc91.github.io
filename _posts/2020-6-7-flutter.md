@@ -72,8 +72,7 @@ dependencies://依赖库
   url_launcher: ^6.1.10
   uuid: ^3.0.7
   dartx: ^1.1.0
-  ble_plugin:
-    path: plugins/ble_plugin
+
 
 dev_dependencies:
   flutter_test:
@@ -117,3 +116,14 @@ flutter_icons:
   macos:
     generate: false
 ```
+
+## GetX 
+
+> https://github.com/jonataslaw/getx
+
+
+
+## GetX cli
+
+> https://github.com/jonataslaw/get_cli/blob/master/README-zh_CN.md
+

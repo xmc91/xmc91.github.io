@@ -5,9 +5,63 @@
     <description>风一样de男子</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 16 Sep 2023 14:04:54 +0800</pubDate>
-    <lastBuildDate>Sat, 16 Sep 2023 14:04:54 +0800</lastBuildDate>
+    <pubDate>Thu, 23 Nov 2023 10:10:11 +0800</pubDate>
+    <lastBuildDate>Thu, 23 Nov 2023 10:10:11 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
+    
+      <item>
+        <title>数据库</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;数据库&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;数据库概念&quot;&gt;数据库概念&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;table｜schema&lt;/li&gt;
+  &lt;li&gt;column 列&lt;/li&gt;
+  &lt;li&gt;row 行&lt;/li&gt;
+  &lt;li&gt;primary key 主键&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;数据库命令&quot;&gt;数据库命令&lt;/h2&gt;
+
+&lt;h2 id=&quot;查看-show&quot;&gt;查看 SHOW&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;选择数据库：USE xxx&lt;/li&gt;
+  &lt;li&gt;展示所有数据库：SHOW DATABASES&lt;/li&gt;
+  &lt;li&gt;展示所有表：SHOW TABLES｜SHOW COLUMNS FERM xxx&lt;/li&gt;
+  &lt;li&gt;看是状态：SHOW STATUS&lt;/li&gt;
+  &lt;li&gt;看错误等：SHOW ERRORS｜ SHOW WARINGS&lt;/li&gt;
+  &lt;li&gt;查看权限：SHOW GRANTS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;检索-select&quot;&gt;检索 SELECT&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;单列：SELECT xx FREOM xx&lt;/li&gt;
+  &lt;li&gt;多列：SELECT x,y FROM xxx&lt;/li&gt;
+  &lt;li&gt;所有列：SELECT * FROM xxx&lt;/li&gt;
+  &lt;li&gt;不同行：SELECT xx FROM xxx，不重复：SELECT DIStINGCT xx FROM xxx&lt;/li&gt;
+  &lt;li&gt;限制：LIMIT n&lt;/li&gt;
+  &lt;li&gt;限定表名：SELECT table.column FROM table&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;排序检索&quot;&gt;排序检索&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;默认正序：ASC&lt;/li&gt;
+  &lt;li&gt;指定条件，加 ORDER BY&lt;/li&gt;
+  &lt;li&gt;多列排序：SELECT x, y, FROM table ORDER BY x, y&lt;/li&gt;
+  &lt;li&gt;倒序，加 DESC&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 24 Sep 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/09/24/database.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/09/24/database.html</guid>
+        
+        <category>数据库</category>
+        
+        
+      </item>
     
       <item>
         <title>Android13升级</title>
@@ -154,6 +208,122 @@
         
         
         <category>html</category>
+        
+      </item>
+    
+      <item>
+        <title>Android-权限</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Android,权限&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;蓝牙权限&quot;&gt;蓝牙权限&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;声明权限&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;必须声明neverForLocation，如果不声明就代表需要用蓝牙定位，不主动申请定位就扫描不到设备&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &amp;lt;uses-permission android:name=&quot;android.permission.BLUETOOTH&quot; /&amp;gt;
+    &amp;lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADMIN&quot; /&amp;gt;
+
+    &amp;lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot; /&amp;gt; 
+    &amp;lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&amp;gt;
+
+	&amp;lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_CONNECT&quot; /&amp;gt;
+	&amp;lt;uses-permission
+        android:name=&quot;android.permission.BLUETOOTH_SCAN&quot;
+        android:usesPermissionFlags=&quot;neverForLocation&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;根据版本申请不同的权限&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;		ArrayList&amp;lt;String&amp;gt; permissions = new ArrayList&amp;lt;&amp;gt;();
+        if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.S) {
+            permissions.add(Manifest.permission.BLUETOOTH_SCAN);
+            permissions.add(Manifest.permission.BLUETOOTH_CONNECT);
+        } else if (Build.VERSION.SDK_INT &amp;gt; Build.VERSION_CODES.P) {
+            permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
+        } else if (Build.VERSION.SDK_INT &amp;gt; Build.VERSION_CODES.M) {
+            permissions.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+        }
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;部分手机没有BLUETOOTH_SCAN权限，都无法打开蓝牙。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (!bluetoothAdapter.isEnabled()) {
+                    new RxPermissions(mActivity).requestEachCombined(Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT)
+                            .subscribe(new Consumer&amp;lt;Permission&amp;gt;() {
+                                @Override
+                                public void accept(Permission permission) throws Exception {
+                                    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                                    startActivityForResult(enableBtIntent, OPEN_REQUEST_CODE);
+                                }
+                            }, new Consumer&amp;lt;Throwable&amp;gt;() {
+                                @Override
+                                public void accept(Throwable throwable) throws Exception {
+
+                                }
+                            });
+
+                } else {
+                    requestBlePermission();
+                }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;存储权限&quot;&gt;存储权限&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Android10以后，开始分区存储，八大目录不再需要sd卡权限&lt;/li&gt;
+  &lt;li&gt;Android13以后，新出 READ_MEDIA_IMAGES &amp;amp; READ_MEDIA_VIDEO 权限。&lt;/li&gt;
+  &lt;li&gt;手QQ也不需要sd卡权限&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;权限组，官方说，在Android O之前，同一权限组的权限，只要用户授权一个，则整个权限组都被授权；Android O对此进行了修改。同一权限组不同权限，必须都要动态申请权限。但是如果第一个被用户同意了，后面的同组权限再申请时，就不会再弹窗而是被直接同意了。 but，部分厂商太狗了，改的啥也不符合。安全起见，同组的也申请。例子参考：https://blog.csdn.net/qihoo_tech/article/details/105828426。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;外置sd卡，app私有目录：/storage/emulated/0/Android/data/pkg/files，获取方法：getExternalFilesDir(null)&lt;/li&gt;
+  &lt;li&gt;外置sd卡：/mnt/sdcard/ 或者 /storage/emulated/0/&lt;/li&gt;
+  &lt;li&gt;app私有目录有两个。卸载后都会删除，都不需要权限，都是其他应用不可访问
+    &lt;ul&gt;
+      &lt;li&gt;一个在内置sd卡：getFilesDir() 或 getCacheDir() ，文件管理路径：/data/data/package_name/，Android10+，系统会对这些位置加密&lt;/li&gt;
+      &lt;li&gt;一个在外置：getExternalFilesDir() 或 getExternalCacheDir()，文件管理路径：/storage/emulated/0/Android/data/pkg/。其他应用可以在具有适当权限的情况下访问这些目录，但存储在这些目录中的文件仅供您的应用使用&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;在搭载 Android 9（API 级别 28）或更低版本的设备上，只要您的应用具有适当的存储权限，就可以访问属于其他应用的应用专用文件。为了让用户更好地管理自己的文件并减少混乱，以 Android 10（API 级别 29）及更高版本为目标平台的应用在默认情况下被授予了对外部存储空间的分区访问权限（即分区存储）。启用分区存储后，应用将无法访问属于其他应用的应用专属目录。&lt;/li&gt;
+  &lt;li&gt;公用空间，通过 MediaStore API，Android11+访问其他应用放在这里的数据需要read权限；Android10访问其他应用放在这的数据需要read或者write权限；Android9- 访问所有文件都需要权限。八大目录：图片（DCIM/ 和 Pictures/）、视频（DCIM/、Movies/ 和 Pictures/）、音频（Alarms/、Audiobooks/、Music/、Notifications/、Podcasts/ 和 Ringtones/）、下载的文件（Download/）&lt;/li&gt;
+  &lt;li&gt;相册里边的图片和视频，都是八大目录。比如，相机拍的无论是视频还是照片，都在DCIM/；其他地方下载的一般放在 DOWNLOAD/ 或者 Movice。截屏的放在DCIM/Screenshorts， 微信保存的图片放在Picture/WeiXin/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;总结：数据库、SP、其他比较重要的放在内置私有目录，，头像、图片保存在外置私有目录，，明确共享的放在八大目录&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;检索第三方app&quot;&gt;检索第三方app&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &amp;lt;queries&amp;gt;&amp;lt;!--配置需要查询的三方app的包名--&amp;gt;
+        &amp;lt;package android:name=&quot;com.whatsapp&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.facebook.katana&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.facebook.orca&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.tencent.tim&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.tencent.mm&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.tencent.mobileqq&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.instagram.android&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.linkedin.android&quot; /&amp;gt;
+        &amp;lt;package android:name=&quot;com.pinterest&quot; /&amp;gt;
+    &amp;lt;/queries&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 06 Sep 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/09/06/Android-%E6%9D%83%E9%99%90.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/09/06/Android-%E6%9D%83%E9%99%90.html</guid>
+        
         
       </item>
     
@@ -471,256 +641,6 @@ scheduledExecutor.schedule(new Runnable() {
         <guid isPermaLink="true">http://localhost:4000/2023/02/06/%E9%94%81.html</guid>
         
         <category>Java</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>ViewPage2</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;基于RecyclerView，替代ViewPage&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;基本使用&quot;&gt;基本使用&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;绑定adapter和监听
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;viewpage.adapter = ViewPagerAdapter()
-viewpage.currentItem = 1
-viewpage.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-          override fun onPageSelected(position: Int) {
-              super.onPageSelected(position)
-              Log.e(TAG, &quot;onPageSelected: $position&quot;)
-              lastPosiont = position
-          }
-      })
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;adapter
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class ViewPagerAdapter(private val mLevel: Array&amp;lt;ByteArray&amp;gt;) : RecyclerView.Adapter&amp;lt;ViewPagerAdapter.ViewHolder&amp;gt;() {
-  override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-      return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.mode_item, parent, false))
-  }
-
-  override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-      holder.itemImg.setLevel(mLevel[position])
-  }
-
-  override fun getItemCount(): Int {
-      return mLevel.size
-  }
-
-  inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-      var itemImg: ImageView
-
-      init {
-          itemImg = itemView.findViewById(R.id.item_img)
-          itemView.tag = this
-      }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;知识点&quot;&gt;知识点&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;初始化后会先走一次监听，位置为设定的，如果没有设定，就是0&lt;/li&gt;
-  &lt;li&gt;ViewPage2基于RecyclerView，第一个就是它
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var recyclerView: RecyclerView = viewpage.getChildAt(0) as RecyclerView
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;获取ItemView，借道RecyclerView
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var curItemView = recyclerView.layoutManager?.findViewByPosition(position)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 01 Feb 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/02/01/Android-ViewPage2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/02/01/Android-ViewPage2.html</guid>
-        
-        <category>Android</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>RecyclewView</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Android 使用最频繁的一个group组件&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;基本使用&quot;&gt;基本使用&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;初始化及监听&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mAdapter = new XXXAdapter(mContext);
-LinearLayoutManager layoutManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
-mRecyclerView.setLayoutManager(layoutManager);
-mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-mRecyclerView.setAdapter(mAdapter);
-
-mAdapter.setOnItemClickListener(type -&amp;gt; {
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li&gt;adapter&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class XXXAdapter extends RecyclerView.Adapter&amp;lt;XXXAdapter.ItemViewHolder&amp;gt; {
-
-    private LayoutInflater mInflater;
-
-    private OnItemClickListener mOnItemClickListener;
-
-    private MsgEntity mMsgEntity;
-
-    public MsgCenterAdapter(Context context) {
-        mInflater = LayoutInflater.from(context);
-    }
-
-    public void setMsgEntity(MsgEntity msgEntity) {
-        mMsgEntity = msgEntity;
-    }
-
-    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
-        mOnItemClickListener = onItemClickListener;
-    }
-
-    @Override
-    public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ItemViewHolder(mInflater.inflate(R.layout.item_msg_center, parent, false));
-    }
-
-    @Override
-    public void onBindViewHolder(ItemViewHolder holder, int position) {
-        Context context = holder.itemView.getContext();
-        holder.mIcon.setImageResource(R.mipmap.icon_msg_center_comment);
-        holder.mName.setText(R.string.msgCenterComment);
-    }
-
-    @Override
-    public int getItemCount() {
-        return 4;
-    }
-
-    static class ItemViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.icon)
-        ImageView mIcon;
-
-        public ItemViewHolder(View itemView) {
-            super(itemView);
-            ButterKnife.bind(this, itemView);
-            setIsRecyclable(false);
-        }
-    }
-
-    public interface OnItemClickListener {
-        void onItemClick(@MsgType String type);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;进阶&quot;&gt;进阶&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;LayoutManager
-    &lt;ul&gt;
-      &lt;li&gt;LinearLayoutManager 横向、纵向。&lt;/li&gt;
-      &lt;li&gt;GridLayoutManager 网格&lt;/li&gt;
-      &lt;li&gt;StaggeredGridLayoutManager 瀑布&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;分割线 ItemDecoration：onDraw、onDrawOver、getItemOffsets
-    &lt;ul&gt;
-      &lt;li&gt;onDraw方法先于drawChildren&lt;/li&gt;
-      &lt;li&gt;onDrawOver在drawChildren之后，一般我们选择复写其中一个即可。&lt;/li&gt;
-      &lt;li&gt;getItemOffsets 可以通过outRect.set()为每个Item设置一定的偏移量，主要用于绘制Decorator。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class DividerGridItemDecoration extends RecyclerView.ItemDecoration{
-
-    private static final int[] ATTRS = new int[] { android.R.attr.listDivider };
-    private Drawable mDivider;
-
-    public DividerGridItemDecoration(Context context){
-        final TypedArray a = context.obtainStyledAttributes(ATTRS);
-        mDivider = a.getDrawable(0);
-        a.recycle();
-    }
-
-    @Override
-    public void onDraw(Canvas c, RecyclerView parent, State state){
-        drawHorizontal(c, parent);
-        drawVertical(c, parent);
-    }
-
-    public void drawHorizontal(Canvas c, RecyclerView parent){
-        int childCount = parent.getChildCount();
-        for (int i = 0; i &amp;lt; childCount; i++){
-            final View child = parent.getChildAt(i);
-            final RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child.getLayoutParams();
-            final int left = child.getLeft() - params.leftMargin;
-            final int right = child.getRight() + params.rightMargin
-                    + mDivider.getIntrinsicWidth();
-            final int top = child.getBottom() + params.bottomMargin;
-            final int bottom = top + mDivider.getIntrinsicHeight();
-            mDivider.setBounds(left, top, right, bottom);
-            mDivider.draw(c);
-        }
-    }
-
-    public void drawVertical(Canvas c, RecyclerView parent){
-        final int childCount = parent.getChildCount();
-        for (int i = 0; i &amp;lt; childCount; i++){
-            final View child = parent.getChildAt(i);
-            final RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child.getLayoutParams();
-            final int top = child.getTop() - params.topMargin;
-            final int bottom = child.getBottom() + params.bottomMargin;
-            final int left = child.getRight() + params.rightMargin;
-            final int right = left + mDivider.getIntrinsicWidth();
-            mDivider.setBounds(left, top, right, bottom);
-            mDivider.draw(c);
-        }
-    }
-
-    @Override
-    public void getItemOffsets(Rect outRect, int itemPosition,
-            RecyclerView parent){
-        int spanCount = getSpanCount(parent);
-        int childCount = parent.getAdapter().getItemCount();
-        outRect.set(0, 0, mDivider.getIntrinsicWidth(), 0);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;动画&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;绘制：测量 onMeasure 和布局 onLayout 工作委托给 LayoutManager 来执行，不同的 LayoutManager 会有不同风格的布局显示，这是一种策略模式
-&lt;img src=&quot;/assets/img/recyclerview_draw.png&quot; alt=&quot;复杂度&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Recycler&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;四级缓存&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;header 和 footer&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 01 Feb 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/02/01/Android-RecyclewView.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/02/01/Android-RecyclewView.html</guid>
-        
-        <category>Android</category>
         
         
       </item>
