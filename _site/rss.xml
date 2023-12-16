@@ -5,9 +5,501 @@
     <description>风一样de男子</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 23 Nov 2023 10:10:11 +0800</pubDate>
-    <lastBuildDate>Thu, 23 Nov 2023 10:10:11 +0800</lastBuildDate>
+    <pubDate>Sat, 16 Dec 2023 19:18:37 +0800</pubDate>
+    <lastBuildDate>Sat, 16 Dec 2023 19:18:37 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
+    
+      <item>
+        <title>油猴VIP插件代码</title>
+        <description>&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// ==UserScript==
+// @name              全网VIP视频免费破解【专注一个脚本只做一件事件】
+// @namespace         http://tampermonkey.net/
+// @version           1.6.7
+// @description       全网VIP视频免费破解【专注一个脚本只做一件事件】。支持：腾讯、爱奇艺、优酷、芒果、pptv、乐视等其它网站；
+// @icon              data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAkACQAAD//gAUU29mdHdhcmU6IFNuaXBhc3Rl/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAGgAeAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8/stTivZLhFV0eBtrhwB+PXpXc/Bj4bXXxy1ObTdE1XTrDUE3GO31PzkMyqMsytHE64Gf4iD6A15TrUx0fUriVQcXcBUY/vjivpb9hGz+w/GLTocYK6dcbvqQCa/Q6ec46dWth21zUFNzdt3zfuvS8btng5rwnkuCy3DZrSi3DGyoqiuZ6JQf1m/flq2hG+yMPTf2e9X1nVPEFlZa9olx/YTmO9nDXKxo4LB1G6AMxUockDB7E1i+Jvg/rnhzw/peuRSWut6RqP+pu9MMjgHBIDK6KwOAe3bBwa+g/hQEPiP41CVmSM6ndbmRdxA3zZIGRn8xXkniP42Wdr4C0Dwp4XhvPI0/wDeTX2oIsbyvhshUR2AGWJ5Y9h71+cUuKuK8ZxVisry6KqUqFSkpJxSiqc6DnKUp7qXPyqKV7pv3WtV8NWyzLKGAhXrNxlNTtZ3fNGdkku3Le/5njU1tDcbfNiSXacrvUHB9q3/AA/438R+Eo5o9D1/VNGSYhpV0+8kgDkdCwRhn8axaK/od0abbbitd9N7bXPh/rNflhDndo3sruyvvbtfrbc6Kf4j+LLq4uJ5vFGszT3CCOaSTUJmaVBnCsS2SBk8H1Nc7RRUU8NRoylOlBRcrXaSTdtFfvZbGU6tSpbnk3buz//Z
+// @author            w__yi
+// @match             *://*.youku.com/*
+// @match             *://*.iqiyi.com/*
+// @match             *://*.iq.com/*
+// @match             *://*.le.com/*
+// @match             *://v.qq.com/*
+// @match             *://m.v.qq.com/*
+// @match             *://*.tudou.com/*
+// @match             *://*.mgtv.com/*
+// @match             *://tv.sohu.com/*
+// @match             *://film.sohu.com/*
+// @match             *://*.1905.com/*
+
+// @match             *://*.pptv.com/*
+
+// @require           https://cdn.bootcdn.net/ajax/libs/jquery/3.2.1/jquery.min.js
+// @connect           api.bilibili.com
+// @grant             unsafeWindow
+// @grant             GM_addStyle
+// @grant             GM_openInTab
+// @grant             GM_getValue
+// @grant             GM_setValue
+// @grant             GM_xmlhttpRequest
+// @grant             GM_log
+// @charset		      UTF-8
+// @license           GPL License
+// @downloadURL https://update.greasyfork.org/scripts/438657/%E5%85%A8%E7%BD%91VIP%E8%A7%86%E9%A2%91%E5%85%8D%E8%B4%B9%E7%A0%B4%E8%A7%A3%E3%80%90%E4%B8%93%E6%B3%A8%E4%B8%80%E4%B8%AA%E8%84%9A%E6%9C%AC%E5%8F%AA%E5%81%9A%E4%B8%80%E4%BB%B6%E4%BA%8B%E4%BB%B6%E3%80%91.user.js
+// @updateURL https://update.greasyfork.org/scripts/438657/%E5%85%A8%E7%BD%91VIP%E8%A7%86%E9%A2%91%E5%85%8D%E8%B4%B9%E7%A0%B4%E8%A7%A3%E3%80%90%E4%B8%93%E6%B3%A8%E4%B8%80%E4%B8%AA%E8%84%9A%E6%9C%AC%E5%8F%AA%E5%81%9A%E4%B8%80%E4%BB%B6%E4%BA%8B%E4%BB%B6%E3%80%91.meta.js
+// ==/UserScript==
+
+const util = (function () {
+
+    function findTargetElement(targetContainer) {
+        const body = window.document;
+        let tabContainer;
+        let tryTime = 0;
+        const maxTryTime = 120;
+        let startTimestamp;
+        return new Promise((resolve, reject) =&amp;gt; {
+            function tryFindElement(timestamp) {
+                if (!startTimestamp) {
+                    startTimestamp = timestamp;
+                }
+                const elapsedTime = timestamp - startTimestamp;
+
+                if (elapsedTime &amp;gt;= 500) {
+                    GM_log(&quot;查找元素：&quot; + targetContainer + &quot;，第&quot; + tryTime + &quot;次&quot;);
+                    tabContainer = body.querySelector(targetContainer);
+                    if (tabContainer) {
+                        resolve(tabContainer);
+                    } else if (++tryTime === maxTryTime) {
+                        reject();
+                    } else {
+                        startTimestamp = timestamp;
+                    }
+                }
+                if (!tabContainer &amp;amp;&amp;amp; tryTime &amp;lt; maxTryTime) {
+                    requestAnimationFrame(tryFindElement);
+                }
+            }
+
+            requestAnimationFrame(tryFindElement);
+        });
+    }
+
+    function urlChangeReload() {
+        const oldHref = window.location.href;
+        let interval = setInterval(() =&amp;gt; {
+            let newHref = window.location.href;
+            if (oldHref !== newHref) {
+                clearInterval(interval);
+                window.location.reload();
+            }
+        }, 500);
+    }
+
+    function reomveVideo() {
+        setInterval(() =&amp;gt; {
+            for (let video of document.getElementsByTagName(&quot;video&quot;)) {
+                if (video.src) {
+                    video.removeAttribute(&quot;src&quot;);
+                    video.muted = true;
+                    video.load();
+                    video.pause();
+                }
+            }
+        }, 500);
+    }
+
+    function syncRequest(option) {
+        return new Promise((resolve, reject) =&amp;gt; {
+            option.onload = (res) =&amp;gt; {
+                resolve(res);
+            };
+            option.onerror = (err) =&amp;gt; {
+                reject(err);
+            };
+            GM_xmlhttpRequest(option);
+        });
+    }
+
+    return {
+        req: (option) =&amp;gt; syncRequest(option),
+        findTargetEle: (targetEle) =&amp;gt; findTargetElement(targetEle),
+        urlChangeReload: () =&amp;gt; urlChangeReload(),
+        reomveVideo: () =&amp;gt; reomveVideo()
+    }
+})();
+
+
+const superVip = (function () {
+
+    const _CONFIG_ = {
+        isMobile: navigator.userAgent.match(/(Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini)/i),
+        currentPlayerNode: null,
+        vipBoxId: 'vip_jx_box' + Math.ceil(Math.random() * 100000000),
+        flag: &quot;flag_vip&quot;,
+        autoPlayerKey: &quot;auto_player_key&quot; + window.location.host,
+        autoPlayerVal: &quot;auto_player_value_&quot; + window.location.host,
+        videoParseList: [
+            {&quot;name&quot;: &quot;综合/B站&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://jx.jsonplayer.com/player/?url=&quot;},
+            {&quot;name&quot;: &quot;CK&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://www.ckplayer.vip/jiexi/?url=&quot;},
+            {&quot;name&quot;: &quot;YT&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://jx.yangtu.top/?url=&quot;},
+            {&quot;name&quot;: &quot;Player-JY&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://jx.playerjy.com/?url=&quot;},
+            {&quot;name&quot;: &quot;yparse&quot;, &quot;type&quot;: &quot;1,2&quot;, &quot;url&quot;: &quot;https://jx.yparse.com/index.php?url=&quot;},
+            {&quot;name&quot;: &quot;8090&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://www.8090g.cn/?url=&quot;},
+            {&quot;name&quot;: &quot;剖元&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://www.pouyun.com/?url=&quot;},
+            {&quot;name&quot;: &quot;虾米&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://jx.xmflv.com/?url=&quot;},
+            {&quot;name&quot;: &quot;全民&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://43.240.74.102:4433?url=&quot;},
+            {&quot;name&quot;: &quot;OK&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://api.okjx.cc:3389/jx.php?url=&quot;},
+            {&quot;name&quot;: &quot;OKJX&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://okjx.cc/?url=&quot;},
+            {&quot;name&quot;: &quot;m1907&quot;, &quot;type&quot;: &quot;1,2&quot;, &quot;url&quot;: &quot;https://im1907.top/?jx=&quot;},
+
+            {&quot;name&quot;: &quot;爱豆&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://jx.aidouer.net/?url=&quot;},
+            {&quot;name&quot;: &quot;猪蹄&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://jx.iztyy.com/Bei/?url=&quot;},
+            {&quot;name&quot;: &quot;夜幕&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://www.yemu.xyz/?url=&quot;},
+
+            {&quot;name&quot;: &quot;MAO&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://www.mtosz.com/m3u8.php?url=&quot;},
+            {&quot;name&quot;: &quot;M3U8TV&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://jx.m3u8.tv/jiexi/?url=&quot;},
+            {&quot;name&quot;: &quot;铭人云&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://parse.123mingren.com/?url=&quot;},
+            {&quot;name&quot;: &quot;4kdv&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://jx.4kdv.com/?url=&quot;},
+
+            {&quot;name&quot;: &quot;1717&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://ckmov.ccyjjd.com/ckmov/?url=&quot;},
+            {&quot;name&quot;: &quot;qianqi&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://api.qianqi.net/vip/?url=&quot;},
+            {&quot;name&quot;: &quot;laobandq&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://vip.laobandq.com/jiexi.php?url=&quot;},
+            {&quot;name&quot;: &quot;playm3u8&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://www.playm3u8.cn/jiexi.php?url=&quot;},
+            {&quot;name&quot;: &quot;无名小站&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://www.administratorw.com/video.php?url=&quot;},
+            {&quot;name&quot;: &quot;盘古&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://go.yh0523.cn/y.cy?url=&quot;},
+            {&quot;name&quot;: &quot;Blbo&quot;, &quot;type&quot;: &quot;1,3&quot;, &quot;url&quot;: &quot;https://jx.blbo.cc:4433/?url=&quot;},
+        ],
+        playerContainers: [
+            {
+                host: &quot;v.qq.com&quot;,
+                container: &quot;#mod_player,#player-container,.container-player&quot;,
+                name: &quot;Default&quot;,
+                displayNodes: [&quot;#mask_layer&quot;, &quot;.mod_vip_popup&quot;, &quot;#mask_layer&quot;, &quot;.panel-tip-pay&quot;]
+            },
+            {
+                host: &quot;m.v.qq.com&quot;,
+                container: &quot;.mod_player,#player&quot;,
+                name: &quot;Default&quot;,
+                displayNodes: [&quot;.mod_vip_popup&quot;, &quot;[class^=app_],[class^=app-],[class*=_app_],[class*=-app-],[class$=_app],[class$=-app]&quot;, &quot;div[dt-eid=open_app_bottom]&quot;, &quot;div.video_function.video_function_new&quot;, &quot;a[open-app]&quot;, &quot;section.mod_source&quot;, &quot;section.mod_box.mod_sideslip_h.mod_multi_figures_h,section.mod_sideslip_privileges,section.mod_game_rec&quot;, &quot;.at-app-banner&quot;]
+            },
+
+            {host: &quot;w.mgtv.com&quot;, container: &quot;#mgtv-player-wrap&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {host: &quot;www.mgtv.com&quot;, container: &quot;#mgtv-player-wrap&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {
+                host: &quot;m.mgtv.com&quot;,
+                container: &quot;.video-area&quot;,
+                name: &quot;Default&quot;,
+                displayNodes: [&quot;div[class^=mg-app]&quot;, &quot;.video-area-bar&quot;, &quot;.open-app-popup&quot;]
+            },
+            {host: &quot;www.bilibili.com&quot;, container: &quot;#player_module,#bilibiliPlayer,#bilibili-player&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {host: &quot;m.bilibili.com&quot;, container: &quot;.player-wrapper,.player-container,.mplayer&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {host: &quot;www.iqiyi.com&quot;, container: &quot;#flashbox&quot;, name: &quot;Default&quot;, displayNodes: [&quot;#playerPopup&quot;, &quot;div[class^=qy-header-login-pop]&quot;, &quot;section[class^=modal-cover_]&quot; ,&quot;.toast&quot;]},
+            {
+                host: &quot;m.iqiyi.com&quot;,
+                container: &quot;.m-video-player-wrap&quot;,
+                name: &quot;Default&quot;,
+                displayNodes: [&quot;div.m-iqyGuide-layer&quot;, &quot;a[down-app-android-url]&quot;, &quot;[name=m-extendBar]&quot;, &quot;[class*=ChannelHomeBanner]&quot;, &quot;section.m-hotWords-bottom&quot;]
+            },
+            {host: &quot;www.iq.com&quot;, container: &quot;.intl-video-wrap&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {host: &quot;v.youku.com&quot;, container: &quot;#player&quot;, name: &quot;Default&quot;, displayNodes: [&quot;#iframaWrapper&quot;, &quot;#checkout_counter_mask&quot;, &quot;#checkout_counter_popup&quot;]},
+            {
+                host: &quot;m.youku.com&quot;,
+                container: &quot;#player,.h5-detail-player&quot;,
+                name: &quot;Default&quot;,
+                displayNodes: [&quot;.callEnd_box&quot;, &quot;.h5-detail-guide&quot;, &quot;.h5-detail-vip-guide&quot;]
+            },
+            {host: &quot;tv.sohu.com&quot;, container: &quot;#player&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {host: &quot;film.sohu.com&quot;, container: &quot;#playerWrap&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {host: &quot;www.le.com&quot;, container: &quot;#le_playbox&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {host: &quot;video.tudou.com&quot;, container: &quot;.td-playbox&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {host: &quot;v.pptv.com&quot;, container: &quot;#pptv_playpage_box&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {host: &quot;vip.pptv.com&quot;, container: &quot;.w-video&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {host: &quot;www.wasu.cn&quot;, container: &quot;#flashContent&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {host: &quot;www.acfun.cn&quot;, container: &quot;#player&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {host: &quot;vip.1905.com&quot;, container: &quot;#player,#vodPlayer&quot;, name: &quot;Default&quot;, displayNodes: []},
+            {host: &quot;www.1905.com&quot;, container: &quot;#player,#vodPlayer&quot;, name: &quot;Default&quot;, displayNodes: []},
+        ]
+    };
+
+    class BaseConsumer {
+        constructor() {
+            this.parse = () =&amp;gt; {
+                util.findTargetEle('body')
+                    .then((container) =&amp;gt; this.preHandle(container))
+                    .then((container) =&amp;gt; this.generateElement(container))
+                    .then((container) =&amp;gt; this.bindEvent(container))
+                    .then((container) =&amp;gt; this.autoPlay(container))
+                    .then((container) =&amp;gt; this.postHandle(container));
+            }
+        }
+
+        preHandle(container) {
+            _CONFIG_.currentPlayerNode.displayNodes.forEach((item, index) =&amp;gt; {
+                util.findTargetEle(item)
+                    .then((obj) =&amp;gt; obj.style.display = 'none')
+                    .catch(e =&amp;gt; console.warn(&quot;不存在元素&quot;, e));
+            });
+            return new Promise((resolve, reject) =&amp;gt; resolve(container));
+        }
+
+        generateElement(container) {
+            GM_addStyle(`
+                        #${_CONFIG_.vipBoxId} {cursor:pointer; position:fixed; top:120px; left:0px; z-index:9999999; text-align:left;}
+                        #${_CONFIG_.vipBoxId} .img_box{width:32px; height:32px;line-height:32px;text-align:center;background-color:#1c84c6;margin:10px 0px;}
+                        #${_CONFIG_.vipBoxId} .vip_list {display:none; position:absolute; border-radius:5px; left:32px; top:0; text-align:center; background-color: #3f4149; border:1px solid white;padding:10px 0px; width:380px; max-height:400px; overflow-y:auto;}
+                        #${_CONFIG_.vipBoxId} .vip_list li{border-radius:2px; font-size:12px; color:#DCDCDC; text-align:center; width:calc(25% - 14px); line-height:21px; float:left; border:1px solid gray; padding:0 4px; margin:4px 2px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;-o-text-overflow:ellipsis;}
+                        #${_CONFIG_.vipBoxId} .vip_list li:hover{color:#1c84c6; border:1px solid #1c84c6;}
+                        #${_CONFIG_.vipBoxId} .vip_list ul{padding-left: 10px;}
+                        #${_CONFIG_.vipBoxId} .vip_list::-webkit-scrollbar{width:5px; height:1px;}
+                        #${_CONFIG_.vipBoxId} .vip_list::-webkit-scrollbar-thumb{box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.2); background:#A8A8A8;}
+                        #${_CONFIG_.vipBoxId} .vip_list::-webkit-scrollbar-track{box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.2); background:#F1F1F1;}
+                        #${_CONFIG_.vipBoxId} li.selected{color:#1c84c6; border:1px solid #1c84c6;}
+						`);
+
+            if (_CONFIG_.isMobile) {
+                GM_addStyle(`
+                    #${_CONFIG_.vipBoxId} {top:300px;}
+                    #${_CONFIG_.vipBoxId} .vip_list {width:300px;}
+                    `);
+            }
+
+            let type_1_str = &quot;&quot;;
+            let type_2_str = &quot;&quot;;
+            let type_3_str = &quot;&quot;;
+            _CONFIG_.videoParseList.forEach((item, index) =&amp;gt; {
+                if (item.type.includes(&quot;1&quot;)) {
+                    type_1_str += `&amp;lt;li class=&quot;nq-li&quot; title=&quot;${item.name}1&quot; data-index=&quot;${index}&quot;&amp;gt;${item.name}&amp;lt;/li&amp;gt;`;
+                }
+                if (item.type.includes(&quot;2&quot;)) {
+                    type_2_str += `&amp;lt;li class=&quot;tc-li&quot; title=&quot;${item.name}&quot; data-index=&quot;${index}&quot;&amp;gt;${item.name}&amp;lt;/li&amp;gt;`;
+                }
+                if (item.type.includes(&quot;3&quot;)) {
+                    type_3_str += `&amp;lt;li class=&quot;tc-li&quot; title=&quot;${item.name}&quot; data-index=&quot;${index}&quot;&amp;gt;${item.name}&amp;lt;/li&amp;gt;`;
+                }
+            });
+
+            let autoPlay = !!GM_getValue(_CONFIG_.autoPlayerKey, null) ? &quot;开&quot; : &quot;关&quot;;
+
+            $(container).append(`
+                &amp;lt;div id=&quot;${_CONFIG_.vipBoxId}&quot;&amp;gt;
+                    &amp;lt;div class=&quot;vip_icon&quot;&amp;gt;
+                        &amp;lt;div class=&quot;img_box&quot; title=&quot;选择解析源&quot; style=&quot;color:white;font-size:16px;font-weight:bold;border-radius:5px;&quot;&amp;gt;&amp;lt;span style=&quot;color: red;&quot;&amp;gt;V&amp;lt;/span&amp;gt;I&amp;lt;span style=&quot;color: yellow;&quot;&amp;gt;P&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;
+                        &amp;lt;div class=&quot;vip_list&quot;&amp;gt;
+                            &amp;lt;div&amp;gt;
+                                &amp;lt;h3 style=&quot;color:#1c84c6; font-weight: bold; font-size: 16px; padding:5px 0px;&quot;&amp;gt;[内嵌播放]&amp;lt;/h3&amp;gt;
+                                &amp;lt;ul&amp;gt;
+                                    ${type_1_str}
+                                    &amp;lt;div style=&quot;clear:both;&quot;&amp;gt;&amp;lt;/div&amp;gt;
+                                &amp;lt;/ul&amp;gt;
+                            &amp;lt;/div&amp;gt;
+                            &amp;lt;div&amp;gt;
+                                &amp;lt;h3 style=&quot;color:#1c84c6; font-weight: bold; font-size: 16px; padding:5px 0px;&quot;&amp;gt;[弹窗播放带选集]&amp;lt;/h3&amp;gt;
+                                &amp;lt;ul&amp;gt;
+                                    ${type_2_str}
+                                    &amp;lt;div style=&quot;clear:both;&quot;&amp;gt;&amp;lt;/div&amp;gt;
+                                &amp;lt;/ul&amp;gt;
+                            &amp;lt;/div&amp;gt;
+                            &amp;lt;div&amp;gt;
+                                &amp;lt;h3 style=&quot;color:#1c84c6; font-weight: bold; font-size: 16px; padding:5px 0px;&quot;&amp;gt;[弹窗播放不带选集]&amp;lt;/h3&amp;gt;
+                                &amp;lt;ul&amp;gt;
+                                    ${type_3_str}
+                                    &amp;lt;div style=&quot;clear:both;&quot;&amp;gt;&amp;lt;/div&amp;gt;
+                                &amp;lt;/ul&amp;gt;
+                            &amp;lt;/div&amp;gt;
+                            &amp;lt;div style=&quot;text-align:left;color:#FFF;font-size:10px;padding:0px 10px;margin-top:10px;&quot;&amp;gt;
+                                &amp;lt;b&amp;gt;自动解析功能说明：&amp;lt;/b&amp;gt;
+                                &amp;lt;br&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;1、自动解析功能默认关闭（自动解析只支持内嵌播放源）
+                                &amp;lt;br&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;2、开启自动解析，网页打开后脚本将根据当前选中的解析源自动解析视频。如解析失败，请手动选择不同的解析源尝试
+                                &amp;lt;br&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;3、没有选中解析源将随机选取一个
+                                &amp;lt;br&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;4、如某些网站有会员可以关闭自动解析功能
+                            &amp;lt;/div&amp;gt;
+                        &amp;lt;/div&amp;gt;
+                    &amp;lt;/div&amp;gt;
+                    &amp;lt;div class=&quot;img_box&quot; id=&quot;vip_auto&quot; style=&quot;color:white;font-size:16px;font-weight:bold;border-radius:5px;&quot; title=&quot;是否打开自动解析。若自动解析失败，请手动选择其它接口尝试！！&quot;&amp;gt;${autoPlay}&amp;lt;/div&amp;gt;
+                &amp;lt;/div&amp;gt;`);
+            return new Promise((resolve, reject) =&amp;gt; resolve(container));
+        }
+
+        bindEvent(container) {
+            const vipBox = $(`#${_CONFIG_.vipBoxId}`);
+            if (_CONFIG_.isMobile) {
+                vipBox.find(&quot;.vip_icon&quot;).on(&quot;click&quot;, () =&amp;gt; vipBox.find(&quot;.vip_list&quot;).toggle());
+            } else {
+                vipBox.find(&quot;.vip_icon&quot;).on(&quot;mouseover&quot;, () =&amp;gt; vipBox.find(&quot;.vip_list&quot;).show());
+                vipBox.find(&quot;.vip_icon&quot;).on(&quot;mouseout&quot;, () =&amp;gt; vipBox.find(&quot;.vip_list&quot;).hide());
+            }
+
+            let _this = this;
+            vipBox.find(&quot;.vip_list .nq-li&quot;).each((liIndex, item) =&amp;gt; {
+                item.addEventListener(&quot;click&quot;, () =&amp;gt; {
+                    const index = parseInt($(item).attr(&quot;data-index&quot;));
+                    GM_setValue(_CONFIG_.autoPlayerVal, index);
+                    GM_setValue(_CONFIG_.flag, &quot;true&quot;);
+                    _this.showPlayerWindow(_CONFIG_.videoParseList[index]);
+                    vipBox.find(&quot;.vip_list li&quot;).removeClass(&quot;selected&quot;);
+                    $(item).addClass(&quot;selected&quot;);
+                });
+            });
+            vipBox.find(&quot;.vip_list .tc-li&quot;).each((liIndex, item) =&amp;gt; {
+                item.addEventListener(&quot;click&quot;, () =&amp;gt; {
+                    const index = parseInt($(item).attr(&quot;data-index&quot;));
+                    const videoObj = _CONFIG_.videoParseList[index];
+                    let url = videoObj.url + window.location.href;
+                    GM_openInTab(url, {active: true, insert: true, setParent: true});
+                });
+            });
+
+            //右键移动位置
+            vipBox.mousedown(function (e) {
+                if (e.which !== 3) {
+                    return;
+                }
+                e.preventDefault()
+                vipBox.css(&quot;cursor&quot;, &quot;move&quot;);
+                const positionDiv = $(this).offset();
+                let distenceX = e.pageX - positionDiv.left;
+                let distenceY = e.pageY - positionDiv.top;
+
+                $(document).mousemove(function (e) {
+                    let x = e.pageX - distenceX;
+                    let y = e.pageY - distenceY;
+                    const windowWidth = $(window).width();
+                    const windowHeight = $(window).height();
+
+                    if (x &amp;lt; 0) {
+                        x = 0;
+                    } else if (x &amp;gt; windowWidth - vipBox.outerWidth(true) - 100) {
+                        x = windowWidth - vipBox.outerWidth(true) - 100;
+                    }
+
+                    if (y &amp;lt; 0) {
+                        y = 0;
+                    } else if (y &amp;gt; windowHeight - vipBox.outerHeight(true)) {
+                        y = windowHeight - vipBox.outerHeight(true);
+                    }
+                    vipBox.css(&quot;left&quot;, x);
+                    vipBox.css(&quot;top&quot;, y);
+                });
+                $(document).mouseup(function () {
+                    $(document).off('mousemove');
+                    vipBox.css(&quot;cursor&quot;, &quot;pointer&quot;);
+                });
+                $(document).contextmenu(function (e) {
+                    e.preventDefault();
+                })
+            });
+            return new Promise((resolve, reject) =&amp;gt; resolve(container));
+        }
+
+        autoPlay(container) {
+            const vipBox = $(`#${_CONFIG_.vipBoxId}`);
+            vipBox.find(&quot;#vip_auto&quot;).on(&quot;click&quot;, function () {
+                if (!!GM_getValue(_CONFIG_.autoPlayerKey, null)) {
+                    GM_setValue(_CONFIG_.autoPlayerKey, null);
+                    $(this).html(&quot;关&quot;);
+                    $(this).attr(&quot;title&quot;, &quot;是否打开自动解析。若自动解析失败，请手动选择其它接口尝试！！&quot;);
+                } else {
+                    GM_setValue(_CONFIG_.autoPlayerKey, &quot;true&quot;);
+                    $(this).html(&quot;开&quot;);
+                }
+                setTimeout(function () {
+                    window.location.reload();
+                }, 200);
+            });
+
+            if (!!GM_getValue(_CONFIG_.autoPlayerKey, null)) {
+                this.selectPlayer(container);
+            }
+            return new Promise((resolve, reject) =&amp;gt; resolve(container));
+        }
+
+        selectPlayer(container) {
+            let index = GM_getValue(_CONFIG_.autoPlayerVal, 2);
+            let autoObj = _CONFIG_.videoParseList[index];
+            let _th = this;
+            if (autoObj.type.includes(&quot;1&quot;)) {
+                setTimeout(function () {
+                    _th.showPlayerWindow(autoObj);
+                    const vipBox = $(`#${_CONFIG_.vipBoxId}`);
+                    vipBox.find(`.vip_list [title=&quot;${autoObj.name}1&quot;]`).addClass(&quot;selected&quot;);
+                    $(container).find(&quot;#vip_auto&quot;).attr(&quot;title&quot;, `自动解析源：${autoObj.name}`);
+                }, 2500);
+            }
+        }
+
+        showPlayerWindow(videoObj) {
+            util.findTargetEle(_CONFIG_.currentPlayerNode.container)
+                .then((container) =&amp;gt; {
+                    const type = videoObj.type;
+                    let url = videoObj.url + window.location.href;
+                    if (type.includes(&quot;1&quot;)) {
+                        util.reomveVideo();
+                        $(container).empty();
+                        $(container).empty();
+                        let iframeDivCss = &quot;width:100%;height:100%;z-index:999999;&quot;;
+                        if (_CONFIG_.isMobile) {
+                            iframeDivCss = &quot;width:100%;height:220px;z-index:999999;&quot;;
+                        }
+                        if (_CONFIG_.isMobile &amp;amp;&amp;amp; window.location.href.indexOf(&quot;iqiyi.com&quot;) !== -1) {
+                            iframeDivCss = &quot;width:100%;height:220px;z-index:999999;margin-top:-56.25%;&quot;;
+                        }
+                        $(container).append(`&amp;lt;div style=&quot;${iframeDivCss}&quot;&amp;gt;&amp;lt;iframe id=&quot;iframe-player-4a5b6c&quot; src=&quot;${url}&quot; style=&quot;border:none;&quot; allowfullscreen=&quot;true&quot; width=&quot;100%&quot; height=&quot;100%&quot;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;lt;/div&amp;gt;`);
+                    }
+                });
+        }
+
+        postHandle(container) {
+            if (!!GM_getValue(_CONFIG_.autoPlayerKey, null)) {
+                util.urlChangeReload();
+            } else {
+                let oldHref = window.location.href;
+                let interval = setInterval(() =&amp;gt; {
+                    let newHref = window.location.href;
+                    if (oldHref !== newHref) {
+                        oldHref = newHref;
+                        if (!!GM_getValue(_CONFIG_.flag, null)) {
+                            clearInterval(interval);
+                            window.location.reload();
+                        }
+                    }
+                }, 1000);
+            }
+        }
+
+    }
+
+    class DefaultConsumer extends BaseConsumer {
+    }
+
+    return {
+        start: () =&amp;gt; {
+            GM_setValue(_CONFIG_.flag, null);
+            let mallCase = 'Default';
+            let playerNode = _CONFIG_.playerContainers.filter(value =&amp;gt; value.host === window.location.host);
+            if (playerNode === null || playerNode.length &amp;lt;= 0) {
+                console.warn(window.location.host + &quot;该网站暂不支持，请联系作者，作者将会第一时间处理（注意：请记得提供有问题的网址）&quot;);
+                return;
+            }
+            _CONFIG_.currentPlayerNode = playerNode[0];
+            mallCase = _CONFIG_.currentPlayerNode.name;
+            const targetConsumer = eval(`new ${mallCase}Consumer`);
+            targetConsumer.parse();
+        }
+    }
+
+})();
+
+(function () {
+    superVip.start();
+})();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Fri, 01 Dec 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2023/12/01/%E6%B2%B9%E7%8C%B4VIP%E6%8F%92%E4%BB%B6%E4%BB%A3%E7%A0%81.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/12/01/%E6%B2%B9%E7%8C%B4VIP%E6%8F%92%E4%BB%B6%E4%BB%A3%E7%A0%81.html</guid>
+        
+        <category>plugin</category>
+        
+        
+      </item>
     
       <item>
         <title>数据库</title>
@@ -608,37 +1100,6 @@ scheduledExecutor.schedule(new Runnable() {
         <pubDate>Tue, 07 Feb 2023 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2023/02/07/list%E5%BE%AA%E7%8E%AF%E5%88%A0%E9%99%A4.html</link>
         <guid isPermaLink="true">http://localhost:4000/2023/02/07/list%E5%BE%AA%E7%8E%AF%E5%88%A0%E9%99%A4.html</guid>
-        
-        <category>Java</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>乐观锁和悲观锁</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;乐观锁、悲观锁&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;乐观锁&quot;&gt;乐观锁&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;使用场景：多读少写。增加吞吐量。&lt;/li&gt;
-  &lt;li&gt;一般对比version实现
-    &lt;blockquote&gt;
-      &lt;p&gt;常用例子：银行柜台，某人账号100，操作员A取走30，操作员B取走20。A提交版本加一，B提交时被驳回，B读后再加一才能更新。&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;悲观锁&quot;&gt;悲观锁&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;常见。&lt;/li&gt;
-  &lt;li&gt;Synchronized 关键字，同时只有一个线程可访问。&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 06 Feb 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/02/06/%E9%94%81.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/02/06/%E9%94%81.html</guid>
         
         <category>Java</category>
         
