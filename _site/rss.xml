@@ -3,10 +3,10 @@
   <channel>
     <title>雪木 Blog</title>
     <description>风一样de男子</description>
-    <link>//</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 16 Dec 2023 19:21:58 +0800</pubDate>
-    <lastBuildDate>Sat, 16 Dec 2023 19:21:58 +0800</lastBuildDate>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 16 Dec 2023 19:46:26 +0800</pubDate>
+    <lastBuildDate>Sat, 16 Dec 2023 19:46:26 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -493,8 +493,8 @@ const superVip = (function () {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Fri, 01 Dec 2023 00:00:00 +0800</pubDate>
-        <link>/2023/12/01/%E6%B2%B9%E7%8C%B4VIP%E6%8F%92%E4%BB%B6%E4%BB%A3%E7%A0%81.html</link>
-        <guid isPermaLink="true">/2023/12/01/%E6%B2%B9%E7%8C%B4VIP%E6%8F%92%E4%BB%B6%E4%BB%A3%E7%A0%81.html</guid>
+        <link>http://localhost:4000/2023/12/01/%E6%B2%B9%E7%8C%B4VIP%E6%8F%92%E4%BB%B6%E4%BB%A3%E7%A0%81.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/12/01/%E6%B2%B9%E7%8C%B4VIP%E6%8F%92%E4%BB%B6%E4%BB%A3%E7%A0%81.html</guid>
         
         <category>plugin</category>
         
@@ -547,8 +547,8 @@ const superVip = (function () {
 
 </description>
         <pubDate>Sun, 24 Sep 2023 00:00:00 +0800</pubDate>
-        <link>/2023/09/24/database.html</link>
-        <guid isPermaLink="true">/2023/09/24/database.html</guid>
+        <link>http://localhost:4000/2023/09/24/database.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/09/24/database.html</guid>
         
         <category>数据库</category>
         
@@ -622,8 +622,8 @@ const superVip = (function () {
 
 </description>
         <pubDate>Thu, 07 Sep 2023 00:00:00 +0800</pubDate>
-        <link>/2023/09/07/Android13%E5%8D%87%E7%BA%A7.html</link>
-        <guid isPermaLink="true">/2023/09/07/Android13%E5%8D%87%E7%BA%A7.html</guid>
+        <link>http://localhost:4000/2023/09/07/Android13%E5%8D%87%E7%BA%A7.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/09/07/Android13%E5%8D%87%E7%BA%A7.html</guid>
         
         <category>Android</category>
         
@@ -655,8 +655,8 @@ const superVip = (function () {
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 06 Sep 2023 00:00:00 +0800</pubDate>
-        <link>/2023/09/06/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8F%92%E4%BB%B6.html</link>
-        <guid isPermaLink="true">/2023/09/06/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8F%92%E4%BB%B6.html</guid>
+        <link>http://localhost:4000/2023/09/06/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8F%92%E4%BB%B6.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/09/06/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8F%92%E4%BB%B6.html</guid>
         
         <category>ali</category>
         
@@ -693,8 +693,8 @@ const superVip = (function () {
 
 </description>
         <pubDate>Wed, 06 Sep 2023 00:00:00 +0800</pubDate>
-        <link>/2023/09/06/html.html</link>
-        <guid isPermaLink="true">/2023/09/06/html.html</guid>
+        <link>http://localhost:4000/2023/09/06/html.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/09/06/html.html</guid>
         
         <category>JS</category>
         
@@ -813,8 +813,8 @@ const superVip = (function () {
 
 </description>
         <pubDate>Wed, 06 Sep 2023 00:00:00 +0800</pubDate>
-        <link>/2023/09/06/Android-%E6%9D%83%E9%99%90.html</link>
-        <guid isPermaLink="true">/2023/09/06/Android-%E6%9D%83%E9%99%90.html</guid>
+        <link>http://localhost:4000/2023/09/06/Android-%E6%9D%83%E9%99%90.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/09/06/Android-%E6%9D%83%E9%99%90.html</guid>
         
         
       </item>
@@ -937,8 +937,8 @@ scheduledExecutor.schedule(new Runnable() {
 
 </description>
         <pubDate>Fri, 17 Mar 2023 00:00:00 +0800</pubDate>
-        <link>/2023/03/17/%E5%B0%8F%E5%8A%9F%E8%83%BD.html</link>
-        <guid isPermaLink="true">/2023/03/17/%E5%B0%8F%E5%8A%9F%E8%83%BD.html</guid>
+        <link>http://localhost:4000/2023/03/17/%E5%B0%8F%E5%8A%9F%E8%83%BD.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/03/17/%E5%B0%8F%E5%8A%9F%E8%83%BD.html</guid>
         
         <category>Android</category>
         
@@ -962,8 +962,8 @@ scheduledExecutor.schedule(new Runnable() {
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 14 Mar 2023 00:00:00 +0800</pubDate>
-        <link>/2023/03/14/%E5%AE%89%E5%85%A8%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A.html</link>
-        <guid isPermaLink="true">/2023/03/14/%E5%AE%89%E5%85%A8%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A.html</guid>
+        <link>http://localhost:4000/2023/03/14/%E5%AE%89%E5%85%A8%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/03/14/%E5%AE%89%E5%85%A8%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A.html</guid>
         
         <category>上架</category>
         
@@ -1048,8 +1048,8 @@ scheduledExecutor.schedule(new Runnable() {
 
 </description>
         <pubDate>Tue, 14 Mar 2023 00:00:00 +0800</pubDate>
-        <link>/2023/03/14/Android12%E9%80%82%E9%85%8D.html</link>
-        <guid isPermaLink="true">/2023/03/14/Android12%E9%80%82%E9%85%8D.html</guid>
+        <link>http://localhost:4000/2023/03/14/Android12%E9%80%82%E9%85%8D.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/03/14/Android12%E9%80%82%E9%85%8D.html</guid>
         
         <category>Android</category>
         
@@ -1098,8 +1098,8 @@ scheduledExecutor.schedule(new Runnable() {
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 07 Feb 2023 00:00:00 +0800</pubDate>
-        <link>/2023/02/07/list%E5%BE%AA%E7%8E%AF%E5%88%A0%E9%99%A4.html</link>
-        <guid isPermaLink="true">/2023/02/07/list%E5%BE%AA%E7%8E%AF%E5%88%A0%E9%99%A4.html</guid>
+        <link>http://localhost:4000/2023/02/07/list%E5%BE%AA%E7%8E%AF%E5%88%A0%E9%99%A4.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2023/02/07/list%E5%BE%AA%E7%8E%AF%E5%88%A0%E9%99%A4.html</guid>
         
         <category>Java</category>
         
