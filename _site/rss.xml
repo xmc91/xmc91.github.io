@@ -5,9 +5,213 @@
     <description>风一样de男子</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 16 Dec 2023 19:46:26 +0800</pubDate>
-    <lastBuildDate>Sat, 16 Dec 2023 19:46:26 +0800</lastBuildDate>
-    <generator>Jekyll v4.3.1</generator>
+    <pubDate>Thu, 26 Dec 2024 10:26:47 +0800</pubDate>
+    <lastBuildDate>Thu, 26 Dec 2024 10:26:47 +0800</lastBuildDate>
+    <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>Flutter</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;官网：https://docs.flutter.cn/release/archive?tab=macos ，，， 中文：https://book.flutterchina.club/chapter1/install_flutter.html#_1-3-1-%E5%AE%89%E8%A3%85flutter&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;报错处理&quot;&gt;报错处理&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;/r
+    &lt;blockquote&gt;
+      &lt;p&gt;/r是window的换行，/n是unix的换行，要下载对应的sdk。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 27 Aug 2024 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2024/08/27/flutter.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2024/08/27/flutter.html</guid>
+        
+        <category>Flutter</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Android 图片选择</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Android 图片选择的那些事儿&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;调用系统&quot;&gt;调用系统&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;使用Intent，部分手机不需要权限，部分手机需要 读SD卡权限，保险起见都读sd卡权限，，，，，，小米社区app，使用的是image的权限，即Android13之后图片、视频、录音那三个。
+    &lt;blockquote&gt;
+      &lt;p&gt;Intent intent = new Intent();
+ intent.setType(“image/*”);
+ intent.setAction(Intent.ACTION_PICK);
+ startActivityForResult(Intent.createChooser(intent, “Select Picture”), 1);&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ACTION_PICK 调用的是相册，ACTION_GET_CONTENT 调用的是系统文件系统。&lt;/li&gt;
+  &lt;li&gt;小米相册可配置一个类似 MAX_COUNT 的参数，但不知道是啥，这样调用时设置了最大数量，会有限制。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;使用androidxactivity新的方式-pickvisualmedia&quot;&gt;使用androidx.activity新的方式 PickVisualMedia&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;简单&lt;/li&gt;
+  &lt;li&gt;在小米手机上，好看好用简单，在三星手机Android9上就那个啥了。单选调用的是文件系统，多选不支持&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;使用三方库即自己写一个相册屏蔽碎片化&quot;&gt;使用三方库，即自己写一个相册，屏蔽碎片化&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;需要适配图片权限。13以下，sd卡；13 ，那三个权限；14，那三个加部分图片权限。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2024/08/01/%E5%9B%BE%E7%89%87%E9%80%89%E6%8B%A9.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2024/08/01/%E5%9B%BE%E7%89%87%E9%80%89%E6%8B%A9.html</guid>
+        
+        <category>Android</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>战役</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;著名战役&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;台儿庄战役&quot;&gt;台儿庄战役&lt;/h1&gt;
+&lt;p&gt;李宗仁任第五战区长官，在黄河长江之间。淞沪会战后，第五战区被南北夹击，老将放弃南京到武汉，结果小日本太快了，去重庆要到老年5月汛期。韩复榘被老将微操，放弃黄河战线，小日本两路南下直逼徐州，两路的交点在台儿庄，各路军阀在此激战，拖到了5月。完成战略胜利。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2024/07/31/%E6%88%98%E5%BD%B9.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2024/07/31/%E6%88%98%E5%BD%B9.html</guid>
+        
+        <category>Android</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>OpenGl</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Android Open GL ：https://developer.android.google.cn/develop/ui/views/graphics/opengl/environment?hl=zh-cn&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;配置&quot;&gt;配置&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;manifest声明glEsVersion&lt;/li&gt;
+  &lt;li&gt;继承 GLSurfaceView&lt;/li&gt;
+  &lt;li&gt;设置opegl版本
+    &lt;blockquote&gt;
+      &lt;p&gt;2.0 android 2.2+
+3.0 android 4.3+
+3.1 android 5.0+
+3.2 android 7.0+&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;继承GLSurfaceView.Render 设置RenderMode，并设置Render，实现 onSurfaceCreated、onSurfaceChanged、onDrawFrame&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;定义形状&quot;&gt;定义形状&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;逆时针，三个点，每个点都有xyz，用FloatBuffer装数据。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;绘制形状&quot;&gt;绘制形状&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;shader，要用OpenGL 着色语言，就是字符串拼接的函数&lt;/li&gt;
+  &lt;li&gt;纹理&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;设置相机及投影&quot;&gt;设置相机及投影&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;正交投影和穿透投影，定义投影，用 projectionMatrix  （float[16]） 保存数据。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;动画&quot;&gt;动画&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Matrix 旋转、移动、渐变、缩放&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;触摸事件&quot;&gt;触摸事件&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;onTouchEvent处理&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;其他&quot;&gt;其他&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;设置背景透明
+```
+render 的onSurfaceCreated中
+GLES20.glClearColor(0.0f, 0.0f, 0.0f, 0.0f)
+GLES20.glEnable(GLES20.GL_BLEND)
+GLES20.glBlendFunc(GLES20.GL_SRC_ALPHA, GLES20.GL_ONE_MINUS_SRC_ALPHA)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;SurfaceView中的init
+setEGLConfigChooser(8, 8, 8, 8, 16, 0)
+setRenderer(mRenderer)
+holder.setFormat(PixelFormat.TRANSLUCENT)
+setZOrderOnTop(true)&lt;/p&gt;
+
+&lt;p&gt;总结&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;•	设置清屏颜色的 alpha 值为 0.0f 来使背景透明。
+•	启用混合模式以支持透明度：glEnable(GL_BLEND) 和 glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)。
+•	配置 GLSurfaceView 以支持透明背景。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+</description>
+        <pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2024/07/31/opengl.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2024/07/31/opengl.html</guid>
+        
+        <category>Android</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>历史事件</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;发生在各个年代的事件&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;上古&quot;&gt;上古&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;有巢氏：发现鸟能在树上筑巢，躲避灾难。&lt;/li&gt;
+  &lt;li&gt;燧人氏：发现鸟能钻木取火。&lt;/li&gt;
+  &lt;li&gt;伏羲氏：结网、弓箭打猎、（吃不完的先养起来）养牲口等技能总结者。&lt;/li&gt;
+  &lt;li&gt;神农氏：发现谷子落在地上来年会发现长出苗儿，发展农业。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;新石器文化&quot;&gt;新石器文化&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;仰韶文化：母系公社，在河南西部陕西中部山西南部，妇女地位高，墓葬以女性为主，如果这个女性地位高，其他早期藏的人要迁过来。合葬。&lt;/li&gt;
+  &lt;li&gt;河姆渡文化：长江下游，宁绍平原及舟山。-5000～-3000，种稻子。&lt;/li&gt;
+  &lt;li&gt;大汶口文化：-4300～-2500，山东泰安大汶口村。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;黄帝炎帝蚩尤&quot;&gt;黄帝、炎帝、蚩尤&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;黄帝：-4000，先在陕西姬水后在河北涿鹿。-2698 取代神农氏，称霸&lt;/li&gt;
+  &lt;li&gt;炎帝：山东，向东被蚩尤打。&lt;/li&gt;
+  &lt;li&gt;蚩尤：九黎族首领，81兄弟（支族）。&lt;/li&gt;
+  &lt;li&gt;1战：炎黄在涿鹿郊外打蚩尤，夸父是蚩尤的部下在潼关被应龙万箭射死，蚩尤死后被刑天等葬在濮阳西水坡，九黎族后融入炎黄。&lt;/li&gt;
+  &lt;li&gt;2战：黄帝在阪泉打败炎帝，炎帝部下共工怒撞不周山，从此西北高东南低&lt;/li&gt;
+  &lt;li&gt;嫘祖：黄帝媳妇儿，养蚕缫丝织帛等。&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2024/07/30/%E5%8E%86%E5%8F%B2%E4%BA%8B%E4%BB%B6.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2024/07/30/%E5%8E%86%E5%8F%B2%E4%BA%8B%E4%BB%B6.html</guid>
+        
+        <category>Android</category>
+        
+        
+      </item>
     
       <item>
         <title>油猴VIP插件代码</title>
@@ -132,7 +336,7 @@ const superVip = (function () {
     const _CONFIG_ = {
         isMobile: navigator.userAgent.match(/(Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini)/i),
         currentPlayerNode: null,
-        vipBoxId: 'vip_jx_box' + Math.ceil(Math.random() * 100000000),
+        vipBoxId: &apos;vip_jx_box&apos; + Math.ceil(Math.random() * 100000000),
         flag: &quot;flag_vip&quot;,
         autoPlayerKey: &quot;auto_player_key&quot; + window.location.host,
         autoPlayerVal: &quot;auto_player_value_&quot; + window.location.host,
@@ -222,7 +426,7 @@ const superVip = (function () {
     class BaseConsumer {
         constructor() {
             this.parse = () =&amp;gt; {
-                util.findTargetEle('body')
+                util.findTargetEle(&apos;body&apos;)
                     .then((container) =&amp;gt; this.preHandle(container))
                     .then((container) =&amp;gt; this.generateElement(container))
                     .then((container) =&amp;gt; this.bindEvent(container))
@@ -234,7 +438,7 @@ const superVip = (function () {
         preHandle(container) {
             _CONFIG_.currentPlayerNode.displayNodes.forEach((item, index) =&amp;gt; {
                 util.findTargetEle(item)
-                    .then((obj) =&amp;gt; obj.style.display = 'none')
+                    .then((obj) =&amp;gt; obj.style.display = &apos;none&apos;)
                     .catch(e =&amp;gt; console.warn(&quot;不存在元素&quot;, e));
             });
             return new Promise((resolve, reject) =&amp;gt; resolve(container));
@@ -379,7 +583,7 @@ const superVip = (function () {
                     vipBox.css(&quot;top&quot;, y);
                 });
                 $(document).mouseup(function () {
-                    $(document).off('mousemove');
+                    $(document).off(&apos;mousemove&apos;);
                     vipBox.css(&quot;cursor&quot;, &quot;pointer&quot;);
                 });
                 $(document).contextmenu(function (e) {
@@ -472,7 +676,7 @@ const superVip = (function () {
     return {
         start: () =&amp;gt; {
             GM_setValue(_CONFIG_.flag, null);
-            let mallCase = 'Default';
+            let mallCase = &apos;Default&apos;;
             let playerNode = _CONFIG_.playerContainers.filter(value =&amp;gt; value.host === window.location.host);
             if (playerNode === null || playerNode.length &amp;lt;= 0) {
                 console.warn(window.location.host + &quot;该网站暂不支持，请联系作者，作者将会第一时间处理（注意：请记得提供有问题的网址）&quot;);
@@ -700,409 +904,6 @@ const superVip = (function () {
         
         
         <category>html</category>
-        
-      </item>
-    
-      <item>
-        <title>Android-权限</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Android,权限&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;蓝牙权限&quot;&gt;蓝牙权限&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;声明权限&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;必须声明neverForLocation，如果不声明就代表需要用蓝牙定位，不主动申请定位就扫描不到设备&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &amp;lt;uses-permission android:name=&quot;android.permission.BLUETOOTH&quot; /&amp;gt;
-    &amp;lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADMIN&quot; /&amp;gt;
-
-    &amp;lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot; /&amp;gt; 
-    &amp;lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&amp;gt;
-
-	&amp;lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_CONNECT&quot; /&amp;gt;
-	&amp;lt;uses-permission
-        android:name=&quot;android.permission.BLUETOOTH_SCAN&quot;
-        android:usesPermissionFlags=&quot;neverForLocation&quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;根据版本申请不同的权限&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;		ArrayList&amp;lt;String&amp;gt; permissions = new ArrayList&amp;lt;&amp;gt;();
-        if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.S) {
-            permissions.add(Manifest.permission.BLUETOOTH_SCAN);
-            permissions.add(Manifest.permission.BLUETOOTH_CONNECT);
-        } else if (Build.VERSION.SDK_INT &amp;gt; Build.VERSION_CODES.P) {
-            permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
-        } else if (Build.VERSION.SDK_INT &amp;gt; Build.VERSION_CODES.M) {
-            permissions.add(Manifest.permission.ACCESS_COARSE_LOCATION);
-        }
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;部分手机没有BLUETOOTH_SCAN权限，都无法打开蓝牙。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (!bluetoothAdapter.isEnabled()) {
-                    new RxPermissions(mActivity).requestEachCombined(Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT)
-                            .subscribe(new Consumer&amp;lt;Permission&amp;gt;() {
-                                @Override
-                                public void accept(Permission permission) throws Exception {
-                                    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                                    startActivityForResult(enableBtIntent, OPEN_REQUEST_CODE);
-                                }
-                            }, new Consumer&amp;lt;Throwable&amp;gt;() {
-                                @Override
-                                public void accept(Throwable throwable) throws Exception {
-
-                                }
-                            });
-
-                } else {
-                    requestBlePermission();
-                }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;存储权限&quot;&gt;存储权限&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Android10以后，开始分区存储，八大目录不再需要sd卡权限&lt;/li&gt;
-  &lt;li&gt;Android13以后，新出 READ_MEDIA_IMAGES &amp;amp; READ_MEDIA_VIDEO 权限。&lt;/li&gt;
-  &lt;li&gt;手QQ也不需要sd卡权限&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;权限组，官方说，在Android O之前，同一权限组的权限，只要用户授权一个，则整个权限组都被授权；Android O对此进行了修改。同一权限组不同权限，必须都要动态申请权限。但是如果第一个被用户同意了，后面的同组权限再申请时，就不会再弹窗而是被直接同意了。 but，部分厂商太狗了，改的啥也不符合。安全起见，同组的也申请。例子参考：https://blog.csdn.net/qihoo_tech/article/details/105828426。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;外置sd卡，app私有目录：/storage/emulated/0/Android/data/pkg/files，获取方法：getExternalFilesDir(null)&lt;/li&gt;
-  &lt;li&gt;外置sd卡：/mnt/sdcard/ 或者 /storage/emulated/0/&lt;/li&gt;
-  &lt;li&gt;app私有目录有两个。卸载后都会删除，都不需要权限，都是其他应用不可访问
-    &lt;ul&gt;
-      &lt;li&gt;一个在内置sd卡：getFilesDir() 或 getCacheDir() ，文件管理路径：/data/data/package_name/，Android10+，系统会对这些位置加密&lt;/li&gt;
-      &lt;li&gt;一个在外置：getExternalFilesDir() 或 getExternalCacheDir()，文件管理路径：/storage/emulated/0/Android/data/pkg/。其他应用可以在具有适当权限的情况下访问这些目录，但存储在这些目录中的文件仅供您的应用使用&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;在搭载 Android 9（API 级别 28）或更低版本的设备上，只要您的应用具有适当的存储权限，就可以访问属于其他应用的应用专用文件。为了让用户更好地管理自己的文件并减少混乱，以 Android 10（API 级别 29）及更高版本为目标平台的应用在默认情况下被授予了对外部存储空间的分区访问权限（即分区存储）。启用分区存储后，应用将无法访问属于其他应用的应用专属目录。&lt;/li&gt;
-  &lt;li&gt;公用空间，通过 MediaStore API，Android11+访问其他应用放在这里的数据需要read权限；Android10访问其他应用放在这的数据需要read或者write权限；Android9- 访问所有文件都需要权限。八大目录：图片（DCIM/ 和 Pictures/）、视频（DCIM/、Movies/ 和 Pictures/）、音频（Alarms/、Audiobooks/、Music/、Notifications/、Podcasts/ 和 Ringtones/）、下载的文件（Download/）&lt;/li&gt;
-  &lt;li&gt;相册里边的图片和视频，都是八大目录。比如，相机拍的无论是视频还是照片，都在DCIM/；其他地方下载的一般放在 DOWNLOAD/ 或者 Movice。截屏的放在DCIM/Screenshorts， 微信保存的图片放在Picture/WeiXin/&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;总结：数据库、SP、其他比较重要的放在内置私有目录，，头像、图片保存在外置私有目录，，明确共享的放在八大目录&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;检索第三方app&quot;&gt;检索第三方app&lt;/h2&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &amp;lt;queries&amp;gt;&amp;lt;!--配置需要查询的三方app的包名--&amp;gt;
-        &amp;lt;package android:name=&quot;com.whatsapp&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.facebook.katana&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.facebook.orca&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.tencent.tim&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.tencent.mm&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.tencent.mobileqq&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.instagram.android&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.linkedin.android&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.pinterest&quot; /&amp;gt;
-    &amp;lt;/queries&amp;gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Wed, 06 Sep 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/09/06/Android-%E6%9D%83%E9%99%90.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/09/06/Android-%E6%9D%83%E9%99%90.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Android小功能</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Android 小功能积累&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;空间不够滚动来凑&quot;&gt;空间不够，滚动来凑&lt;/h2&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;TextView
-    android:id=&quot;@+id/device_name&quot;
-    android:layout_width=&quot;100dp&quot;
-    android:layout_height=&quot;wrap_content&quot;
-    android:ellipsize=&quot;marquee&quot;
-    android:focusable=&quot;true&quot;
-    android:focusableInTouchMode=&quot;true&quot;
-    android:marqueeRepeatLimit=&quot;marquee_forever&quot;
-    android:maxWidth=&quot;100dp&quot;
-    android:scrollHorizontally=&quot;true&quot;
-    android:singleLine=&quot;true&quot;
-    android:textColor=&quot;@color/black&quot;
-    android:textSize=&quot;18sp&quot;
-    android:textStyle=&quot;bold&quot; /&amp;gt;
-
-最后 setSelected(true)    
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;log写入本地文件系统&quot;&gt;log写入本地文件系统&lt;/h2&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    public static void write(String text) {
-        SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss:SSS&quot;);
-        text = sdf.format(new Date()) + &quot;: &quot; + text + &quot; \n&quot;;
-        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
-            if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-                String sdPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + &quot;/&quot;;// sd/Download
-                File file1 = new File(sdPath + &quot;log.txt&quot;);
-                if (!file1.exists()) {
-                    try {
-                        file1.createNewFile();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-                FileOutputStream fileOutputStream = null;
-                try {
-                    fileOutputStream = new FileOutputStream(file1,true);
-                    fileOutputStream.write(text.getBytes());
-                    VTLog.d(&quot;write&quot;, &quot;&quot; + text);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                } finally {
-                    if (fileOutputStream != null) {
-                        try {
-                            fileOutputStream.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-八大目录可保存。    
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;沉浸式状态栏&quot;&gt;沉浸式状态栏&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;状态栏透明，然后根据内容适配颜色&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;简单的就是fitsSystemWindows，让系统自适配。&lt;/li&gt;
-  &lt;li&gt;复杂的就是现接管window的标识（清除、add），设置activity全屏且状态栏不消失，自己适配padding和margin，根据距离适当移动内容区并控制状态栏字体颜色
- https://juejin.cn/post/7203563038301061181?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;splite-sqlitedatabase&quot;&gt;splite （SQLiteDatabase）&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;轻量数据库，借用辅助类SQLiteOpenHelper实现增删改查&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;SQLiteOpenHelper，自己写一个继承之， &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onCreate&lt;/code&gt; 仅首次创建数据执行，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onUpgrade&lt;/code&gt; 仅新版本大于老版本执行。创建表时，可以指定主键&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;insert&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;update&lt;/code&gt; : 借助ContentValues&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;delete&lt;/code&gt;：”xxx=?”,填充？即可&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;query&lt;/code&gt; :借助Cursor&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;android-三种定时方法&quot;&gt;Android 三种定时方法&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 需要更新UI的
-private Handler mHandler = new Handler(Looper.myLooper());
-mHandler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            mTabRecycleView.scrollToPosition(position);
-                        }
-                    }, 50);
-
-2.Timer 与线程无关
-Timer timer = new Timer();
-timer.schedule(new TimerTask() {
-    @Override
-    public void run() {
-       
-    }
-}, 50);
-
-3.ScheduledExecutorService 与线程无关
-ScheduledExecutorService scheduledExecutor = Executors.newScheduledThreadPool(1);
-scheduledExecutor.schedule(new Runnable() {
-    @Override
-    public void run() {
-        // 需要进行延时执行的操作
-    }
-}, delayMillis, TimeUnit.MILLISECONDS);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Fri, 17 Mar 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/03/17/%E5%B0%8F%E5%8A%9F%E8%83%BD.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/03/17/%E5%B0%8F%E5%8A%9F%E8%83%BD.html</guid>
-        
-        <category>Android</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>安全评估报告</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;有舆论或社会动员能力的功能的软件的自查报告&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;指导：https://baijiahao.baidu.com/s?id=1620538698297450950&amp;amp;wfr=spider&amp;amp;for=pc&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;https://www.zhihu.com/question/307071708/answer/1035153886&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;填写报告网址：http://www.beian.gov.cn/portal/index.do&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 14 Mar 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/03/14/%E5%AE%89%E5%85%A8%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/03/14/%E5%AE%89%E5%85%A8%E8%AF%84%E4%BC%B0%E6%8A%A5%E5%91%8A.html</guid>
-        
-        <category>上架</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Android12适配</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Google 正式推出的系统，两年后都会强制要求在Google Play上架需要适配，比如今年推出Android99，两年后target小于99就不让在Google play上架了。同时Google play严禁应用内置其他下载途径，会触犯【网络和设备滥用】。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;android12-适配其实很简单大多数应用只需修改以下几点&quot;&gt;Android12 适配其实很简单，大多数应用只需修改以下几点。&lt;/h1&gt;
-
-&lt;h2 id=&quot;target&quot;&gt;target&lt;/h2&gt;
-&lt;p&gt;修改为31即可。&lt;/p&gt;
-
-&lt;h2 id=&quot;pendingintent&quot;&gt;PendingIntent&lt;/h2&gt;
-&lt;p&gt;flag修改为 FLAG_IMMUTABLE 或者或上 FLAG_IMMUTABLE 即可。&lt;/p&gt;
-
-&lt;h2 id=&quot;exported&quot;&gt;exported&lt;/h2&gt;
-&lt;p&gt;在使用了 intent-filter 的组件上修改 exported = true 即可。&lt;/p&gt;
-
-&lt;h2 id=&quot;require-包名&quot;&gt;require 包名&lt;/h2&gt;
-&lt;p&gt;要访问的其他app的包名，要提前声明&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &amp;lt;queries&amp;gt;
-        &amp;lt;package android:name=&quot;com.whatsapp&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.facebook.katana&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.facebook.orca&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.twitter.android&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.tencent.tim&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.tencent.mm&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.sina.weibo&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.tencent.mobileqq&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;com.instagram.android&quot; /&amp;gt;
-        &amp;lt;package android:name=&quot;jp.naver.line.android&quot; /&amp;gt;
-    &amp;lt;/queries&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;ble&quot;&gt;BLE&lt;/h2&gt;
-&lt;p&gt;增加以下权限并请求&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	// app模拟蓝牙设备时使用
-    &amp;lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADVERTISE&quot; /&amp;gt;
-    // app连接外围设备时使用
-    &amp;lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_CONNECT&quot; /&amp;gt;
-    // app扫描外围设备时使用
-    &amp;lt;uses-permission
-        android:name=&quot;android.permission.BLUETOOTH_SCAN&quot;
-        android:usesPermissionFlags=&quot;neverForLocation&quot; /&amp;gt;
-
-    ArrayList&amp;lt;String&amp;gt; permissions = new ArrayList&amp;lt;&amp;gt;();
-        if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.S) {
-            permissions.add(Manifest.permission.BLUETOOTH_SCAN);
-            permissions.add(Manifest.permission.BLUETOOTH_CONNECT);
-        } else if (Build.VERSION.SDK_INT &amp;gt; Build.VERSION_CODES.P) {
-            permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
-        } else if (Build.VERSION.SDK_INT &amp;gt; Build.VERSION_CODES.M) {
-            permissions.add(Manifest.permission.ACCESS_COARSE_LOCATION);
-        }   
-
-		BluetoothAdapter bluetoothAdapter = bluetoothManager.getAdapter();
-            if (!bluetoothAdapter.isEnabled()) {
-                // Android 12没有权限，去打开蓝牙，会gg!!!
-                new RxPermissions(mActivity).requestEachCombined(Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT)
-                        .subscribe(new Consumer&amp;lt;Permission&amp;gt;() {
-                            @Override
-                            public void accept(Permission permission) throws Exception {
-                                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                                startActivityForResult(enableBtIntent, OPEN_REQUEST_CODE);
-                            }
-                        }, new Consumer&amp;lt;Throwable&amp;gt;() {
-                            @Override
-                            public void accept(Throwable throwable) throws Exception {
-
-                            }
-                        });
-            }else {
-                requestBlePermision(permissions.toArray(new String[permissions.size()]))    
-
-            }        
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Tue, 14 Mar 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/03/14/Android12%E9%80%82%E9%85%8D.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/03/14/Android12%E9%80%82%E9%85%8D.html</guid>
-        
-        <category>Android</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>list循环删除</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;倒着删、迭代器删、stream删&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;for 循环倒序删除
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  List&amp;lt;String&amp;gt; list = new ArrayList(initList);
-  for (int i = list.size() - 1; i &amp;gt; 0; i--) {
-      String str = list.get(i);
-      if (ok) {
-          list.remove(i);
-      }
-  }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;迭代器循环迭代器删除
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  List&amp;lt;String&amp;gt; list = new ArrayList(initList);
-  for (Iterator&amp;lt;String&amp;gt; iterator = list.iterator(); iterator.hasNext(); ) {
-      String str = iterator.next();
-      if (ok) {
-          iterator.remove();
-      }
-  }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;stream filter 过滤
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  List&amp;lt;String&amp;gt; list = new ArrayList(initList);
-  if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.N) {
-      list.stream().filter(new Predicate&amp;lt;String&amp;gt;() {
-          @Override
-          public boolean test(String s) {
-              return true;
-          }
-      }).collect(Collectors.toList());
-  }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 07 Feb 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/02/07/list%E5%BE%AA%E7%8E%AF%E5%88%A0%E9%99%A4.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/02/07/list%E5%BE%AA%E7%8E%AF%E5%88%A0%E9%99%A4.html</guid>
-        
-        <category>Java</category>
-        
         
       </item>
     

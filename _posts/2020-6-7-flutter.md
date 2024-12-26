@@ -30,6 +30,8 @@ cd 到项目中，使用fvm use 1.22.4 --local
 + assets，资源文件
 + plugins，插件
 + pubspec.yaml，项目配置文件
++ 查看依赖结构：flutter pub deps
++ 查看可用更新：flutter pub outdated
 
 ```
 name: xxx // 项目名
