@@ -6,9 +6,9 @@
 
 ### Preview
 
-#### [在线预览 Live Demo →](http://liaokeyu.com/)
+#### [在线预览 Live Demo →](https://xmc91.github.io/)
 
-![](screenshot/jekyll-theme-h2o-realhome.jpg)
+![](screenshot/jekyll-theme-h2o-realhome.png)
 
 ![](screenshot/jekyll-theme-h2o-realm.png)
 
@@ -18,7 +18,7 @@ If you like this theme or using it, please give a ⭐️ for motivation ;)
 
 如果想体验手机浏览效果，可以扫一下二维码：
 
-![](screenshot/1494404591.png)
+![](screenshot/xxx.png)
 
 Using your smartphone to scan the QR Code
 
