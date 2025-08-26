@@ -3,11 +3,41 @@
   <channel>
     <title>雪木 Blog</title>
     <description>风一样de男子</description>
-    <link>http://localhost:4000//</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 26 Dec 2024 10:26:47 +0800</pubDate>
-    <lastBuildDate>Thu, 26 Dec 2024 10:26:47 +0800</lastBuildDate>
+    <link>//</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 26 Aug 2025 22:06:54 +0800</pubDate>
+    <lastBuildDate>Tue, 26 Aug 2025 22:06:54 +0800</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>Android 常用库</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;台儿庄战役背景：1938 年 3 月 16 日—4 月 15 日，日方企图：速战速决，三个月亡华。津浦铁路是当时贯通中国南北的大动脉。山东主席韩复榘（开封会议后在武昌枪毙）撤离济南，日军顺利过了黄河。
+日军若打通津浦线，就能把华北与华中战场连成一片，徐州是津浦线与陇海线的交汇枢纽。
+国民政府把华东、中原部队集中到第五战区，由李宗仁统一指挥（约 29–40 万人），布成口袋阵：内线：孙连仲第 2 集团军死守台儿庄，吸住日军；外线：汤恩伯第 20 军团、张自忠第 59 军等侧击、包抄，形成内外夹击。同时，中共在淮河、津浦路两侧发动游击战，牵制日军兵力。
+国内：淞沪、南京失守后士气低迷，急需一场胜仗重振民心。国际：欧美舆论普遍唱衰中国抗战，台儿庄若败，外援更难到来
+日本大本营制定《徐州会战计划》，意图南北对进，在徐州地区歼灭中国军队主力，然后西取郑州、南攻武汉，逼迫国民政府投降。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;RxJava 异步流、链式网络请求
+https://github.com/ReactiveX/RxJava&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;RxAndrid 主线程调度、生命周期绑定 
+https://github.com/ReactiveX/RxAndroid&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 27 Aug 2024 00:00:00 +0800</pubDate>
+        <link>/2024/08/27/Android-%E5%B8%B8%E7%94%A8%E5%BA%93.html</link>
+        <guid isPermaLink="true">/2024/08/27/Android-%E5%B8%B8%E7%94%A8%E5%BA%93.html</guid>
+        
+        <category>Android</category>
+        
+        
+      </item>
     
       <item>
         <title>Flutter</title>
@@ -25,8 +55,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 27 Aug 2024 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2024/08/27/flutter.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2024/08/27/flutter.html</guid>
+        <link>/2024/08/27/flutter.html</link>
+        <guid isPermaLink="true">/2024/08/27/flutter.html</guid>
         
         <category>Flutter</category>
         
@@ -65,8 +95,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 01 Aug 2024 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2024/08/01/%E5%9B%BE%E7%89%87%E9%80%89%E6%8B%A9.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2024/08/01/%E5%9B%BE%E7%89%87%E9%80%89%E6%8B%A9.html</guid>
+        <link>/2024/08/01/%E5%9B%BE%E7%89%87%E9%80%89%E6%8B%A9.html</link>
+        <guid isPermaLink="true">/2024/08/01/%E5%9B%BE%E7%89%87%E9%80%89%E6%8B%A9.html</guid>
         
         <category>Android</category>
         
@@ -83,8 +113,8 @@
 &lt;p&gt;李宗仁任第五战区长官，在黄河长江之间。淞沪会战后，第五战区被南北夹击，老将放弃南京到武汉，结果小日本太快了，去重庆要到老年5月汛期。韩复榘被老将微操，放弃黄河战线，小日本两路南下直逼徐州，两路的交点在台儿庄，各路军阀在此激战，拖到了5月。完成战略胜利。&lt;/p&gt;
 </description>
         <pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2024/07/31/%E6%88%98%E5%BD%B9.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2024/07/31/%E6%88%98%E5%BD%B9.html</guid>
+        <link>/2024/07/31/%E6%88%98%E5%BD%B9.html</link>
+        <guid isPermaLink="true">/2024/07/31/%E6%88%98%E5%BD%B9.html</guid>
         
         <category>Android</category>
         
@@ -164,8 +194,8 @@ setZOrderOnTop(true)&lt;/p&gt;
 &lt;p&gt;```&lt;/p&gt;
 </description>
         <pubDate>Wed, 31 Jul 2024 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2024/07/31/opengl.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2024/07/31/opengl.html</guid>
+        <link>/2024/07/31/opengl.html</link>
+        <guid isPermaLink="true">/2024/07/31/opengl.html</guid>
         
         <category>Android</category>
         
@@ -205,8 +235,8 @@ setZOrderOnTop(true)&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 30 Jul 2024 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2024/07/30/%E5%8E%86%E5%8F%B2%E4%BA%8B%E4%BB%B6.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2024/07/30/%E5%8E%86%E5%8F%B2%E4%BA%8B%E4%BB%B6.html</guid>
+        <link>/2024/07/30/%E5%8E%86%E5%8F%B2%E4%BA%8B%E4%BB%B6.html</link>
+        <guid isPermaLink="true">/2024/07/30/%E5%8E%86%E5%8F%B2%E4%BA%8B%E4%BB%B6.html</guid>
         
         <category>Android</category>
         
@@ -697,8 +727,8 @@ const superVip = (function () {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Fri, 01 Dec 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/12/01/%E6%B2%B9%E7%8C%B4VIP%E6%8F%92%E4%BB%B6%E4%BB%A3%E7%A0%81.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/12/01/%E6%B2%B9%E7%8C%B4VIP%E6%8F%92%E4%BB%B6%E4%BB%A3%E7%A0%81.html</guid>
+        <link>/2023/12/01/%E6%B2%B9%E7%8C%B4VIP%E6%8F%92%E4%BB%B6%E4%BB%A3%E7%A0%81.html</link>
+        <guid isPermaLink="true">/2023/12/01/%E6%B2%B9%E7%8C%B4VIP%E6%8F%92%E4%BB%B6%E4%BB%A3%E7%A0%81.html</guid>
         
         <category>plugin</category>
         
@@ -751,8 +781,8 @@ const superVip = (function () {
 
 </description>
         <pubDate>Sun, 24 Sep 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/09/24/database.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/09/24/database.html</guid>
+        <link>/2023/09/24/database.html</link>
+        <guid isPermaLink="true">/2023/09/24/database.html</guid>
         
         <category>数据库</category>
         
@@ -826,8 +856,8 @@ const superVip = (function () {
 
 </description>
         <pubDate>Thu, 07 Sep 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/09/07/Android13%E5%8D%87%E7%BA%A7.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/09/07/Android13%E5%8D%87%E7%BA%A7.html</guid>
+        <link>/2023/09/07/Android13%E5%8D%87%E7%BA%A7.html</link>
+        <guid isPermaLink="true">/2023/09/07/Android13%E5%8D%87%E7%BA%A7.html</guid>
         
         <category>Android</category>
         
@@ -859,51 +889,11 @@ const superVip = (function () {
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 06 Sep 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/09/06/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8F%92%E4%BB%B6.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/09/06/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8F%92%E4%BB%B6.html</guid>
+        <link>/2023/09/06/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8F%92%E4%BB%B6.html</link>
+        <guid isPermaLink="true">/2023/09/06/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%8F%92%E4%BB%B6.html</guid>
         
         <category>ali</category>
         
-        
-      </item>
-    
-      <item>
-        <title>html小功能</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Html 小功能积累&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;图片处理&quot;&gt;图片处理&lt;/h2&gt;
-&lt;h3 id=&quot;图片链接&quot;&gt;图片链接&lt;/h3&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;a href=&quot;超链接地址&quot;&amp;gt;&amp;lt;img src=&quot;路径&quot; alt=&quot;替代文本&quot;&amp;gt;&amp;lt;/a&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;图片不同区域点击跳转不同连接&quot;&gt;图片不同区域点击跳转不同连接&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;连接map&lt;/li&gt;
-  &lt;li&gt;设置map&lt;/li&gt;
-  &lt;li&gt;设置不同的area&lt;/li&gt;
-  &lt;li&gt;设置坐标 coords&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;img src=&quot;./img/bg-home.jpg&quot; alt=&quot;&quot; usemap=&quot;#map&quot;&amp;gt;
-&amp;lt;map name=&quot;map&quot; id=&quot;map&quot;&amp;gt;
-     &amp;lt;area shape=&quot;poly&quot; coords=&quot;583,382,587,357,609,359,611,283,1014,247,1392,352,1362,410,1218,445,583,382&quot; href=&quot;https://www.baidu.com/&quot; alt=&quot;&quot;&amp;gt;
-     &amp;lt;area shape=&quot;poly&quot; coords=&quot;584,392,532,500,1194,587,1386,533,1414,398,1231,448,584,392&quot; href=&quot;https://www.mi.com/&quot; alt=&quot;&quot;&amp;gt;
-     &amp;lt;area shape=&quot;poly&quot; coords=&quot;591,520,565,595,510,618,1169,731,1406,641,1395,542,1170,601,591,520&quot; href=&quot;https://huaban.com/&quot; alt=&quot;&quot;&amp;gt;
-     &amp;lt;area shape=&quot;poly&quot; coords=&quot;570,641,569,742,1164,867,1395,767,1398,655,1172,734,570,641&quot; href=&quot;https://www.qingnian8.com/&quot; alt=&quot;&quot;&amp;gt;        
-&amp;lt;/map&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Wed, 06 Sep 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2023/09/06/html.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/09/06/html.html</guid>
-        
-        <category>JS</category>
-        
-        
-        <category>html</category>
         
       </item>
     
