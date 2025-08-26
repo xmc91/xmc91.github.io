@@ -5,8 +5,8 @@
     <description>风一样de男子</description>
     <link>//</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 Aug 2025 22:06:54 +0800</pubDate>
-    <lastBuildDate>Tue, 26 Aug 2025 22:06:54 +0800</lastBuildDate>
+    <pubDate>Tue, 26 Aug 2025 22:18:46 +0800</pubDate>
+    <lastBuildDate>Tue, 26 Aug 2025 22:18:46 +0800</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
     
       <item>
@@ -19,20 +19,207 @@
 日本大本营制定《徐州会战计划》，意图南北对进，在徐州地区歼灭中国军队主力，然后西取郑州、南攻武汉，逼迫国民政府投降。&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;h2 id=&quot;rxjava2-全家桶&quot;&gt;RxJava2 全家桶&lt;/h2&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;RxJava 异步流、链式网络请求
-https://github.com/ReactiveX/RxJava&lt;/p&gt;
+  &lt;li&gt;RxJava 异步流、链式网络请求 Java 响应式流标准实现
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/ReactiveX/RxJava
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;RxAndrid 主线程调度、生命周期绑定 
-https://github.com/ReactiveX/RxAndroid&lt;/p&gt;
+  &lt;li&gt;RxAndrid 主线程调度、生命周期绑定 AndroidSchedulers.mainThread()
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/ReactiveX/RxAndroid
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RxBinding View 事件流化 把 onClick、onTextChange 变成 Observable
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/JakeWharton/RxBinding
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RxLifecycle	自动在 onDestroy 取消订阅 	避免内存泄漏
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/trello/RxLifecycle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RxPermissions	Android 6.0 动态权限	一行链式申请权限
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; https://github.com/tbruyelle/RxPermissions 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;网络层square-全家桶&quot;&gt;网络层（Square 全家桶）&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Retrofit RESTful 网络请求	注解 + 接口 = 网络 API
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/square/retrofit
+https://square.github.io/retrofit/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Okhttp HTTP 客户端	连接池、拦截器、HTTP2/HTTPS
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://square.github.io/okhttp/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Gson Converter      Retrofit 自动解析 JSON 零配置 Bean 映射
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://square.github.io/retrofit/configuration/
+https://github.com/square/retrofit/blob/trunk/retrofit-converters/gson/README.md
+
+ new Retrofit.Builder()
+  .addConverterFactory(GsonConverterFactory.create())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RxJava2 Adapter  让 Retrofit 返回 Observable	与 RxJava 无缝集成
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://square.github.io/retrofit/configuration/
+https://github.com/square/retrofit/blob/trunk/retrofit-adapters/rxjava2/README.md
+
+new Retrofit.Builder()
+  .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Logging Interceptor  控制台打印请求/响应	开发调试神器
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/square/okhttp/blob/master/okhttp-logging-interceptor/README.md
+
+  HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+  logging.setLevel(Level.BASIC);
+  new OkHttpClient.Builder().addInterceptor(logging)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;PersistentCookieJar 自动持久化 Cookie	登录态保持
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/franmontiel/PersistentCookieJar
+
+ClearableCookieJar cookieJar = new PersistentCookieJar
+(new SetCookieCache(), new SharedPrefsCookiePersistor(context));
+
+new OkHttpClient.Builder().cookieJar(cookieJar)        
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;图片加载&quot;&gt;图片加载&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Glide  网络/本地图片、GIF、缩略图	内存/磁盘二级缓存，生命周期感知
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/bumptech/glide
+
+implementation &apos;com.github.bumptech.glide:glide:4.16.0&apos;
+
+Glide.with(this).load(&quot;&quot;).into(imageView);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Picasso 极简图片加载	一行代码显示网络图
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://square.github.io/picasso/
+
+implementation &apos;com.squareup.picasso:picasso:(insert latest version)&apos;
+
+Picasso.get().load(url).resize(50, 50).centerCrop().into(imageView)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Glide Transformations  圆角、模糊、滤镜	30+ 现成变换
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/wasabeef/glide-transformations
+
+implementation &apos;jp.wasabeef:glide-transformations:4.3.0&apos;
+// If you want to use the GPU Filters
+implementation &apos;jp.co.cyberagent.android:gpuimage:2.1.0&apos;
+
+Glide.with(this).load(R.drawable.demo)
+.apply(RequestOptions.bitmapTransform(BlurTransformation(25, 3)))
+.into(imageView)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ui--组件&quot;&gt;UI &amp;amp; 组件&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;BaseRecyclerViewAdapterHelper 快速写 Adapter	空视图、拖拽、加载更多
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+
+implementation &quot;io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.4&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Over-Scroll iOS 弹性回弹	一行代码给 RecyclerView
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  https://github.com/EverythingMe/overscroll-decor
+
+  implementation &apos;io.github.everythingme:overscroll-decor-android:1.1.1&apos;
+
+  // Horizontal
+  OverScrollDecoratorHelper.setUpOverScroll(recyclerView, OverScrollDecoratorHelper.ORIENTATION_HORIZONTAL);
+  // Vertical
+  OverScrollDecoratorHelper.setUpOverScroll(recyclerView, OverScrollDecoratorHelper.ORIENTATION_VERTICAL);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;SwipeLayout  侧滑删除/菜单	左右滑动菜单
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/daimajia/AndroidSwipeLayout
+
+  compile &apos;com.android.support:recyclerview-v7:21.0.0&apos;
+  compile &apos;com.android.support:support-v4:20.+&apos;
+  compile &quot;com.daimajia.swipelayout:library:1.2.0@aar&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;FlexboxLayout 流式布局 CSS Flexbox 语法
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/google/flexbox-layout
+
+implementation &apos;com.google.android.flexbox:flexbox:3.0.0&apos;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Android-PickerView 省市区/日期滚轮	三级联动选择器
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/Bigkoo/Android-PickerView
+
+compile &apos;com.contrarywind:Android-PickerView:4.1.9&apos;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;CalendarView  日历控件	月/周日历、标记、范围选择
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/huanghaibin-dev/CalendarView
+
+implementation &apos;com.haibin:calendarview:3.6.8&apos;
+implementation &apos;com.haibin:calendarview:3.7.1&apos;//Androidx
+
+要加keep
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;h2 id=&quot;工具&quot;&gt;工具&lt;/h2&gt;
+  &lt;/li&gt;
+  &lt;li&gt;AndroidUtilCode 常用工具类集合	权限、设备、加密、SP 一行搞定
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/Blankj/AndroidUtilCode
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Timber 统一日志	Debug/Release 自动分级
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/JakeWharton/timber
+
+implementation &apos;com.jakewharton.timber:timber:5.0.1&apos;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;PDF viewer PDF 预览	手势缩放、页码跳转
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/DImuthuUpe/AndroidPdfViewer
+
+implementation &apos;com.github.barteksc:android-pdf-viewer:2.8.2&apos;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Dagger 编译期 DI	零反射、APT 生成代码
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  https://github.com/google/dagger
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Kotlin 协程 协程异步	lifecycleScope 自动取消
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  https://github.com/Kotlin/kotlinx.coroutines
+
+  implementation(&quot;org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2&quot;)
+
+  suspend fun main() = coroutineScope {
+  launch { 
+     delay(1000)
+     println(&quot;Kotlin Coroutines World!&quot;) 
+  }
+  println(&quot;Hello&quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;JSON 解析
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  https://github.com/google/gson
+
+  implementation &apos;com.google.code.gson:gson:2.13.1&apos;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
 </description>
-        <pubDate>Tue, 27 Aug 2024 00:00:00 +0800</pubDate>
-        <link>/2024/08/27/Android-%E5%B8%B8%E7%94%A8%E5%BA%93.html</link>
-        <guid isPermaLink="true">/2024/08/27/Android-%E5%B8%B8%E7%94%A8%E5%BA%93.html</guid>
+        <pubDate>Tue, 26 Aug 2025 00:00:00 +0800</pubDate>
+        <link>/2025/08/26/Android-%E5%B8%B8%E7%94%A8%E5%BA%93.html</link>
+        <guid isPermaLink="true">/2025/08/26/Android-%E5%B8%B8%E7%94%A8%E5%BA%93.html</guid>
         
         <category>Android</category>
         
